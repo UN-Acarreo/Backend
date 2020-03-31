@@ -2,14 +2,14 @@
 
 -- DROP DATABASE "UN-Acarreo";
 
-CREATE DATABASE "UN-Acarreo"
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Spanish_Colombia.1252'
-    LC_CTYPE = 'Spanish_Colombia.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
+--CREATE DATABASE "UN-Acarreo"
+--    WITH 
+--    OWNER = postgres
+--    ENCODING = 'UTF8'
+--    LC_COLLATE = 'Spanish_Colombia.1252'
+--    LC_CTYPE = 'Spanish_Colombia.1252'
+--    TABLESPACE = pg_default
+--    CONNECTION LIMIT = -1;
 
  -- Table: public."Bill"
  --DROP TABLE public."Bill";
@@ -46,7 +46,7 @@ ALTER TABLE public."Cargo"
 
 CREATE TABLE public."Driver"
 (
-    "Id_driver" integer NOT NULL DEFAULT nextval('"Driver_Id_driver_seq"'::regclass),
+    "Id_driver" serial NOT NULL,
     "Driver_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "Driver_last_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "Driver_password" character varying COLLATE pg_catalog."default" NOT NULL,
@@ -111,7 +111,7 @@ ALTER TABLE public."Route"
 
 CREATE TABLE public."Status"
 (
-    "Id_status" integer NOT NULL DEFAULT nextval('"Status_Id_status_seq"'::regclass),
+    "Id_status" serial NOT NULL,
     status_description character varying COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "Status_pkey" PRIMARY KEY ("Id_status"),
     CONSTRAINT "Valid_status" CHECK (status_description::text = 'In progress'::text OR status_description::text = 'Reserved'::text OR status_description::text = 'Cancelled'::text OR status_description::text = 'Done'::text) NOT VALID
@@ -128,7 +128,7 @@ ALTER TABLE public."Status"
 
 CREATE TABLE public."User"
 (
-    "Id_user" integer NOT NULL DEFAULT nextval('"User_Id_user_seq"'::regclass),
+    "Id_user" serial NOT NULL,
     "User_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_last_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_password" character varying COLLATE pg_catalog."default" NOT NULL,
@@ -212,7 +212,7 @@ ALTER TABLE public."Haulage"
 -- Table: public."Rating"
 CREATE TABLE public."Bill"
 (
-    "Id_bill" integer NOT NULL DEFAULT nextval('"Bill_Id_bill_seq"'::regclass),
+    "Id_bill" serial NOT NULL,
     "Amount" double precision NOT NULL,
     "Id_haulage" integer NOT NULL,
     CONSTRAINT "Bill_pkey" PRIMARY KEY ("Id_bill"),
