@@ -33,7 +33,7 @@ async function insertUserTest(user){
 }
 
 //test insertion
-router.get('/api/insertuser/', async function(req, res){
+router.get('/api/insertuser', async function(req, res){
   //The variable user can be changed in order to test user insertion with different data
   var user = {name: 'Esteban', lastname: 'Jaramillo', password: '123456', address: 'cll fake 123', email: 'v@v.com'}
   await insertUserTest(user);
@@ -41,7 +41,7 @@ router.get('/api/insertuser/', async function(req, res){
 });
 
 //test get info
-router.get('/api/getinfo/', async function(req, res){
+router.get('/api/getinfo', async function(req, res){
   var info = await getInfo()
   console.log(info)
   res.json(info)
@@ -50,7 +50,7 @@ router.get('/api/getinfo/', async function(req, res){
 
 
 //Route will be used to handle login POST requests
-router.post('/api/login/', function(req, res){
+router.post('/api/login', function(req, res){
   //TODO login user
   res.json({Api: 'Online'})
 
@@ -58,41 +58,42 @@ router.post('/api/login/', function(req, res){
 
 
 //Route will be used to handle driver sign up POST requests
-router.post('/api/driversignup/', function(req, res){
+router.post('/api/driver-signup', function(req, res){
   //TODO sign up driver
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle client sign up POST requests
-router.post('/api/clientsignup/', function(req, res){
+router.post('/api/client-signup', function(req, res){
   //TODO sign up client
+  console.log(req.body.request); //Here should come the user data
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle POST requests of service creation
-router.post('/api/createservice/', function(req, res){
+router.post('/api/create-service', function(req, res){
   //TODO create service
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle cancel POST service requests
-router.post('/api/cancelservice/', function(req, res){
+router.post('/api/cancel-service', function(req, res){
   //TODO cancel service
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle the drivers schedules GET request
-router.get('/api/driverschedule/', function(req, res){
+router.get('/api/driver-schedule', function(req, res){
   res.json({Api: 'Send driver schedule'})
 });
 
 
 //Route will be used to send the drivers location GET request
-router.get('/api/driverlocation/', function(req, res){
+router.get('/api/driver-location', function(req, res){
   res.json({Api: 'Send driver coordinates'})
 });
 
