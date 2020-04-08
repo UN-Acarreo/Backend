@@ -154,13 +154,7 @@ CREATE TABLE public."Vehicle"
     "Model" character varying COLLATE pg_catalog."default" NOT NULL,
     "Payload_capacity" integer NOT NULL,
     "Photo" character varying COLLATE pg_catalog."default" NOT NULL,
-    "Id_owner" integer NOT NULL,
-    CONSTRAINT "Vehicle_pkey" PRIMARY KEY ("Id_vehicle"),
-    CONSTRAINT "Vehicle_Id_owner_fkey" FOREIGN KEY ("Id_owner")
-        REFERENCES public."Driver" ("Id_driver") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID
+    CONSTRAINT "Vehicle_pkey" PRIMARY KEY ("Id_vehicle")
 )
 
 TABLESPACE pg_default;
