@@ -50,8 +50,8 @@ CREATE TABLE public."Driver"
     "Driver_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "Driver_last_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "Driver_password" character varying COLLATE pg_catalog."default" NOT NULL,
-    "Driver_addresss" character varying COLLATE pg_catalog."default" NOT NULL,
-    "Driver_E-mail" character varying COLLATE pg_catalog."default" NOT NULL,
+    "Driver_address" character varying COLLATE pg_catalog."default" NOT NULL,
+    "Driver_Email" character varying COLLATE pg_catalog."default" NOT NULL,
     "Average_rating" double precision,
     "Driver_photo" character varying COLLATE pg_catalog."default",
     "Driver_phone" integer NOT NULL,
@@ -132,8 +132,8 @@ CREATE TABLE public."User"
     "User_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_last_name" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_password" character varying COLLATE pg_catalog."default" NOT NULL,
-    "User_addresss" character varying COLLATE pg_catalog."default" NOT NULL,
-    "User_E-mail" character varying COLLATE pg_catalog."default" NOT NULL,
+    "User_address" character varying COLLATE pg_catalog."default" NOT NULL,
+    "User_Email" character varying COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "User_pkey" PRIMARY KEY ("Id_user")
 )
 
