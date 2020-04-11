@@ -21,9 +21,11 @@ router.post('/client-signup',async function(req,res){
   if(success==1)
   {
     console.log("added succesfully");
+    res.status(201).send("added succesfully");
   }
-  else if(succes==0){
-    console.log("error");
+  else{
+    console.log(success.message);
+    res.status(400).send(success.message);
   }
 } );
 
