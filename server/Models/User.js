@@ -25,7 +25,8 @@ const User = DataBase.define('User', {
       },
       User_Email: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
       }
   }, {
     freezeTableName: true,

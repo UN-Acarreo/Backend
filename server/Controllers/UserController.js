@@ -18,7 +18,7 @@ async function createUser(req)
         );
         return 1;
     } catch (error) {
-        return 0;
+        return error;
     }  
 }
 module.exports={
