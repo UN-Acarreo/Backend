@@ -57,6 +57,7 @@ CREATE TABLE public."Driver"
     "Driver_phone" integer NOT NULL,
     "Identity_card" integer NOT NULL,
     CONSTRAINT "Driver_pkey" PRIMARY KEY ("Id_driver"),
+    CONSTRAINT "Driver_Email" UNIQUE ("Driver_Email"),
     CONSTRAINT "Driver_identity_card" UNIQUE ("Identity_card")
 )
 
@@ -134,7 +135,8 @@ CREATE TABLE public."User"
     "User_password" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_address" character varying COLLATE pg_catalog."default" NOT NULL,
     "User_Email" character varying COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT "User_pkey" PRIMARY KEY ("Id_user")
+    CONSTRAINT "User_pkey" PRIMARY KEY ("Id_user"),
+    CONSTRAINT "User_email" UNIQUE ("User_Email")
 )
 
 TABLESPACE pg_default;
