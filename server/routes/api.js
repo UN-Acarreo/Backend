@@ -9,14 +9,14 @@ router.post('/login', function(req, res){
 })
 
 //Route will be used to handle driver sign up POST requests
-router.post('/driver-signup', function(req, res){
+router.post('/driver/signup', function(req, res){
   
   res.json({Api: 'Online'})
 });
 
 const UserController =require('../Controllers/UserController')
 //Route will be used to handle client sign up POST requests
-router.post('/client-signup',async function(req,res){
+router.post('/client/signup',async function(req,res){
   let success = await UserController.createUser(req);
   if(success==1)
   {
@@ -30,27 +30,27 @@ router.post('/client-signup',async function(req,res){
 } );
 
 //Route will be used to handle POST requests of service creation
-router.post('/create-service', function(req, res){
+router.post('/service/create', function(req, res){
   //TODO create service
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle cancel POST service requests
-router.post('/cancel-service', function(req, res){
+router.post('/service/cancel', function(req, res){
   //TODO cancel service
   res.json({Api: 'Online'})
 });
 
 
 //Route will be used to handle the drivers schedules GET request
-router.get('/driver-schedule', function(req, res){
+router.get('/driver/schedule', function(req, res){
   res.json({Api: 'Send driver schedule'})
 });
 
 
 //Route will be used to send the drivers location GET request
-router.get('/driver-location', function(req, res){
+router.get('/driver/location', function(req, res){
   res.json({Api: 'Send driver coordinates'})
 });
 
