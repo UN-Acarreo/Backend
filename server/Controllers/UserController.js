@@ -1,26 +1,30 @@
+
+// Import model
 const UserModel = require('../Models/User');
-async function createUser(req)
-{
+
+// Create user
+async function createUser(req) {
+
     try {
 
-        const{name, lastname, password, address, email}=req.body.request;
-        let newUser = await UserModel.create(
+        // Get atributes
+        const { User_name, User_last_name, User_password, User_address, User_Email } = req.body.request;
+
+        // Create user
+        await UserModel.create(
             {
-                User_name: name,
-                User_last_name: lastname,
-                User_password: password,
-                User_address: address,
-                User_Email: email
-            }
-            ,{
-            fields: ['User_name','User_last_name','User_password','User_address','User_Email']
+                User_name: User_name,
+                User_last_name: User_last_name,
+                User_password: User_password,
+                User_address: User_address,
+                User_Email: User_Email
             }
         );
         return 1;
+
     } catch (error) {
         return error;
-    }  
+    }
+
 }
-module.exports={
-    createUser:createUser}
-    ;
+module.exports = { createUser: createUser };

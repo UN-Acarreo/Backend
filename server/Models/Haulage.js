@@ -40,6 +40,9 @@ const Haulage = DataBase.define('Haulage', {
         freezeTableName: true,
     });
 
+// Skip primaryKey manual insertion
+User.removeAttribute('Id_haulage');
+
 Haulage.hasOne(Cargo,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
 Cargo.belongsTo(Haulage,{foreignKey: "Id_cargo", targetKey: "Id_cargo"});
 
