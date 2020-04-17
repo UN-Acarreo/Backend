@@ -27,4 +27,26 @@ async function createUser(req) {
     }
 
 }
-module.exports = { createUser: createUser };
+
+// Validate user
+async function validateUser(req) {
+
+    try {
+
+        // Get atributes
+        const { User_address, User_password } = req.body.request;
+
+        // Validate user
+        count = await UserModel.count({ where: { User_address: User_address, User_password: User_password } })
+        if (count > 0) {
+            return true;
+        }
+        return false;
+
+    } catch (error) {
+        return error;
+    }
+
+}
+
+module.exports = { createUser: createUser, validateUser: validateUser };

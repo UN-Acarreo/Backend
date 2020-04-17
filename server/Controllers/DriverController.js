@@ -31,4 +31,26 @@ async function createDriver(req) {
     }
 
 }
-module.exports = { createDriver: createDriver };
+
+// Validate Driver
+async function validateDriver(req) {
+
+    try {
+
+        // Get atributes
+        const { Driver_address, Driver_password } = req.body.request;
+
+        // Validate Driver
+        count = await UserModel.count({ where: { Driver_address: Driver_address, Driver_password: Driver_password } })
+        if (count > 0) {
+            return true;
+        }
+        return false;
+
+    } catch (error) {
+        return error;
+    }
+
+}
+
+module.exports = { createDriver: createDriver, validateDriver: validateDriver };
