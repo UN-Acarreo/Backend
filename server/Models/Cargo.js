@@ -23,4 +23,7 @@ const Cargo = DataBase.define('Cargo', {
     freezeTableName: true,
   });
 
+// Skip primaryKey manual insertion
+User.removeAttribute('Id_cargo');
+
 module.exports = Cargo;

@@ -19,7 +19,10 @@ const Bill = DataBase.define('Bill', {
     }, {
         freezeTableName: true,
     });
-    
+
+// Skip primaryKey manual insertion
+User.removeAttribute('Id_bill');
+
 Haulage.hasOne(Bill,{foreignKey: "Id_haulage", sourceKey: "Id_haulage"});
 Bill.belongsTo(Haulage,{foreignKey: "Id_haulage", targetKey: "Id_haulage"});
 module.exports = Bill;

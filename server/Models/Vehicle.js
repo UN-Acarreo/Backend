@@ -32,4 +32,7 @@ const Vehicle = DataBase.define('Vehicle', {
         freezeTableName: true,
     });
 
+// Skip primaryKey manual insertion
+User.removeAttribute('Id_vehicle');
+
 module.exports = Vehicle;

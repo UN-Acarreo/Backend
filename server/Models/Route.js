@@ -23,4 +23,7 @@ const Route = DataBase.define('Route', {
         freezeTableName: true,
     });
 
+// Skip primaryKey manual insertion
+User.removeAttribute('Id_route');
+
 module.exports = Route;

@@ -32,4 +32,7 @@ const User = DataBase.define('User', {
       freezeTableName: true,
     });
 
+  // Skip primaryKey manual insertion
+  User.removeAttribute('Id_user');
+
   module.exports = User;
