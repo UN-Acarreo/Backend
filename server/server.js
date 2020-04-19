@@ -2,6 +2,8 @@
 const cors = require('cors');
 // Call express framework
 var express = require('express');
+// Import path
+const path = require("path");
 // Get all functions
 var app = express();
 //importing routes from api.js
@@ -21,6 +23,9 @@ app.use(express.json());
 //To avoid CORS errors
 app.use(cors(corsOptions));
 
+//Use public dirname to serve static files
+//app.get("/", express.static(path.join(__dirname, "./public")));
+app.use('/uploads/drivers',express.static(path.join(__dirname, 'public/uploads/drivers')));
 
 //Require route files
 app.use('/',index);
