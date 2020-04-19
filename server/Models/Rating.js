@@ -28,6 +28,6 @@ const Rating = DataBase.define('Rating', {
     });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_rating');
+Rating.removeAttribute('Id_rating');
 
 module.exports = Rating;

@@ -8,14 +8,14 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     Id_driver: {
         type: Sequelize.INTEGER,
         references: {
-            model: Driver, 
+            model: Driver,
             key: 'Id_driver'
           }
     },
     Id_vehicle: {
         type: Sequelize.INTEGER,
         references: {
-            model: Vehicle, 
+            model: Vehicle,
             key: 'Id_vehicle'
           }
     },
@@ -28,7 +28,7 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     });
 
 // Add Composite Primary Key
-DataBase.addConstraint('Driver_Vehicle', ['Id_driver', 'Id_vehicle'], {
+DataBase.queryInterface.addConstraint('Driver_Vehicle', ['Id_driver', 'Id_vehicle'], {
     type: 'primary key',
     name: 'Driver_Vehicle_pkey'
     });

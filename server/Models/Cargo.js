@@ -24,6 +24,6 @@ const Cargo = DataBase.define('Cargo', {
   });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_cargo');
+Cargo.removeAttribute('Id_cargo');
 
 module.exports = Cargo;

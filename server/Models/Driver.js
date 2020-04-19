@@ -51,6 +51,6 @@ const Driver = DataBase.define('Driver', {
     });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_driver');
+Driver.removeAttribute('Id_driver');
 
 module.exports = Driver;

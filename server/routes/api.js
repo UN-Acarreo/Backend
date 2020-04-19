@@ -1,6 +1,26 @@
 const express = require ('express');
 const router = express.Router();
 
+//Controllers definition
+
+
+const UserController = require('../Controllers/UserController')
+const DriverController = require('../Controllers/DriverController')
+const VehicleController = require('../Controllers/VehicleController')
+const RatingController = require('../Controllers/RatingController')
+const RouteController =  require('../Controllers/RouteController')
+const StatusController = require('../Controllers/StatusController')
+const CargoController = require('../Controllers/CargoController')
+
+
+/*
+const BillController = require('../Controllers/BillController')
+const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
+const HaulageController = require('../Controllers/HaulageController')
+const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
+*/
+
+
 //Route will be used to handle login POST requests
 router.post('/login', function(req, res){
   //TODO login user
@@ -10,11 +30,11 @@ router.post('/login', function(req, res){
 
 //Route will be used to handle driver sign up POST requests
 router.post('/driver/signup', function(req, res){
-  
+
   res.json({Api: 'Online'})
 });
 
-const UserController =require('../Controllers/UserController')
+
 //Route will be used to handle client sign up POST requests
 router.post('/client/signup',async function(req,res){
   let success = await UserController.createUser(req);

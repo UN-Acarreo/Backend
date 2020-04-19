@@ -33,6 +33,6 @@ const Vehicle = DataBase.define('Vehicle', {
     });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_vehicle');
+Vehicle.removeAttribute('Id_vehicle');
 
 module.exports = Vehicle;
