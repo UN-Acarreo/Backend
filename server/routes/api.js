@@ -28,7 +28,7 @@ async function check_fields(req){
   Object.keys(data).forEach(function(key) {
     var field = data[key]
     if((key == 'User_name' || key == 'User_last_name' || key == 'Driver_name' || key == 'Driver_last_name')
-        && !validator.isAlpha(field)){
+        && !validator.isAlpha(validator.blacklist(field, ' '))){
        console.log('Field must contain only letters')
        is_valid = false
     }
@@ -62,7 +62,7 @@ async function saveImage(baseImage, path, img_name) {
           const filename = img_name+"."+ext
           const fullpath = path + filename
 
-          //write the file 
+          //write the file
           fs.writeFileSync(fullpath, base64Data, 'base64');
           return true
           //return {filename, localPath};
@@ -95,7 +95,10 @@ router.post('/driver/signup', async function(req, res){
       return res.json({error: 'Error en los datos suministrados '})
   }
 
-  req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card
+  //Set the path of the saved image on the db field
+  var baseImage = req.body.request.foto_data
+  const extension = baseImage.substring(baseImage.indexOf("/")+1, baseImage.indexOf(";base64"));
+  req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card+"."+extension
 
   //Save driver on db
   let success = await DriverController.createDriver(req);
