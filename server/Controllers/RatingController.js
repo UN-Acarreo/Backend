@@ -2,6 +2,9 @@
 // Import model
 const RatingModel = require('../Models/Rating');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Rating
 async function createRating(req) {
 
@@ -19,9 +22,11 @@ async function createRating(req) {
                 Comments: Comments
             }
         );
+        logger.info("RatingController: Rating was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("RatingController: " + error);
         return error;
     }
 

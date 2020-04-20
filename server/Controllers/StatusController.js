@@ -2,6 +2,9 @@
 // Import model
 const StatusModel = require('../Models/Status');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Status
 async function createStatus(req) {
 
@@ -16,9 +19,11 @@ async function createStatus(req) {
                 status_description: status_description
             }
         );
+        logger.info("StatusController: Status was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("StatusController: " + error);
         return error;
     }
 

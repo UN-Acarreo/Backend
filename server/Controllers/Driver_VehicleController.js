@@ -2,6 +2,9 @@
 // Import model
 const Driver_VehicleModel = require('../Models/Driver_Vehicle');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Driver_Vehicle
 async function createDriver_Vehicle(req) {
 
@@ -18,9 +21,11 @@ async function createDriver_Vehicle(req) {
                 Is_owner: Is_owner
             }
         );
+        logger.info("Driver_VehicleController: Driver_Vehicle was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("Driver_VehicleController: " + error);
         return error;
     }
 

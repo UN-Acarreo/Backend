@@ -2,6 +2,9 @@
 // Import model
 const UserModel = require('../Models/User');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create user
 async function createUser(req) {
 
@@ -20,9 +23,11 @@ async function createUser(req) {
                 User_Email: User_Email
             }
         );
+        logger.info("UserController: User was created successfully.");
         return 1;
 
     } catch (error) {
+        logger.error("UserController: " + error);
         return error;
     }
 
@@ -39,11 +44,14 @@ async function validateUser(req) {
         // Validate user
         count = await UserModel.count({ where: { User_address: User_address, User_password: User_password } })
         if (count > 0) {
+            logger.info("UserController: User is valid");
             return true;
         }
+        logger.info("UserController: User is not valid");
         return false;
 
     } catch (error) {
+        logger.error("UserController: " + error);
         return error;
     }
 

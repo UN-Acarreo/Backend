@@ -2,6 +2,9 @@
 // Import model
 const BillModel = require('../Models/Bill');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Bill
 async function createBill(req) {
 
@@ -17,9 +20,11 @@ async function createBill(req) {
               Id_haulage: Id_haulage
             }
         );
+        logger.info("BillController: Bill was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("BillController: " + error);
         return error;
     }
 

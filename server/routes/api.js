@@ -4,6 +4,9 @@ const fs = require("fs");
 const path = require("path");
 var validator = require('validator');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 //Controllers definition
 const UserController = require('../Controllers/UserController')
 const DriverController = require('../Controllers/DriverController')
@@ -29,23 +32,24 @@ async function check_fields(req){
     var field = data[key]
     if((key == 'User_name' || key == 'User_last_name' || key == 'Driver_name' || key == 'Driver_last_name')
         && !validator.isAlpha(validator.blacklist(field, ' '))){
-       console.log('Field must contain only letters')
+        logger.info('Check field: Field must contain only letters')
        is_valid = false
     }
     if((key == 'Identity_card') && !validator.isNumeric(field)){
-       console.log('Field must be a valid document')
+       logger.info('Check field: Field must be a valid document')
        is_valid = false
     }
     if((key == 'User_Email' || key == 'Driver_Email') && !validator.isEmail(field)){
-       console.log('Field must be a valid email')
+       logger.info('Check field: Field must be a valid email')
        is_valid = false
     }
     //length validation
     if(field.length == 0){
-      console.log("Field can't be empty")
+      logger.info("Check field: Field can't be empty")
       is_valid = false
     }
   })
+  logger.info("Check field: Field is valid")
   return is_valid;
 }
 
@@ -64,11 +68,12 @@ async function saveImage(baseImage, path, img_name) {
 
           //write the file
           fs.writeFileSync(fullpath, base64Data, 'base64');
+          logger.error("Save image: Image saved succesfully")
           return true
           //return {filename, localPath};
         }
         catch(err){
-          console.log(err)
+          logger.error("Save image: " + err)
           return false
         }
 
@@ -86,12 +91,14 @@ router.post('/login', function(req, res){
 router.post('/driver/signup', async function(req, res){
   const valid_fields = await check_fields(req);
   if(valid_fields == false){
+     logger.info('Signup driver: Error in the supplied data')
      return res.json({error: 'Error en los datos suministrados '})
   }
   //Save drivers image
   const filePath = path.join(__dirname, "../public/uploads/drivers/");
   const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
+      logger.info('Signup driver: Error in the supplied data')
       return res.json({error: 'Error en los datos suministrados '})
   }
 
@@ -104,11 +111,11 @@ router.post('/driver/signup', async function(req, res){
   let success = await DriverController.createDriver(req);
   if(success==1)
   {
-    console.log("added succesfully");
+    logger.info("Signup driver: added succesfully");
     res.status(201).send("added succesfully");
   }
   else{
-    console.log(success.message);
+    logger.error("Signup driver: " + success.message);
     res.json({error : success.message});
   }
 
@@ -119,17 +126,18 @@ router.post('/driver/signup', async function(req, res){
 router.post('/client/signup', async function(req,res){
   const valid_fields = await check_fields(req);
   if(valid_fields == false){
+     logger.info('Signup client: Error in the supplied data')
      return res.json({error: 'Error en los datos suministrados'})
   }
 
   let success = await UserController.createUser(req);
   if(success==1)
   {
-    console.log("added succesfully");
+    logger.info("Signup client: added succesfully");
     res.status(201).send("added succesfully");
   }
   else{
-    console.log(success.message);
+    logger.error("Signup client: " + success.message);
     res.json({error : success.message});
   }
 });
