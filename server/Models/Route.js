@@ -24,6 +24,6 @@ const Route = DataBase.define('Route', {
     });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_route');
+Route.removeAttribute('Id_route');
 
 module.exports = Route;

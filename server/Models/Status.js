@@ -16,6 +16,6 @@ const Status = DataBase.define('Status', {
     });
 
 // Skip primaryKey manual insertion
-User.removeAttribute('Id_status');
+Status.removeAttribute('Id_status');
 
 module.exports = Status;

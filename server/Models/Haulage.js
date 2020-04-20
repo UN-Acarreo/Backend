@@ -10,7 +10,7 @@ const Haulage = DataBase.define('Haulage', {
     // attributes
     Id_haulage: {
         type: Sequelize.INTEGER,
-        primaryKey: true
+        primaryKey: true,
     },
     Id_user: {
         type: Sequelize.INTEGER,
@@ -40,8 +40,6 @@ const Haulage = DataBase.define('Haulage', {
         freezeTableName: true,
     });
 
-// Skip primaryKey manual insertion
-User.removeAttribute('Id_haulage');
 
 Haulage.hasOne(Cargo,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
 Cargo.belongsTo(Haulage,{foreignKey: "Id_cargo", targetKey: "Id_cargo"});

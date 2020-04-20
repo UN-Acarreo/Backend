@@ -8,7 +8,8 @@ async function createDriver(req) {
     try {
 
         // Get atributes
-        const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
+        //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
+        const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
 
         // Create Driver
         await DriverModel.create(
@@ -18,14 +19,14 @@ async function createDriver(req) {
                 Driver_password: Driver_password,
                 Driver_address: Driver_address,
                 Driver_Email: Driver_Email,
-                Average_rating: Average_rating,
+                //Average_rating: Average_rating,
                 Driver_photo: Driver_photo,
                 Driver_phone: Driver_phone,
                 Identity_card: Identity_card
             }
         );
         return 1;
-        
+
     } catch (error) {
         return error;
     }
