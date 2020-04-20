@@ -15,7 +15,6 @@ const Status = DataBase.define('Status', {
         freezeTableName: true,
     });
 
-// Skip primaryKey manual insertion
-Status.removeAttribute('Id_status');
+
 
 module.exports = Status;

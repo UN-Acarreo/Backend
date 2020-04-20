@@ -19,6 +19,9 @@ async function createUser(req) {
                 User_address: User_address,
                 User_Email: User_Email
             }
+            ,{
+                fields: ["User_name", "User_last_name", "User_password", "User_address", "User_Email"]
+            }
         );
         return 1;
 

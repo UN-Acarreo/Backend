@@ -27,12 +27,13 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
         freezeTableName: true,
     });
 
+/*
 // Add Composite Primary Key
 DataBase.queryInterface.addConstraint('Driver_Vehicle', ['Id_driver', 'Id_vehicle'], {
     type: 'primary key',
     name: 'Driver_Vehicle_pkey'
     });
-
+*/
 Vehicle.belongsToMany(Driver, { through: 'Driver_Vehicle' });
 Driver.belongsToMany(Vehicle, { through: 'Driver_Vehicle' });
 

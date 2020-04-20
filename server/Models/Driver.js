@@ -50,7 +50,4 @@ const Driver = DataBase.define('Driver', {
         freezeTableName: true,
     });
 
-// Skip primaryKey manual insertion
-Driver.removeAttribute('Id_driver');
-
 module.exports = Driver;
