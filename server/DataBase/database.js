@@ -1,3 +1,7 @@
+
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(
     'UN-Acarreo',
@@ -22,9 +26,9 @@ const sequelize = new Sequelize(
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection to data base has been established successfully.');
+    logger.info("DataBase: Connection to data base has been established successfully.");
   })
   .catch(err => {
-    console.error('Unable to connect to the database:', err);
+    logger.error("DataBase: Unable to connect to the database: " + err);
   });
 module.exports = sequelize;

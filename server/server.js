@@ -9,6 +9,8 @@ var app = express();
 //importing routes from api.js
 const api = require('./routes/api.js');
 const index = require('./routes/index.js');
+// Import logger
+const logger = require('./utils/logger/logger');
 
 app.use(function(req,res,next){
   res.header('Access-Control-Allow-Origin: *');
@@ -33,9 +35,8 @@ app.use('/api',api);
 
 // Start server in specific port
 app.listen(3001, function(){
-	// Actions on ready
-  	console.log('Server ready!');
-
+  // Actions on ready
+  logger.info('Server: Server is running');
 });
 
 /*

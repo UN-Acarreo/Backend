@@ -2,6 +2,9 @@
 // Import model
 const DriverModel = require('../Models/Driver');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Driver
 async function createDriver(req) {
 
@@ -25,9 +28,11 @@ async function createDriver(req) {
                 Identity_card: Identity_card
             }
         );
+        logger.info("DriverController: Driver was created successfully.");
         return 1;
 
     } catch (error) {
+        logger.error("DriverController: " + error);
         return error;
     }
 
@@ -44,11 +49,14 @@ async function validateDriver(req) {
         // Validate Driver
         count = await UserModel.count({ where: { Driver_address: Driver_address, Driver_password: Driver_password } })
         if (count > 0) {
+            logger.info("DriverController: Driver is valid.");
             return true;
         }
+        logger.info("DriverController: Driver is not valid.");
         return false;
 
     } catch (error) {
+        logger.error("DriverController: " + error);
         return error;
     }
 

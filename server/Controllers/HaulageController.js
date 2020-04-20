@@ -2,6 +2,9 @@
 // Import model
 const HaulageModel = require('../Models/Haulage');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Haulage
 async function createHaulage(req) {
 
@@ -21,9 +24,11 @@ async function createHaulage(req) {
                 Id_status: Id_status
             }
         );
+        logger.info("HaulageController: Haulage was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("HaulageController: " + error);
         return error;
     }
 

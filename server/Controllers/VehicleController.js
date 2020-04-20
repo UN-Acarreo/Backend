@@ -2,6 +2,9 @@
 // Import model
 const VehicleModel = require('../Models/Vehicle');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Vehicle
 async function createVehicle(req) {
 
@@ -20,9 +23,11 @@ async function createVehicle(req) {
                 Photo: Photo
             }
         );
+        logger.info("VehicleController: Vehicle was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("VehicleController: " + error);
         return error;
     }
 

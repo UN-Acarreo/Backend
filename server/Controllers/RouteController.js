@@ -2,6 +2,9 @@
 // Import model
 const RouteModel = require('../Models/Route');
 
+// Import logger
+const logger = require('./../utils/logger/logger');
+
 // Create Route
 async function createRoute(req) {
 
@@ -19,9 +22,11 @@ async function createRoute(req) {
                 Duration: Duration
             }
         );
+        logger.info("RouteController: Route was created successfully.");
         return 1;
         
     } catch (error) {
+        logger.error("RouteController: " + error);
         return error;
     }
 
