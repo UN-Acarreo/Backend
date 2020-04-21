@@ -3,7 +3,7 @@ const DataBase = require('../DataBase/database.js');
 const Cargo = require("./Cargo");
 const Rating = require("./Rating");
 const Route = require("./Route");
-const Status = require("./Route");
+const Status = require("./Status");
 const User = require("./User")
 
 const Haulage = DataBase.define('Haulage', {
