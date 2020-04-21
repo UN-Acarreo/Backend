@@ -54,8 +54,8 @@ CREATE TABLE public."Driver"
     "Driver_Email" character varying COLLATE pg_catalog."default" NOT NULL,
     "Average_rating" double precision,
     "Driver_photo" character varying COLLATE pg_catalog."default",
-    "Driver_phone" integer NOT NULL,
-    "Identity_card" integer NOT NULL,
+    "Driver_phone" bigint NOT NULL,
+    "Identity_card" bigint NOT NULL,
     CONSTRAINT "Driver_pkey" PRIMARY KEY ("Id_driver"),
     CONSTRAINT "Driver_Email" UNIQUE ("Driver_Email"),
     CONSTRAINT "Driver_identity_card" UNIQUE ("Identity_card")
