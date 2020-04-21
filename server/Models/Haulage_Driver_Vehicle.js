@@ -35,11 +35,12 @@ const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
     });
 
 // Add Composite Primary Key
+/*
 DataBase.addConstraint('Haulage_Driver_Vehicle', ['Id_haulage', 'Id_driver', 'Id_vehicle'], {
     type: 'primary key',
     name: 'Haulage_Driver_Vehicle_pkey'
     });
-
+*/
 Haulage.belongsToMany(Driver_Vehicle, { through: 'Haulage_Driver_Vehicle' });
 Driver_Vehicle.belongsToMany(Haulage, { through: 'Haulage_Driver_Vehicle' });
 module.exports = Haulage_Driver_Vehicle;

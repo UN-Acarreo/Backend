@@ -37,20 +37,17 @@ const Driver = DataBase.define('Driver', {
         allowNull: true,
     },
     Driver_phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
         allowNull: false,
         unique: true
     },
     Identity_card: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
         allowNull: false,
         unique: true
     }
     }, {
         freezeTableName: true,
     });
-
-// Skip primaryKey manual insertion
-Driver.removeAttribute('Id_driver');
 
 module.exports = Driver;

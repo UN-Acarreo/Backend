@@ -13,7 +13,6 @@ async function createDriver(req) {
         // Get atributes
         //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
         const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
-
         // Create Driver
         await DriverModel.create(
             {
@@ -26,6 +25,9 @@ async function createDriver(req) {
                 Driver_photo: Driver_photo,
                 Driver_phone: Driver_phone,
                 Identity_card: Identity_card
+            }
+            ,{
+                fields: ["Driver_name", "Driver_last_name", "Driver_password", "Driver_address", "Driver_Email", "Driver_phone", "Identity_card", "Driver_photo"]
             }
         );
         logger.info("DriverController: Driver was created successfully.");

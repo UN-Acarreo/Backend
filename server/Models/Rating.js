@@ -27,7 +27,5 @@ const Rating = DataBase.define('Rating', {
         freezeTableName: true,
     });
 
-// Skip primaryKey manual insertion
-Rating.removeAttribute('Id_rating');
 
 module.exports = Rating;
