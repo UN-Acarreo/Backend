@@ -42,6 +42,6 @@ DataBase.addConstraint('Haulage_Driver_Vehicle', ['Id_haulage', 'Id_driver', 'Id
     name: 'Haulage_Driver_Vehicle_pkey'
     });
 */
-Haulage.belongsToMany(Driver_Vehicle, { through: 'Haulage_Driver_Vehicle' });
-Driver_Vehicle.belongsToMany(Haulage, { through: 'Haulage_Driver_Vehicle' });
+//Haulage.belongsToMany(Driver_Vehicle, { through: 'Haulage_Driver_Vehicle' });
+//Driver_Vehicle.belongsToMany(Haulage, { through: 'Haulage_Driver_Vehicle' });
 module.exports = Haulage_Driver_Vehicle;

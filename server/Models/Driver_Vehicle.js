@@ -7,6 +7,7 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     // attributes
     Id_driver: {
         type: Sequelize.INTEGER,
+        unique :true,
         references: {
             model: Driver,
             key: 'Id_driver'
@@ -14,6 +15,7 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     },
     Id_vehicle: {
         type: Sequelize.INTEGER,
+        unique :true,
         references: {
             model: Vehicle,
             key: 'Id_vehicle'
@@ -34,7 +36,7 @@ DataBase.queryInterface.addConstraint('Driver_Vehicle', ['Id_driver', 'Id_vehicl
     name: 'Driver_Vehicle_pkey'
     });
 */
-Vehicle.belongsToMany(Driver, { through: 'Driver_Vehicle' });
-Driver.belongsToMany(Vehicle, { through: 'Driver_Vehicle' });
+//Vehicle.belongsToMany(Driver, { through: 'Driver_Vehicle' });
+//Driver.belongsToMany(Vehicle, { through: 'Driver_Vehicle' });
 
 module.exports = Driver_Vehicle;
