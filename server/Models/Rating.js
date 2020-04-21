@@ -5,6 +5,7 @@ const Rating = DataBase.define('Rating', {
     // attributes
     Id_rating: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Puntuality: {

@@ -10,6 +10,7 @@ const Haulage = DataBase.define('Haulage', {
     // attributes
     Id_haulage: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true,
     },
     Id_user: {

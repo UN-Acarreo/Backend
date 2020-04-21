@@ -9,6 +9,7 @@ const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
         type: Sequelize.INTEGER,
         references: {
             model: Haulage, 
+            autoIncrement :true,
             key: 'Id_haulage'
           }
     },

@@ -5,6 +5,7 @@ const Cargo = DataBase.define('Cargo', {
     // attributes
     Id_cargo: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Weight: {

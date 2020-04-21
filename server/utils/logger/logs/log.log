@@ -102,3 +102,10 @@
 [2020-04-20T20:32:57.095Z] : info : Check field: Field is valid
 [2020-04-20T20:32:57.197Z] : info : UserController: User was created successfully.
 [2020-04-20T20:32:57.197Z] : info : Signup client: added succesfully
+[2020-04-21T20:20:59.069Z] : error : DataBase: Unable to connect to the database: SequelizeConnectionError: no existe la base de datos �UN-Acarreo�
+[2020-04-21T20:24:02.209Z] : error : DataBase: Unable to connect to the database: SequelizeConnectionError: no existe la base de datos �UN-Acarreo�
+[2020-04-21T20:24:46.179Z] : error : DataBase: Unable to connect to the database: SequelizeConnectionError: no existe la base de datos �UN-Acarreo�
+[2020-04-21T20:34:22.115Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-21T20:38:29.424Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-21T20:45:41.843Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-21T20:56:28.147Z] : info : DataBase: Connection to data base has been established successfully.

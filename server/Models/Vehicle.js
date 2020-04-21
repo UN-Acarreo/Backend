@@ -5,6 +5,7 @@ const Vehicle = DataBase.define('Vehicle', {
     // attributes
     Id_vehicle: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Plate: {

@@ -5,6 +5,7 @@ const Driver = DataBase.define('Driver', {
     // attributes
     Id_driver: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Driver_name: {
