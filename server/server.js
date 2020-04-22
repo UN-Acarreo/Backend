@@ -77,8 +77,7 @@ async function init_dataBase () {
    //await db.sync()
    logger.info("Server: database tables created if the dont exist");
   } catch (err) {
-   console.log(err)
-   process.exit(-1)
+    logger.error("Server: unable to create database tables: "+err)
   }
  }
 
