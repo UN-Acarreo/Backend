@@ -16,6 +16,4 @@ const Status = DataBase.define('Status', {
         freezeTableName: true,
     });
 
-
-
 module.exports = Status;

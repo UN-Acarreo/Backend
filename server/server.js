@@ -55,6 +55,7 @@ Haulage_Driver_Vehicle=require("./Models/Haulage_Driver_Vehicle");
 
 async function init_dataBase () {
   try {
+  //creating all tables if they dont exist allready
    await User.sync()
    await Driver.sync()
    await Vehicle.sync()
@@ -66,6 +67,13 @@ async function init_dataBase () {
    await Bill.sync()
    await Driver_Vehicle.sync()
    await Haulage_Driver_Vehicle.sync()
+    //adding constraints
+   await db.queryInterface.addConstraint('Status', ['Status_description'], {
+    type: 'check',
+    where: {
+        Status_description: ['In progress', 'Reserved', 'Cancelled', 'Done']
+    }
+    });
    //await db.sync()
    logger.info("sincronization");
   } catch (err) {
