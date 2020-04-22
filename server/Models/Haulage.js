@@ -42,19 +42,19 @@ const Haulage = DataBase.define('Haulage', {
     });
 
 
-Haulage.hasOne(Cargo,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
-Cargo.belongsTo(Haulage,{foreignKey: "Id_cargo", targetKey: "Id_cargo"});
+Haulage.belongsTo(Cargo,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
+Cargo.hasOne(Haulage,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
 
-Haulage.hasOne(Rating,{foreignKey: "Id_rating", sourceKey: "Id_rating"});
-Rating.belongsTo(Haulage,{foreignKey: "Id_rating", targetKey: "Id_rating"});
+Haulage.belongsTo(Rating,{foreignKey: "Id_rating", sourceKey: "Id_rating"});
+Rating.hasOne(Haulage,{foreignKey: "Id_rating", sourceKey: "Id_rating"});
 
-Haulage.hasOne(Route,{foreignKey: "Id_route", sourceKey: "Id_route"});
-Route.belongsTo(Haulage,{foreignKey: "Id_route", targetKey: "Id_route"});
+Haulage.belongsTo(Route,{foreignKey: "Id_route", sourceKey: "Id_route"});
+Route.hasOne(Haulage,{foreignKey: "Id_route", sourceKey: "Id_route"});
 
 Haulage.belongsTo(Status,{foreignKey: "Id_status", sourceKey: "Id_status"});
-Status.hasMany(Haulage,{foreignKey: "Id_status", targetKey: "Id_status"});
+Status.hasMany(Haulage,{foreignKey: "Id_status", sourceKey: "Id_status"});
 
 Haulage.belongsTo(User,{foreignKey: "Id_user", sourceKey: "Id_user"});
-User.hasMany(Haulage,{foreignKey: "Id_user", targetKey: "Id_user"});
+User.hasMany(Haulage,{foreignKey: "Id_user", sourceKey: "Id_user"});
 
 module.exports = Haulage;
