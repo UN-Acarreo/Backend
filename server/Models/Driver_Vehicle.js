@@ -3,21 +3,19 @@ const DataBase = require('../DataBase/database.js');
 const Driver = require("./Driver");
 const Vehicle = require("./Vehicle");
 
+
+
 const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     // attributes
     Id_driver: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Driver,
-            key: 'Id_driver'
-          }
+        primaryKey: true,
+        unique:true
     },
     Id_vehicle: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Vehicle,
-            key: 'Id_vehicle'
-          }
+        primaryKey: true,
+        unique:true
     },
     Is_owner: {
         type: Sequelize.BOOLEAN,
@@ -27,14 +25,9 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
         freezeTableName: true,
     });
 
-/*
-// Add Composite Primary Key
-DataBase.queryInterface.addConstraint('Driver_Vehicle', ['Id_driver', 'Id_vehicle'], {
-    type: 'primary key',
-    name: 'Driver_Vehicle_pkey'
-    });
-*/
-Vehicle.belongsToMany(Driver, { through: 'Driver_Vehicle' });
-Driver.belongsToMany(Vehicle, { through: 'Driver_Vehicle' });
-
+    //Vehicle.belongsToMany(Driver, { through: Driver_Vehicle,foreignKey: "Id_vehicle" , otherKey: "Id_driver"});
+    //Driver.belongsToMany(Vehicle, { through: Driver_Vehicle ,foreignKey:  "Id_driver", otherKey: "Id_vehicle"});
+    Vehicle.belongsToMany(Driver, { through: Driver_Vehicle});
+    Driver.belongsToMany(Vehicle, { through: Driver_Vehicle});
 module.exports = Driver_Vehicle;
+

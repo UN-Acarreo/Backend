@@ -5,6 +5,7 @@ const Route = DataBase.define('Route', {
     // attributes
     Id_route: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Origin_coord: {

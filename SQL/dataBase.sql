@@ -12,17 +12,18 @@
 --    CONNECTION LIMIT = -1;
 
  -- Table: public."Bill"
- --DROP TABLE public."Bill";
- --DROP TABLE public."Haulage";
- --DROP TABLE public."Rating";
- --DROP TABLE public."Vehicle";
- --DROP TABLE public."Driver";
- --DROP TABLE public."User";
- --DROP TABLE public."Status";
- --DROP TABLE public."Cargo";
- --DROP TABLE public."Route";
- --DROP TABLE public."Driver_Vehicle";
- --DROP TABLE public."Haulage_Driver_Vehicle";
+ 
+ --DROP TABLE public."Bill" cascade;
+ --DROP TABLE public."Haulage" cascade;
+ --DROP TABLE public."Rating" cascade;
+ --DROP TABLE public."Vehicle" cascade;
+ --DROP TABLE public."Driver" cascade;
+ --DROP TABLE public."User" cascade;
+ --DROP TABLE public."Status" cascade;
+ --DROP TABLE public."Cargo" cascade;
+ --DROP TABLE public."Route" cascade;
+ --DROP TABLE public."Driver_Vehicle" cascade;
+ --DROP TABLE public."Haulage_Driver_Vehicle" cascade;
  
 
 -- Table: public."Cargo"

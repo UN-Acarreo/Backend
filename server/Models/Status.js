@@ -5,6 +5,7 @@ const Status = DataBase.define('Status', {
     // attributes
     Id_status: {
         type: Sequelize.INTEGER,
+        autoIncrement :true,
         primaryKey: true
     },
     Status_description: {
@@ -14,7 +15,5 @@ const Status = DataBase.define('Status', {
     }, {
         freezeTableName: true,
     });
-
-
 
 module.exports = Status;

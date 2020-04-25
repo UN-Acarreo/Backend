@@ -7,24 +7,16 @@ const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
     // attributes
     Id_haulage: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Haulage, 
-            key: 'Id_haulage'
-          }
+        primaryKey: true
+        
     },
     Id_driver: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Driver_Vehicle, 
-            key: 'Id_driver'
-          }
+        primaryKey: true
     },
     Id_vehicle: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Driver_Vehicle, 
-            key: 'Id_vehicle'
-          }
+        primaryKey: true
     },
     Is_active: {
         type: Sequelize.BOOLEAN,
@@ -41,6 +33,9 @@ DataBase.addConstraint('Haulage_Driver_Vehicle', ['Id_haulage', 'Id_driver', 'Id
     name: 'Haulage_Driver_Vehicle_pkey'
     });
 */
-Haulage.belongsToMany(Driver_Vehicle, { through: 'Haulage_Driver_Vehicle' });
-Driver_Vehicle.belongsToMany(Haulage, { through: 'Haulage_Driver_Vehicle' });
+Haulage.belongsToMany(Driver_Vehicle, { through: Haulage_Driver_Vehicle});
+Driver_Vehicle.belongsToMany(Haulage, { through: Haulage_Driver_Vehicle});
+//Haulage.belongsToMany(Driver_Vehicle, { through: Haulage_Driver_Vehicle, foreignKey: "Id_Haulage" , otherKey: "Driver_Vehicle_pkey"});
+//Driver_Vehicle.belongsToMany(Haulage, { through: Haulage_Driver_Vehicle, foreignKey: "Driver_Vehicle_pkey" , otherKey: "Id_Haulage"});
+
 module.exports = Haulage_Driver_Vehicle;

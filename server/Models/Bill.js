@@ -6,6 +6,7 @@ const Bill = DataBase.define('Bill', {
     // attributes
     Id_bill: {
       type: Sequelize.INTEGER,
+      autoIncrement :true,
       primaryKey: true
     },
     Amount: {

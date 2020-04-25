@@ -11,7 +11,8 @@ const api = require('./routes/api.js');
 const index = require('./routes/index.js');
 // Import logger
 const logger = require('./utils/logger/logger');
-
+//importr db
+const db = require("./DataBase/database");
 app.use(function(req,res,next){
   res.header('Access-Control-Allow-Origin: *');
   next();
@@ -38,6 +39,49 @@ app.listen(3001, function(){
   // Actions on ready
   logger.info('Server: Server is running');
 });
+
+ //creating all models
+User = require("./Models/User");
+Driver = require("./Models/Driver");
+Vehicle = require("./Models/Vehicle");
+Rating = require("./Models/Rating");
+Route = require("./Models/Route");
+Status = require("./Models/Status");
+Cargo = require("./Models/Cargo");
+Haulage = require("./Models/Haulage");
+Bill = require("./Models/Bill");
+Driver_Vehicle = require("./Models/Driver_Vehicle"); 
+Haulage_Driver_Vehicle=require("./Models/Haulage_Driver_Vehicle");
+
+async function init_dataBase () {
+  try {
+  //creating all tables if they dont exist allready
+   await User.sync()
+   await Driver.sync()
+   await Vehicle.sync()
+   await Rating.sync()
+   await Route.sync()
+   await Status.sync()
+   await Cargo.sync()
+   await Haulage.sync()
+   await Bill.sync()
+   await Driver_Vehicle.sync()
+   await Haulage_Driver_Vehicle.sync()
+    //adding constraints
+   await db.queryInterface.addConstraint('Status', ['Status_description'], {
+    type: 'check',
+    where: {
+        Status_description: ['In progress', 'Reserved', 'Cancelled', 'Done']
+    }
+    });
+   //await db.sync()
+   logger.info("Server: database tables created if the dont exist");
+  } catch (err) {
+    logger.error("Server: unable to create database tables: "+err)
+  }
+ }
+
+init_dataBase ()
 
 /*
 	- You are able to access to local server by http://localhost:3000/
