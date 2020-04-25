@@ -1,0 +1,82 @@
+[2020-04-22T00:47:29.859Z] : info : Server: Server is running
+[2020-04-22T00:47:30.029Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:47:30.526Z] : info : sincronization
+[2020-04-22T00:48:12.239Z] : info : Server: Server is running
+[2020-04-22T00:48:12.402Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:48:12.472Z] : info : sincronization
+[2020-04-22T00:48:51.098Z] : info : Server: Server is running
+[2020-04-22T00:48:51.272Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:48:51.346Z] : info : sincronization
+[2020-04-22T00:49:28.723Z] : info : Server: Server is running
+[2020-04-22T00:49:28.884Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:49:28.972Z] : info : sincronization
+[2020-04-22T00:51:29.580Z] : info : Server: Server is running
+[2020-04-22T00:51:29.728Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:51:29.789Z] : info : sincronization
+[2020-04-22T00:51:55.845Z] : info : Server: Server is running
+[2020-04-22T00:51:55.987Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:56:21.597Z] : info : Server: Server is running
+[2020-04-22T00:56:21.764Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:56:21.833Z] : info : sincronization
+[2020-04-22T00:57:35.410Z] : info : Server: Server is running
+[2020-04-22T00:57:35.577Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:57:36.039Z] : info : sincronization
+[2020-04-22T01:14:33.203Z] : info : Server: Server is running
+[2020-04-22T01:14:33.398Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:14:34.015Z] : info : sincronization
+[2020-04-22T01:18:40.705Z] : info : Server: Server is running
+[2020-04-22T01:18:40.881Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:19:11.851Z] : info : Server: Server is running
+[2020-04-22T01:19:12.066Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:22:38.356Z] : info : Server: Server is running
+[2020-04-22T01:22:38.564Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:23:08.985Z] : info : Server: Server is running
+[2020-04-22T01:23:09.149Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:24:53.622Z] : info : Server: Server is running
+[2020-04-22T01:24:53.921Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:24:54.018Z] : info : sincronization
+[2020-04-22T01:26:31.181Z] : info : Server: Server is running
+[2020-04-22T01:26:31.397Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:26:31.878Z] : info : sincronization
+[2020-04-22T01:28:45.766Z] : info : Server: Server is running
+[2020-04-22T01:28:45.942Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:29:44.452Z] : info : Server: Server is running
+[2020-04-22T01:29:44.630Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:29:45.110Z] : info : Server: database tables created if the dont exist
+[2020-04-22T01:47:29.466Z] : info : Server: Server is running
+[2020-04-22T01:47:29.636Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:48:36.273Z] : info : Server: Server is running
+[2020-04-22T01:48:36.471Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:52:28.231Z] : info : Server: Server is running
+[2020-04-22T01:52:28.427Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:02:58.859Z] : info : Server: Server is running
+[2020-04-22T02:02:59.017Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:05:06.967Z] : info : Server: Server is running
+[2020-04-22T02:05:07.140Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:06:06.359Z] : info : Server: Server is running
+[2020-04-22T02:06:06.587Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:07:19.730Z] : info : Server: Server is running
+[2020-04-22T02:07:19.909Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:07:20.464Z] : info : Server: database tables created if the dont exist
+[2020-04-22T02:28:45.106Z] : info : Server: Server is running
+[2020-04-22T02:28:45.335Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:30:43.100Z] : info : Server: Server is running
+[2020-04-22T02:30:43.269Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:30:43.712Z] : info : Server: database tables created if the dont exist
+[2020-04-22T02:32:35.094Z] : info : Check field: Field is valid
+[2020-04-22T02:32:35.252Z] : info : UserController: User was created successfully.
+[2020-04-22T02:32:35.253Z] : info : Signup client: added succesfully
+[2020-04-22T02:33:35.135Z] : info : Check field: Field is valid
+[2020-04-22T02:33:35.229Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-04-22T02:33:35.230Z] : error : Signup client: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-04-22T02:34:06.181Z] : info : Check field: Field is valid
+[2020-04-22T02:34:06.189Z] : error : Save image: Image saved succesfully
+[2020-04-22T02:34:06.320Z] : info : DriverController: Driver was created successfully.
+[2020-04-22T02:34:06.321Z] : info : Signup driver: added succesfully
+[2020-04-22T02:34:59.212Z] : info : Check field: Field must be a valid document
+[2020-04-22T02:34:59.245Z] : info : Check field: Field is valid
+[2020-04-22T02:34:59.246Z] : info : Signup driver: Error in the supplied data
+[2020-04-22T02:35:13.663Z] : info : Check field: Field is valid
+[2020-04-22T02:35:13.665Z] : error : Save image: Image saved succesfully
+[2020-04-22T02:35:13.766Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-22T02:35:13.767Z] : error : Signup driver: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
