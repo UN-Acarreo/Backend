@@ -9,25 +9,28 @@ We use **postgresql** to manage our database and host our local server
 
 ### `node server`
 
-- To update database schema make sure you are at  Backend/server/Database in your command line and run
+- To update database schema make sure you are at  Backend/server/Database in your command line and run:
 
 ### `sequelize db:migrate`
 
-- If you want to undo the last migration make sure you are at  Backend/server/Database in your command line and run
+- If you want to undo the last migration make sure you are at  Backend/server/Database in your command line and run:
 
 ### `sequelize db:migrate:undo`
 
-- If you want to undo all migrations make sure you are at  Backend/server/Database in your command line and run
+- If you want to undo all migrations make sure you are at  Backend/server/Database in your command line and run:
 
 ### `sequelize db:migrate:undo:all`
 
-- To update database contents make sure you are at  Backend/server/Database in your command line and run
+- To update database contents make sure you are at  Backend/server/Database in your command line and run:
 
 ### `sequelize db:seed:all`
 
-Or if you want to execute a spefic seed file run
+Or if you want to execute a spefic seed file run:
+
 ### `sequelize db:seed --seed seed_name.js`
 
 - To delete all insertions made in all seeds make sure you are at  Backend/server/Database in your command line and run
 
 ### `sequelize db:seed:undo:all`
+
+- If you are going to drop tables for some reason make sure to undo migrations first.
