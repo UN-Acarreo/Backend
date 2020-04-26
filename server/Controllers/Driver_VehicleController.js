@@ -6,12 +6,12 @@ const Driver_VehicleModel = require('../Models/Driver_Vehicle');
 const logger = require('./../utils/logger/logger');
 
 // Create Driver_Vehicle
-async function createDriver_Vehicle(req) {
+async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
 
     try {
 
         // Get atributes
-        const { Id_driver, Id_vehicle, Is_owner } = req.body.request;
+        //const { Id_driver, Id_vehicle, Is_owner } = req.body.request;
 
         // Create Driver_Vehicle
         await Driver_VehicleModel.create(
@@ -20,10 +20,10 @@ async function createDriver_Vehicle(req) {
                 Id_vehicle: Id_vehicle,
                 Is_owner: Is_owner
             }
-        );
+        )
         logger.info("Driver_VehicleController: Driver_Vehicle was created successfully.");
         return 1;
-        
+
     } catch (error) {
         logger.error("Driver_VehicleController: " + error);
         return error;
