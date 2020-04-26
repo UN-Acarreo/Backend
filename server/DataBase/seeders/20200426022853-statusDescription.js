@@ -1,8 +1,8 @@
 'use strict';
-
+//there are 4 types of possibles status, this file can insert them all (or delete them all)
 module.exports = {
   up: (queryInterface, Sequelize) => {
-
+    //inserting
     return Promise.all([
       queryInterface.bulkInsert('Status', [{Status_description: 'In progress'}], {}),
       queryInterface.bulkInsert('Status', [{Status_description: 'Reserved'}], {}),
@@ -13,13 +13,7 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
+    //deleting
    return Promise.all([
     queryInterface.bulkDelete('Status', null, {})
     
