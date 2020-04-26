@@ -15,14 +15,11 @@ const RatingController = require('../Controllers/RatingController')
 const RouteController =  require('../Controllers/RouteController')
 const StatusController = require('../Controllers/StatusController')
 const CargoController = require('../Controllers/CargoController')
-
-/*
-this lines give error :(
 const BillController = require('../Controllers/BillController')
 const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
 const HaulageController = require('../Controllers/HaulageController')
 const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
-*/
+
 
 //Function used to check the request fields (valid emails, valid field lengths and valid text fields)
 async function check_fields(req){
@@ -108,18 +105,67 @@ router.post('/driver/signup', async function(req, res){
   req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card+"."+extension
 
   //Save driver on db
-  let success = await DriverController.createDriver(req);
-  if(success==1)
+  let saved = await DriverController.createDriver(req);
+  console.log('variabe: '+saved)
+  if(saved.status == 1)
   {
     logger.info("Signup driver: added succesfully");
-    res.status(201).send("added succesfully");
+    //res.status(201).send("added succesfully");
+    return res.json({status: 1, db_driver_id: saved.id});
   }
   else{
-    logger.error("Signup driver: " + success.message);
-    res.json({error : success.message});
+    logger.error("Signup driver: " + saved.message);
+    return res.json({error : saved.message});
   }
 
 });
+
+
+router.post('/vehicle/signup', async function(req, res){
+  const valid_fields = await check_fields(req);
+  if(valid_fields == false){
+     logger.info('Signup vehicle: Error in the supplied data')
+     return res.json({error: 'Error en los datos suministrados '})
+  }
+  //Save vehicle image
+  const filePath = path.join(__dirname, "../public/uploads/vehicles/");
+  const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  if(imageSaved == false){
+      logger.info('Signup vehicle: Error in the supplied data')
+      return res.json({error: 'Error en los datos suministrados '})
+  }
+
+  //Set the path of the saved image on the db field
+  var baseImage = req.body.request.foto_data
+  const extension = baseImage.substring(baseImage.indexOf("/")+1, baseImage.indexOf(";base64"));
+  req.body.request.Photo = '/uploads/vehicles/'+req.body.request.Identity_card+"."+extension
+
+  //Save vehicle on db
+  let saved_vehicle = await VehicleController.createVehicle(req);
+  //error saving the vehicle
+  if(saved_vehicle.status != 1 && saved_vehicle.message){
+     logger.error("Signup vehicle: " + saved_vehicle.message);
+     return res.json({error : saved_vehicle.message});
+  }
+
+  //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
+  let success_driver_vehicle = await Driver_Vehicle_Controller.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.id, req.body.request.Is_owner)
+
+
+  if(success_driver_vehicle == 1)
+  {
+    logger.info("Signup vehicle: added succesfully");
+    //res.status(201).send("added succesfully");
+    return res.json({status: 1});
+
+  }
+  else{
+    logger.error("Signup vehicle: " + 'Error registrando el vehículo');
+     return res.json({error : success_driver_vehicle.message});
+  }
+
+});
+
 
 
 //Route will be used to handle client sign up POST requests
@@ -134,7 +180,8 @@ router.post('/client/signup', async function(req,res){
   if(success==1)
   {
     logger.info("Signup client: added succesfully");
-    res.status(201).send("added succesfully");
+    //res.status(201).send("added succesfully");
+    return res.json({status: 1});
   }
   else{
     logger.error("Signup client: " + success.message);
