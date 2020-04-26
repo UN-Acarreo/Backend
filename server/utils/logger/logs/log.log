@@ -101,3 +101,24 @@
 [2020-04-26T03:27:54.790Z] : info : Server: Server is running
 [2020-04-26T03:27:54.941Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-04-26T03:27:55.021Z] : error : Server: unable to create database tables: SequelizeDatabaseError: la restricción «Status_Status_description_ck» para la relación «Status» ya existe
+[2020-04-26T03:42:46.071Z] : info : Server: Server is running
+[2020-04-26T03:42:46.232Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:42:46.654Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:42:52.171Z] : info : Server: Server is running
+[2020-04-26T03:42:52.328Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:42:52.399Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:08:21.143Z] : info : Server: Server is running
+[2020-04-26T04:08:21.290Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:08:21.699Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:10:17.237Z] : info : Server: Server is running
+[2020-04-26T04:10:17.387Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:10:17.452Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:17:37.971Z] : info : Server: Server is running
+[2020-04-26T04:17:38.105Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:17:38.535Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:18:15.880Z] : info : Server: Server is running
+[2020-04-26T04:18:16.042Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:18:16.106Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:31:55.160Z] : info : Server: Server is running
+[2020-04-26T04:31:55.315Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:31:55.383Z] : info : Server: database tables created if the dont exist
