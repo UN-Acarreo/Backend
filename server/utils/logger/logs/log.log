@@ -92,3 +92,12 @@
 [2020-04-26T02:06:19.546Z] : info : Server: Server is running
 [2020-04-26T02:06:19.735Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-04-26T02:06:20.192Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:24:36.757Z] : info : Server: Server is running
+[2020-04-26T03:24:37.025Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:24:37.105Z] : error : Server: unable to create database tables: SequelizeDatabaseError: la restricción «Status_Status_description_ck» para la relación «Status» ya existe
+[2020-04-26T03:27:43.475Z] : info : Server: Server is running
+[2020-04-26T03:27:43.639Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:27:44.086Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:27:54.790Z] : info : Server: Server is running
+[2020-04-26T03:27:54.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:27:55.021Z] : error : Server: unable to create database tables: SequelizeDatabaseError: la restricción «Status_Status_description_ck» para la relación «Status» ya existe
