@@ -25,9 +25,7 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
         freezeTableName: true,
     });
 
-    //Vehicle.belongsToMany(Driver, { through: Driver_Vehicle,foreignKey: "Id_vehicle" , otherKey: "Id_driver"});
-    //Driver.belongsToMany(Vehicle, { through: Driver_Vehicle ,foreignKey:  "Id_driver", otherKey: "Id_vehicle"});
-    Vehicle.belongsToMany(Driver, { through: Driver_Vehicle});
-    Driver.belongsToMany(Vehicle, { through: Driver_Vehicle});
+    Vehicle.belongsToMany(Driver, { through: Driver_Vehicle,foreignKey: "Id_vehicle" , otherKey: "Id_driver"});
+    Driver.belongsToMany(Vehicle, { through: Driver_Vehicle ,foreignKey:  "Id_driver", otherKey: "Id_vehicle"});
 module.exports = Driver_Vehicle;
 

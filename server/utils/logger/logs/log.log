@@ -80,3 +80,15 @@
 [2020-04-22T02:35:13.665Z] : error : Save image: Image saved succesfully
 [2020-04-22T02:35:13.766Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
 [2020-04-22T02:35:13.767Z] : error : Signup driver: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-26T01:13:55.479Z] : info : Server: Server is running
+[2020-04-26T01:13:55.633Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T01:13:56.327Z] : info : Server: database tables created if the dont exist
+[2020-04-26T01:56:44.924Z] : info : Server: Server is running
+[2020-04-26T01:56:45.107Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T01:56:45.748Z] : info : Server: database tables created if the dont exist
+[2020-04-26T02:01:06.053Z] : info : Server: Server is running
+[2020-04-26T02:01:06.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T02:01:06.671Z] : info : Server: database tables created if the dont exist
+[2020-04-26T02:06:19.546Z] : info : Server: Server is running
+[2020-04-26T02:06:19.735Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T02:06:20.192Z] : info : Server: database tables created if the dont exist

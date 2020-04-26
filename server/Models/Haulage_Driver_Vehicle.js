@@ -26,16 +26,5 @@ const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
         freezeTableName: true,
     });
 
-// Add Composite Primary Key
-/*
-DataBase.addConstraint('Haulage_Driver_Vehicle', ['Id_haulage', 'Id_driver', 'Id_vehicle'], {
-    type: 'primary key',
-    name: 'Haulage_Driver_Vehicle_pkey'
-    });
-*/
-Haulage.belongsToMany(Driver_Vehicle, { through: Haulage_Driver_Vehicle});
-Driver_Vehicle.belongsToMany(Haulage, { through: Haulage_Driver_Vehicle});
-//Haulage.belongsToMany(Driver_Vehicle, { through: Haulage_Driver_Vehicle, foreignKey: "Id_Haulage" , otherKey: "Driver_Vehicle_pkey"});
-//Driver_Vehicle.belongsToMany(Haulage, { through: Haulage_Driver_Vehicle, foreignKey: "Driver_Vehicle_pkey" , otherKey: "Id_Haulage"});
-
+// This wont have any foreing keys at the moment, these will be created in a migration
 module.exports = Haulage_Driver_Vehicle;
