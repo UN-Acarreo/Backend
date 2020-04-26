@@ -2,6 +2,9 @@
 //This migration updates the Haulage_Driver_Vehicle tables and creates all foreign keys, 
 //or deletes them if migration were undone
 
+// Import logger
+const logger = require('./../../utils/logger/logger');
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     //adding all foreign keys
@@ -40,7 +43,12 @@ module.exports = {
             onUpdate: 'cascade'
             })
       ]
-    )
+    ).then(() => {
+      logger.info("Migrations/completeWeakTables: Migration completed.");
+    })
+    .catch(err => {
+      logger.error("Migrations/completeWeakTables: Migration failed." + err);
+    });
   },
 
   down: (queryInterface, Sequelize) => {
@@ -49,6 +57,11 @@ module.exports = {
       queryInterface.removeConstraint("Haulage_Driver_Vehicle", "Haulage_Driver_Id_driver_fkey"),
       queryInterface.removeConstraint("Haulage_Driver_Vehicle", "Haulage_Driver_Id_haulage_fkey"),
       queryInterface.removeConstraint("Haulage_Driver_Vehicle", "Haulage_Driver_Id_vehicle_fkey")
-    ])
+    ]).then(() => {
+      logger.info("Migrations/completeWeakTables: Migration reverted.");
+    })
+    .catch(err => {
+      logger.error("Migrations/completeWeakTables: Migration failed." + err);
+    });
   }
 };

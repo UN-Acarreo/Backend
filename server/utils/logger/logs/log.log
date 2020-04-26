@@ -122,3 +122,20 @@
 [2020-04-26T04:31:55.160Z] : info : Server: Server is running
 [2020-04-26T04:31:55.315Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-04-26T04:31:55.383Z] : info : Server: database tables created if the dont exist
+[2020-04-26T14:16:18.452Z] : info : Server: Server is running
+[2020-04-26T14:16:18.812Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T14:16:18.878Z] : info : Server: database tables created if the dont exist
+[2020-04-26T14:17:17.101Z] : info : Check field: Field is valid
+[2020-04-26T14:17:17.402Z] : info : UserController: User was created successfully.
+[2020-04-26T14:17:17.403Z] : info : Signup client: added succesfully
+[2020-04-26T14:20:09.759Z] : info : Check field: Field is valid
+[2020-04-26T14:20:09.800Z] : error : Save image: Image saved succesfully
+[2020-04-26T14:20:09.981Z] : info : DriverController: Driver was created successfully.
+[2020-04-26T14:20:09.981Z] : info : Signup driver: added succesfully
+[2020-04-26T16:21:46.338Z] : info : Migrations/statusConstraints: Migration undone.
+[2020-04-26T16:21:46.373Z] : info : Migrations/completeWeakTables: Migration undone.
+[2020-04-26T16:23:13.500Z] : info : Seeders/statusDescription: Deletion complete.
+[2020-04-26T16:24:12.706Z] : info : Seeders/statusDescription: Insertion complete.
+[2020-04-26T16:24:40.782Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-04-26T16:24:40.858Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-04-26T16:25:07.688Z] : error : Seeders/statusDescription: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
