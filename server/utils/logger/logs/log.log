@@ -169,3 +169,90 @@
 [2020-04-28T13:43:47.227Z] : info : Signup vehicle: added succesfully
 [2020-04-28T13:46:51.266Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «FASD1»
 [2020-04-28T13:48:04.014Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-01T18:29:46.253Z] : info : Server: Server is running
+[2020-05-01T18:29:46.380Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T18:29:46.421Z] : info : Server: database tables created if the dont exist
+[2020-05-01T18:30:12.480Z] : info : Check field: Field must be a valid email
+[2020-05-01T18:30:12.480Z] : info : Check field: Field must be a valid document
+[2020-05-01T18:30:12.480Z] : info : Check field: Field is valid
+[2020-05-01T18:30:12.481Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:35:42.301Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:35:42.302Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:35:42.302Z] : info : Check field: Field is valid
+[2020-05-01T19:35:42.302Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:53:10.124Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:53:10.124Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:53:10.124Z] : info : Check field: Field is valid
+[2020-05-01T19:53:10.124Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:58:12.642Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:58:12.643Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:58:12.643Z] : info : Check field: Field is valid
+[2020-05-01T19:58:12.643Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:09:31.549Z] : info : Server: Server is running
+[2020-05-01T20:09:32.246Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:09:32.471Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:10:57.314Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:10:57.314Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:10:57.314Z] : info : Check field: Field is valid
+[2020-05-01T20:10:57.315Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:14:35.083Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:14:35.084Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:14:35.084Z] : info : Check field: Field is valid
+[2020-05-01T20:14:35.084Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:16.255Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:16.255Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:16.255Z] : info : Check field: Field is valid
+[2020-05-01T20:16:16.256Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:22.758Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:22.758Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:22.759Z] : info : Check field: Field is valid
+[2020-05-01T20:16:22.759Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:26.161Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:26.161Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:26.162Z] : info : Check field: Field is valid
+[2020-05-01T20:16:26.162Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:29.904Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:29.904Z] : info : Check field: Field is valid
+[2020-05-01T20:16:29.905Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:17:08.461Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:17:08.462Z] : info : Check field: Field is valid
+[2020-05-01T20:17:08.462Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:17:21.061Z] : info : Check field: Field is valid
+[2020-05-01T20:17:21.076Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:21.318Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:21.319Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:25.822Z] : info : Check field: Field is valid
+[2020-05-01T20:17:25.837Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:25.841Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:25.841Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:43.743Z] : info : Check field: Field is valid
+[2020-05-01T20:17:43.760Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:43.811Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:43.812Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:20:39.374Z] : info : Server: Server is running
+[2020-05-01T20:20:39.509Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:20:39.566Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:20:42.399Z] : info : Check field: Field is valid
+[2020-05-01T20:20:42.414Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:20:42.424Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:20:42.425Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:21:35.075Z] : info : Server: Server is running
+[2020-05-01T20:21:35.202Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:21:35.247Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:21:38.412Z] : info : Check field: Field is valid
+[2020-05-01T20:21:38.426Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:21:38.440Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:21:38.441Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:31:34.360Z] : info : Check field: Field is valid
+[2020-05-01T20:31:34.374Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:31:34.516Z] : info : DriverController: Driver was created successfully.
+[2020-05-01T20:31:34.516Z] : info : Signup driver: added succesfully
+[2020-05-01T20:32:00.638Z] : info : Check field: Field is valid
+[2020-05-01T20:32:00.654Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:32:00.711Z] : error : VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «wer»
+[2020-05-01T20:32:00.711Z] : error : Signup vehicle: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «wer»
+[2020-05-01T20:32:33.044Z] : info : Check field: Field is valid
+[2020-05-01T20:32:33.057Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:32:33.101Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-01T20:32:33.339Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-01T20:32:33.339Z] : info : Signup vehicle: added succesfully
