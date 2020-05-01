@@ -14,7 +14,7 @@ async function createVehicle(req) {
         const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
 
         // Create Vehicle
-        await VehicleModel.create(
+        var result = await VehicleModel.create(
             {
                 Plate: Plate,
                 Brand: Brand,
@@ -22,13 +22,17 @@ async function createVehicle(req) {
                 Payload_capacity: Payload_capacity,
                 Photo: Photo
             }
-        );
+        )
+
         logger.info("VehicleController: Vehicle was created successfully.");
-        return 1;
-        
+        return {status: 1, id: result.Id_vehicle}
+        /*
+        logger.info("VehicleController: Vehicle was created successfully.");
+        return 1;*/
+
     } catch (error) {
         logger.error("VehicleController: " + error);
-        return error;
+        return {status: -1, message: error};
     }
 
 }

@@ -14,7 +14,7 @@ async function createDriver(req) {
         //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
         const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
         // Create Driver
-        await DriverModel.create(
+        var result = await DriverModel.create(
             {
                 Driver_name: Driver_name,
                 Driver_last_name: Driver_last_name,
@@ -29,13 +29,16 @@ async function createDriver(req) {
             ,{
                 fields: ["Driver_name", "Driver_last_name", "Driver_password", "Driver_address", "Driver_Email", "Driver_phone", "Identity_card", "Driver_photo"]
             }
-        );
+        )
+
+        console.log('id del driver '+ result.Id_driver);
         logger.info("DriverController: Driver was created successfully.");
-        return 1;
+        return {status: 1, id: result.Id_driver}
+
 
     } catch (error) {
         logger.error("DriverController: " + error);
-        return error;
+        return {status: -1, message: error};
     }
 
 }

@@ -9,7 +9,7 @@ const Vehicle = DataBase.define('Vehicle', {
         primaryKey: true
     },
     Plate: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true
     },
