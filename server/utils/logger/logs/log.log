@@ -669,3 +669,43 @@
 [2020-05-02T18:23:01.704Z] : info : Check field: Name "" invalid
 [2020-05-02T18:23:11.435Z] : info : Check field: Lastname "" invalid
 [2020-05-02T18:23:16.650Z] : info : Check field: Field can't be empty
+[2020-05-02T20:07:18.481Z] : error : Migrations/RemovingVehicleDuplicateConstraints: Migration failed.SequelizeUnknownConstraintError: Unknown constraint error
+[2020-05-02T20:10:29.471Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration reverted.
+[2020-05-02T20:11:50.399Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «a»
+[2020-05-02T20:11:50.450Z] : info : Migrations/statusConstraints: Migration reverted.
+[2020-05-02T20:11:50.497Z] : info : Migrations/completeWeakTables: Migration reverted.
+[2020-05-02T20:11:58.558Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-05-02T20:11:58.722Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-05-02T20:11:58.812Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-02T20:11:58.834Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration done.
+[2020-05-02T20:12:35.825Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration reverted.
+[2020-05-02T20:12:35.914Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «a»
+[2020-05-02T20:12:35.933Z] : info : Migrations/statusConstraints: Migration reverted.
+[2020-05-02T20:12:35.968Z] : info : Migrations/completeWeakTables: Migration reverted.
+[2020-05-02T20:13:06.147Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-05-02T20:13:06.208Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-05-02T20:13:06.286Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-02T20:13:06.309Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration done.
+[2020-05-02T20:16:18.017Z] : info : Server: Server is running
+[2020-05-02T20:16:18.200Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T20:16:18.273Z] : info : Server: database tables created if the dont exist
+[2020-05-02T20:16:26.726Z] : info : Check field: Field is valid
+[2020-05-02T20:16:26.729Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:26.775Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T20:16:26.778Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T20:16:30.788Z] : info : Check field: Field is valid
+[2020-05-02T20:16:30.790Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:30.796Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T20:16:30.797Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T20:16:35.026Z] : info : Check field: Field is valid
+[2020-05-02T20:16:35.027Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:35.031Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T20:16:35.032Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T20:16:39.980Z] : info : Check field: Field is valid
+[2020-05-02T20:16:39.982Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:39.991Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T20:16:39.993Z] : info : Signup driver: added succesfully
+[2020-05-02T20:16:51.611Z] : info : Check field: Field is valid
+[2020-05-02T20:16:51.613Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:51.702Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-02T20:16:51.703Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
