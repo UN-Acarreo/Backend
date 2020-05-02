@@ -657,3 +657,15 @@
 [2020-05-02T18:10:16.186Z] : info : Save image: Image saved succesfully
 [2020-05-02T18:10:16.237Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
 [2020-05-02T18:10:16.237Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:52.575Z] : info : Check field: Field is valid
+[2020-05-02T18:15:52.588Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:15:52.631Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:52.631Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:55.635Z] : info : Check field: Field is valid
+[2020-05-02T18:15:55.651Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:15:55.658Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T18:15:55.665Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T18:15:55.665Z] : info : Signup vehicle: added succesfully
+[2020-05-02T18:23:01.704Z] : info : Check field: Name "" invalid
+[2020-05-02T18:23:11.435Z] : info : Check field: Lastname "" invalid
+[2020-05-02T18:23:16.650Z] : info : Check field: Field can't be empty

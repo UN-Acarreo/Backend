@@ -186,15 +186,6 @@ router.post('/vehicle/signup', async function(req, res){
   if(saved_vehicle.status != 1 && saved_vehicle.message){
      message = saved_vehicle.message.toString()
      logger.error("Signup vehicle: " + message);
-     if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»") {
-       return res.status(400).json({error : "La Placa ya existe"});
-     }
-     if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key2»") {
-      return res.status(400).json({error : "La Placa ya existe"});
-     }
-     if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key1»") {
-       return res.status(400).json({error : "La Placa ya existe"});
-     }
      if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»") {
        return res.status(400).json({error : "La Placa ya existe"});
      }
