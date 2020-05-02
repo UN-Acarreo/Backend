@@ -112,8 +112,15 @@ async function saveImage(baseImage, path, img_name) {
 
 
 //Route will be used to handle login POST requests
-router.post('/login', function(req, res){
+router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
+  let type_of_user = req.params.type_of_user
+  //Client login
+  if(type_of_user=="client")
+  {
+    let success = await UserController.validateUser(req);
+
+  }
   res.status(200).json({Api: 'Online'})
 
 })

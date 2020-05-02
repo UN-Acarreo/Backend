@@ -709,3 +709,147 @@
 [2020-05-02T20:16:51.613Z] : info : Save image: Image saved succesfully
 [2020-05-02T20:16:51.702Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
 [2020-05-02T20:16:51.703Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-02T22:43:43.693Z] : info : Server: Server is running
+[2020-05-02T22:43:44.022Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:43:44.148Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:45:38.377Z] : info : Server: Server is running
+[2020-05-02T22:45:38.531Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:45:38.596Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:50:13.159Z] : info : Check field: Field is valid
+[2020-05-02T22:50:13.266Z] : info : UserController: User was created successfully.
+[2020-05-02T22:50:13.266Z] : info : Signup client: added succesfully
+[2020-05-02T22:50:23.580Z] : info : Server: Server is running
+[2020-05-02T22:50:23.743Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:50:23.822Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:52:37.653Z] : info : UserController: User is not valid
+[2020-05-02T22:56:14.979Z] : info : UserController: User is valid
+[2020-05-02T23:01:35.661Z] : info : UserController: User is valid
+[2020-05-02T23:01:55.538Z] : info : Server: Server is running
+[2020-05-02T23:01:55.689Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:01:55.768Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:01:59.661Z] : info : UserController: User is valid
+[2020-05-02T23:01:59.661Z] : error : UserController: ReferenceError: letgetUserByEmail is not defined
+[2020-05-02T23:02:35.805Z] : info : Server: Server is running
+[2020-05-02T23:02:35.963Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:02:36.025Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:02:42.385Z] : info : UserController: User is valid
+[2020-05-02T23:04:06.703Z] : info : Server: Server is running
+[2020-05-02T23:04:06.845Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:06.914Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:04:13.429Z] : info : UserController: User is valid
+[2020-05-02T23:04:24.463Z] : info : Server: Server is running
+[2020-05-02T23:04:24.653Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:24.733Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:04:55.812Z] : info : Server: Server is running
+[2020-05-02T23:04:55.962Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:56.027Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:05:03.550Z] : info : Server: Server is running
+[2020-05-02T23:05:03.775Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:05:03.856Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:05:16.021Z] : info : UserController: User is valid
+[2020-05-02T23:06:13.394Z] : info : Server: Server is running
+[2020-05-02T23:06:13.551Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:06:13.620Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:06:22.032Z] : info : Server: Server is running
+[2020-05-02T23:06:22.190Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:06:22.256Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:06:34.319Z] : info : UserController: User is valid
+[2020-05-02T23:07:07.461Z] : info : Server: Server is running
+[2020-05-02T23:07:07.619Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:07:07.694Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:07:12.045Z] : info : UserController: User is valid
+[2020-05-02T23:07:34.708Z] : info : Server: Server is running
+[2020-05-02T23:07:34.858Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:07:34.920Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:11:46.967Z] : info : Server: Server is running
+[2020-05-02T23:11:47.239Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:11:47.318Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:11:52.353Z] : info : UserController: User is valid
+[2020-05-02T23:12:25.063Z] : info : Server: Server is running
+[2020-05-02T23:12:25.228Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:12:25.295Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:12:33.014Z] : info : UserController: User is valid
+[2020-05-02T23:15:38.952Z] : info : Server: Server is running
+[2020-05-02T23:15:39.117Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:15:39.187Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:17:55.240Z] : info : Server: Server is running
+[2020-05-02T23:17:55.441Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:17:55.550Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:18:00.260Z] : info : UserController: User is valid
+[2020-05-02T23:18:00.270Z] : info : UserController:user found
+[2020-05-02T23:18:12.807Z] : info : Server: Server is running
+[2020-05-02T23:18:12.953Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:18:13.023Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:18:33.154Z] : info : UserController: User is not valid
+[2020-05-02T23:19:26.746Z] : info : Server: Server is running
+[2020-05-02T23:19:26.958Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:19:27.060Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:19:42.589Z] : info : Server: Server is running
+[2020-05-02T23:19:42.734Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:19:42.799Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:19:58.961Z] : info : UserController: User is valid
+[2020-05-02T23:19:58.973Z] : info : UserController:User found
+[2020-05-02T23:20:46.894Z] : info : Server: Server is running
+[2020-05-02T23:20:47.039Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:20:47.104Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:21:25.448Z] : info : Server: Server is running
+[2020-05-02T23:21:25.594Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:21:25.673Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:21:54.461Z] : info : Server: Server is running
+[2020-05-02T23:21:54.624Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:21:54.693Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:22:00.583Z] : info : UserController: User is valid
+[2020-05-02T23:22:00.595Z] : info : UserController:User found
+[2020-05-02T23:22:23.663Z] : info : Server: Server is running
+[2020-05-02T23:22:23.816Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:22:23.892Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:22:30.152Z] : info : UserController: User is valid
+[2020-05-02T23:22:30.157Z] : info : UserController:User found
+[2020-05-02T23:23:35.982Z] : info : Server: Server is running
+[2020-05-02T23:23:36.124Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:23:36.189Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:28:17.349Z] : info : Server: Server is running
+[2020-05-02T23:28:17.508Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:28:17.579Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:28:21.529Z] : info : UserController: User is valid
+[2020-05-02T23:28:21.537Z] : info : UserController:User found
+[2020-05-02T23:29:08.775Z] : info : UserController: User is valid
+[2020-05-02T23:29:08.779Z] : info : UserController:User found
+[2020-05-02T23:35:06.729Z] : info : Server: Server is running
+[2020-05-02T23:35:06.889Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:35:06.974Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:37:53.868Z] : info : Server: Server is running
+[2020-05-02T23:37:54.037Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:37:54.190Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:38:00.177Z] : info : UserController: User is valid
+[2020-05-02T23:38:00.182Z] : info : UserController:User found
+[2020-05-02T23:38:00.182Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:39:08.434Z] : info : Server: Server is running
+[2020-05-02T23:39:08.581Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:39:08.659Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:39:21.315Z] : info : UserController: User is valid
+[2020-05-02T23:39:21.320Z] : info : UserController:User found
+[2020-05-02T23:39:21.321Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:39:55.093Z] : info : Server: Server is running
+[2020-05-02T23:39:55.271Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:39:55.343Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:40:01.568Z] : info : UserController: User is valid
+[2020-05-02T23:40:01.575Z] : info : UserController:User found
+[2020-05-02T23:40:01.576Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:41:37.659Z] : info : Server: Server is running
+[2020-05-02T23:41:37.802Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:41:37.892Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:41:41.171Z] : info : UserController: User is valid
+[2020-05-02T23:41:41.177Z] : info : UserController:User found
+[2020-05-02T23:44:08.130Z] : info : Server: Server is running
+[2020-05-02T23:44:09.110Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:44:09.211Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:47:06.775Z] : info : Server: Server is running
+[2020-05-02T23:47:06.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:47:07.017Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:47:29.262Z] : info : UserController: User is valid
+[2020-05-02T23:47:29.270Z] : info : UserController:User found
+[2020-05-02T23:47:29.271Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-02T23:47:35.709Z] : info : Server: Server is running
+[2020-05-02T23:47:35.902Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:47:36.025Z] : info : Server: database tables created if the dont exist
