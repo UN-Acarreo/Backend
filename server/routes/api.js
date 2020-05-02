@@ -80,7 +80,7 @@ async function saveImage(baseImage, path, img_name) {
 //Route will be used to handle login POST requests
 router.post('/login', function(req, res){
   //TODO login user using Oauth
-  res.json({Api: 'Online'})
+  res.status(200).json({Api: 'Online'})
 
 })
 
@@ -89,14 +89,14 @@ router.post('/driver/signup', async function(req, res){
   const valid_fields = await check_fields(req);
   if(valid_fields == false){
      logger.info('Signup driver: Error in the supplied data')
-     return res.json({error: 'Error en los datos suministrados '})
+     return res.status(400).json({error: 'Error en los datos suministrados '})
   }
   //Save drivers image
   const filePath = path.join(__dirname, "../public/uploads/drivers/");
   const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in the supplied data')
-      return res.json({error: 'Error en los datos suministrados '})
+      return res.status(400).json({error: 'Error en los datos suministrados '})
   }
 
   //Set the path of the saved image on the db field
@@ -111,11 +111,11 @@ router.post('/driver/signup', async function(req, res){
   {
     logger.info("Signup driver: added succesfully");
     //res.status(201).send("added succesfully");
-    return res.json({status: 1, db_driver_id: saved.id});
+    return res.status(201).json({status: 1, db_driver_id: saved.id});
   }
   else{
     logger.error("Signup driver: " + saved.message);
-    return res.json({error : saved.message});
+    return res.status(500).json({error : saved.message});
   }
 
 });
@@ -125,14 +125,14 @@ router.post('/vehicle/signup', async function(req, res){
   const valid_fields = await check_fields(req);
   if(valid_fields == false){
      logger.info('Signup vehicle: Error in the supplied data')
-     return res.json({error: 'Error en los datos suministrados '})
+     return res.status(400).json({error: 'Error en los datos suministrados '})
   }
   //Save vehicle image
   const filePath = path.join(__dirname, "../public/uploads/vehicles/");
   const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup vehicle: Error in the supplied data')
-      return res.json({error: 'Error en los datos suministrados '})
+      return res.status(400).json({error: 'Error en los datos suministrados '})
   }
 
   //Set the path of the saved image on the db field
@@ -145,7 +145,7 @@ router.post('/vehicle/signup', async function(req, res){
   //error saving the vehicle
   if(saved_vehicle.status != 1 && saved_vehicle.message){
      logger.error("Signup vehicle: " + saved_vehicle.message);
-     return res.json({error : saved_vehicle.message});
+     return res.status(500).json({error : saved_vehicle.message});
   }
 
   //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
@@ -156,12 +156,12 @@ router.post('/vehicle/signup', async function(req, res){
   {
     logger.info("Signup vehicle: added succesfully");
     //res.status(201).send("added succesfully");
-    return res.json({status: 1});
+    return res.status(201).json({status: 1});
 
   }
   else{
     logger.error("Signup vehicle: " + 'Error registrando el vehículo');
-     return res.json({error : success_driver_vehicle.message});
+     return res.status(500).json({error : success_driver_vehicle.message});
   }
 
 });
@@ -173,7 +173,7 @@ router.post('/client/signup', async function(req,res){
   const valid_fields = await check_fields(req);
   if(valid_fields == false){
      logger.info('Signup client: Error in the supplied data')
-     return res.json({error: 'Error en los datos suministrados'})
+     return res.status(400).json({error: 'Error en los datos suministrados'})
   }
 
   let success = await UserController.createUser(req);
@@ -181,37 +181,37 @@ router.post('/client/signup', async function(req,res){
   {
     logger.info("Signup client: added succesfully");
     //res.status(201).send("added succesfully");
-    return res.json({status: 1});
+    return res.status(201).json({status: 1});
   }
   else{
     logger.error("Signup client: " + success.message);
-    res.json({error : success.message});
+    res.status(500).json({error : success.message});
   }
-});
+}); 
 
 //Route will be used to handle POST requests of service creation
 router.post('/service/create', function(req, res){
   //TODO create service
-  res.json({Api: 'Online'})
+  res.status(200).json({Api: 'Online'})
 });
 
 
 //Route will be used to handle cancel POST service requests
 router.post('/service/cancel', function(req, res){
   //TODO cancel service
-  res.json({Api: 'Online'})
+  res.status(200).json({Api: 'Online'})
 });
 
 
 //Route will be used to handle the drivers schedules GET request
 router.get('/driver/schedule', function(req, res){
-  res.json({Api: 'Send driver schedule'})
+  res.status(200).json({Api: 'Send driver schedule'})
 });
 
 
 //Route will be used to send the drivers location GET request
 router.get('/driver/location', function(req, res){
-  res.json({Api: 'Send driver coordinates'})
+  res.status(200).json({Api: 'Send driver coordinates'})
 });
 
 
