@@ -890,3 +890,84 @@
 [2020-05-03T00:13:25.508Z] : info : Server: Server is running
 [2020-05-03T00:13:25.690Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-03T00:13:25.762Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:00:31.855Z] : info : Server: Server is running
+[2020-05-03T01:00:32.015Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:00:32.081Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:02:20.483Z] : info : Server: Server is running
+[2020-05-03T01:02:20.656Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:02:20.726Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:02:46.784Z] : info : Check field: Field can't be empty
+[2020-05-03T01:03:01.490Z] : info : Check field: Field is valid
+[2020-05-03T01:03:01.495Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:03:01.495Z] : info : api.js: could not find Driver
+[2020-05-03T01:04:31.563Z] : info : Server: Server is running
+[2020-05-03T01:04:31.702Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:04:31.766Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:04:51.703Z] : info : Server: Server is running
+[2020-05-03T01:04:51.903Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:04:51.999Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:06:32.663Z] : info : Server: Server is running
+[2020-05-03T01:06:32.910Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:06:32.982Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:07:41.125Z] : info : Server: Server is running
+[2020-05-03T01:07:41.270Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:07:41.340Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:09:54.800Z] : info : Server: Server is running
+[2020-05-03T01:09:54.956Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:09:55.023Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:01.254Z] : info : Server: Server is running
+[2020-05-03T01:10:01.453Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:10:01.538Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:07.737Z] : info : Server: Server is running
+[2020-05-03T01:10:07.890Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:10:07.969Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:35.776Z] : info : Check field: Field is valid
+[2020-05-03T01:10:35.777Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:10:35.778Z] : error : api.js: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:11:57.707Z] : info : Server: Server is running
+[2020-05-03T01:11:57.890Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:11:57.989Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:12:19.984Z] : info : Server: Server is running
+[2020-05-03T01:12:20.233Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:12:20.370Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:12:33.139Z] : info : Check field: Field is valid
+[2020-05-03T01:12:33.143Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:12:33.144Z] : error : api.js: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:14:39.955Z] : info : Server: Server is running
+[2020-05-03T01:14:40.202Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:14:40.276Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:14:49.876Z] : info : Server: Server is running
+[2020-05-03T01:14:50.048Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:14:50.126Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:14:54.635Z] : info : Check field: Field is valid
+[2020-05-03T01:14:54.644Z] : error : DriverController: Error: WHERE parameter "Driver_Email" has invalid "undefined" value
+[2020-05-03T01:14:54.645Z] : error : api.js: Error: WHERE parameter "Driver_Email" has invalid "undefined" value
+[2020-05-03T01:15:39.513Z] : info : Server: Server is running
+[2020-05-03T01:15:39.675Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:15:39.738Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:15:51.177Z] : info : Check field: Field is valid
+[2020-05-03T01:15:51.315Z] : info : DriverController: Driver is valid
+[2020-05-03T01:15:51.321Z] : info : DriverController:Driver found
+[2020-05-03T01:15:51.321Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-03T01:15:51.321Z] : info : api.js: returned Driver id succesfully
+[2020-05-03T01:16:55.628Z] : info : Check field: Field is valid
+[2020-05-03T01:16:55.707Z] : info : DriverController: Driver is not valid
+[2020-05-03T01:16:55.707Z] : info : api.js: could not find Driver
+[2020-05-03T01:18:28.421Z] : info : Check field: Field can't be empty
+[2020-05-03T01:18:52.427Z] : info : Check field: Field is valid
+[2020-05-03T01:18:52.502Z] : info : DriverController: Driver is valid
+[2020-05-03T01:18:52.505Z] : info : DriverController:Driver found
+[2020-05-03T01:18:52.505Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-03T01:18:52.506Z] : info : api.js: returned Driver id succesfully
+[2020-05-03T01:19:52.318Z] : info : Server: Server is running
+[2020-05-03T01:19:52.489Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:19:52.562Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:19:59.006Z] : info : Server: Server is running
+[2020-05-03T01:19:59.156Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:19:59.220Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:20:11.724Z] : info : Server: Server is running
+[2020-05-03T01:20:11.893Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:20:11.963Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:20:38.186Z] : info : Server: Server is running
+[2020-05-03T01:20:38.329Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:20:38.391Z] : info : Server: database tables created if the dont exist

@@ -111,7 +111,14 @@ async function saveImage(baseImage, path, img_name) {
     }
 
 
+
 //Route will be used to handle login POST requests
+
+//Login for user and driver
+//status 0 = user/driver not found
+//status 1 = user/driver found, id returned
+//status -1 = error, error message returned
+//status -2 = filed checks failed, error message returned
 router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
@@ -120,9 +127,9 @@ router.post('/:type_of_user/login', async function(req, res){
   if(valid_fields !== true){
      return res.status(400).json({status:-2, error: valid_fields})
   }
-  //Client login
   if(type_of_user=="client")
   {
+    //Client login
     let {status,data} = await UserController.validateUser(req);
     if(status==1)
     {
@@ -136,7 +143,33 @@ router.post('/:type_of_user/login', async function(req, res){
     }
     else if(status==-1 || status==-2)
     {
-      logger.info("api.js: could not find user")
+      logger.error("api.js: "+ data)
+      return res.status(500).json({status: -1, error: "Error del servidor"});
+    }
+  }else if(type_of_user=="driver"){
+    //driver login
+    //the following lines were coded because original req conteined fields related to user
+    //new_req changes names of this fields to match the ones of the driver
+    let new_request ={Driver_Email:req.body.request.User_Email,
+      Driver_password:req.body.request.User_password
+    };
+    let new_req ={body:{request:new_request}};
+
+    let {status,data} = await DriverController.validateDriver(new_req);
+
+    if(status==1)
+    {
+      logger.info("api.js: returned Driver id succesfully")
+      return res.status(200).json({status: 1, db_driver_id: data});
+
+    }else if(status==0)
+    {
+      logger.info("api.js: could not find Driver")
+      return res.status(400).json({status: 0, error: "Correo o contraseña incorrectos"});
+    }
+    else if(status==-1 || status==-2)
+    {
+      logger.error("api.js: "+data)
       return res.status(500).json({status: -1, error: "Error del servidor"});
     }
 
@@ -165,7 +198,7 @@ router.post('/driver/signup', async function(req, res){
 
   //Save driver on db
   let saved = await DriverController.createDriver(req);
-  console.log('variabe: '+saved)
+  //console.log('variabe: '+saved)
   if(saved.status == 1)
   {
     logger.info("Signup driver: added succesfully");

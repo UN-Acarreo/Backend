@@ -31,7 +31,6 @@ async function createDriver(req) {
             }
         )
 
-        console.log('id del driver '+ result.Id_driver);
         logger.info("DriverController: Driver was created successfully.");
         return {status: 1, id: result.Id_driver}
 
@@ -43,26 +42,68 @@ async function createDriver(req) {
 
 }
 
-// Validate Driver
+// Validate driver
+//status 0 = driver not found
+//status 1 = driver found, id returned
+//status -1 = error in DriverModel.count, error message returned
+//status -2 = error in DriverModel.findAll from getDriverByEmail, error message returned
 async function validateDriver(req) {
 
     try {
-
         // Get atributes
-        const { Driver_address, Driver_password } = req.body.request;
+        const { Driver_Email, Driver_password } = req.body.request;
 
         // Validate Driver
-        count = await UserModel.count({ where: { Driver_address: Driver_address, Driver_password: Driver_password } })
+        count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
         if (count > 0) {
-            logger.info("DriverController: Driver is valid.");
-            return true;
+            logger.info("DriverController: Driver is valid");
+            let {status, data}=await getDriverByEmail(Driver_Email)
+            if(status==1)
+            {
+                logger.info("DriverController: succesfull call to getDriverBeEmail")
+                return {status: 1, data: data.Id_driver};
+            }else if(status==-1)
+            {    logger.error("DriverController: error from getDriverBeEmail"+ error)
+                return {status: -2, data: error};  
+            }
         }
-        logger.info("DriverController: Driver is not valid.");
-        return false;
+        logger.info("DriverController: Driver is not valid");
+        return {status: 0, data: false};  ;
 
     } catch (error) {
         logger.error("DriverController: " + error);
-        return error;
+        return {status: -1, data: error};  
+    }
+
+}
+
+// Get Driver by email
+//status 0 = Driver not found
+//status 1 = Driver found, Driver returned
+//status -1 = error, error message returned
+async function getDriverByEmail(email)
+{
+    //query to find Driver by given email (which is unique)
+    try {
+        let drivers = await DriverModel.findAll(
+            { where: { Driver_Email: email } }
+            )
+        //query returns array of Drivers that match were clause
+        if(drivers.length==0)
+        {
+            logger.info("DriverController:email doesnt match known Driver")
+            return {status:0, data:"not found"}
+        }
+        else{
+            logger.info("DriverController:Driver found")
+            //Drivers[0] should be the only Driver in array, .dataValues is Json containing atributes
+            return {status: 1,data: drivers[0].dataValues} 
+        }
+              
+    } catch (error) {
+        logger.info("DriverController: "+ error)
+        return {status:-1, data:error}
+        
     }
 
 }
