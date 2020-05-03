@@ -46,19 +46,19 @@ async function validateUser(req) {
     try {
 
         // Get atributes
-        const { User_address, User_password } = req.body.request;
+        const { User_Email, User_password } = req.body.request;
 
         // Validate user
-        count = await UserModel.count({ where: { User_Email: User_address, User_password: User_password } })
+        count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
         if (count > 0) {
             logger.info("UserController: User is valid");
-            let {status, data}=await getUserByEmail(User_address)
+            let {status, data}=await getUserByEmail(User_Email)
             if(status==1)
             {
                 logger.info("UserController: succesfull call to getUserBeEmail")
                 return {status: 1, data: data.Id_user};
             }else if(status==-1)
-            {    logger.info("UserController: error from getUserBeEmail"+ error)
+            {    logger.error("UserController: error from getUserBeEmail"+ error)
                 return {status: -2, data: error};  
             }
         }

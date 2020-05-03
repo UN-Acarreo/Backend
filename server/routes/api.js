@@ -115,13 +115,32 @@ async function saveImage(baseImage, path, img_name) {
 router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
+  //data validation
+  const valid_fields = await check_fields(req);
+  if(valid_fields !== true){
+     return res.status(400).json({status:-2, error: valid_fields})
+  }
   //Client login
   if(type_of_user=="client")
   {
-    let success = await UserController.validateUser(req);
+    let {status,data} = await UserController.validateUser(req);
+    if(status==1)
+    {
+      logger.info("api.js: returned user id succesfully")
+      return res.status(200).json({status: 1, db_user_id: data});
+
+    }else if(status==0)
+    {
+      logger.info("api.js: could not find user")
+      return res.status(400).json({status: 0, error: "Correo o contraseña incorrectos"});
+    }
+    else if(status==-1 || status==-2)
+    {
+      logger.info("api.js: could not find user")
+      return res.status(500).json({status: -1, error: "Error del servidor"});
+    }
 
   }
-  res.status(200).json({Api: 'Online'})
 
 })
 
