@@ -61,7 +61,7 @@ async function validateDriver(req) {
             if(status==1)
             {
                 logger.info("DriverController: succesfull call to getDriverBeEmail")
-                return {status: 1, data: data.Id_driver};
+                return {status: 1, data: data};
             }else if(status==-1)
             {    logger.error("DriverController: error from getDriverBeEmail"+ error)
                 return {status: -2, data: error};  
