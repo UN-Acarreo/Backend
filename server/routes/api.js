@@ -119,6 +119,7 @@ async function saveImage(baseImage, path, img_name) {
 //status 1 = user/driver found, id returned
 //status -1 = error, error message returned
 //status -2 = filed checks failed, error message returned
+//status -3 = wrong path
 router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
@@ -172,6 +173,11 @@ router.post('/:type_of_user/login', async function(req, res){
       logger.error("api.js: "+data)
       return res.status(500).json({status: -1, error: "Error del servidor"});
     }
+
+  }
+  else{
+      logger.info("api.js: request parameters doesnt mactch driver nor user")
+      return res.status(404).json({status: -3, error: "ruta incorrecta"});
 
   }
 

@@ -971,3 +971,36 @@
 [2020-05-03T01:20:38.186Z] : info : Server: Server is running
 [2020-05-03T01:20:38.329Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-03T01:20:38.391Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:21:22.565Z] : info : Server: Server is running
+[2020-05-03T01:21:22.732Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:21:22.802Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:22:48.287Z] : info : Check field: Field is valid
+[2020-05-03T01:22:48.340Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:22:48.451Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-03T01:22:48.452Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-03T01:22:56.444Z] : info : Check field: Field is valid
+[2020-05-03T01:22:56.446Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:22:56.451Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-03T01:22:56.451Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-03T01:23:02.974Z] : info : Check field: Field is valid
+[2020-05-03T01:23:03.014Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:03.020Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-03T01:23:03.021Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-03T01:23:09.259Z] : info : Check field: Field is valid
+[2020-05-03T01:23:09.260Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:09.269Z] : info : DriverController: Driver was created successfully.
+[2020-05-03T01:23:09.269Z] : info : Signup driver: added succesfully
+[2020-05-03T01:23:19.735Z] : info : Check field: Field is valid
+[2020-05-03T01:23:19.749Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:19.971Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-03T01:23:19.972Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-03T01:23:24.438Z] : info : Check field: Field is valid
+[2020-05-03T01:23:24.451Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:24.457Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-03T01:23:24.482Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-03T01:23:24.482Z] : info : Signup vehicle: added succesfully
+[2020-05-03T01:26:10.463Z] : info : Server: Server is running
+[2020-05-03T01:26:10.709Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:26:10.781Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:26:28.087Z] : info : Check field: Field is valid
+[2020-05-03T01:26:28.088Z] : info : api.js: request parameters doesnt mactch driver nor user
