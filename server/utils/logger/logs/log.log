@@ -1258,3 +1258,39 @@
 [2020-05-04T04:54:46.123Z] : info : Check field: Field is valid
 [2020-05-04T04:54:46.249Z] : info : UserController: User was created successfully.
 [2020-05-04T04:54:46.251Z] : info : Signup client: added succesfully
+[2020-05-04T19:20:47.798Z] : info : Server: Server is running
+[2020-05-04T19:20:48.007Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:20:48.068Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:22:17.139Z] : info : Server: Server is running
+[2020-05-04T19:22:17.342Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:22:17.414Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:28:09.249Z] : info : Server: Server is running
+[2020-05-04T19:28:09.575Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.639Z] : info : Server: Server is running
+[2020-05-04T19:28:10.814Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.870Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:29:29.138Z] : info : Server: Server is running
+[2020-05-04T19:29:29.301Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:29:29.393Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:31:24.038Z] : info : Server: Server is running
+[2020-05-04T19:31:24.199Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:31:24.281Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:23.028Z] : info : Server: Server is running
+[2020-05-04T19:34:23.185Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:23.253Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:27.209Z] : info : Server: Server is running
+[2020-05-04T19:34:27.368Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:27.439Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:42.453Z] : info : Server: Server is running
+[2020-05-04T19:34:42.588Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:42.658Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:35:10.486Z] : info : Server: Server is running
+[2020-05-04T19:35:10.773Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:35:10.841Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:32.060Z] : info : Server: Server is running
+[2020-05-04T19:36:32.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:36:32.293Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:33.952Z] : error : Api:Server recieved error from client:: "afmoyar@unal.edu.co" "a"
+[2020-05-04T19:37:13.307Z] : info : Server: Server is running
+[2020-05-04T19:37:13.460Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:37:13.528Z] : info : Server: database tables created if the dont exist
