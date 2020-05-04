@@ -1,0 +1,1296 @@
+[2020-04-22T00:47:29.859Z] : info : Server: Server is running
+[2020-04-22T00:47:30.029Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:47:30.526Z] : info : sincronization
+[2020-04-22T00:48:12.239Z] : info : Server: Server is running
+[2020-04-22T00:48:12.402Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:48:12.472Z] : info : sincronization
+[2020-04-22T00:48:51.098Z] : info : Server: Server is running
+[2020-04-22T00:48:51.272Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:48:51.346Z] : info : sincronization
+[2020-04-22T00:49:28.723Z] : info : Server: Server is running
+[2020-04-22T00:49:28.884Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:49:28.972Z] : info : sincronization
+[2020-04-22T00:51:29.580Z] : info : Server: Server is running
+[2020-04-22T00:51:29.728Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:51:29.789Z] : info : sincronization
+[2020-04-22T00:51:55.845Z] : info : Server: Server is running
+[2020-04-22T00:51:55.987Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:56:21.597Z] : info : Server: Server is running
+[2020-04-22T00:56:21.764Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:56:21.833Z] : info : sincronization
+[2020-04-22T00:57:35.410Z] : info : Server: Server is running
+[2020-04-22T00:57:35.577Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T00:57:36.039Z] : info : sincronization
+[2020-04-22T01:14:33.203Z] : info : Server: Server is running
+[2020-04-22T01:14:33.398Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:14:34.015Z] : info : sincronization
+[2020-04-22T01:18:40.705Z] : info : Server: Server is running
+[2020-04-22T01:18:40.881Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:19:11.851Z] : info : Server: Server is running
+[2020-04-22T01:19:12.066Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:22:38.356Z] : info : Server: Server is running
+[2020-04-22T01:22:38.564Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:23:08.985Z] : info : Server: Server is running
+[2020-04-22T01:23:09.149Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:24:53.622Z] : info : Server: Server is running
+[2020-04-22T01:24:53.921Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:24:54.018Z] : info : sincronization
+[2020-04-22T01:26:31.181Z] : info : Server: Server is running
+[2020-04-22T01:26:31.397Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:26:31.878Z] : info : sincronization
+[2020-04-22T01:28:45.766Z] : info : Server: Server is running
+[2020-04-22T01:28:45.942Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:29:44.452Z] : info : Server: Server is running
+[2020-04-22T01:29:44.630Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:29:45.110Z] : info : Server: database tables created if the dont exist
+[2020-04-22T01:47:29.466Z] : info : Server: Server is running
+[2020-04-22T01:47:29.636Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:48:36.273Z] : info : Server: Server is running
+[2020-04-22T01:48:36.471Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T01:52:28.231Z] : info : Server: Server is running
+[2020-04-22T01:52:28.427Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:02:58.859Z] : info : Server: Server is running
+[2020-04-22T02:02:59.017Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:05:06.967Z] : info : Server: Server is running
+[2020-04-22T02:05:07.140Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:06:06.359Z] : info : Server: Server is running
+[2020-04-22T02:06:06.587Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:07:19.730Z] : info : Server: Server is running
+[2020-04-22T02:07:19.909Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:07:20.464Z] : info : Server: database tables created if the dont exist
+[2020-04-22T02:28:45.106Z] : info : Server: Server is running
+[2020-04-22T02:28:45.335Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:30:43.100Z] : info : Server: Server is running
+[2020-04-22T02:30:43.269Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-22T02:30:43.712Z] : info : Server: database tables created if the dont exist
+[2020-04-22T02:32:35.094Z] : info : Check field: Field is valid
+[2020-04-22T02:32:35.252Z] : info : UserController: User was created successfully.
+[2020-04-22T02:32:35.253Z] : info : Signup client: added succesfully
+[2020-04-22T02:33:35.135Z] : info : Check field: Field is valid
+[2020-04-22T02:33:35.229Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-04-22T02:33:35.230Z] : error : Signup client: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-04-22T02:34:06.181Z] : info : Check field: Field is valid
+[2020-04-22T02:34:06.189Z] : error : Save image: Image saved succesfully
+[2020-04-22T02:34:06.320Z] : info : DriverController: Driver was created successfully.
+[2020-04-22T02:34:06.321Z] : info : Signup driver: added succesfully
+[2020-04-22T02:34:59.212Z] : info : Check field: Field must be a valid document
+[2020-04-22T02:34:59.245Z] : info : Check field: Field is valid
+[2020-04-22T02:34:59.246Z] : info : Signup driver: Error in the supplied data
+[2020-04-22T02:35:13.663Z] : info : Check field: Field is valid
+[2020-04-22T02:35:13.665Z] : error : Save image: Image saved succesfully
+[2020-04-22T02:35:13.766Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-22T02:35:13.767Z] : error : Signup driver: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-26T01:13:55.479Z] : info : Server: Server is running
+[2020-04-26T01:13:55.633Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T01:13:56.327Z] : info : Server: database tables created if the dont exist
+[2020-04-26T01:56:44.924Z] : info : Server: Server is running
+[2020-04-26T01:56:45.107Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T01:56:45.748Z] : info : Server: database tables created if the dont exist
+[2020-04-26T02:01:06.053Z] : info : Server: Server is running
+[2020-04-26T02:01:06.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T02:01:06.671Z] : info : Server: database tables created if the dont exist
+[2020-04-26T02:06:19.546Z] : info : Server: Server is running
+[2020-04-26T02:06:19.735Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T02:06:20.192Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:24:36.757Z] : info : Server: Server is running
+[2020-04-26T03:24:37.025Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:24:37.105Z] : error : Server: unable to create database tables: SequelizeDatabaseError: la restricción «Status_Status_description_ck» para la relación «Status» ya existe
+[2020-04-26T03:27:43.475Z] : info : Server: Server is running
+[2020-04-26T03:27:43.639Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:27:44.086Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:27:54.790Z] : info : Server: Server is running
+[2020-04-26T03:27:54.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:27:55.021Z] : error : Server: unable to create database tables: SequelizeDatabaseError: la restricción «Status_Status_description_ck» para la relación «Status» ya existe
+[2020-04-26T03:42:46.071Z] : info : Server: Server is running
+[2020-04-26T03:42:46.232Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:42:46.654Z] : info : Server: database tables created if the dont exist
+[2020-04-26T03:42:52.171Z] : info : Server: Server is running
+[2020-04-26T03:42:52.328Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T03:42:52.399Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:08:21.143Z] : info : Server: Server is running
+[2020-04-26T04:08:21.290Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:08:21.699Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:10:17.237Z] : info : Server: Server is running
+[2020-04-26T04:10:17.387Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:10:17.452Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:17:37.971Z] : info : Server: Server is running
+[2020-04-26T04:17:38.105Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:17:38.535Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:18:15.880Z] : info : Server: Server is running
+[2020-04-26T04:18:16.042Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:18:16.106Z] : info : Server: database tables created if the dont exist
+[2020-04-26T04:31:55.160Z] : info : Server: Server is running
+[2020-04-26T04:31:55.315Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T04:31:55.383Z] : info : Server: database tables created if the dont exist
+[2020-04-26T14:16:18.452Z] : info : Server: Server is running
+[2020-04-26T14:16:18.812Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-26T14:16:18.878Z] : info : Server: database tables created if the dont exist
+[2020-04-26T14:17:17.101Z] : info : Check field: Field is valid
+[2020-04-26T14:17:17.402Z] : info : UserController: User was created successfully.
+[2020-04-26T14:17:17.403Z] : info : Signup client: added succesfully
+[2020-04-26T14:20:09.759Z] : info : Check field: Field is valid
+[2020-04-26T14:20:09.800Z] : error : Save image: Image saved succesfully
+[2020-04-26T14:20:09.981Z] : info : DriverController: Driver was created successfully.
+[2020-04-26T14:20:09.981Z] : info : Signup driver: added succesfully
+[2020-04-26T16:21:46.338Z] : info : Migrations/statusConstraints: Migration undone.
+[2020-04-26T16:21:46.373Z] : info : Migrations/completeWeakTables: Migration undone.
+[2020-04-26T16:23:13.500Z] : info : Seeders/statusDescription: Deletion complete.
+[2020-04-26T16:24:12.706Z] : info : Seeders/statusDescription: Insertion complete.
+[2020-04-26T16:24:40.782Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-04-26T16:24:40.858Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-04-26T16:25:07.688Z] : error : Seeders/statusDescription: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
+[2020-04-28T13:02:27.217Z] : info : Server: Server is running
+[2020-04-28T13:02:27.679Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-28T13:02:27.830Z] : info : Server: database tables created if the dont exist
+[2020-04-28T13:21:20.281Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-04-28T13:21:51.737Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la columna «Plate» no puede convertirse automáticamente al tipo integer
+[2020-04-28T13:23:51.911Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-04-28T13:30:53.687Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: no existe la columna «column»
+[2020-04-28T13:31:14.136Z] : info : Migrations/statusConstraints: Migration reverted.
+[2020-04-28T13:34:19.527Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-04-28T13:34:19.615Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-04-28T13:34:40.437Z] : info : Migrations/vehiclePlateIsString: Migration reverted.
+[2020-04-28T13:37:57.183Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-04-28T13:42:25.514Z] : info : Server: Server is running
+[2020-04-28T13:42:25.693Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-04-28T13:42:25.762Z] : info : Server: database tables created if the dont exist
+[2020-04-28T13:42:59.695Z] : info : Check field: Field is valid
+[2020-04-28T13:42:59.699Z] : error : Save image: Image saved succesfully
+[2020-04-28T13:42:59.810Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-28T13:42:59.854Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-04-28T13:43:06.703Z] : info : Check field: Field is valid
+[2020-04-28T13:43:06.724Z] : error : Save image: Image saved succesfully
+[2020-04-28T13:43:06.732Z] : info : DriverController: Driver was created successfully.
+[2020-04-28T13:43:06.733Z] : info : Signup driver: added succesfully
+[2020-04-28T13:43:47.077Z] : info : Check field: Field is valid
+[2020-04-28T13:43:47.079Z] : error : Save image: Image saved succesfully
+[2020-04-28T13:43:47.157Z] : info : VehicleController: Vehicle was created successfully.
+[2020-04-28T13:43:47.226Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-04-28T13:43:47.227Z] : info : Signup vehicle: added succesfully
+[2020-04-28T13:46:51.266Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «FASD1»
+[2020-04-28T13:48:04.014Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-01T18:29:46.253Z] : info : Server: Server is running
+[2020-05-01T18:29:46.380Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T18:29:46.421Z] : info : Server: database tables created if the dont exist
+[2020-05-01T18:30:12.480Z] : info : Check field: Field must be a valid email
+[2020-05-01T18:30:12.480Z] : info : Check field: Field must be a valid document
+[2020-05-01T18:30:12.480Z] : info : Check field: Field is valid
+[2020-05-01T18:30:12.481Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:35:42.301Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:35:42.302Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:35:42.302Z] : info : Check field: Field is valid
+[2020-05-01T19:35:42.302Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:53:10.124Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:53:10.124Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:53:10.124Z] : info : Check field: Field is valid
+[2020-05-01T19:53:10.124Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T19:58:12.642Z] : info : Check field: Field must be a valid email
+[2020-05-01T19:58:12.643Z] : info : Check field: Field must be a valid document
+[2020-05-01T19:58:12.643Z] : info : Check field: Field is valid
+[2020-05-01T19:58:12.643Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:09:31.549Z] : info : Server: Server is running
+[2020-05-01T20:09:32.246Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:09:32.471Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:10:57.314Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:10:57.314Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:10:57.314Z] : info : Check field: Field is valid
+[2020-05-01T20:10:57.315Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:14:35.083Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:14:35.084Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:14:35.084Z] : info : Check field: Field is valid
+[2020-05-01T20:14:35.084Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:16.255Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:16.255Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:16.255Z] : info : Check field: Field is valid
+[2020-05-01T20:16:16.256Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:22.758Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:22.758Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:22.759Z] : info : Check field: Field is valid
+[2020-05-01T20:16:22.759Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:26.161Z] : info : Check field: Field must be a valid email
+[2020-05-01T20:16:26.161Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:26.162Z] : info : Check field: Field is valid
+[2020-05-01T20:16:26.162Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:16:29.904Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:16:29.904Z] : info : Check field: Field is valid
+[2020-05-01T20:16:29.905Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:17:08.461Z] : info : Check field: Field must be a valid document
+[2020-05-01T20:17:08.462Z] : info : Check field: Field is valid
+[2020-05-01T20:17:08.462Z] : info : Signup driver: Error in the supplied data
+[2020-05-01T20:17:21.061Z] : info : Check field: Field is valid
+[2020-05-01T20:17:21.076Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:21.318Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:21.319Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:25.822Z] : info : Check field: Field is valid
+[2020-05-01T20:17:25.837Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:25.841Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:25.841Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:43.743Z] : info : Check field: Field is valid
+[2020-05-01T20:17:43.760Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:17:43.811Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:17:43.812Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:20:39.374Z] : info : Server: Server is running
+[2020-05-01T20:20:39.509Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:20:39.566Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:20:42.399Z] : info : Check field: Field is valid
+[2020-05-01T20:20:42.414Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:20:42.424Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:20:42.425Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:21:35.075Z] : info : Server: Server is running
+[2020-05-01T20:21:35.202Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-01T20:21:35.247Z] : info : Server: database tables created if the dont exist
+[2020-05-01T20:21:38.412Z] : info : Check field: Field is valid
+[2020-05-01T20:21:38.426Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:21:38.440Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:21:38.441Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «yui»
+[2020-05-01T20:31:34.360Z] : info : Check field: Field is valid
+[2020-05-01T20:31:34.374Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:31:34.516Z] : info : DriverController: Driver was created successfully.
+[2020-05-01T20:31:34.516Z] : info : Signup driver: added succesfully
+[2020-05-01T20:32:00.638Z] : info : Check field: Field is valid
+[2020-05-01T20:32:00.654Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:32:00.711Z] : error : VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «wer»
+[2020-05-01T20:32:00.711Z] : error : Signup vehicle: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «wer»
+[2020-05-01T20:32:33.044Z] : info : Check field: Field is valid
+[2020-05-01T20:32:33.057Z] : error : Save image: Image saved succesfully
+[2020-05-01T20:32:33.101Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-01T20:32:33.339Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-01T20:32:33.339Z] : info : Signup vehicle: added succesfully
+[2020-05-02T03:07:06.554Z] : info : Server: Server is running
+[2020-05-02T03:07:10.055Z] : info : Server: Server is running
+[2020-05-02T03:07:10.620Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T03:07:11.396Z] : info : Server: database tables created if the dont exist
+[2020-05-02T04:19:44.021Z] : info : Check field: Field is valid
+[2020-05-02T04:19:44.034Z] : error : Save image: Image saved succesfully
+[2020-05-02T04:19:44.228Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:19:44.228Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:20:03.946Z] : info : Check field: Field is valid
+[2020-05-02T04:20:03.964Z] : error : Save image: Image saved succesfully
+[2020-05-02T04:20:04.019Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:20:04.019Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:21:44.754Z] : info : Check field: Field is valid
+[2020-05-02T04:21:44.771Z] : error : Save image: Image saved succesfully
+[2020-05-02T04:21:44.818Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:21:44.818Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T04:22:10.863Z] : info : Check field: Field is valid
+[2020-05-02T04:22:10.882Z] : error : Save image: Image saved succesfully
+[2020-05-02T04:22:10.967Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T04:22:10.967Z] : info : Signup driver: added succesfully
+[2020-05-02T15:41:56.302Z] : info : Server: Server is running
+[2020-05-02T15:41:56.688Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T15:41:56.927Z] : info : Server: database tables created if the dont exist
+[2020-05-02T15:42:42.637Z] : info : Check field: Field must be a valid email
+[2020-05-02T15:42:42.638Z] : info : Check field: Field must be a valid document
+[2020-05-02T15:42:42.638Z] : info : Check field: Field is valid
+[2020-05-02T15:42:42.651Z] : error : Save image: Image saved succesfully
+[2020-05-02T15:42:42.912Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:42:42.913Z] : error : Signup driver: object
+[2020-05-02T15:43:39.946Z] : info : Server: Server is running
+[2020-05-02T15:43:40.064Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T15:43:40.104Z] : info : Server: database tables created if the dont exist
+[2020-05-02T15:43:44.089Z] : info : Check field: Field must be a valid email
+[2020-05-02T15:43:44.089Z] : info : Check field: Field must be a valid document
+[2020-05-02T15:43:44.089Z] : info : Check field: Field is valid
+[2020-05-02T15:43:44.105Z] : error : Save image: Image saved succesfully
+[2020-05-02T15:43:44.117Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:43:44.118Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:50:01.180Z] : info : Server: Server is running
+[2020-05-02T15:50:01.301Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T15:50:01.341Z] : info : Server: database tables created if the dont exist
+[2020-05-02T15:50:32.368Z] : info : Check field: Field must be a valid email
+[2020-05-02T15:50:32.368Z] : info : Check field: Field must be a valid document
+[2020-05-02T15:50:32.369Z] : info : Check field: Field is valid
+[2020-05-02T15:50:32.383Z] : error : Save image: Image saved succesfully
+[2020-05-02T15:50:32.436Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:50:32.437Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:57:54.970Z] : info : Server: Server is running
+[2020-05-02T15:57:55.128Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T15:57:55.193Z] : info : Server: database tables created if the dont exist
+[2020-05-02T15:58:00.733Z] : info : Check field: Field must be a valid email
+[2020-05-02T15:58:00.734Z] : info : Check field: Field must be a valid document
+[2020-05-02T15:58:00.735Z] : info : Check field: Field is valid
+[2020-05-02T15:58:00.755Z] : error : Save image: Image saved succesfully
+[2020-05-02T15:58:00.764Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T15:58:00.765Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:07:17.621Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:07:23.940Z] : info : Server: Server is running
+[2020-05-02T16:07:24.058Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:07:24.101Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:08:36.832Z] : info : Server: Server is running
+[2020-05-02T16:08:36.949Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:08:36.988Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:08:42.751Z] : info : Check field: Field is valid
+[2020-05-02T16:08:42.777Z] : error : Save image: Image saved succesfully
+[2020-05-02T16:08:42.789Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:08:42.789Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:10:13.898Z] : info : Server: Server is running
+[2020-05-02T16:10:14.039Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:10:14.094Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:10:20.477Z] : info : Check field: Field is valid
+[2020-05-02T16:10:20.500Z] : error : Save image: Image saved succesfully
+[2020-05-02T16:10:20.512Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:10:20.513Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:20:43.562Z] : info : Server: Server is running
+[2020-05-02T16:20:44.024Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:20:44.239Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:20:48.669Z] : info : Check field: Field is valid
+[2020-05-02T16:20:48.684Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:20:48.775Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:20:48.776Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:22:01.137Z] : info : Server: Server is running
+[2020-05-02T16:22:01.270Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:22:01.310Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:22:05.341Z] : info : Check field: Field is valid
+[2020-05-02T16:22:05.360Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:22:05.369Z] : error : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:22:05.369Z] : error : Signup driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ert»
+[2020-05-02T16:22:53.501Z] : info : Server: Server is running
+[2020-05-02T16:22:53.668Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:22:53.725Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:23:31.719Z] : info : Server: Server is running
+[2020-05-02T16:23:31.854Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:23:31.905Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:23:36.652Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:23:36.652Z] : info : Signup driver: El campo debe ser un e-mail valido
+[2020-05-02T16:24:29.557Z] : info : Server: Server is running
+[2020-05-02T16:24:29.675Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:24:29.715Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:24:34.253Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:24:34.253Z] : info : Signup driver: El campo debe ser un e-mail valido
+[2020-05-02T16:25:24.393Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:25:24.393Z] : info : Signup driver: El campo debe ser un e-mail valido
+[2020-05-02T16:25:27.592Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:25:27.593Z] : info : Signup driver: El campo debe ser un e-mail valido
+[2020-05-02T16:25:34.484Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:25:34.484Z] : info : Signup driver: El campo debe ser un documento valido
+[2020-05-02T16:25:43.598Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:25:43.598Z] : info : Signup driver: El campo debe ser un telefono valido
+[2020-05-02T16:25:47.659Z] : info : Check field: Field is valid
+[2020-05-02T16:25:47.682Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:25:48.018Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T16:25:48.019Z] : info : Signup driver: added succesfully
+[2020-05-02T16:27:55.391Z] : info : Server: Server is running
+[2020-05-02T16:27:55.520Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:27:55.566Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:29:22.064Z] : info : Server: Server is running
+[2020-05-02T16:29:22.188Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:29:22.232Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:29:27.852Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:29:27.852Z] : info : Signup driver: El campo debe ser un e-mail valido
+[2020-05-02T16:31:32.224Z] : info : Server: Server is running
+[2020-05-02T16:31:32.351Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:31:32.390Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:31:36.443Z] : info : Check field: Field must be a valid email
+[2020-05-02T16:31:36.443Z] : info : Signup driver: El e-mail no es valido
+[2020-05-02T16:31:49.929Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:31:49.929Z] : info : Signup driver: El documento debe ser numérico
+[2020-05-02T16:35:25.881Z] : info : Server: Server is running
+[2020-05-02T16:35:25.988Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:35:26.024Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:35:33.712Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:35:33.713Z] : info : Signup driver: La Cédula debe ser numérica
+[2020-05-02T16:35:41.725Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:35:41.725Z] : info : Signup driver: La Cédula debe ser numérica
+[2020-05-02T16:36:03.553Z] : info : Check field: Field must contain only letters
+[2020-05-02T16:36:03.554Z] : info : Signup driver: El Nombre debe contener solamente letras
+[2020-05-02T16:36:38.293Z] : info : Check field: Field must contain only letters
+[2020-05-02T16:36:38.293Z] : info : Signup driver: El Nombre debe contener solamente letras
+[2020-05-02T16:38:36.924Z] : info : Server: Server is running
+[2020-05-02T16:38:37.045Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:38:37.087Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:38:43.613Z] : info : Check field: Field must contain only letters
+[2020-05-02T16:38:43.613Z] : info : Signup driver: El Nombre no es válido
+[2020-05-02T16:38:52.195Z] : info : Check field: Field must contain only letters
+[2020-05-02T16:38:52.195Z] : info : Signup driver: El Apellido no es válido
+[2020-05-02T16:38:58.565Z] : info : Check field: Field must be a valid document
+[2020-05-02T16:38:58.565Z] : info : Signup driver: El Teléfono no es válido
+[2020-05-02T16:39:02.106Z] : info : Check field: Field is valid
+[2020-05-02T16:39:02.126Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:39:02.224Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:02.224Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:05.383Z] : info : Check field: Field is valid
+[2020-05-02T16:39:05.398Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:39:05.403Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:05.403Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:06.692Z] : info : Check field: Field is valid
+[2020-05-02T16:39:06.710Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:39:06.714Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:06.715Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:09.015Z] : info : Check field: Field is valid
+[2020-05-02T16:39:09.033Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:39:09.037Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:39:09.037Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:40:52.302Z] : info : Server: Server is running
+[2020-05-02T16:40:52.433Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:40:52.475Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:41:00.985Z] : info : Check field: Field is valid
+[2020-05-02T16:41:01.002Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:41:01.017Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:41:01.018Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:41:57.906Z] : info : Server: Server is running
+[2020-05-02T16:41:58.012Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:41:58.053Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:42:00.927Z] : info : Check field: Field is valid
+[2020-05-02T16:42:00.944Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:42:00.955Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:42:00.956Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:42:20.596Z] : info : Server: Server is running
+[2020-05-02T16:42:20.719Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:42:20.759Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:42:24.681Z] : info : Check field: Field is valid
+[2020-05-02T16:42:24.700Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:42:24.713Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:42:24.714Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:43:38.039Z] : info : Server: Server is running
+[2020-05-02T16:43:38.212Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:43:38.281Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:43:44.977Z] : info : Check field: Field is valid
+[2020-05-02T16:43:44.996Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:43:45.007Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:43:45.008Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:46:37.579Z] : info : Server: Server is running
+[2020-05-02T16:46:37.695Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:46:37.734Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:46:55.436Z] : info : Server: Server is running
+[2020-05-02T16:46:55.563Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:46:55.603Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:47:03.670Z] : info : Check field: Field is valid
+[2020-05-02T16:47:03.688Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:47:03.701Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:47:03.702Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:49:33.312Z] : info : Server: Server is running
+[2020-05-02T16:49:33.436Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T16:49:33.480Z] : info : Server: database tables created if the dont exist
+[2020-05-02T16:49:40.738Z] : info : Check field: Field is valid
+[2020-05-02T16:49:40.754Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:49:40.767Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:49:40.768Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:50:53.071Z] : info : Check field: Field is valid
+[2020-05-02T16:50:53.087Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:50:53.139Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:50:53.139Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T16:51:01.716Z] : info : Check field: Field is valid
+[2020-05-02T16:51:01.737Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:51:01.744Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T16:51:01.744Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T16:51:26.172Z] : info : Check field: Field is valid
+[2020-05-02T16:51:26.187Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:51:26.239Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T16:51:26.240Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T16:51:40.837Z] : info : Check field: Field must contain only letters
+[2020-05-02T16:51:40.837Z] : info : Signup driver: El Nombre no es válido
+[2020-05-02T16:51:47.660Z] : info : Check field: Field is valid
+[2020-05-02T16:51:47.677Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:51:47.731Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T16:51:47.731Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T16:51:51.118Z] : info : Check field: Field is valid
+[2020-05-02T16:51:51.132Z] : info : Save image: Image saved succesfully
+[2020-05-02T16:51:51.301Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T16:51:51.301Z] : info : Signup driver: added succesfully
+[2020-05-02T17:03:37.577Z] : info : Server: Server is running
+[2020-05-02T17:03:37.700Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:03:37.739Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:04:01.563Z] : info : Check field: Plate "asd" invalid
+[2020-05-02T17:04:01.563Z] : info : Signup vehicle: Error in the supplied data
+[2020-05-02T17:04:11.303Z] : info : Check field: Plate "asd" invalid
+[2020-05-02T17:04:11.304Z] : info : Signup vehicle: Error in the supplied data
+[2020-05-02T17:08:39.707Z] : info : Server: Server is running
+[2020-05-02T17:08:39.819Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:08:39.864Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:08:50.441Z] : info : Check field: Plate "asd" invalid
+[2020-05-02T17:13:53.612Z] : info : Server: Server is running
+[2020-05-02T17:13:53.718Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:13:53.757Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:13:58.280Z] : info : Check field: Field can't be empty
+[2020-05-02T17:15:10.946Z] : info : Server: Server is running
+[2020-05-02T17:15:11.067Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:15:11.113Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:15:18.054Z] : info : Check field: Field can't be empty
+[2020-05-02T17:16:03.314Z] : info : Server: Server is running
+[2020-05-02T17:16:03.437Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:16:03.478Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:16:09.091Z] : info : Check field: Field can't be empty
+[2020-05-02T17:16:46.960Z] : info : Check field: Field can't be empty
+[2020-05-02T17:17:05.586Z] : info : Check field: Field can't be empty
+[2020-05-02T17:17:11.888Z] : info : Check field: Field is valid
+[2020-05-02T17:17:11.903Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:17:11.961Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T17:17:12.053Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T17:17:12.053Z] : info : Signup vehicle: added succesfully
+[2020-05-02T17:17:16.718Z] : info : Check field: Field is valid
+[2020-05-02T17:17:16.731Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:17:16.737Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:17:16.738Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:17:18.446Z] : info : Check field: Field is valid
+[2020-05-02T17:17:18.458Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:17:18.461Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:17:18.462Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:25:59.809Z] : info : Server: Server is running
+[2020-05-02T17:25:59.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:25:59.985Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:26:05.483Z] : info : Check field: Field is valid
+[2020-05-02T17:26:05.501Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:26:05.516Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:26:05.516Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:26:07.471Z] : info : Check field: Field is valid
+[2020-05-02T17:26:07.486Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:26:07.491Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:26:07.491Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:26:12.764Z] : info : Check field: Field is valid
+[2020-05-02T17:26:12.778Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:26:12.783Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T17:26:12.789Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T17:26:12.789Z] : info : Signup vehicle: added succesfully
+[2020-05-02T17:26:39.446Z] : info : Check field: E-Mail "rty" invalid
+[2020-05-02T17:27:03.674Z] : info : Check field: Name "345" invalid
+[2020-05-02T17:27:11.121Z] : info : Check field: Lastname "345" invalid
+[2020-05-02T17:27:16.643Z] : info : Check field: E-Mail "345" invalid
+[2020-05-02T17:27:23.588Z] : info : Check field: Field is valid
+[2020-05-02T17:27:23.635Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:27:23.714Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T17:27:23.714Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T17:27:33.792Z] : info : Check field: Field is valid
+[2020-05-02T17:27:33.811Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:27:33.878Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T17:27:33.878Z] : info : Signup driver: added succesfully
+[2020-05-02T17:28:23.427Z] : info : Check field: Field is valid
+[2020-05-02T17:28:23.461Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:28:23.523Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:28:23.524Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:28:27.237Z] : info : Check field: Field is valid
+[2020-05-02T17:28:27.259Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:28:27.267Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T17:28:27.268Z] : info : Signup driver: added succesfully
+[2020-05-02T17:29:09.045Z] : info : Check field: Payload capacity "34wer" invalid
+[2020-05-02T17:29:13.451Z] : info : Check field: Field is valid
+[2020-05-02T17:29:13.467Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:29:13.523Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T17:29:13.530Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T17:29:13.530Z] : info : Signup vehicle: added succesfully
+[2020-05-02T17:30:13.114Z] : info : Check field: Name "567" invalid
+[2020-05-02T17:30:13.114Z] : info : Signup client: Error in the supplied data
+[2020-05-02T17:30:41.391Z] : info : Check field: Name "567" invalid
+[2020-05-02T17:30:41.391Z] : info : Signup client: Error in the supplied data
+[2020-05-02T17:36:19.532Z] : info : Server: Server is running
+[2020-05-02T17:36:19.653Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:36:19.697Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:37:44.514Z] : info : Check field: Name "" invalid
+[2020-05-02T17:37:50.343Z] : info : Check field: Lastname "" invalid
+[2020-05-02T17:37:54.980Z] : info : Check field: Field can't be empty
+[2020-05-02T17:38:03.441Z] : info : Check field: Field can't be empty
+[2020-05-02T17:38:13.715Z] : info : Check field: E-Mail "" invalid
+[2020-05-02T17:38:21.298Z] : info : Check field: Identity card "" invalid
+[2020-05-02T17:38:24.089Z] : info : Check field: Phone "" invalid
+[2020-05-02T17:38:27.546Z] : info : Check field: Field is valid
+[2020-05-02T17:38:27.571Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:38:27.649Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T17:38:27.649Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T17:38:30.449Z] : info : Check field: Field is valid
+[2020-05-02T17:38:30.465Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:38:30.471Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:38:30.471Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:38:33.873Z] : info : Check field: Field is valid
+[2020-05-02T17:38:33.891Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:38:33.895Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:38:33.895Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:38:37.519Z] : info : Check field: Field is valid
+[2020-05-02T17:38:37.540Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:38:37.549Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T17:38:37.550Z] : info : Signup driver: added succesfully
+[2020-05-02T17:38:54.819Z] : info : Check field: Field can't be empty
+[2020-05-02T17:38:58.689Z] : info : Check field: Field can't be empty
+[2020-05-02T17:39:02.147Z] : info : Check field: Field can't be empty
+[2020-05-02T17:39:36.131Z] : info : Server: Server is running
+[2020-05-02T17:39:36.272Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:39:36.314Z] : info : Server: database tables created if the dont exist
+[2020-05-02T17:39:42.271Z] : info : Check field: Field can't be empty
+[2020-05-02T17:39:46.387Z] : info : Check field: Payload capacity "" invalid
+[2020-05-02T17:39:50.983Z] : info : Check field: Field is valid
+[2020-05-02T17:39:50.998Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:39:51.047Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T17:39:51.069Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T17:39:51.069Z] : info : Signup vehicle: added succesfully
+[2020-05-02T17:39:53.160Z] : info : Check field: Field is valid
+[2020-05-02T17:39:53.176Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:39:53.184Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:39:53.184Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T17:52:11.010Z] : info : Check field: E-Mail "rty" invalid
+[2020-05-02T17:52:20.532Z] : info : Check field: Field is valid
+[2020-05-02T17:52:20.652Z] : info : UserController: User was created successfully.
+[2020-05-02T17:52:20.653Z] : info : Signup client: added succesfully
+[2020-05-02T17:58:24.706Z] : info : Check field: Field is valid
+[2020-05-02T17:58:24.721Z] : info : Save image: Image saved succesfully
+[2020-05-02T17:58:24.769Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:58:24.769Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T17:59:31.940Z] : info : Check field: Field is valid
+[2020-05-02T17:59:31.984Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T17:59:31.984Z] : error : Signup client: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T17:59:56.669Z] : info : Server: Server is running
+[2020-05-02T17:59:56.807Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T17:59:56.866Z] : info : Server: database tables created if the dont exist
+[2020-05-02T18:00:03.661Z] : info : Check field: Field is valid
+[2020-05-02T18:00:03.671Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:00:03.672Z] : error : Signup driver: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:01:26.265Z] : info : Server: Server is running
+[2020-05-02T18:01:26.393Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T18:01:26.435Z] : info : Server: database tables created if the dont exist
+[2020-05-02T18:01:33.770Z] : info : Check field: Field is valid
+[2020-05-02T18:01:33.779Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:01:33.780Z] : error : Signup user: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:02:49.041Z] : info : Server: Server is running
+[2020-05-02T18:02:49.161Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T18:02:49.203Z] : info : Server: database tables created if the dont exist
+[2020-05-02T18:02:52.837Z] : info : Check field: Field is valid
+[2020-05-02T18:02:52.846Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:02:52.847Z] : error : Signup user: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:06:12.909Z] : info : Server: Server is running
+[2020-05-02T18:06:13.036Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T18:06:13.081Z] : info : Server: database tables created if the dont exist
+[2020-05-02T18:06:18.081Z] : info : Check field: Field is valid
+[2020-05-02T18:06:18.091Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:06:18.092Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-02T18:07:30.025Z] : info : Check field: Field is valid
+[2020-05-02T18:07:30.040Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:07:30.108Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T18:07:30.109Z] : info : Signup driver: added succesfully
+[2020-05-02T18:10:16.173Z] : info : Check field: Field is valid
+[2020-05-02T18:10:16.186Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:10:16.237Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:10:16.237Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:52.575Z] : info : Check field: Field is valid
+[2020-05-02T18:15:52.588Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:15:52.631Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:52.631Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key3»
+[2020-05-02T18:15:55.635Z] : info : Check field: Field is valid
+[2020-05-02T18:15:55.651Z] : info : Save image: Image saved succesfully
+[2020-05-02T18:15:55.658Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-02T18:15:55.665Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-02T18:15:55.665Z] : info : Signup vehicle: added succesfully
+[2020-05-02T18:23:01.704Z] : info : Check field: Name "" invalid
+[2020-05-02T18:23:11.435Z] : info : Check field: Lastname "" invalid
+[2020-05-02T18:23:16.650Z] : info : Check field: Field can't be empty
+[2020-05-02T20:07:18.481Z] : error : Migrations/RemovingVehicleDuplicateConstraints: Migration failed.SequelizeUnknownConstraintError: Unknown constraint error
+[2020-05-02T20:10:29.471Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration reverted.
+[2020-05-02T20:11:50.399Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «a»
+[2020-05-02T20:11:50.450Z] : info : Migrations/statusConstraints: Migration reverted.
+[2020-05-02T20:11:50.497Z] : info : Migrations/completeWeakTables: Migration reverted.
+[2020-05-02T20:11:58.558Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-05-02T20:11:58.722Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-05-02T20:11:58.812Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-02T20:11:58.834Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration done.
+[2020-05-02T20:12:35.825Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration reverted.
+[2020-05-02T20:12:35.914Z] : error : Migrations/vehiclePlateIsString: Migration failed.SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «a»
+[2020-05-02T20:12:35.933Z] : info : Migrations/statusConstraints: Migration reverted.
+[2020-05-02T20:12:35.968Z] : info : Migrations/completeWeakTables: Migration reverted.
+[2020-05-02T20:13:06.147Z] : info : Migrations/completeWeakTables: Migration completed.
+[2020-05-02T20:13:06.208Z] : info : Migrations/statusConstraints: Migration completed.
+[2020-05-02T20:13:06.286Z] : info : Migrations/vehiclePlateIsString: Migration completed.
+[2020-05-02T20:13:06.309Z] : info : Migrations/RemovingVehicleDuplicateConstraints: Migration done.
+[2020-05-02T20:16:18.017Z] : info : Server: Server is running
+[2020-05-02T20:16:18.200Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T20:16:18.273Z] : info : Server: database tables created if the dont exist
+[2020-05-02T20:16:26.726Z] : info : Check field: Field is valid
+[2020-05-02T20:16:26.729Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:26.775Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T20:16:26.778Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-02T20:16:30.788Z] : info : Check field: Field is valid
+[2020-05-02T20:16:30.790Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:30.796Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T20:16:30.797Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-02T20:16:35.026Z] : info : Check field: Field is valid
+[2020-05-02T20:16:35.027Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:35.031Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T20:16:35.032Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-02T20:16:39.980Z] : info : Check field: Field is valid
+[2020-05-02T20:16:39.982Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:39.991Z] : info : DriverController: Driver was created successfully.
+[2020-05-02T20:16:39.993Z] : info : Signup driver: added succesfully
+[2020-05-02T20:16:51.611Z] : info : Check field: Field is valid
+[2020-05-02T20:16:51.613Z] : info : Save image: Image saved succesfully
+[2020-05-02T20:16:51.702Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-02T20:16:51.703Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-02T22:43:43.693Z] : info : Server: Server is running
+[2020-05-02T22:43:44.022Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:43:44.148Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:45:38.377Z] : info : Server: Server is running
+[2020-05-02T22:45:38.531Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:45:38.596Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:50:13.159Z] : info : Check field: Field is valid
+[2020-05-02T22:50:13.266Z] : info : UserController: User was created successfully.
+[2020-05-02T22:50:13.266Z] : info : Signup client: added succesfully
+[2020-05-02T22:50:23.580Z] : info : Server: Server is running
+[2020-05-02T22:50:23.743Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T22:50:23.822Z] : info : Server: database tables created if the dont exist
+[2020-05-02T22:52:37.653Z] : info : UserController: User is not valid
+[2020-05-02T22:56:14.979Z] : info : UserController: User is valid
+[2020-05-02T23:01:35.661Z] : info : UserController: User is valid
+[2020-05-02T23:01:55.538Z] : info : Server: Server is running
+[2020-05-02T23:01:55.689Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:01:55.768Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:01:59.661Z] : info : UserController: User is valid
+[2020-05-02T23:01:59.661Z] : error : UserController: ReferenceError: letgetUserByEmail is not defined
+[2020-05-02T23:02:35.805Z] : info : Server: Server is running
+[2020-05-02T23:02:35.963Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:02:36.025Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:02:42.385Z] : info : UserController: User is valid
+[2020-05-02T23:04:06.703Z] : info : Server: Server is running
+[2020-05-02T23:04:06.845Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:06.914Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:04:13.429Z] : info : UserController: User is valid
+[2020-05-02T23:04:24.463Z] : info : Server: Server is running
+[2020-05-02T23:04:24.653Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:24.733Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:04:55.812Z] : info : Server: Server is running
+[2020-05-02T23:04:55.962Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:04:56.027Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:05:03.550Z] : info : Server: Server is running
+[2020-05-02T23:05:03.775Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:05:03.856Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:05:16.021Z] : info : UserController: User is valid
+[2020-05-02T23:06:13.394Z] : info : Server: Server is running
+[2020-05-02T23:06:13.551Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:06:13.620Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:06:22.032Z] : info : Server: Server is running
+[2020-05-02T23:06:22.190Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:06:22.256Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:06:34.319Z] : info : UserController: User is valid
+[2020-05-02T23:07:07.461Z] : info : Server: Server is running
+[2020-05-02T23:07:07.619Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:07:07.694Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:07:12.045Z] : info : UserController: User is valid
+[2020-05-02T23:07:34.708Z] : info : Server: Server is running
+[2020-05-02T23:07:34.858Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:07:34.920Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:11:46.967Z] : info : Server: Server is running
+[2020-05-02T23:11:47.239Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:11:47.318Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:11:52.353Z] : info : UserController: User is valid
+[2020-05-02T23:12:25.063Z] : info : Server: Server is running
+[2020-05-02T23:12:25.228Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:12:25.295Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:12:33.014Z] : info : UserController: User is valid
+[2020-05-02T23:15:38.952Z] : info : Server: Server is running
+[2020-05-02T23:15:39.117Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:15:39.187Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:17:55.240Z] : info : Server: Server is running
+[2020-05-02T23:17:55.441Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:17:55.550Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:18:00.260Z] : info : UserController: User is valid
+[2020-05-02T23:18:00.270Z] : info : UserController:user found
+[2020-05-02T23:18:12.807Z] : info : Server: Server is running
+[2020-05-02T23:18:12.953Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:18:13.023Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:18:33.154Z] : info : UserController: User is not valid
+[2020-05-02T23:19:26.746Z] : info : Server: Server is running
+[2020-05-02T23:19:26.958Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:19:27.060Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:19:42.589Z] : info : Server: Server is running
+[2020-05-02T23:19:42.734Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:19:42.799Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:19:58.961Z] : info : UserController: User is valid
+[2020-05-02T23:19:58.973Z] : info : UserController:User found
+[2020-05-02T23:20:46.894Z] : info : Server: Server is running
+[2020-05-02T23:20:47.039Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:20:47.104Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:21:25.448Z] : info : Server: Server is running
+[2020-05-02T23:21:25.594Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:21:25.673Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:21:54.461Z] : info : Server: Server is running
+[2020-05-02T23:21:54.624Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:21:54.693Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:22:00.583Z] : info : UserController: User is valid
+[2020-05-02T23:22:00.595Z] : info : UserController:User found
+[2020-05-02T23:22:23.663Z] : info : Server: Server is running
+[2020-05-02T23:22:23.816Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:22:23.892Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:22:30.152Z] : info : UserController: User is valid
+[2020-05-02T23:22:30.157Z] : info : UserController:User found
+[2020-05-02T23:23:35.982Z] : info : Server: Server is running
+[2020-05-02T23:23:36.124Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:23:36.189Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:28:17.349Z] : info : Server: Server is running
+[2020-05-02T23:28:17.508Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:28:17.579Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:28:21.529Z] : info : UserController: User is valid
+[2020-05-02T23:28:21.537Z] : info : UserController:User found
+[2020-05-02T23:29:08.775Z] : info : UserController: User is valid
+[2020-05-02T23:29:08.779Z] : info : UserController:User found
+[2020-05-02T23:35:06.729Z] : info : Server: Server is running
+[2020-05-02T23:35:06.889Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:35:06.974Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:37:53.868Z] : info : Server: Server is running
+[2020-05-02T23:37:54.037Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:37:54.190Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:38:00.177Z] : info : UserController: User is valid
+[2020-05-02T23:38:00.182Z] : info : UserController:User found
+[2020-05-02T23:38:00.182Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:39:08.434Z] : info : Server: Server is running
+[2020-05-02T23:39:08.581Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:39:08.659Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:39:21.315Z] : info : UserController: User is valid
+[2020-05-02T23:39:21.320Z] : info : UserController:User found
+[2020-05-02T23:39:21.321Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:39:55.093Z] : info : Server: Server is running
+[2020-05-02T23:39:55.271Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:39:55.343Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:40:01.568Z] : info : UserController: User is valid
+[2020-05-02T23:40:01.575Z] : info : UserController:User found
+[2020-05-02T23:40:01.576Z] : error : UserController: TypeError: Cannot read property 'Id_user' of undefined
+[2020-05-02T23:41:37.659Z] : info : Server: Server is running
+[2020-05-02T23:41:37.802Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:41:37.892Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:41:41.171Z] : info : UserController: User is valid
+[2020-05-02T23:41:41.177Z] : info : UserController:User found
+[2020-05-02T23:44:08.130Z] : info : Server: Server is running
+[2020-05-02T23:44:09.110Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:44:09.211Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:47:06.775Z] : info : Server: Server is running
+[2020-05-02T23:47:06.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:47:07.017Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:47:29.262Z] : info : UserController: User is valid
+[2020-05-02T23:47:29.270Z] : info : UserController:User found
+[2020-05-02T23:47:29.271Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-02T23:47:35.709Z] : info : Server: Server is running
+[2020-05-02T23:47:35.902Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:47:36.025Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:54:26.636Z] : info : Server: Server is running
+[2020-05-02T23:54:26.800Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:54:26.869Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:54:31.384Z] : info : UserController: User is valid
+[2020-05-02T23:54:31.391Z] : info : UserController:User found
+[2020-05-02T23:54:31.392Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-02T23:54:31.392Z] : info : api.js: returned user id succesfully
+[2020-05-02T23:56:30.153Z] : info : Server: Server is running
+[2020-05-02T23:56:30.412Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:56:30.483Z] : info : Server: database tables created if the dont exist
+[2020-05-02T23:58:12.649Z] : info : Server: Server is running
+[2020-05-02T23:58:12.938Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-02T23:58:12.998Z] : info : Server: database tables created if the dont exist
+[2020-05-03T00:07:40.988Z] : info : Server: Server is running
+[2020-05-03T00:07:41.187Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T00:07:41.280Z] : info : Server: database tables created if the dont exist
+[2020-05-03T00:08:29.004Z] : info : Server: Server is running
+[2020-05-03T00:08:29.154Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T00:08:29.221Z] : info : Server: database tables created if the dont exist
+[2020-05-03T00:08:41.373Z] : info : Server: Server is running
+[2020-05-03T00:08:41.561Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T00:08:41.664Z] : info : Server: database tables created if the dont exist
+[2020-05-03T00:09:06.119Z] : info : Check field: Field is valid
+[2020-05-03T00:09:06.205Z] : info : UserController: User is valid
+[2020-05-03T00:09:06.212Z] : info : UserController:User found
+[2020-05-03T00:09:06.213Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-03T00:09:06.213Z] : info : api.js: returned user id succesfully
+[2020-05-03T00:09:18.210Z] : info : Check field: E-Mail "aaahotmail.com" invalid
+[2020-05-03T00:09:25.943Z] : info : Check field: E-Mail "aaahotmail.com" invalid
+[2020-05-03T00:09:40.933Z] : info : Check field: Field can't be empty
+[2020-05-03T00:12:45.094Z] : info : Server: Server is running
+[2020-05-03T00:12:45.242Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T00:12:45.311Z] : info : Server: database tables created if the dont exist
+[2020-05-03T00:12:57.066Z] : info : Check field: Field can't be empty
+[2020-05-03T00:13:25.508Z] : info : Server: Server is running
+[2020-05-03T00:13:25.690Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T00:13:25.762Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:00:31.855Z] : info : Server: Server is running
+[2020-05-03T01:00:32.015Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:00:32.081Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:02:20.483Z] : info : Server: Server is running
+[2020-05-03T01:02:20.656Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:02:20.726Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:02:46.784Z] : info : Check field: Field can't be empty
+[2020-05-03T01:03:01.490Z] : info : Check field: Field is valid
+[2020-05-03T01:03:01.495Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:03:01.495Z] : info : api.js: could not find Driver
+[2020-05-03T01:04:31.563Z] : info : Server: Server is running
+[2020-05-03T01:04:31.702Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:04:31.766Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:04:51.703Z] : info : Server: Server is running
+[2020-05-03T01:04:51.903Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:04:51.999Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:06:32.663Z] : info : Server: Server is running
+[2020-05-03T01:06:32.910Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:06:32.982Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:07:41.125Z] : info : Server: Server is running
+[2020-05-03T01:07:41.270Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:07:41.340Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:09:54.800Z] : info : Server: Server is running
+[2020-05-03T01:09:54.956Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:09:55.023Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:01.254Z] : info : Server: Server is running
+[2020-05-03T01:10:01.453Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:10:01.538Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:07.737Z] : info : Server: Server is running
+[2020-05-03T01:10:07.890Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:10:07.969Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:10:35.776Z] : info : Check field: Field is valid
+[2020-05-03T01:10:35.777Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:10:35.778Z] : error : api.js: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:11:57.707Z] : info : Server: Server is running
+[2020-05-03T01:11:57.890Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:11:57.989Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:12:19.984Z] : info : Server: Server is running
+[2020-05-03T01:12:20.233Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:12:20.370Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:12:33.139Z] : info : Check field: Field is valid
+[2020-05-03T01:12:33.143Z] : error : DriverController: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:12:33.144Z] : error : api.js: TypeError: Cannot destructure property 'Driver_Email' of 'req.body.request' as it is undefined.
+[2020-05-03T01:14:39.955Z] : info : Server: Server is running
+[2020-05-03T01:14:40.202Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:14:40.276Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:14:49.876Z] : info : Server: Server is running
+[2020-05-03T01:14:50.048Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:14:50.126Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:14:54.635Z] : info : Check field: Field is valid
+[2020-05-03T01:14:54.644Z] : error : DriverController: Error: WHERE parameter "Driver_Email" has invalid "undefined" value
+[2020-05-03T01:14:54.645Z] : error : api.js: Error: WHERE parameter "Driver_Email" has invalid "undefined" value
+[2020-05-03T01:15:39.513Z] : info : Server: Server is running
+[2020-05-03T01:15:39.675Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:15:39.738Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:15:51.177Z] : info : Check field: Field is valid
+[2020-05-03T01:15:51.315Z] : info : DriverController: Driver is valid
+[2020-05-03T01:15:51.321Z] : info : DriverController:Driver found
+[2020-05-03T01:15:51.321Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-03T01:15:51.321Z] : info : api.js: returned Driver id succesfully
+[2020-05-03T01:16:55.628Z] : info : Check field: Field is valid
+[2020-05-03T01:16:55.707Z] : info : DriverController: Driver is not valid
+[2020-05-03T01:16:55.707Z] : info : api.js: could not find Driver
+[2020-05-03T01:18:28.421Z] : info : Check field: Field can't be empty
+[2020-05-03T01:18:52.427Z] : info : Check field: Field is valid
+[2020-05-03T01:18:52.502Z] : info : DriverController: Driver is valid
+[2020-05-03T01:18:52.505Z] : info : DriverController:Driver found
+[2020-05-03T01:18:52.505Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-03T01:18:52.506Z] : info : api.js: returned Driver id succesfully
+[2020-05-03T01:19:52.318Z] : info : Server: Server is running
+[2020-05-03T01:19:52.489Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:19:52.562Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:19:59.006Z] : info : Server: Server is running
+[2020-05-03T01:19:59.156Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:19:59.220Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:20:11.724Z] : info : Server: Server is running
+[2020-05-03T01:20:11.893Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:20:11.963Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:20:38.186Z] : info : Server: Server is running
+[2020-05-03T01:20:38.329Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:20:38.391Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:21:22.565Z] : info : Server: Server is running
+[2020-05-03T01:21:22.732Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:21:22.802Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:22:48.287Z] : info : Check field: Field is valid
+[2020-05-03T01:22:48.340Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:22:48.451Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-03T01:22:48.452Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-03T01:22:56.444Z] : info : Check field: Field is valid
+[2020-05-03T01:22:56.446Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:22:56.451Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-03T01:22:56.451Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-03T01:23:02.974Z] : info : Check field: Field is valid
+[2020-05-03T01:23:03.014Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:03.020Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-03T01:23:03.021Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-03T01:23:09.259Z] : info : Check field: Field is valid
+[2020-05-03T01:23:09.260Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:09.269Z] : info : DriverController: Driver was created successfully.
+[2020-05-03T01:23:09.269Z] : info : Signup driver: added succesfully
+[2020-05-03T01:23:19.735Z] : info : Check field: Field is valid
+[2020-05-03T01:23:19.749Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:19.971Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-03T01:23:19.972Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-03T01:23:24.438Z] : info : Check field: Field is valid
+[2020-05-03T01:23:24.451Z] : info : Save image: Image saved succesfully
+[2020-05-03T01:23:24.457Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-03T01:23:24.482Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-03T01:23:24.482Z] : info : Signup vehicle: added succesfully
+[2020-05-03T01:26:10.463Z] : info : Server: Server is running
+[2020-05-03T01:26:10.709Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-03T01:26:10.781Z] : info : Server: database tables created if the dont exist
+[2020-05-03T01:26:28.087Z] : info : Check field: Field is valid
+[2020-05-03T01:26:28.088Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-05-04T03:44:57.134Z] : info : Server: Server is running
+[2020-05-04T03:44:57.776Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T03:44:57.897Z] : info : Server: database tables created if the dont exist
+[2020-05-04T03:53:41.309Z] : info : Check field: Field is valid
+[2020-05-04T03:53:41.675Z] : info : DriverController: Driver is not valid
+[2020-05-04T03:53:41.676Z] : info : api.js: could not find Driver
+[2020-05-04T03:53:47.747Z] : info : Check field: Field is valid
+[2020-05-04T03:53:47.750Z] : info : DriverController: Driver is valid
+[2020-05-04T03:53:47.761Z] : info : DriverController:Driver found
+[2020-05-04T03:53:47.761Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T03:53:47.762Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T03:54:09.069Z] : info : Check field: Field is valid
+[2020-05-04T03:54:09.291Z] : info : UserController: User is valid
+[2020-05-04T03:54:09.296Z] : info : UserController:User found
+[2020-05-04T03:54:09.297Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T03:54:09.297Z] : info : api.js: returned user id succesfully
+[2020-05-04T03:58:28.477Z] : info : Check field: Field is valid
+[2020-05-04T03:58:28.556Z] : info : DriverController: Driver is valid
+[2020-05-04T03:58:28.561Z] : info : DriverController:Driver found
+[2020-05-04T03:58:28.561Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T03:58:28.563Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:02:08.111Z] : info : Check field: Field is valid
+[2020-05-04T04:02:08.191Z] : info : UserController: User is not valid
+[2020-05-04T04:02:08.192Z] : info : api.js: could not find user
+[2020-05-04T04:02:11.762Z] : info : Check field: Field is valid
+[2020-05-04T04:02:11.765Z] : info : UserController: User is not valid
+[2020-05-04T04:02:11.766Z] : info : api.js: could not find user
+[2020-05-04T04:02:14.431Z] : info : Check field: Field is valid
+[2020-05-04T04:02:14.434Z] : info : UserController: User is not valid
+[2020-05-04T04:02:14.435Z] : info : api.js: could not find user
+[2020-05-04T04:02:18.068Z] : info : Check field: Field is valid
+[2020-05-04T04:02:18.073Z] : info : UserController: User is valid
+[2020-05-04T04:02:18.078Z] : info : UserController:User found
+[2020-05-04T04:02:18.079Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:02:18.080Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:04:23.411Z] : info : Check field: Field is valid
+[2020-05-04T04:04:23.415Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:23.742Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-04T04:04:23.757Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-04T04:04:27.344Z] : info : Check field: Field is valid
+[2020-05-04T04:04:27.345Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:27.350Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:04:27.351Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:04:33.785Z] : info : Check field: Field is valid
+[2020-05-04T04:04:33.787Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:33.791Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:04:33.792Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:04:38.262Z] : info : Check field: Field is valid
+[2020-05-04T04:04:38.263Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:38.271Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:04:38.273Z] : info : Signup driver: added succesfully
+[2020-05-04T04:04:58.142Z] : info : Check field: Field is valid
+[2020-05-04T04:04:58.144Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:58.325Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:04:58.326Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:34.459Z] : info : Check field: Field is valid
+[2020-05-04T04:05:34.461Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:05:34.555Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:34.556Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:38.513Z] : info : Check field: Field is valid
+[2020-05-04T04:05:38.514Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:05:38.519Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:05:38.591Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:05:38.594Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:13:00.864Z] : info : Check field: Field is valid
+[2020-05-04T04:13:00.941Z] : info : DriverController: Driver is valid
+[2020-05-04T04:13:00.945Z] : info : DriverController:Driver found
+[2020-05-04T04:13:00.946Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:13:00.946Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:14:06.725Z] : info : Check field: Field is valid
+[2020-05-04T04:14:06.810Z] : info : UserController: User is not valid
+[2020-05-04T04:14:06.811Z] : info : api.js: could not find user
+[2020-05-04T04:14:09.929Z] : info : Check field: Field is valid
+[2020-05-04T04:14:09.933Z] : info : UserController: User is not valid
+[2020-05-04T04:14:09.934Z] : info : api.js: could not find user
+[2020-05-04T04:14:12.458Z] : info : Check field: Field is valid
+[2020-05-04T04:14:12.462Z] : info : UserController: User is not valid
+[2020-05-04T04:14:12.463Z] : info : api.js: could not find user
+[2020-05-04T04:14:15.849Z] : info : Check field: Field is valid
+[2020-05-04T04:14:15.852Z] : info : UserController: User is not valid
+[2020-05-04T04:14:15.853Z] : info : api.js: could not find user
+[2020-05-04T04:14:19.033Z] : info : Check field: Field is valid
+[2020-05-04T04:14:19.036Z] : info : UserController: User is not valid
+[2020-05-04T04:14:19.037Z] : info : api.js: could not find user
+[2020-05-04T04:14:25.737Z] : info : Check field: Field is valid
+[2020-05-04T04:14:25.741Z] : info : UserController: User is not valid
+[2020-05-04T04:14:25.742Z] : info : api.js: could not find user
+[2020-05-04T04:14:29.861Z] : info : Check field: Field is valid
+[2020-05-04T04:14:29.864Z] : info : UserController: User is not valid
+[2020-05-04T04:14:29.865Z] : info : api.js: could not find user
+[2020-05-04T04:14:33.793Z] : info : Check field: Field is valid
+[2020-05-04T04:14:33.795Z] : info : UserController: User is valid
+[2020-05-04T04:14:33.798Z] : info : UserController:User found
+[2020-05-04T04:14:33.799Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:14:33.800Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:15:03.220Z] : info : Check field: Field is valid
+[2020-05-04T04:15:03.336Z] : info : DriverController: Driver is valid
+[2020-05-04T04:15:03.341Z] : info : DriverController:Driver found
+[2020-05-04T04:15:03.342Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:15:03.343Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:15:48.298Z] : info : Check field: Field is valid
+[2020-05-04T04:15:48.381Z] : info : DriverController: Driver is valid
+[2020-05-04T04:15:48.385Z] : info : DriverController:Driver found
+[2020-05-04T04:15:48.386Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:15:48.387Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:16:05.654Z] : info : Check field: Field is valid
+[2020-05-04T04:16:05.738Z] : info : UserController: User is valid
+[2020-05-04T04:16:05.744Z] : info : UserController:User found
+[2020-05-04T04:16:05.745Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:16:05.745Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:16:19.703Z] : info : Check field: Field is valid
+[2020-05-04T04:16:19.782Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:16:19.783Z] : info : api.js: could not find Driver
+[2020-05-04T04:16:22.573Z] : info : Check field: Field is valid
+[2020-05-04T04:16:22.576Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:16:22.577Z] : info : api.js: could not find Driver
+[2020-05-04T04:16:25.562Z] : info : Check field: Field is valid
+[2020-05-04T04:16:25.566Z] : info : DriverController: Driver is valid
+[2020-05-04T04:16:25.571Z] : info : DriverController:Driver found
+[2020-05-04T04:16:25.572Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:16:25.573Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:16:31.595Z] : info : Check field: E-Mail "" invalid
+[2020-05-04T04:16:36.562Z] : info : Check field: Field is valid
+[2020-05-04T04:16:36.646Z] : info : DriverController: Driver is valid
+[2020-05-04T04:16:36.652Z] : info : DriverController:Driver found
+[2020-05-04T04:16:36.652Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:16:36.653Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:17:23.488Z] : info : Check field: Field is valid
+[2020-05-04T04:17:23.492Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:23.657Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:23.658Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:28.782Z] : info : Check field: Field is valid
+[2020-05-04T04:17:28.783Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:28.789Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:28.790Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:33.137Z] : info : Check field: Field is valid
+[2020-05-04T04:17:33.138Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:33.146Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:17:33.146Z] : info : Signup driver: added succesfully
+[2020-05-04T04:17:45.602Z] : info : Check field: Field is valid
+[2020-05-04T04:17:45.616Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:45.704Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:17:45.717Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:17:45.718Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:18:55.915Z] : info : Check field: Field is valid
+[2020-05-04T04:18:56.019Z] : info : DriverController: Driver is valid
+[2020-05-04T04:18:56.023Z] : info : DriverController:Driver found
+[2020-05-04T04:18:56.024Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:18:56.025Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:26:10.591Z] : info : Check field: Field is valid
+[2020-05-04T04:26:10.673Z] : info : DriverController: Driver is valid
+[2020-05-04T04:26:10.678Z] : info : DriverController:Driver found
+[2020-05-04T04:26:10.679Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:26:10.680Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:27:54.692Z] : info : Check field: Field is valid
+[2020-05-04T04:27:54.776Z] : info : DriverController: Driver is valid
+[2020-05-04T04:27:54.780Z] : info : DriverController:Driver found
+[2020-05-04T04:27:54.781Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:27:54.782Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:33:10.813Z] : info : Check field: Field is valid
+[2020-05-04T04:33:10.817Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:33:10.931Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:33:10.973Z] : info : Signup driver: added succesfully
+[2020-05-04T04:33:24.568Z] : info : Check field: Field is valid
+[2020-05-04T04:33:24.570Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:33:24.669Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:33:24.670Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:34:01.524Z] : info : Check field: Field is valid
+[2020-05-04T04:34:01.526Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:34:01.612Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:34:01.622Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:34:01.623Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:36:01.550Z] : info : Check field: Field is valid
+[2020-05-04T04:36:01.554Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:01.683Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:36:01.684Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:36:24.039Z] : info : Check field: Field is valid
+[2020-05-04T04:36:24.040Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:24.133Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:36:24.134Z] : info : Signup driver: added succesfully
+[2020-05-04T04:36:51.414Z] : info : Check field: Field is valid
+[2020-05-04T04:36:51.416Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:51.553Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:36:51.578Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:36:51.580Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:38:10.709Z] : info : Check field: Field is valid
+[2020-05-04T04:38:10.819Z] : info : DriverController: Driver is valid
+[2020-05-04T04:38:10.823Z] : info : DriverController:Driver found
+[2020-05-04T04:38:10.824Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:38:10.825Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:39:39.946Z] : info : Check field: Field is valid
+[2020-05-04T04:39:40.031Z] : info : DriverController: Driver is valid
+[2020-05-04T04:39:40.036Z] : info : DriverController:Driver found
+[2020-05-04T04:39:40.037Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:39:40.037Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:40:01.231Z] : info : Check field: Field is valid
+[2020-05-04T04:40:01.360Z] : info : DriverController: Driver is valid
+[2020-05-04T04:40:01.365Z] : info : DriverController:Driver found
+[2020-05-04T04:40:01.366Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:40:01.367Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:41:01.671Z] : info : Check field: Field is valid
+[2020-05-04T04:41:01.674Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:41:01.790Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:41:01.791Z] : info : Signup driver: added succesfully
+[2020-05-04T04:41:14.420Z] : info : Check field: Field is valid
+[2020-05-04T04:41:14.422Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:41:14.521Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:41:14.537Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:41:14.538Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:41:51.006Z] : info : Check field: Field is valid
+[2020-05-04T04:41:51.152Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:41:51.153Z] : info : api.js: could not find Driver
+[2020-05-04T04:41:53.980Z] : info : Check field: Field is valid
+[2020-05-04T04:41:53.984Z] : info : DriverController: Driver is valid
+[2020-05-04T04:41:53.987Z] : info : DriverController:Driver found
+[2020-05-04T04:41:53.989Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:41:53.990Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:42:43.795Z] : info : Check field: Field is valid
+[2020-05-04T04:42:43.910Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-04T04:42:43.911Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-04T04:43:19.961Z] : info : Check field: Field is valid
+[2020-05-04T04:43:20.050Z] : info : UserController: User was created successfully.
+[2020-05-04T04:43:20.052Z] : info : Signup client: added succesfully
+[2020-05-04T04:45:37.135Z] : info : Check field: Field is valid
+[2020-05-04T04:45:37.233Z] : info : DriverController: Driver is valid
+[2020-05-04T04:45:37.237Z] : info : DriverController:Driver found
+[2020-05-04T04:45:37.238Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:45:37.239Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:47:37.959Z] : info : Check field: Field is valid
+[2020-05-04T04:47:38.128Z] : info : UserController: User is valid
+[2020-05-04T04:47:38.133Z] : info : UserController:User found
+[2020-05-04T04:47:38.134Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:47:38.135Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:48:38.615Z] : info : Check field: Field is valid
+[2020-05-04T04:48:38.768Z] : info : UserController: User is not valid
+[2020-05-04T04:48:38.769Z] : info : api.js: could not find user
+[2020-05-04T04:48:42.647Z] : info : Check field: Field is valid
+[2020-05-04T04:48:42.653Z] : info : DriverController: Driver is valid
+[2020-05-04T04:48:42.658Z] : info : DriverController:Driver found
+[2020-05-04T04:48:42.659Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:48:42.660Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:03.772Z] : info : Check field: Field is valid
+[2020-05-04T04:54:03.915Z] : info : DriverController: Driver is valid
+[2020-05-04T04:54:03.919Z] : info : DriverController:Driver found
+[2020-05-04T04:54:03.920Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:54:03.921Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:16.728Z] : info : Check field: Field is valid
+[2020-05-04T04:54:16.861Z] : info : DriverController: Driver is valid
+[2020-05-04T04:54:16.865Z] : info : DriverController:Driver found
+[2020-05-04T04:54:16.866Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:54:16.867Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:46.123Z] : info : Check field: Field is valid
+[2020-05-04T04:54:46.249Z] : info : UserController: User was created successfully.
+[2020-05-04T04:54:46.251Z] : info : Signup client: added succesfully
+[2020-05-04T19:20:47.798Z] : info : Server: Server is running
+[2020-05-04T19:20:48.007Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:20:48.068Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:22:17.139Z] : info : Server: Server is running
+[2020-05-04T19:22:17.342Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:22:17.414Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:28:09.249Z] : info : Server: Server is running
+[2020-05-04T19:28:09.575Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.639Z] : info : Server: Server is running
+[2020-05-04T19:28:10.814Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.870Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:29:29.138Z] : info : Server: Server is running
+[2020-05-04T19:29:29.301Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:29:29.393Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:31:24.038Z] : info : Server: Server is running
+[2020-05-04T19:31:24.199Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:31:24.281Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:23.028Z] : info : Server: Server is running
+[2020-05-04T19:34:23.185Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:23.253Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:27.209Z] : info : Server: Server is running
+[2020-05-04T19:34:27.368Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:27.439Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:42.453Z] : info : Server: Server is running
+[2020-05-04T19:34:42.588Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:42.658Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:35:10.486Z] : info : Server: Server is running
+[2020-05-04T19:35:10.773Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:35:10.841Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:32.060Z] : info : Server: Server is running
+[2020-05-04T19:36:32.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:36:32.293Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:33.952Z] : error : Api:Server recieved error from client:: "afmoyar@unal.edu.co" "a"
+[2020-05-04T19:37:13.307Z] : info : Server: Server is running
+[2020-05-04T19:37:13.460Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:37:13.528Z] : info : Server: database tables created if the dont exist
