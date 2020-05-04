@@ -56,7 +56,7 @@ async function validateUser(req) {
             if(status==1)
             {
                 logger.info("UserController: succesfull call to getUserBeEmail")
-                return {status: 1, data: data.Id_user};
+                return {status: 1, data: data};
             }else if(status==-1)
             {    logger.error("UserController: error from getUserBeEmail"+ error)
                 return {status: -2, data: error};  
