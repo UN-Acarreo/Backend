@@ -114,6 +114,18 @@ async function saveImage(baseImage, path, img_name) {
 
 //Route will be used to handle login POST requests
 
+
+router.post('/log-client-errors', async function(req, res){
+
+  let error = req.body.error.message;
+  let errorInfo = req.body.error.stack;
+  console.log(req.body.message);
+  logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " "+ JSON.stringify(errorInfo))
+  return res.status(200).send("ok");
+
+});
+
+
 //Login for user and driver
 //status 0 = user/driver not found
 //status 1 = user/driver found, id returned

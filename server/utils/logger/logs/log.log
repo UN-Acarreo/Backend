@@ -1004,3 +1004,293 @@
 [2020-05-03T01:26:10.781Z] : info : Server: database tables created if the dont exist
 [2020-05-03T01:26:28.087Z] : info : Check field: Field is valid
 [2020-05-03T01:26:28.088Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-05-04T03:44:57.134Z] : info : Server: Server is running
+[2020-05-04T03:44:57.776Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T03:44:57.897Z] : info : Server: database tables created if the dont exist
+[2020-05-04T03:53:41.309Z] : info : Check field: Field is valid
+[2020-05-04T03:53:41.675Z] : info : DriverController: Driver is not valid
+[2020-05-04T03:53:41.676Z] : info : api.js: could not find Driver
+[2020-05-04T03:53:47.747Z] : info : Check field: Field is valid
+[2020-05-04T03:53:47.750Z] : info : DriverController: Driver is valid
+[2020-05-04T03:53:47.761Z] : info : DriverController:Driver found
+[2020-05-04T03:53:47.761Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T03:53:47.762Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T03:54:09.069Z] : info : Check field: Field is valid
+[2020-05-04T03:54:09.291Z] : info : UserController: User is valid
+[2020-05-04T03:54:09.296Z] : info : UserController:User found
+[2020-05-04T03:54:09.297Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T03:54:09.297Z] : info : api.js: returned user id succesfully
+[2020-05-04T03:58:28.477Z] : info : Check field: Field is valid
+[2020-05-04T03:58:28.556Z] : info : DriverController: Driver is valid
+[2020-05-04T03:58:28.561Z] : info : DriverController:Driver found
+[2020-05-04T03:58:28.561Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T03:58:28.563Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:02:08.111Z] : info : Check field: Field is valid
+[2020-05-04T04:02:08.191Z] : info : UserController: User is not valid
+[2020-05-04T04:02:08.192Z] : info : api.js: could not find user
+[2020-05-04T04:02:11.762Z] : info : Check field: Field is valid
+[2020-05-04T04:02:11.765Z] : info : UserController: User is not valid
+[2020-05-04T04:02:11.766Z] : info : api.js: could not find user
+[2020-05-04T04:02:14.431Z] : info : Check field: Field is valid
+[2020-05-04T04:02:14.434Z] : info : UserController: User is not valid
+[2020-05-04T04:02:14.435Z] : info : api.js: could not find user
+[2020-05-04T04:02:18.068Z] : info : Check field: Field is valid
+[2020-05-04T04:02:18.073Z] : info : UserController: User is valid
+[2020-05-04T04:02:18.078Z] : info : UserController:User found
+[2020-05-04T04:02:18.079Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:02:18.080Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:04:23.411Z] : info : Check field: Field is valid
+[2020-05-04T04:04:23.415Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:23.742Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-04T04:04:23.757Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-05-04T04:04:27.344Z] : info : Check field: Field is valid
+[2020-05-04T04:04:27.345Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:27.350Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:04:27.351Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:04:33.785Z] : info : Check field: Field is valid
+[2020-05-04T04:04:33.787Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:33.791Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:04:33.792Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:04:38.262Z] : info : Check field: Field is valid
+[2020-05-04T04:04:38.263Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:38.271Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:04:38.273Z] : info : Signup driver: added succesfully
+[2020-05-04T04:04:58.142Z] : info : Check field: Field is valid
+[2020-05-04T04:04:58.144Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:04:58.325Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:04:58.326Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:34.459Z] : info : Check field: Field is valid
+[2020-05-04T04:05:34.461Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:05:34.555Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:34.556Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:05:38.513Z] : info : Check field: Field is valid
+[2020-05-04T04:05:38.514Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:05:38.519Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:05:38.591Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:05:38.594Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:13:00.864Z] : info : Check field: Field is valid
+[2020-05-04T04:13:00.941Z] : info : DriverController: Driver is valid
+[2020-05-04T04:13:00.945Z] : info : DriverController:Driver found
+[2020-05-04T04:13:00.946Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:13:00.946Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:14:06.725Z] : info : Check field: Field is valid
+[2020-05-04T04:14:06.810Z] : info : UserController: User is not valid
+[2020-05-04T04:14:06.811Z] : info : api.js: could not find user
+[2020-05-04T04:14:09.929Z] : info : Check field: Field is valid
+[2020-05-04T04:14:09.933Z] : info : UserController: User is not valid
+[2020-05-04T04:14:09.934Z] : info : api.js: could not find user
+[2020-05-04T04:14:12.458Z] : info : Check field: Field is valid
+[2020-05-04T04:14:12.462Z] : info : UserController: User is not valid
+[2020-05-04T04:14:12.463Z] : info : api.js: could not find user
+[2020-05-04T04:14:15.849Z] : info : Check field: Field is valid
+[2020-05-04T04:14:15.852Z] : info : UserController: User is not valid
+[2020-05-04T04:14:15.853Z] : info : api.js: could not find user
+[2020-05-04T04:14:19.033Z] : info : Check field: Field is valid
+[2020-05-04T04:14:19.036Z] : info : UserController: User is not valid
+[2020-05-04T04:14:19.037Z] : info : api.js: could not find user
+[2020-05-04T04:14:25.737Z] : info : Check field: Field is valid
+[2020-05-04T04:14:25.741Z] : info : UserController: User is not valid
+[2020-05-04T04:14:25.742Z] : info : api.js: could not find user
+[2020-05-04T04:14:29.861Z] : info : Check field: Field is valid
+[2020-05-04T04:14:29.864Z] : info : UserController: User is not valid
+[2020-05-04T04:14:29.865Z] : info : api.js: could not find user
+[2020-05-04T04:14:33.793Z] : info : Check field: Field is valid
+[2020-05-04T04:14:33.795Z] : info : UserController: User is valid
+[2020-05-04T04:14:33.798Z] : info : UserController:User found
+[2020-05-04T04:14:33.799Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:14:33.800Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:15:03.220Z] : info : Check field: Field is valid
+[2020-05-04T04:15:03.336Z] : info : DriverController: Driver is valid
+[2020-05-04T04:15:03.341Z] : info : DriverController:Driver found
+[2020-05-04T04:15:03.342Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:15:03.343Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:15:48.298Z] : info : Check field: Field is valid
+[2020-05-04T04:15:48.381Z] : info : DriverController: Driver is valid
+[2020-05-04T04:15:48.385Z] : info : DriverController:Driver found
+[2020-05-04T04:15:48.386Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:15:48.387Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:16:05.654Z] : info : Check field: Field is valid
+[2020-05-04T04:16:05.738Z] : info : UserController: User is valid
+[2020-05-04T04:16:05.744Z] : info : UserController:User found
+[2020-05-04T04:16:05.745Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:16:05.745Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:16:19.703Z] : info : Check field: Field is valid
+[2020-05-04T04:16:19.782Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:16:19.783Z] : info : api.js: could not find Driver
+[2020-05-04T04:16:22.573Z] : info : Check field: Field is valid
+[2020-05-04T04:16:22.576Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:16:22.577Z] : info : api.js: could not find Driver
+[2020-05-04T04:16:25.562Z] : info : Check field: Field is valid
+[2020-05-04T04:16:25.566Z] : info : DriverController: Driver is valid
+[2020-05-04T04:16:25.571Z] : info : DriverController:Driver found
+[2020-05-04T04:16:25.572Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:16:25.573Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:16:31.595Z] : info : Check field: E-Mail "" invalid
+[2020-05-04T04:16:36.562Z] : info : Check field: Field is valid
+[2020-05-04T04:16:36.646Z] : info : DriverController: Driver is valid
+[2020-05-04T04:16:36.652Z] : info : DriverController:Driver found
+[2020-05-04T04:16:36.652Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:16:36.653Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:17:23.488Z] : info : Check field: Field is valid
+[2020-05-04T04:17:23.492Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:23.657Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:23.658Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:28.782Z] : info : Check field: Field is valid
+[2020-05-04T04:17:28.783Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:28.789Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:28.790Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-04T04:17:33.137Z] : info : Check field: Field is valid
+[2020-05-04T04:17:33.138Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:33.146Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:17:33.146Z] : info : Signup driver: added succesfully
+[2020-05-04T04:17:45.602Z] : info : Check field: Field is valid
+[2020-05-04T04:17:45.616Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:17:45.704Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:17:45.717Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:17:45.718Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:18:55.915Z] : info : Check field: Field is valid
+[2020-05-04T04:18:56.019Z] : info : DriverController: Driver is valid
+[2020-05-04T04:18:56.023Z] : info : DriverController:Driver found
+[2020-05-04T04:18:56.024Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:18:56.025Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:26:10.591Z] : info : Check field: Field is valid
+[2020-05-04T04:26:10.673Z] : info : DriverController: Driver is valid
+[2020-05-04T04:26:10.678Z] : info : DriverController:Driver found
+[2020-05-04T04:26:10.679Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:26:10.680Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:27:54.692Z] : info : Check field: Field is valid
+[2020-05-04T04:27:54.776Z] : info : DriverController: Driver is valid
+[2020-05-04T04:27:54.780Z] : info : DriverController:Driver found
+[2020-05-04T04:27:54.781Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:27:54.782Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:33:10.813Z] : info : Check field: Field is valid
+[2020-05-04T04:33:10.817Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:33:10.931Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:33:10.973Z] : info : Signup driver: added succesfully
+[2020-05-04T04:33:24.568Z] : info : Check field: Field is valid
+[2020-05-04T04:33:24.570Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:33:24.669Z] : error : VehicleController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:33:24.670Z] : error : Signup vehicle: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»
+[2020-05-04T04:34:01.524Z] : info : Check field: Field is valid
+[2020-05-04T04:34:01.526Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:34:01.612Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:34:01.622Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:34:01.623Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:36:01.550Z] : info : Check field: Field is valid
+[2020-05-04T04:36:01.554Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:01.683Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:36:01.684Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-05-04T04:36:24.039Z] : info : Check field: Field is valid
+[2020-05-04T04:36:24.040Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:24.133Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:36:24.134Z] : info : Signup driver: added succesfully
+[2020-05-04T04:36:51.414Z] : info : Check field: Field is valid
+[2020-05-04T04:36:51.416Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:36:51.553Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:36:51.578Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:36:51.580Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:38:10.709Z] : info : Check field: Field is valid
+[2020-05-04T04:38:10.819Z] : info : DriverController: Driver is valid
+[2020-05-04T04:38:10.823Z] : info : DriverController:Driver found
+[2020-05-04T04:38:10.824Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:38:10.825Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:39:39.946Z] : info : Check field: Field is valid
+[2020-05-04T04:39:40.031Z] : info : DriverController: Driver is valid
+[2020-05-04T04:39:40.036Z] : info : DriverController:Driver found
+[2020-05-04T04:39:40.037Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:39:40.037Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:40:01.231Z] : info : Check field: Field is valid
+[2020-05-04T04:40:01.360Z] : info : DriverController: Driver is valid
+[2020-05-04T04:40:01.365Z] : info : DriverController:Driver found
+[2020-05-04T04:40:01.366Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:40:01.367Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:41:01.671Z] : info : Check field: Field is valid
+[2020-05-04T04:41:01.674Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:41:01.790Z] : info : DriverController: Driver was created successfully.
+[2020-05-04T04:41:01.791Z] : info : Signup driver: added succesfully
+[2020-05-04T04:41:14.420Z] : info : Check field: Field is valid
+[2020-05-04T04:41:14.422Z] : info : Save image: Image saved succesfully
+[2020-05-04T04:41:14.521Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-04T04:41:14.537Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-04T04:41:14.538Z] : info : Signup vehicle: added succesfully
+[2020-05-04T04:41:51.006Z] : info : Check field: Field is valid
+[2020-05-04T04:41:51.152Z] : info : DriverController: Driver is not valid
+[2020-05-04T04:41:51.153Z] : info : api.js: could not find Driver
+[2020-05-04T04:41:53.980Z] : info : Check field: Field is valid
+[2020-05-04T04:41:53.984Z] : info : DriverController: Driver is valid
+[2020-05-04T04:41:53.987Z] : info : DriverController:Driver found
+[2020-05-04T04:41:53.989Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:41:53.990Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:42:43.795Z] : info : Check field: Field is valid
+[2020-05-04T04:42:43.910Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-04T04:42:43.911Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-04T04:43:19.961Z] : info : Check field: Field is valid
+[2020-05-04T04:43:20.050Z] : info : UserController: User was created successfully.
+[2020-05-04T04:43:20.052Z] : info : Signup client: added succesfully
+[2020-05-04T04:45:37.135Z] : info : Check field: Field is valid
+[2020-05-04T04:45:37.233Z] : info : DriverController: Driver is valid
+[2020-05-04T04:45:37.237Z] : info : DriverController:Driver found
+[2020-05-04T04:45:37.238Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:45:37.239Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:47:37.959Z] : info : Check field: Field is valid
+[2020-05-04T04:47:38.128Z] : info : UserController: User is valid
+[2020-05-04T04:47:38.133Z] : info : UserController:User found
+[2020-05-04T04:47:38.134Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-04T04:47:38.135Z] : info : api.js: returned user id succesfully
+[2020-05-04T04:48:38.615Z] : info : Check field: Field is valid
+[2020-05-04T04:48:38.768Z] : info : UserController: User is not valid
+[2020-05-04T04:48:38.769Z] : info : api.js: could not find user
+[2020-05-04T04:48:42.647Z] : info : Check field: Field is valid
+[2020-05-04T04:48:42.653Z] : info : DriverController: Driver is valid
+[2020-05-04T04:48:42.658Z] : info : DriverController:Driver found
+[2020-05-04T04:48:42.659Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:48:42.660Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:03.772Z] : info : Check field: Field is valid
+[2020-05-04T04:54:03.915Z] : info : DriverController: Driver is valid
+[2020-05-04T04:54:03.919Z] : info : DriverController:Driver found
+[2020-05-04T04:54:03.920Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:54:03.921Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:16.728Z] : info : Check field: Field is valid
+[2020-05-04T04:54:16.861Z] : info : DriverController: Driver is valid
+[2020-05-04T04:54:16.865Z] : info : DriverController:Driver found
+[2020-05-04T04:54:16.866Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-04T04:54:16.867Z] : info : api.js: returned Driver id succesfully
+[2020-05-04T04:54:46.123Z] : info : Check field: Field is valid
+[2020-05-04T04:54:46.249Z] : info : UserController: User was created successfully.
+[2020-05-04T04:54:46.251Z] : info : Signup client: added succesfully
+[2020-05-04T19:20:47.798Z] : info : Server: Server is running
+[2020-05-04T19:20:48.007Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:20:48.068Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:22:17.139Z] : info : Server: Server is running
+[2020-05-04T19:22:17.342Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:22:17.414Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:28:09.249Z] : info : Server: Server is running
+[2020-05-04T19:28:09.575Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.639Z] : info : Server: Server is running
+[2020-05-04T19:28:10.814Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:28:10.870Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:29:29.138Z] : info : Server: Server is running
+[2020-05-04T19:29:29.301Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:29:29.393Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:31:24.038Z] : info : Server: Server is running
+[2020-05-04T19:31:24.199Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:31:24.281Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:23.028Z] : info : Server: Server is running
+[2020-05-04T19:34:23.185Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:23.253Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:27.209Z] : info : Server: Server is running
+[2020-05-04T19:34:27.368Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:27.439Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:34:42.453Z] : info : Server: Server is running
+[2020-05-04T19:34:42.588Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:34:42.658Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:35:10.486Z] : info : Server: Server is running
+[2020-05-04T19:35:10.773Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:35:10.841Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:32.060Z] : info : Server: Server is running
+[2020-05-04T19:36:32.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:36:32.293Z] : info : Server: database tables created if the dont exist
+[2020-05-04T19:36:33.952Z] : error : Api:Server recieved error from client:: "afmoyar@unal.edu.co" "a"
+[2020-05-04T19:37:13.307Z] : info : Server: Server is running
+[2020-05-04T19:37:13.460Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-04T19:37:13.528Z] : info : Server: database tables created if the dont exist
