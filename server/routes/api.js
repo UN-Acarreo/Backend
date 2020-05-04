@@ -122,7 +122,7 @@ router.post('/log-client-errors', async function(req, res){
   logger.error("Api:Server recieved error from client:: " + error + " "+ errorInfo)
   res.status(200);
 
-}
+});
 
 
 //Login for user and driver
