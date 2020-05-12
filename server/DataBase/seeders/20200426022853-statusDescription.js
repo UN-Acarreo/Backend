@@ -3,6 +3,7 @@
 
 // Import logger
 const logger = require('./../../utils/logger/logger');
+const Status = require('../../Models/Status');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -24,8 +25,9 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     //deleting
    return Promise.all([
-    queryInterface.bulkDelete('Status', null, {})
-    
+  
+    Status.truncate({restartIdentity: true, cascade: true})
+     
   ]).then(() => {
     logger.info("Seeders/statusDescription: Deletion complete.");
   })
