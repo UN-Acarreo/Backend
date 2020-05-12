@@ -169,11 +169,12 @@ router.post('/:type_of_user/login', async function(req, res){
     let new_req ={body:{request:new_request}};
 
     let {status,data} = await DriverController.validateDriver(new_req);
+    let vehicle_status, vehicle_data = await (await Driver_Vehicle_Controller.getVehicleByDriverId(data.Id_driver)).data;
 
     if(status==1)
     {
       logger.info("api.js: returned Driver id succesfully")
-      return res.status(200).json({status: 1, db_driver_id: data});
+      return res.status(200).json({status: 1, db_driver_id: data, vehicle_data: vehicle_data});
 
     }else if(status==0)
     {
