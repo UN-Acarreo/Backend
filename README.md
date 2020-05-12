@@ -15,8 +15,8 @@ We use **postgresql** to manage our database and host our local server
 
 IF you are having trouble running this command try
 
-## `npm i -g sequelize-cli`
-## `npm install -g pg`
+### `npm i -g sequelize-cli`
+### `npm install -g pg`
 
 
 - If you want to undo the last migration make sure you are at  Backend/server/Database in your command line and run:
