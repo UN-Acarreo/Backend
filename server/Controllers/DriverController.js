@@ -1,3 +1,5 @@
+//Used to hash password
+const bcrypt = require('bcrypt');
 
 // Import model
 const DriverModel = require('../Models/Driver');
@@ -13,12 +15,14 @@ async function createDriver(req) {
         // Get atributes
         //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
         const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
+        //Hash the password
+        var Driver_password_hashed = bcrypt.hashSync(Driver_password, 10);
         // Create Driver
         var result = await DriverModel.create(
             {
                 Driver_name: Driver_name,
                 Driver_last_name: Driver_last_name,
-                Driver_password: Driver_password,
+                Driver_password: Driver_password_hashed,
                 Driver_address: Driver_address,
                 Driver_Email: Driver_Email,
                 //Average_rating: Average_rating,
@@ -52,19 +56,23 @@ async function validateDriver(req) {
     try {
         // Get atributes
         const { Driver_Email, Driver_password } = req.body.request;
-
         // Validate Driver
-        count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
+        //count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
+        count = await DriverModel.count({ where: { Driver_Email: Driver_Email} })
         if (count > 0) {
             logger.info("DriverController: Driver is valid");
-            let {status, data}=await getDriverByEmail(Driver_Email)
+            let {status, data} = await getDriverByEmail(Driver_Email)
             if(status==1)
             {
+                //Compare hashed passwords
+                if(bcrypt.compareSync(Driver_password, data.Driver_password) == false){
+                    return {status: 0, data: 'Las contraseñas no coinciden'};
+                }
                 logger.info("DriverController: succesfull call to getDriverBeEmail")
                 return {status: 1, data: data};
             }else if(status==-1)
             {    logger.error("DriverController: error from getDriverBeEmail"+ error)
-                return {status: -2, data: error};  
+                return {status: -2, data: error};
             }
         }
         logger.info("DriverController: Driver is not valid");
@@ -72,7 +80,7 @@ async function validateDriver(req) {
 
     } catch (error) {
         logger.error("DriverController: " + error);
-        return {status: -1, data: error};  
+        return {status: -1, data: error};
     }
 
 }
@@ -97,13 +105,13 @@ async function getDriverByEmail(email)
         else{
             logger.info("DriverController:Driver found")
             //Drivers[0] should be the only Driver in array, .dataValues is Json containing atributes
-            return {status: 1,data: drivers[0].dataValues} 
+            return {status: 1,data: drivers[0].dataValues}
         }
-              
+
     } catch (error) {
         logger.info("DriverController: "+ error)
         return {status:-1, data:error}
-        
+
     }
 
 }

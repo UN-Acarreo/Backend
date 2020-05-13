@@ -309,7 +309,7 @@ router.post('/client/signup', async function(req,res){
     }
     return res.status(500).json({error : message});
   }
-}); 
+});
 
 //Route will be used to handle POST requests of service creation
 router.post('/service/create', function(req, res){
