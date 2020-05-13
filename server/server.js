@@ -27,8 +27,8 @@ app.use(express.json({limit: '10mb'}));
 app.use(cors(corsOptions));
 
 //Use public dirname to serve static files
-//app.get("/", express.static(path.join(__dirname, "./public")));
-app.use('/uploads/drivers',express.static(path.join(__dirname, 'public/uploads/drivers')));
+app.use(express.static(__dirname + '/public'));
+//app.use('/uploads/drivers',express.static(path.join(__dirname, 'public/uploads/drivers')));
 
 //Require route files
 app.use('/',index);
@@ -50,7 +50,7 @@ Status = require("./Models/Status");
 Cargo = require("./Models/Cargo");
 Haulage = require("./Models/Haulage");
 Bill = require("./Models/Bill");
-Driver_Vehicle = require("./Models/Driver_Vehicle"); 
+Driver_Vehicle = require("./Models/Driver_Vehicle");
 Haulage_Driver_Vehicle=require("./Models/Haulage_Driver_Vehicle");
 
 async function init_dataBase () {
