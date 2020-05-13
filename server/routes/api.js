@@ -312,7 +312,7 @@ router.post('/client/signup', async function(req,res){
 
 //Route will be used to handle POST requests of service creation
 router.post('/haulage/create', async function(req, res){
-  
+  /*
   const valid_fields = await check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
@@ -323,7 +323,7 @@ router.post('/haulage/create', async function(req, res){
     //this creates haulage with status description of: waiting for driver
     logger.info("api.js: Haulage created successfully")
     //now we have to assign driver
-    
+
     return res.status(201).json({status: 1, haulage: data});
   }
   else if (status==-1)
@@ -336,6 +336,7 @@ router.post('/haulage/create', async function(req, res){
     logger.error("api.js: Could not create haulage: "+ data)
     return res.status(500).json({status: -2, error: "Hubo un problema en la reserva de su acarreo"});
   }
+  */
 
 });
 

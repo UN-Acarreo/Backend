@@ -32,5 +32,15 @@ async function createRoute(req) {
 }
 module.exports = { createRoute: createRoute };
 
+/*
+async function test(){
+
+    let request_route ={Origin_coord:13241, Destination_coord:13134}
+    let req_route ={body:{request:request_route}};
+    let route_response = await createRoute(req_route);
+    console.log(route_response);
+}
+*/
+test();
 
 

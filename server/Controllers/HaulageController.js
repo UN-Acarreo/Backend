@@ -20,35 +20,25 @@ async function createHaulage(req) {
     try {
 
         // Get atributes
-        const { Date, Id_user, Origin_coord, Destination_coord, Id_cargo} = req.body.request;
+        const { Date, Id_user, Id_route, Id_cargo} = req.body.request;
         
         //Create route that will be used in haulage
-        let request_route ={Origin_coord:Origin_coord, Destination_coord:Destination_coord}
-        let req_route ={body:{request:request_route}};
-        let route_response = createRoute(req_route);
-
-        if(route_response.status==1)
-        {
-            //route created succesffully, data has value of route_id
+        //let request_route ={Origin_coord:Origin_coord, Destination_coord:Destination_coord}
+        //let req_route ={body:{request:request_route}};
+        //let route_response = createRoute(req_route);
         
-            // Create Haulage
-            let new_haulage = await HaulageModel.create(
-                {
-                    Date: Date,
-                    Id_user: Id_user,
-                    Id_route: route_response.data,
-                    Id_cargo: Id_cargo,
-                    Id_status: descprition.status_description.WAITING_FOR_DRIVER
-                }
-            );
-            logger.info("HaulageController: Haulage was created successfully.");
-            return {status: 1, data: new_haulage};
-        }
-        else
-        {
-            logger.error("HaulageController: " + route_response.error);
-            return {status: -1, error: route_response.error};
-        }
+        // Create Haulage
+        let new_haulage = await HaulageModel.create(
+            {
+                Date: Date,
+                Id_user: Id_user,
+                Id_route: Id_route,
+                Id_cargo: Id_cargo,
+                Id_status: descprition.status_description.WAITING_FOR_DRIVER
+            }
+        );
+        logger.info("HaulageController: Haulage was created successfully.");
+        return {status: 1, data: new_haulage};
         
     } catch (error) {
         logger.error("HaulageController: " + error);

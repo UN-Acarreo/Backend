@@ -31,4 +31,5 @@ async function createHaulage_Driver_Vehicle(req) {
     }
 
 }
+
 module.exports = { createHaulage_Driver_Vehicle: createHaulage_Driver_Vehicle };
