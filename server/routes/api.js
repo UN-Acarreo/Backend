@@ -311,14 +311,37 @@ router.post('/client/signup', async function(req,res){
 }); 
 
 //Route will be used to handle POST requests of service creation
-router.post('/service/create', function(req, res){
-  //TODO create service
-  res.status(200).json({Api: 'Online'})
+router.post('/haulage/create', async function(req, res){
+  
+  const valid_fields = await check_fields(req);
+  if(valid_fields !== true){
+     return res.status(400).json({error: valid_fields})
+  }
+  let {status,data} = await HaulageController.createHaulage(req);
+  if(status==1)
+  {
+    //this creates haulage with status description of: waiting for driver
+    logger.info("api.js: Haulage created successfully")
+    //now we have to assign driver
+    
+    return res.status(201).json({status: 1, haulage: data});
+  }
+  else if (status==-1)
+  {
+    logger.error("api.js: Could not create haulage: "+ data)
+    return res.status(500).json({status: -1, error: "Hubo un problema creando la ruta de su acarreo"});
+  }
+  else if (status==-2)
+  {
+    logger.error("api.js: Could not create haulage: "+ data)
+    return res.status(500).json({status: -2, error: "Hubo un problema en la reserva de su acarreo"});
+  }
+
 });
 
 
 //Route will be used to handle cancel POST service requests
-router.post('/service/cancel', function(req, res){
+router.post('/haulage/cancel', function(req, res){
   //TODO cancel service
   res.status(200).json({Api: 'Online'})
 });

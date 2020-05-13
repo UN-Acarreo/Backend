@@ -5,32 +5,56 @@ const HaulageModel = require('../Models/Haulage');
 // Import logger
 const logger = require('./../utils/logger/logger');
 
+//import routeController
+const RouteController =require('./RouteController');
+
+//importing description values
+const descprition = require('../constants')
+
 // Create Haulage
+//returns status 1 if created succesfully, data is new haulage
+//returns status -1 if route could not be created, error is returns as well
+//returns status -2 if route was created but not haulage, error is returns as well
 async function createHaulage(req) {
 
     try {
 
         // Get atributes
-        const { Date, Id_user, Id_route, Id_cargo, Id_rating, Id_status } = req.body.request;
+        const { Date, Id_user, Origin_coord, Destination_coord, Id_cargo} = req.body.request;
+        
+        //Create route that will be used in haulage
+        let request_route ={Origin_coord:Origin_coord, Destination_coord:Destination_coord}
+        let req_route ={body:{request:request_route}};
+        let route_response = createRoute(req_route);
 
-        // Create Haulage
-        await HaulageModel.create(
-            {
-                Date: Date,
-                Id_user: Id_user,
-                Id_route: Id_route,
-                Id_cargo: Id_cargo,
-                Id_rating: Id_rating,
-                Id_status: Id_status
-            }
-        );
-        logger.info("HaulageController: Haulage was created successfully.");
-        return 1;
+        if(route_response.status==1)
+        {
+            //route created succesffully, data has value of route_id
+        
+            // Create Haulage
+            let new_haulage = await HaulageModel.create(
+                {
+                    Date: Date,
+                    Id_user: Id_user,
+                    Id_route: route_response.data,
+                    Id_cargo: Id_cargo,
+                    Id_status: descprition.status_description.WAITING_FOR_DRIVER
+                }
+            );
+            logger.info("HaulageController: Haulage was created successfully.");
+            return {status: 1, data: new_haulage};
+        }
+        else
+        {
+            logger.error("HaulageController: " + route_response.error);
+            return {status: -1, error: route_response.error};
+        }
         
     } catch (error) {
         logger.error("HaulageController: " + error);
-        return error;
+         return {status: -2, error:error};
     }
-
 }
 module.exports = { createHaulage: createHaulage };
+
+
