@@ -1,5 +1,5 @@
 //Used to hash password
-const bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 
 // Import model
 const UserModel = require('../Models/User');
