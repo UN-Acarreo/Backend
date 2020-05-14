@@ -311,33 +311,56 @@ router.post('/client/signup', async function(req,res){
 }); 
 
 //Route will be used to handle POST requests of service creation
+//returns -1 if error creating route
 router.post('/haulage/create', async function(req, res){
-  /*
+  
   const valid_fields = await check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
-  let {status,data} = await HaulageController.createHaulage(req);
-  if(status==1)
+  let haulage_created= {status: false, data: false};
+  //creating new route
+  values = req.body.request;
+  let route = await RouteController.createRoute({
+    Origin_coord: values.Origin_coord, Destination_coord: values.Destination_coord
+  });
+  if(route.status==1)
   {
-    //this creates haulage with status description of: waiting for driver
-    logger.info("api.js: Haulage created successfully")
-    //now we have to assign driver
-
-    return res.status(201).json({status: 1, haulage: data});
+    //route created, creating cargo
+    let cargo = await CargoController.createCargo({
+      Weight: values.Weight, Description: values.Description, Comments: values.Comments
+    });
+    if(cargo.status==1)
+    {
+      //cargo created, creating haulage
+      let haulage = await HaulageController.createHaulage({
+        Date: values.Date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
+      });
+      if(haulage.status == 1)
+      {
+        logger.info("api.js: Haulage created successfully")
+        haulage_created = {status: true, data: haulage.data};
+      }
+      else{
+        logger.error("api.js: Could not create haulage: "+ cargo.error)
+        return res.status(500).json({status: -1, error: "Hubo un problema registrado en la reserva de su acarreo"});
+      }
+    }
+    else{
+      logger.error("api.js: Could not create haulage: "+ cargo.error)
+      return res.status(500).json({status: -1, error: "Hubo un problema registrado la carga de su acarreo"});
+    }
   }
-  else if (status==-1)
+  else
   {
-    logger.error("api.js: Could not create haulage: "+ data)
+    logger.error("api.js: Could not create haulage: "+ route.error)
     return res.status(500).json({status: -1, error: "Hubo un problema creando la ruta de su acarreo"});
   }
-  else if (status==-2)
+  if(haulage_created.status==true)
   {
-    logger.error("api.js: Could not create haulage: "+ data)
-    return res.status(500).json({status: -2, error: "Hubo un problema en la reserva de su acarreo"});
+    return res.status(201).json({status: 1, data: haulage_created.data});
+    //now we have to assign driver, this is done bellow the nested ifs
   }
-  */
-
 });
 
 

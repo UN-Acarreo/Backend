@@ -11,7 +11,7 @@ async function createCargo(req) {
     try {
 
         // Get atributes
-        const { Weight, Description, Comments } = req.body.request;
+        const { Weight, Description, Comments } = req;
 
         // Create Cargo
         let new_Cargo = await CargoModel.create(

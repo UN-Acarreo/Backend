@@ -20,7 +20,7 @@ async function createHaulage(req) {
     try {
 
         // Get atributes
-        const { Date, Id_user, Id_route, Id_cargo} = req.body.request;
+        const { Date, Id_user, Id_route, Id_cargo} = req;
         
         //Create route that will be used in haulage
         //let request_route ={Origin_coord:Origin_coord, Destination_coord:Destination_coord}

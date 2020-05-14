@@ -11,7 +11,7 @@ async function createRoute(req) {
     try {
 
         // Get atributes
-        const { Origin_coord, Destination_coord } = req.body.request;
+        const { Origin_coord, Destination_coord } = req;
 
         // Create Route
         const new_route = await RouteModel.create(
@@ -40,7 +40,7 @@ async function test(){
     let route_response = await createRoute(req_route);
     console.log(route_response);
 }
-*/
-test();
 
+test();
+*/
 
