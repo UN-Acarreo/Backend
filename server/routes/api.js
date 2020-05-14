@@ -367,12 +367,18 @@ router.post('/haulage/assign-vehicles', async function(req, res){
 
   let Id_haulage = req.body.request.Id_haulage;
   let weight = await HaulageController.getWeight(Id_haulage);
-  console.log(weight)
+  if(weight.status!=1)
+  {
+    logger.error("api.js: weight not found");
+    return res.status(500).json({status: 1, error: weight.error});
+  }
+  let vehicles = await VehicleController.getListOfVehicles()
   if(weight.status==1)
   {
-    logger.info("api.js: weight found successfully");
-    return res.status(200).json({status: 1, data: weight.data});
+    logger.info("api.js: list of cars");
+    return res.status(200).json({status: 1, data: vehicles.data});
   }
+
   //this needs to 
 });
 

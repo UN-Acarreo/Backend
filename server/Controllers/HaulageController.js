@@ -42,6 +42,7 @@ async function createHaulage(req) {
          return {status: -2, error:error};
     }
 }
+//returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
 async function getWeight(Id_haulage){
     try{
 

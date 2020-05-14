@@ -1345,3 +1345,21 @@
 [2020-05-14T02:38:46.250Z] : info : Server: database tables created if the dont exist
 [2020-05-14T02:38:50.555Z] : info : HaulageController: weight was found successfully.
 [2020-05-14T02:38:50.558Z] : info : api.js: weight found successfully
+[2020-05-14T02:59:10.668Z] : info : Server: Server is running
+[2020-05-14T02:59:10.842Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:59:10.906Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:59:14.190Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T02:59:14.242Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T02:59:14.242Z] : info : api.js: list of cars
+[2020-05-14T02:59:52.804Z] : info : Check field: Field is valid
+[2020-05-14T02:59:52.809Z] : info : Save image: Image saved succesfully
+[2020-05-14T02:59:53.080Z] : info : DriverController: Driver was created successfully.
+[2020-05-14T02:59:53.081Z] : info : Signup driver: added succesfully
+[2020-05-14T03:00:13.351Z] : info : Check field: Field is valid
+[2020-05-14T03:00:13.354Z] : info : Save image: Image saved succesfully
+[2020-05-14T03:00:13.465Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T03:00:13.580Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-14T03:00:13.580Z] : info : Signup vehicle: added succesfully
+[2020-05-14T03:00:17.939Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T03:00:17.942Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T03:00:17.942Z] : info : api.js: list of cars

@@ -34,6 +34,21 @@ async function createVehicle(req) {
         logger.error("VehicleController: " + error);
         return {status: -1, message: error};
     }
-
 }
-module.exports = { createVehicle: createVehicle };
+async function getListOfVehicles()
+{
+    try {
+        let vehicles = await VehicleModel.findAll(
+            { 
+                attributes: ['Id_vehicle','Payload_capacity']
+            })
+        logger.info("VehicleController: Vehicle was created successfully.");
+        return {status: 1, data:vehicles}
+        
+    } catch (error) {
+        logger.error("VehicleController: " + error);
+        return {status: -1, message: error};
+    }
+    
+}
+module.exports = { createVehicle: createVehicle, getListOfVehicles:getListOfVehicles };
