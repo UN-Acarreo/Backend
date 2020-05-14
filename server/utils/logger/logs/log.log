@@ -1973,3 +1973,33 @@
 [2020-05-14T19:37:35.914Z] : info : CargoController: Cargo was created successfully.
 [2020-05-14T19:37:35.921Z] : info : HaulageController: Haulage was created successfully.
 [2020-05-14T19:37:35.921Z] : info : api.js: Haulage created successfully
+[2020-05-14T20:05:57.673Z] : info : Server: Server is running
+[2020-05-14T20:05:58.046Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T20:05:58.112Z] : info : Server: database tables created if the dont exist
+[2020-05-14T20:06:01.410Z] : info : Check field: Field is valid
+[2020-05-14T20:06:01.427Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T20:06:01.429Z] : info : api.js:enough cars
+[2020-05-14T20:06:01.450Z] : info : RouteController: Route was created successfully.
+[2020-05-14T20:06:01.459Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T20:07:41.090Z] : info : Server: Server is running
+[2020-05-14T20:07:41.318Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T20:07:41.452Z] : info : Server: database tables created if the dont exist
+[2020-05-14T20:07:42.941Z] : info : Check field: Field is valid
+[2020-05-14T20:07:42.951Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T20:07:42.953Z] : info : api.js:enough cars
+[2020-05-14T20:07:42.970Z] : info : RouteController: Route was created successfully.
+[2020-05-14T20:07:42.977Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T20:07:42.999Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T20:07:42.999Z] : info : HaulageController: cargo and route of haulage created successfully
+[2020-05-14T20:07:43.000Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-14T20:08:34.394Z] : info : Server: Server is running
+[2020-05-14T20:08:34.580Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T20:08:34.660Z] : info : Server: database tables created if the dont exist
+[2020-05-14T20:08:35.436Z] : info : Check field: Field is valid
+[2020-05-14T20:08:35.445Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T20:08:35.447Z] : info : api.js:enough cars
+[2020-05-14T20:08:35.463Z] : info : RouteController: Route was created successfully.
+[2020-05-14T20:08:35.469Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T20:08:35.487Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T20:08:35.488Z] : info : HaulageController: cargo and route of haulage created successfully
+[2020-05-14T20:08:35.488Z] : info : api.js: haulage, cargo and route created: 
