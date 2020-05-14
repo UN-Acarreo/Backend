@@ -8,6 +8,9 @@ const logger = require('./../utils/logger/logger');
 //import routeController
 const RouteController =require('./RouteController');
 
+//import cargoModel
+const cargoModel =require('../Models/Cargo');
+
 //importing description values
 const descprition = require('../constants')
 
@@ -18,14 +21,8 @@ const descprition = require('../constants')
 async function createHaulage(req) {
 
     try {
-
         // Get atributes
         const { Date, Id_user, Id_route, Id_cargo} = req;
-        
-        //Create route that will be used in haulage
-        //let request_route ={Origin_coord:Origin_coord, Destination_coord:Destination_coord}
-        //let req_route ={body:{request:request_route}};
-        //let route_response = createRoute(req_route);
         
         // Create Haulage
         let new_haulage = await HaulageModel.create(
@@ -45,6 +42,23 @@ async function createHaulage(req) {
          return {status: -2, error:error};
     }
 }
-module.exports = { createHaulage: createHaulage };
+async function getWeight(Id_haulage){
+    try{
+
+        let weight = await HaulageModel.findByPk(Id_haulage,
+            {
+                attributes: [],
+                include: [{ model: cargoModel, attributes: ['Weight']}]
+            }
+        )
+        logger.info("HaulageController: weight was found successfully.");
+        return {status: 1, data: weight};
+    }catch(error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error:error};
+    }
+
+} 
+module.exports = { createHaulage: createHaulage ,getWeight : getWeight};
 
 

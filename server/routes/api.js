@@ -311,7 +311,7 @@ router.post('/client/signup', async function(req,res){
 }); 
 
 //Route will be used to handle POST requests of service creation
-//returns -1 if error creating route
+//returns -1 if error creating route, cargo or haulage
 router.post('/haulage/create', async function(req, res){
   
   const valid_fields = await check_fields(req);
@@ -363,6 +363,18 @@ router.post('/haulage/create', async function(req, res){
   }
 });
 
+router.post('/haulage/assign-vehicles', async function(req, res){
+
+  let Id_haulage = req.body.request.Id_haulage;
+  let weight = await HaulageController.getWeight(Id_haulage);
+  console.log(weight)
+  if(weight.status==1)
+  {
+    logger.info("api.js: weight found successfully");
+    return res.status(200).json({status: 1, data: weight.data});
+  }
+  //this needs to 
+});
 
 //Route will be used to handle cancel POST service requests
 router.post('/haulage/cancel', function(req, res){

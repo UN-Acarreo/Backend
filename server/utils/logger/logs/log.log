@@ -1301,3 +1301,47 @@
 [2020-05-13T01:50:15.195Z] : info : RouteController: Route was created successfully.
 [2020-05-13T01:50:43.612Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-13T01:50:43.620Z] : info : RouteController: Route was created successfully.
+[2020-05-14T02:09:36.320Z] : info : Server: Server is running
+[2020-05-14T02:09:36.546Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:09:36.611Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:09:42.416Z] : error : HaulageController: TypeError: include.model.getTableName is not a function
+[2020-05-14T02:19:52.682Z] : info : Server: Server is running
+[2020-05-14T02:19:52.898Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:19:52.990Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:26:13.243Z] : info : Server: Server is running
+[2020-05-14T02:26:13.565Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:26:13.668Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:26:18.589Z] : error : HaulageController: TypeError: include.model.getTableName is not a function
+[2020-05-14T02:26:45.833Z] : info : Server: Server is running
+[2020-05-14T02:26:46.051Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:26:46.146Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:26:48.228Z] : info : Server: Server is running
+[2020-05-14T02:26:48.400Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:26:48.471Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:26:59.552Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T02:29:04.647Z] : info : Server: Server is running
+[2020-05-14T02:29:04.858Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:29:04.936Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:29:32.860Z] : info : Server: Server is running
+[2020-05-14T02:29:33.073Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:29:33.175Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:29:34.815Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T02:29:53.216Z] : info : Server: Server is running
+[2020-05-14T02:29:53.552Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:29:53.657Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:29:55.999Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T02:29:56.032Z] : info : api.js: weight found successfully
+[2020-05-14T02:37:06.680Z] : info : Server: Server is running
+[2020-05-14T02:37:06.897Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:37:07.029Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:37:35.724Z] : info : Server: Server is running
+[2020-05-14T02:37:35.905Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:37:35.995Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:38:43.785Z] : info : Server: Server is running
+[2020-05-14T02:38:44.004Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:38:44.085Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:38:46.011Z] : info : Server: Server is running
+[2020-05-14T02:38:46.184Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T02:38:46.250Z] : info : Server: database tables created if the dont exist
+[2020-05-14T02:38:50.555Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T02:38:50.558Z] : info : api.js: weight found successfully
