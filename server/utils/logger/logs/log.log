@@ -1363,3 +1363,613 @@
 [2020-05-14T03:00:17.939Z] : info : HaulageController: weight was found successfully.
 [2020-05-14T03:00:17.942Z] : info : VehicleController: Vehicle was created successfully.
 [2020-05-14T03:00:17.942Z] : info : api.js: list of cars
+[2020-05-14T15:58:20.395Z] : info : Server: Server is running
+[2020-05-14T15:58:20.545Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T15:58:20.611Z] : info : Server: database tables created if the dont exist
+[2020-05-14T15:58:59.144Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T15:58:59.149Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T15:58:59.226Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeDatabaseError: no existe la columna «Id_Vehicle»
+[2020-05-14T15:59:33.584Z] : info : Server: Server is running
+[2020-05-14T15:59:33.927Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T15:59:34.035Z] : info : Server: database tables created if the dont exist
+[2020-05-14T15:59:41.829Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T15:59:41.834Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T15:59:41.885Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:02:36.662Z] : info : Server: Server is running
+[2020-05-14T16:02:36.812Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:02:36.874Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:23:54.008Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:23:54.013Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:23:54.017Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:24:32.549Z] : info : Server: Server is running
+[2020-05-14T16:24:32.713Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:24:32.782Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:24:37.571Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:24:37.577Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:24:37.581Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:34:02.690Z] : info : Server: Server is running
+[2020-05-14T16:34:03.244Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:34:03.333Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:34:30.666Z] : info : Server: Server is running
+[2020-05-14T16:34:30.846Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:34:30.920Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:35:29.936Z] : info : Server: Server is running
+[2020-05-14T16:35:30.077Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:35:30.144Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:38:11.291Z] : info : Server: Server is running
+[2020-05-14T16:38:11.438Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:38:11.502Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:38:25.045Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:38:25.051Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:38:25.060Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:38:25.061Z] : error : api.js: list of drivers and vehicles not found
+[2020-05-14T16:41:43.789Z] : info : Server: Server is running
+[2020-05-14T16:41:43.951Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:41:44.037Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:42:01.991Z] : info : Server: Server is running
+[2020-05-14T16:42:02.249Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:42:02.319Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:42:08.022Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:42:08.031Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:42:08.041Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:42:08.041Z] : error : api.js: list of drivers and vehicles not found
+[2020-05-14T16:42:41.873Z] : info : Server: Server is running
+[2020-05-14T16:42:42.052Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:42:42.199Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:42:44.279Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:42:44.284Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:42:44.289Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:42:44.289Z] : error : api.js: list of drivers and vehicles not found
+[2020-05-14T16:43:31.671Z] : info : Server: Server is running
+[2020-05-14T16:43:31.819Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:43:31.885Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:44:15.481Z] : info : Server: Server is running
+[2020-05-14T16:44:15.655Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:44:15.718Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:44:16.543Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:44:16.549Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:44:16.560Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:44:16.560Z] : error : api.js: list of drivers and vehicles found successfully
+[2020-05-14T16:45:57.329Z] : info : Server: Server is running
+[2020-05-14T16:45:57.482Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:45:57.548Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:46:07.464Z] : info : Server: Server is running
+[2020-05-14T16:46:07.653Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:46:07.723Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:46:10.616Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:46:10.622Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:46:10.628Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:46:10.628Z] : error : api.js: list of drivers and vehicles found successfully
+[2020-05-14T16:46:38.407Z] : info : Server: Server is running
+[2020-05-14T16:46:38.563Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:46:38.642Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:51:59.225Z] : info : Server: Server is running
+[2020-05-14T16:51:59.394Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:51:59.470Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:52:01.244Z] : info : Server: Server is running
+[2020-05-14T16:52:01.393Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:52:01.461Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:52:04.970Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:52:04.983Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:52:04.990Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:52:04.990Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T16:52:46.606Z] : info : Server: Server is running
+[2020-05-14T16:52:46.769Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:52:46.830Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:53:19.655Z] : info : Server: Server is running
+[2020-05-14T16:53:19.818Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:53:19.883Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:53:24.549Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:53:24.552Z] : error : VehicleController: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+[2020-05-14T16:53:24.552Z] : error : api.js: list of cars not found
+[2020-05-14T16:53:47.208Z] : info : Server: Server is running
+[2020-05-14T16:53:47.545Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:53:47.640Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:55:09.554Z] : info : Server: Server is running
+[2020-05-14T16:55:09.734Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:55:09.807Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:55:12.092Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:55:12.104Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:55:12.116Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:55:12.116Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T16:55:22.390Z] : info : Server: Server is running
+[2020-05-14T16:55:22.559Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:55:22.638Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:55:38.179Z] : info : Server: Server is running
+[2020-05-14T16:55:38.431Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:55:38.496Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:55:38.751Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:55:38.765Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T16:55:38.772Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T16:55:38.773Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T16:56:53.860Z] : info : Server: Server is running
+[2020-05-14T16:56:54.106Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:56:54.201Z] : info : Server: database tables created if the dont exist
+[2020-05-14T16:56:58.405Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T16:56:58.407Z] : error : VehicleController: SequelizeEagerLoadingError: Driver is associated to Vehicle using an alias. You've included an alias (owner), but it does not match the alias(es) defined in your association (Drivers).
+[2020-05-14T16:56:58.408Z] : error : api.js: list of cars not found
+[2020-05-14T16:57:49.618Z] : info : Server: Server is running
+[2020-05-14T16:57:49.770Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T16:57:49.840Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:03:50.883Z] : info : Server: Server is running
+[2020-05-14T17:03:51.044Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:03:51.116Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:03:53.862Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:03:53.873Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:03:53.885Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:03:53.885Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:04:17.587Z] : info : Server: Server is running
+[2020-05-14T17:04:17.746Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:04:17.810Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:04:22.217Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:04:22.241Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:04:22.249Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:04:22.249Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:05:30.633Z] : info : Server: Server is running
+[2020-05-14T17:05:30.786Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:05:30.853Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:05:41.757Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:05:41.777Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:05:41.787Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:05:41.787Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:06:02.503Z] : info : Server: Server is running
+[2020-05-14T17:06:02.673Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:06:02.737Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:06:28.949Z] : info : Server: Server is running
+[2020-05-14T17:06:29.137Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:06:29.212Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:06:35.635Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:06:35.657Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:06:35.662Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:06:35.662Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:06:49.071Z] : info : Server: Server is running
+[2020-05-14T17:06:49.283Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:06:49.349Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:07:33.702Z] : info : Server: Server is running
+[2020-05-14T17:07:33.865Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:07:33.931Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:08:01.788Z] : info : Server: Server is running
+[2020-05-14T17:08:02.002Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:08:02.144Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:08:04.734Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:08:04.747Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:08:04.758Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:08:04.759Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:08:13.305Z] : info : Server: Server is running
+[2020-05-14T17:08:13.506Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:08:13.579Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:08:14.251Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:08:14.266Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T17:08:14.276Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:08:14.276Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:10:10.877Z] : info : Server: Server is running
+[2020-05-14T17:10:11.019Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:10:11.079Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:10:16.974Z] : info : Server: Server is running
+[2020-05-14T17:10:17.145Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:10:17.220Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:10:31.022Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:10:31.024Z] : error : VehicleController: SequelizeEagerLoadingError: Driver_Vehicle is not associated to Vehicle!
+[2020-05-14T17:10:31.024Z] : error : api.js: list of cars not found
+[2020-05-14T17:11:42.579Z] : info : Server: Server is running
+[2020-05-14T17:11:42.742Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:11:42.832Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:16:52.949Z] : info : Server: Server is running
+[2020-05-14T17:16:53.101Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:16:53.176Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:18:15.597Z] : info : Server: Server is running
+[2020-05-14T17:18:15.802Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:18:15.896Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:19:42.479Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:20:21.992Z] : info : Server: Server is running
+[2020-05-14T17:20:22.308Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:20:22.421Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:20:23.703Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:20:23.704Z] : error : VehicleController: ReferenceError: VehicleModel is not defined
+[2020-05-14T17:20:23.705Z] : error : api.js: list of cars not found
+[2020-05-14T17:21:27.503Z] : info : Server: Server is running
+[2020-05-14T17:21:27.702Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:21:27.805Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:21:33.297Z] : info : Server: Server is running
+[2020-05-14T17:21:33.512Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:21:33.634Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:21:36.750Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:21:36.754Z] : error : VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-14T17:21:36.754Z] : error : api.js: list of cars not found
+[2020-05-14T17:26:12.324Z] : info : Server: Server is running
+[2020-05-14T17:26:12.526Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:26:12.620Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:26:24.499Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:26:24.505Z] : info : Driver_VehicleController: list was returned successfully.
+[2020-05-14T17:26:24.509Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:26:24.510Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T17:29:00.095Z] : info : Server: Server is running
+[2020-05-14T17:29:00.379Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:29:00.475Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:29:34.230Z] : info : Server: Server is running
+[2020-05-14T17:29:34.426Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:29:34.518Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:31:01.556Z] : info : Server: Server is running
+[2020-05-14T17:31:01.786Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:31:01.875Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:31:46.234Z] : info : Server: Server is running
+[2020-05-14T17:31:46.412Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:31:46.502Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:31:56.203Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:32:33.167Z] : info : Server: Server is running
+[2020-05-14T17:32:33.379Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T17:32:33.540Z] : info : Server: database tables created if the dont exist
+[2020-05-14T17:32:36.661Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T17:32:36.667Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T17:32:36.670Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-14T17:32:36.671Z] : info : api.js: list of drivers and vehicles found successfully
+[2020-05-14T18:10:19.426Z] : info : Server: Server is running
+[2020-05-14T18:10:19.580Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:10:19.655Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:15:15.440Z] : info : Server: Server is running
+[2020-05-14T18:15:15.618Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:15:15.700Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:15:17.675Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:15:17.679Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:16:47.798Z] : info : Server: Server is running
+[2020-05-14T18:16:47.948Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:16:48.029Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:16:53.993Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:16:53.998Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:17:49.825Z] : info : Server: Server is running
+[2020-05-14T18:17:49.992Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:17:50.066Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:17:53.389Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:17:53.395Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:18:38.389Z] : info : Server: Server is running
+[2020-05-14T18:18:38.532Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:18:38.589Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:18:43.449Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:18:43.455Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:20:43.854Z] : info : Server: Server is running
+[2020-05-14T18:20:44.034Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:20:44.114Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:20:46.766Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:20:46.772Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:21:15.648Z] : info : Server: Server is running
+[2020-05-14T18:21:15.802Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:21:15.868Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:21:20.326Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:21:20.333Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:27:52.652Z] : info : Server: Server is running
+[2020-05-14T18:27:52.792Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:27:52.864Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:31:07.294Z] : info : Server: Server is running
+[2020-05-14T18:31:07.445Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:31:07.505Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:31:47.002Z] : info : Server: Server is running
+[2020-05-14T18:31:47.199Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:31:47.291Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:32:05.977Z] : info : Server: Server is running
+[2020-05-14T18:32:06.298Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:32:06.422Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:32:07.708Z] : info : Server: Server is running
+[2020-05-14T18:32:07.870Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:32:07.934Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:32:19.354Z] : info : Server: Server is running
+[2020-05-14T18:32:19.531Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:32:19.599Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:32:20.613Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:32:20.620Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:32:20.621Z] : info : api.js:enough cars
+[2020-05-14T18:33:05.414Z] : info : Server: Server is running
+[2020-05-14T18:33:05.622Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:33:05.692Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:34:01.356Z] : info : Server: Server is running
+[2020-05-14T18:34:01.501Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:34:01.561Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:34:23.705Z] : info : Server: Server is running
+[2020-05-14T18:34:23.846Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:34:23.912Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:34:27.907Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:34:27.912Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:34:27.914Z] : info : api.js:enough cars
+[2020-05-14T18:35:04.641Z] : info : Server: Server is running
+[2020-05-14T18:35:04.799Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:35:04.863Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:35:27.710Z] : info : Server: Server is running
+[2020-05-14T18:35:27.971Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:35:28.115Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:35:31.191Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:35:31.196Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:35:31.198Z] : info : api.js:enough cars
+[2020-05-14T18:36:21.234Z] : info : Server: Server is running
+[2020-05-14T18:36:21.477Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:36:21.556Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:36:27.740Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:36:27.745Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:36:27.751Z] : info : api.js:enough cars
+[2020-05-14T18:37:42.744Z] : info : Server: Server is running
+[2020-05-14T18:37:42.901Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:37:42.986Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:37:56.852Z] : info : Server: Server is running
+[2020-05-14T18:37:57.018Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:37:57.092Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:37:59.459Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:37:59.463Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:37:59.464Z] : info : api.js:enough cars
+[2020-05-14T18:39:03.595Z] : info : Server: Server is running
+[2020-05-14T18:39:03.756Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:39:03.820Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:39:06.315Z] : info : Server: Server is running
+[2020-05-14T18:39:06.470Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:39:06.539Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:39:13.711Z] : error : HaulageController: TypeError: Cannot read property 'Weight' of undefined
+[2020-05-14T18:39:13.711Z] : error : api.js: weight not found
+[2020-05-14T18:40:10.767Z] : info : Server: Server is running
+[2020-05-14T18:40:10.906Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:40:10.972Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:40:15.093Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:40:15.099Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:40:15.100Z] : info : api.js:enough cars
+[2020-05-14T18:40:42.569Z] : info : Server: Server is running
+[2020-05-14T18:40:42.707Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:40:42.766Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:44:28.538Z] : info : Server: Server is running
+[2020-05-14T18:44:28.703Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:44:28.826Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:44:30.015Z] : error : HaulageController: TypeError: weight.get is not a function
+[2020-05-14T18:44:30.016Z] : error : api.js: weight not found
+[2020-05-14T18:45:04.323Z] : info : Server: Server is running
+[2020-05-14T18:45:04.492Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:45:04.556Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:45:06.488Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:45:06.495Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:45:06.500Z] : info : api.js:enough cars
+[2020-05-14T18:47:49.362Z] : info : Server: Server is running
+[2020-05-14T18:47:49.530Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:47:49.602Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:47:53.848Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:47:53.858Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:47:53.860Z] : info : api.js:enough cars
+[2020-05-14T18:48:11.520Z] : info : Server: Server is running
+[2020-05-14T18:48:11.692Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:48:11.761Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:48:14.095Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:48:14.100Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:48:14.102Z] : info : api.js:enough cars
+[2020-05-14T18:48:43.168Z] : info : Server: Server is running
+[2020-05-14T18:48:43.342Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:48:43.424Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:48:50.711Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:48:50.717Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:48:50.717Z] : info : api.js:enough cars
+[2020-05-14T18:50:39.061Z] : info : Server: Server is running
+[2020-05-14T18:50:39.205Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:50:39.268Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:50:45.035Z] : info : Server: Server is running
+[2020-05-14T18:50:45.191Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:50:45.259Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:50:48.106Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:50:48.112Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:50:48.112Z] : info : api.js:enough cars
+[2020-05-14T18:51:15.431Z] : info : Server: Server is running
+[2020-05-14T18:51:15.594Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:51:15.680Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:51:16.575Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:51:16.580Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:51:16.580Z] : info : api.js:enough cars
+[2020-05-14T18:51:32.701Z] : info : Server: Server is running
+[2020-05-14T18:51:32.999Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:51:33.109Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:51:35.001Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:51:35.006Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:51:35.011Z] : info : api.js:enough cars
+[2020-05-14T18:52:03.835Z] : info : Server: Server is running
+[2020-05-14T18:52:03.999Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:52:04.088Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:52:15.642Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:52:15.648Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:52:15.650Z] : info : api.js:enough cars
+[2020-05-14T18:52:48.767Z] : info : Server: Server is running
+[2020-05-14T18:52:48.947Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:52:49.016Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:53:33.935Z] : info : Server: Server is running
+[2020-05-14T18:53:34.151Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:53:34.229Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:53:35.743Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:53:35.746Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:53:35.751Z] : info : api.js:enough cars
+[2020-05-14T18:54:06.865Z] : info : Server: Server is running
+[2020-05-14T18:54:07.015Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:54:07.085Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:54:10.771Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:54:10.777Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:54:10.782Z] : info : api.js:enough cars
+[2020-05-14T18:54:46.299Z] : info : Server: Server is running
+[2020-05-14T18:54:46.469Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:54:46.533Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:54:51.933Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:54:51.937Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:54:51.939Z] : info : api.js:enough cars
+[2020-05-14T18:55:20.677Z] : info : Server: Server is running
+[2020-05-14T18:55:20.834Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:55:20.898Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:55:22.783Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:55:22.788Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:55:22.790Z] : info : api.js:enough cars
+[2020-05-14T18:56:34.465Z] : info : Server: Server is running
+[2020-05-14T18:56:34.822Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:56:34.921Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:56:36.172Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:56:36.176Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:56:36.177Z] : info : api.js:enough cars
+[2020-05-14T18:57:00.453Z] : info : Server: Server is running
+[2020-05-14T18:57:00.635Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:57:00.738Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:57:00.886Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:57:00.893Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:57:00.894Z] : info : api.js:enough cars
+[2020-05-14T18:58:10.259Z] : info : Server: Server is running
+[2020-05-14T18:58:10.450Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:58:10.545Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:58:12.361Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T18:58:12.365Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T18:58:12.366Z] : info : api.js:enough cars
+[2020-05-14T18:59:10.704Z] : info : Server: Server is running
+[2020-05-14T18:59:10.874Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:59:10.940Z] : info : Server: database tables created if the dont exist
+[2020-05-14T18:59:20.657Z] : info : Server: Server is running
+[2020-05-14T18:59:20.806Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T18:59:20.865Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:00:07.935Z] : info : Server: Server is running
+[2020-05-14T19:00:08.078Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:00:08.135Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:00:21.842Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T19:00:21.846Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:00:21.848Z] : info : api.js:enough cars
+[2020-05-14T19:02:11.133Z] : info : Server: Server is running
+[2020-05-14T19:02:11.279Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:02:11.340Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:02:12.810Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T19:02:12.814Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:02:12.815Z] : info : api.js:enough cars
+[2020-05-14T19:02:56.739Z] : info : Server: Server is running
+[2020-05-14T19:02:56.893Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:02:56.950Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:03:10.894Z] : info : Server: Server is running
+[2020-05-14T19:03:11.063Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:03:11.129Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:03:13.247Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T19:03:13.252Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:03:13.255Z] : info : api.js:enough cars
+[2020-05-14T19:06:15.148Z] : info : Server: Server is running
+[2020-05-14T19:06:15.411Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:06:15.490Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:06:21.133Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T19:06:21.138Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:06:21.139Z] : info : api.js: not enough cars
+[2020-05-14T19:09:16.633Z] : info : Check field: Field is valid
+[2020-05-14T19:09:16.652Z] : info : Save image: Image saved succesfully
+[2020-05-14T19:09:16.937Z] : info : DriverController: Driver was created successfully.
+[2020-05-14T19:09:16.939Z] : info : Signup driver: added succesfully
+[2020-05-14T19:09:38.497Z] : info : Check field: Field is valid
+[2020-05-14T19:09:38.501Z] : info : Save image: Image saved succesfully
+[2020-05-14T19:09:38.610Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-14T19:09:38.686Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-14T19:09:38.686Z] : info : Signup vehicle: added succesfully
+[2020-05-14T19:09:44.498Z] : info : HaulageController: weight was found successfully.
+[2020-05-14T19:09:44.501Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:09:44.501Z] : info : api.js:enough cars
+[2020-05-14T19:19:04.402Z] : info : Server: Server is running
+[2020-05-14T19:19:04.618Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:19:04.701Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:21:24.890Z] : info : Server: Server is running
+[2020-05-14T19:21:25.099Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:21:25.167Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:21:41.088Z] : info : Server: Server is running
+[2020-05-14T19:21:41.276Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:21:41.371Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:22:48.638Z] : info : Server: Server is running
+[2020-05-14T19:22:48.847Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:22:48.957Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:23:29.417Z] : info : Server: Server is running
+[2020-05-14T19:23:29.599Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:23:29.693Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:24:52.213Z] : info : Server: Server is running
+[2020-05-14T19:24:52.436Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:24:52.545Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:25:22.567Z] : info : Server: Server is running
+[2020-05-14T19:25:22.768Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:25:22.843Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:25:36.208Z] : info : Server: Server is running
+[2020-05-14T19:25:36.463Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:25:36.552Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:25:46.773Z] : info : Check field: Field is valid
+[2020-05-14T19:25:46.783Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:25:46.784Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-14T19:27:14.838Z] : info : Server: Server is running
+[2020-05-14T19:27:15.189Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:27:15.288Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:27:16.413Z] : info : Check field: Field is valid
+[2020-05-14T19:27:16.424Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:27:16.425Z] : info : api.js:enough cars
+[2020-05-14T19:27:16.425Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-14T19:29:21.476Z] : info : Server: Server is running
+[2020-05-14T19:29:21.680Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:29:21.776Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:29:23.854Z] : info : Check field: Field is valid
+[2020-05-14T19:29:23.866Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:29:23.867Z] : info : api.js:enough cars
+[2020-05-14T19:29:23.871Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-14T19:30:02.881Z] : info : Server: Server is running
+[2020-05-14T19:30:03.084Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:30:03.180Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:30:08.680Z] : info : Server: Server is running
+[2020-05-14T19:30:08.899Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:30:08.997Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:30:22.501Z] : info : Server: Server is running
+[2020-05-14T19:30:22.729Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:30:22.831Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:30:50.421Z] : info : Server: Server is running
+[2020-05-14T19:30:50.654Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:30:50.731Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:30:53.470Z] : info : Check field: Field is valid
+[2020-05-14T19:30:53.494Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:30:53.494Z] : info : api.js:enough cars
+[2020-05-14T19:30:53.553Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:30:53.558Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:30:53.658Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:30:53.658Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:33:15.465Z] : info : Server: Server is running
+[2020-05-14T19:33:15.671Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:33:15.766Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:33:51.284Z] : info : Server: Server is running
+[2020-05-14T19:33:51.528Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:33:51.648Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:33:53.497Z] : info : Check field: Field is valid
+[2020-05-14T19:33:53.512Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:33:53.513Z] : info : api.js:enough cars
+[2020-05-14T19:33:53.543Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:33:53.600Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:33:53.619Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:33:53.619Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:34:54.157Z] : info : Server: Server is running
+[2020-05-14T19:34:54.583Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:34:54.657Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:34:55.672Z] : info : Check field: Field is valid
+[2020-05-14T19:34:55.684Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:34:55.686Z] : info : api.js:enough cars
+[2020-05-14T19:34:55.710Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:34:55.732Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:34:55.756Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:34:55.757Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:36:07.195Z] : info : Server: Server is running
+[2020-05-14T19:36:07.392Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:36:07.464Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:36:08.558Z] : info : Check field: Field is valid
+[2020-05-14T19:36:08.570Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:36:08.573Z] : info : api.js:enough cars
+[2020-05-14T19:36:08.599Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:36:08.608Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:36:08.625Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:36:08.625Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:36:26.644Z] : info : Server: Server is running
+[2020-05-14T19:36:26.843Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-14T19:36:26.926Z] : info : Server: database tables created if the dont exist
+[2020-05-14T19:36:27.967Z] : info : Check field: Field is valid
+[2020-05-14T19:36:27.977Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:36:27.978Z] : info : api.js:enough cars
+[2020-05-14T19:36:28.009Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:36:28.020Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:36:28.038Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:36:28.039Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:37:27.823Z] : info : Check field: Field is valid
+[2020-05-14T19:37:27.899Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:37:27.900Z] : info : api.js:enough cars
+[2020-05-14T19:37:27.912Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:37:27.923Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:37:27.940Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:37:27.941Z] : info : api.js: Haulage created successfully
+[2020-05-14T19:37:35.902Z] : info : Check field: Field is valid
+[2020-05-14T19:37:35.905Z] : info : VehicleController: list was returned successfully.
+[2020-05-14T19:37:35.906Z] : info : api.js:enough cars
+[2020-05-14T19:37:35.910Z] : info : RouteController: Route was created successfully.
+[2020-05-14T19:37:35.914Z] : info : CargoController: Cargo was created successfully.
+[2020-05-14T19:37:35.921Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-14T19:37:35.921Z] : info : api.js: Haulage created successfully

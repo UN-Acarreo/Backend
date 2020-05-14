@@ -31,5 +31,24 @@ async function createHaulage_Driver_Vehicle(req) {
     }
 
 }
-
-module.exports = { createHaulage_Driver_Vehicle: createHaulage_Driver_Vehicle };
+async function getListOfBussyDriverVehicle() {
+    
+    try {
+        
+        let list = await Haulage_Driver_VehicleModel.findAll(
+            { 
+                where: { Is_active: "true" },
+                attributes: ['Id_driver','Id_vehicle']
+            });
+        logger.info("Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.");
+        return {status: 1, data: list};
+    } catch (error) {
+        logger.error("Haulage_Driver_VehicleController: Error getting list:"+error);
+        return {status: -1, error: error};
+    }
+        
+}
+module.exports = { 
+    createHaulage_Driver_Vehicle: createHaulage_Driver_Vehicle, 
+    getListOfBussyDriverVehicle: getListOfBussyDriverVehicle
+ };

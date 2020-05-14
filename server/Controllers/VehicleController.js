@@ -2,6 +2,9 @@
 // Import model
 const VehicleModel = require('../Models/Vehicle');
 
+//import driver model
+const Driver_Vehicle = require('../Models/Driver_Vehicle')
+
 // Import logger
 const logger = require('./../utils/logger/logger');
 
@@ -40,15 +43,19 @@ async function getListOfVehicles()
     try {
         let vehicles = await VehicleModel.findAll(
             { 
-                attributes: ['Id_vehicle','Payload_capacity']
+                attributes: ['Id_vehicle','Payload_capacity'],
+                raw: true,
+                //include: [{model:VehicleModel, atributes: ["Payload_capacity"]}]
             })
-        logger.info("VehicleController: Vehicle was created successfully.");
+        logger.info("VehicleController: list was returned successfully.");
         return {status: 1, data:vehicles}
         
     } catch (error) {
         logger.error("VehicleController: " + error);
         return {status: -1, message: error};
     }
-    
 }
-module.exports = { createVehicle: createVehicle, getListOfVehicles:getListOfVehicles };
+module.exports = { 
+    createVehicle: createVehicle,
+    getListOfVehicles : getListOfVehicles 
+};

@@ -110,6 +110,33 @@ async function saveImage(baseImage, path, img_name) {
 
     }
 
+//returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
+function getListOfNeededVehicles(free_vehicles,weight)
+{
+  var needed_vehicles =[]
+  var acum_capacity = 0;
+  console.log("weight: "+weight);
+  free_vehicles.forEach(element => {
+    Id_vehicle=element.Id_vehicle;
+    Payload_capacity=element.Payload_capacity;
+    console.log("Id vehicle: "+Id_vehicle);
+    console.log("Payload capacity: "+Payload_capacity);
+    if(weight>acum_capacity)
+    {
+      needed_vehicles.push(element)
+      acum_capacity = acum_capacity+Payload_capacity
+    }
+  });
+  if(weight>acum_capacity)
+  {
+    logger.info("api.js: not enough cars");
+    return {status: 0, data:needed_vehicles};
+  }
+  else{
+    logger.info("api.js:enough cars");
+    return {status: 1, data:needed_vehicles};;
+  }
+}
 
 
 //Route will be used to handle login POST requests
@@ -318,9 +345,26 @@ router.post('/haulage/create', async function(req, res){
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
+  values = req.body.request;
+  //check for vehicle
+
+  //this needs to be a list with all vehicles free the day of haulage for now its all of them
+  let vehicles = await VehicleController.getListOfVehicles();
+  if(vehicles.status!=1)
+  {
+    logger.error("api.js: list of cars not found");
+    return res.status(500).json({status: -1, error: vehicles.error});
+  }
+  let needed_vehicles=  getListOfNeededVehicles(vehicles.data,values.Weight)
+  console.log(needed_vehicles)
+  if(needed_vehicles.status!=1)
+  {
+    logger.info("api.js: Cant create haulage, no vehicles available");
+    return res.status(200).json({status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo"});
+  }
   let haulage_created= {status: false, data: false};
   //creating new route
-  values = req.body.request;
+  
   let route = await RouteController.createRoute({
     Origin_coord: values.Origin_coord, Destination_coord: values.Destination_coord
   });
@@ -358,7 +402,7 @@ router.post('/haulage/create', async function(req, res){
   }
   if(haulage_created.status==true)
   {
-    return res.status(201).json({status: 1, data: haulage_created.data});
+    return res.status(201).json({status: 1, data: {haulage_data:haulage_created.data,vehicles_data:needed_vehicles.data}});
     //now we have to assign driver, this is done bellow the nested ifs
   }
 });
@@ -372,12 +416,41 @@ router.post('/haulage/assign-vehicles', async function(req, res){
     logger.error("api.js: weight not found");
     return res.status(500).json({status: 1, error: weight.error});
   }
-  let vehicles = await VehicleController.getListOfVehicles()
-  if(weight.status==1)
+  let vehicles = await VehicleController.getListOfVehicles();
+  if(vehicles.status!=1)
   {
-    logger.info("api.js: list of cars");
-    return res.status(200).json({status: 1, data: vehicles.data});
+    logger.error("api.js: list of cars not found");
+    return res.status(500).json({status: -1, error: vehicles.error});
   }
+  
+  var needed_vehicles =[]
+  var acum_capacity = 0;
+  vehicles.data.forEach(element => {
+    Id_vehicle=element.Id_vehicle;
+    Payload_capacity=element.Payload_capacity;
+    if(weight.data>acum_capacity)
+    {
+      needed_vehicles.push(element)
+      acum_capacity = acum_capacity+Payload_capacity
+    }
+  });
+  console.log("all vehicles: "+JSON.stringify(vehicles.data))
+  console.log("weight: "+weight.data)
+  console.log("acum_capacity: "+acum_capacity)
+
+  if(weight.data>acum_capacity)
+  {
+    logger.info("api.js: not enough cars");
+    return res.status(200).json({status: 0, message:"No hay suficientes vehiculos para cumplir su acarreo"});
+  }
+  else{
+    logger.info("api.js:enough cars");
+    return res.status(200).json({status: 1, data:needed_vehicles});
+  }
+
+
+
+  
 
   //this needs to 
 });

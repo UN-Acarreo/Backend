@@ -49,11 +49,13 @@ async function getWeight(Id_haulage){
         let weight = await HaulageModel.findByPk(Id_haulage,
             {
                 attributes: [],
+                //raw:true,
                 include: [{ model: cargoModel, attributes: ['Weight']}]
             }
         )
+        //console.log(weight.dataValues)
         logger.info("HaulageController: weight was found successfully.");
-        return {status: 1, data: weight};
+        return {status: 1, data: weight.dataValues.Cargo.dataValues.Weight};
     }catch(error) {
         logger.error("HaulageController: " + error);
         return {status: -1, error:error};

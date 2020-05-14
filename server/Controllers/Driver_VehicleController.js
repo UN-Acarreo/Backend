@@ -2,6 +2,8 @@
 // Import model
 const Driver_VehicleModel = require('../Models/Driver_Vehicle');
 
+//import vehicle model
+const VehicleModel = require('../Models/Vehicle');
 // Import logger
 const logger = require('./../utils/logger/logger');
 
@@ -30,4 +32,6 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
     }
 
 }
-module.exports = { createDriver_Vehicle: createDriver_Vehicle };
+
+module.exports = { 
+    createDriver_Vehicle: createDriver_Vehicle};
