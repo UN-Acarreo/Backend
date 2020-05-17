@@ -1,7 +1,32 @@
 // Import logger
 const logger = require('./../utils/logger/logger');
+
 //Controller definition
 const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController');
+const DriverController = require('../Controllers/DriverController');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
+
+// Create Driver
+async function createDriver(req) {
+    // Get atributes
+    //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
+    const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
+    //Hash the password
+    var Driver_password_hashed = bcrypt.hashSync(Driver_password, 10);
+    // Create Driver
+    var result = await DriverController.create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo)
+    if(result.status==1)
+    {
+      logger.info("DriverHandler: Driver was created successfully.");
+      return {status: 1, data: result.data}
+    }
+    else{
+      logger.error("DriverHandler: " + result.error);
+      return {status: -1, message: result.error};
+    }
+}
 
 async function chooseFreeDriver(Id_vehicle)
 {
@@ -17,5 +42,6 @@ async function chooseFreeDriver(Id_vehicle)
 }
 
 module.exports = {
-    chooseFreeDriver : chooseFreeDriver
+    chooseFreeDriver : chooseFreeDriver,
+    createDriver : createDriver
   };

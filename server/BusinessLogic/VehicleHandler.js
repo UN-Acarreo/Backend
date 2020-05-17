@@ -1,5 +1,26 @@
 // Import logger
 const logger = require('./../utils/logger/logger');
+
+const VehicleController = require('../Controllers/VehicleController');
+
+async function createVehicle(req) 
+{
+    // Get atributes
+    const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
+
+    // Create Vehicle
+    var result = await VehicleController.create(Plate, Brand, Model, Payload_capacity, Photo)
+
+    if(result.status==1)
+    {
+      logger.info("VehicleHandler: Vehicle was created successfully.");
+      console.log("data:"+result.data)
+      return {status: 1, data: result.data}
+    }
+    logger.error("VehicleHandler: " + result.error);
+    return {status: -1, message: result.error};
+  }
+
 //returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
 function getListOfNeededVehicles(free_vehicles,weight)
 {
@@ -28,5 +49,6 @@ function getListOfNeededVehicles(free_vehicles,weight)
 
 
 module.exports = {
-    getListOfNeededVehicles : getListOfNeededVehicles
+    getListOfNeededVehicles : getListOfNeededVehicles,
+    createVehicle : createVehicle
   };

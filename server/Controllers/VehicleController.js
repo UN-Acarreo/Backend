@@ -9,12 +9,9 @@ const Driver_Vehicle = require('../Models/Driver_Vehicle')
 const logger = require('./../utils/logger/logger');
 
 // Create Vehicle
-async function createVehicle(req) {
+async function create(Plate, Brand, Model, Payload_capacity, Photo) {
 
     try {
-
-        // Get atributes
-        const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
 
         // Create Vehicle
         var result = await VehicleModel.create(
@@ -28,14 +25,14 @@ async function createVehicle(req) {
         )
 
         logger.info("VehicleController: Vehicle was created successfully.");
-        return {status: 1, id: result.Id_vehicle}
+        return {status: 1, data: result.Id_vehicle}
         /*
         logger.info("VehicleController: Vehicle was created successfully.");
         return 1;*/
 
     } catch (error) {
         logger.error("VehicleController: " + error);
-        return {status: -1, message: error};
+        return {status: -1, error: error};
     }
 }
 async function getListOfVehicles()
@@ -52,10 +49,10 @@ async function getListOfVehicles()
         
     } catch (error) {
         logger.error("VehicleController: " + error);
-        return {status: -1, message: error};
+        return {status: -1, error: error};
     }
 }
 module.exports = { 
-    createVehicle: createVehicle,
+    create: create,
     getListOfVehicles : getListOfVehicles 
 };

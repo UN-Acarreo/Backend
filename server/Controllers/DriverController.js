@@ -8,15 +8,9 @@ const DriverModel = require('../Models/Driver');
 const logger = require('./../utils/logger/logger');
 
 // Create Driver
-async function createDriver(req) {
+async function create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo) {
 
     try {
-
-        // Get atributes
-        //const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Average_rating, Driver_photo, Driver_phone, Identity_card } = req.body.request;
-        const { Driver_name, Driver_last_name, Driver_password, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo } = req.body.request;
-        //Hash the password
-        var Driver_password_hashed = bcrypt.hashSync(Driver_password, 10);
         // Create Driver
         var result = await DriverModel.create(
             {
@@ -36,12 +30,11 @@ async function createDriver(req) {
         )
 
         logger.info("DriverController: Driver was created successfully.");
-        return {status: 1, id: result.Id_driver}
-
+        return {status: 1, data: result.Id_driver}
 
     } catch (error) {
         logger.error("DriverController: " + error);
-        return {status: -1, message: error};
+        return {status: -1, error: error};
     }
 
 }
@@ -116,4 +109,4 @@ async function getDriverByEmail(email)
 
 }
 
-module.exports = { createDriver: createDriver, validateDriver: validateDriver };
+module.exports = { create: create, validateDriver: validateDriver };

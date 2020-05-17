@@ -110,6 +110,7 @@ router.post('/:type_of_user/login', async function(req, res){
 
 //Route will be used to handle driver sign up POST requests
 router.post('/driver/signup', async function(req, res){
+
   const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
@@ -128,12 +129,12 @@ router.post('/driver/signup', async function(req, res){
   req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card+"."+extension
 
   //Save driver on db
-  let saved = await DriverController.createDriver(req);
+  let saved = await DriverHandler.createDriver(req);
   //console.log('variabe: '+saved)
   if(saved.status == 1)
   {
     logger.info("Signup driver: added succesfully");
-    return res.status(201).json({status: 1, db_driver_id: saved.id});
+    return res.status(201).json({status: 1, db_driver_id: saved.data});
   }
   else{
     message = saved.message.toString()
@@ -171,7 +172,7 @@ router.post('/vehicle/signup', async function(req, res){
   req.body.request.Photo = '/uploads/vehicles/'+req.body.request.Identity_card+"."+extension
 
   //Save vehicle on db
-  let saved_vehicle = await VehicleController.createVehicle(req);
+  let saved_vehicle = await VehicleHandler.createVehicle(req);
   //error saving the vehicle
   if(saved_vehicle.status != 1 && saved_vehicle.message){
      message = saved_vehicle.message.toString()
@@ -183,7 +184,7 @@ router.post('/vehicle/signup', async function(req, res){
   }
 
   //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
-  let success_driver_vehicle = await Driver_Vehicle_Controller.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.id, req.body.request.Is_owner)
+  let success_driver_vehicle = await Driver_Vehicle_Controller.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
 
 
   if(success_driver_vehicle == 1)
