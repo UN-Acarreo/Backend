@@ -8,7 +8,7 @@ const VehicleModel = require('../Models/Vehicle');
 const logger = require('./../utils/logger/logger');
 
 // Create Driver_Vehicle
-async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
+async function create( Id_driver, Id_vehicle, Is_owner ) {
 
     try {
 
@@ -24,11 +24,11 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
             }
         )
         logger.info("Driver_VehicleController: Driver_Vehicle was created successfully.");
-        return 1;
+        return {status: 1};
 
     } catch (error) {
         logger.error("Driver_VehicleController: " + error);
-        return error;
+        return {status:-1, error:error};
     }
 }
 
@@ -84,7 +84,8 @@ async function getVehicleByDriverId(id)
     }
 
 }
-module.exports = { 
-  createDriver_Vehicle: createDriver_Vehicle,
-  getVehicleByDriverId: getVehicleByDriverId,
-  getDriversByVehicleId:getDriversByVehicleId};
+module.exports = {
+
+    create: create,
+    getVehicleByDriverId: getVehicleByDriverId,
+    getDriversByVehicleId:getDriversByVehicleId};

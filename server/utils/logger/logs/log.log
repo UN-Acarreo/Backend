@@ -2764,3 +2764,18 @@
 [2020-05-17T21:13:21.577Z] : info : DriverController: Driver was created successfully.
 [2020-05-17T21:13:21.577Z] : info : DriverHandler: Driver was created successfully.
 [2020-05-17T21:13:21.577Z] : info : Signup driver: added succesfully
+[2020-05-17T22:36:07.162Z] : info : Server: Server is running
+[2020-05-17T22:36:07.335Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T22:36:07.401Z] : info : Server: database tables created if the dont exist
+[2020-05-17T22:36:11.586Z] : info : Check field: Field is valid
+[2020-05-17T22:36:11.590Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-05-17T22:36:11.768Z] : info : DriverController: Driver was created successfully.
+[2020-05-17T22:36:11.768Z] : info : DriverHandler: Driver was created successfully.
+[2020-05-17T22:36:11.769Z] : info : Signup driver: added succesfully
+[2020-05-17T22:36:23.693Z] : info : Check field: Field is valid
+[2020-05-17T22:36:23.695Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-05-17T22:36:23.907Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-17T22:36:23.908Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-05-17T22:36:23.934Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-17T22:36:23.935Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-17T22:36:23.936Z] : info : Signup vehicle: added succesfully

@@ -8,6 +8,7 @@ const ImageHandler = require("../BusinessLogic/ImageHandler")
 const VehicleHandler = require("../BusinessLogic/VehicleHandler")
 const DriverHandler = require("../BusinessLogic/DriverHandler")
 const UserHandler = require("../BusinessLogic/UserHandler")
+const Driver_Vehicle_Handler = require("../BusinessLogic/Driver_VehicleHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -184,7 +185,7 @@ router.post('/vehicle/signup', async function(req, res){
   }
 
   //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
-  let success_driver_vehicle = await Driver_Vehicle_Controller.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
+  let success_driver_vehicle = await Driver_Vehicle_Handler.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
 
 
   if(success_driver_vehicle == 1)
