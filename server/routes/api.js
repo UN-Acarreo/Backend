@@ -5,6 +5,8 @@ const path = require("path");
 //Handlers definition
 const FieldsHandler = require("../BusinessLogic/FieldsHandler")
 const ImageHandler = require("../BusinessLogic/ImageHandler")
+const VehicleHandler = require("../BusinessLogic/VehicleHandler")
+const DriverHandler = require("../BusinessLogic/DriverHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -21,51 +23,6 @@ const BillController = require('../Controllers/BillController')
 const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
 const HaulageController = require('../Controllers/HaulageController')
 const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
-
-
-
-
-
-
-//returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
-function getListOfNeededVehicles(free_vehicles,weight)
-{
-  var needed_vehicles =[]
-  var acum_capacity = 0;
-  console.log("weight: "+weight);
-  free_vehicles.forEach(element => {
-    Id_vehicle=element.Id_vehicle;
-    Payload_capacity=element.Payload_capacity;
-    if(weight>acum_capacity)
-    {
-      needed_vehicles.push(element)
-      acum_capacity = acum_capacity+Payload_capacity
-    }
-  });
-  if(weight>acum_capacity)
-  {
-    logger.info("api.js: not enough cars");
-    return {status: 0, data:needed_vehicles};
-  }
-  else{
-    logger.info("api.js:enough cars");
-    return {status: 1, data:needed_vehicles};;
-  }
-}
-
-async function chooseFreeDriver(Id_vehicle)
-{
-  let drivers = await Driver_Vehicle_Controller.getDriversByVehicleId(Id_vehicle);
-  if(drivers.status!=1){
-    logger.error("api.js: Cant get list of drivers");
-    return {status: -1, error: drivers.error};
-  }
-  //needs to check if drivers are bussy at hour of haulage
-  
-  return {status:1, data: drivers.data[0]};
-  
-}
-
 
 //Route will be used to handle login POST requests
 
@@ -285,7 +242,7 @@ router.post('/haulage/create', async function(req, res){
     return res.status(500).json({status: -1, error: vehicles.error});
   }
   //this are the vehicles that need to be used for the haulage
-  let needed_vehicles=  getListOfNeededVehicles(vehicles.data,values.Weight)
+  let needed_vehicles=  VehicleHandler.getListOfNeededVehicles(vehicles.data,values.Weight)
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
@@ -293,7 +250,7 @@ router.post('/haulage/create', async function(req, res){
   }
   let needed_driver_vehicles=[];
   needed_vehicles.data.forEach( async function(element) {
-    let driver = await chooseFreeDriver(element.Id_vehicle)
+    let driver = await DriverHandler.chooseFreeDriver(element.Id_vehicle)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
       return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
