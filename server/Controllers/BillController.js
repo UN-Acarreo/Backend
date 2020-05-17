@@ -1,6 +1,6 @@
 
-// Import model
-const BillModel = require('../Models/Bill');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -14,7 +14,7 @@ async function createBill(req) {
         const { Amount, Id_haulage } = req.body.request;
 
         // Create Bill
-        await BillModel.create(
+        await ModelFactory.getModel("Bill").create(
             {
               Amount: Amount,
               Id_haulage: Id_haulage

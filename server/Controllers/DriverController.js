@@ -1,11 +1,12 @@
-//Used to hash password
-var bcrypt = require('bcryptjs');
 
-// Import model
-const DriverModel = require('../Models/Driver');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Create Driver
 async function createDriver(req) {
@@ -18,7 +19,7 @@ async function createDriver(req) {
         //Hash the password
         var Driver_password_hashed = bcrypt.hashSync(Driver_password, 10);
         // Create Driver
-        var result = await DriverModel.create(
+        var result = await ModelFactory.getModel("Driver").create(
             {
                 Driver_name: Driver_name,
                 Driver_last_name: Driver_last_name,
@@ -58,7 +59,7 @@ async function validateDriver(req) {
         const { Driver_Email, Driver_password } = req.body.request;
         // Validate Driver
         //count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
-        count = await DriverModel.count({ where: { Driver_Email: Driver_Email} })
+        count = await ModelFactory.getModel("Driver").count({ where: { Driver_Email: Driver_Email} })
         if (count > 0) {
             logger.info("DriverController: Driver is valid");
             let {status, data} = await getDriverByEmail(Driver_Email)
@@ -93,7 +94,7 @@ async function getDriverByEmail(email)
 {
     //query to find Driver by given email (which is unique)
     try {
-        let drivers = await DriverModel.findAll(
+        let drivers = await ModelFactory.getModel("Driver").findAll(
             { where: { Driver_Email: email } }
             )
         //query returns array of Drivers that match were clause
