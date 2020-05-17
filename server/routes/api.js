@@ -81,7 +81,7 @@ router.post('/:type_of_user/login', async function(req, res){
     };
     let new_req ={body:{request:new_request}};
 
-    let {status,data} = await DriverController.validateDriver(new_req);
+    let {status,data} = await DriverHandler.validateDriver(new_req);
     let vehicle_status, vehicle_data = await (await Driver_Vehicle_Controller.getVehicleByDriverId(data.Id_driver)).data;
 
     if(status==1)

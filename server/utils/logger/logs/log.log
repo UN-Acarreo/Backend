@@ -2779,3 +2779,35 @@
 [2020-05-17T22:36:23.934Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
 [2020-05-17T22:36:23.935Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
 [2020-05-17T22:36:23.936Z] : info : Signup vehicle: added succesfully
+[2020-05-17T23:10:08.522Z] : info : Server: Server is running
+[2020-05-17T23:10:08.713Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:10:08.772Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:10:21.476Z] : info : Check field: Field is valid
+[2020-05-17T23:10:21.559Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:10:21.559Z] : info : DriverHandler: email match
+[2020-05-17T23:10:24.289Z] : info : Check field: Field is valid
+[2020-05-17T23:10:24.293Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:10:24.294Z] : info : DriverHandler: email match
+[2020-05-17T23:10:55.192Z] : info : Server: Server is running
+[2020-05-17T23:10:55.268Z] : info : Check field: Field is valid
+[2020-05-17T23:10:55.450Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:10:55.466Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:10:55.467Z] : info : DriverHandler: email match
+[2020-05-17T23:10:55.511Z] : info : DriverController:Driver found
+[2020-05-17T23:10:55.731Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:10:55.765Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-17T23:10:55.766Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T23:10:55.849Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:11:11.712Z] : info : Check field: Field is valid
+[2020-05-17T23:11:11.790Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:11:11.790Z] : info : DriverHandler: email match
+[2020-05-17T23:11:11.794Z] : info : DriverController:Driver found
+[2020-05-17T23:11:11.970Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:11:11.979Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-17T23:11:11.979Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T23:11:25.496Z] : info : Check field: Field is valid
+[2020-05-17T23:11:25.570Z] : info : UserController:Number of users returned
+[2020-05-17T23:11:25.570Z] : info : UserHandler: email match
+[2020-05-17T23:11:25.574Z] : info : UserController:User found
+[2020-05-17T23:11:25.745Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-05-17T23:11:25.746Z] : info : api.js: returned user id succesfully

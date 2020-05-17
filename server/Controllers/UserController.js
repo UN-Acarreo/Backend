@@ -52,7 +52,7 @@ async function countWhere(query) {
 //status 0 = user not found
 //status 1 = user found, user returned
 //status -1 = error, error message returned
-async function getUserBy(query)
+async function getRegisterBy(query)
 {
     //query to find user by given email (which is unique)
     try {
@@ -80,6 +80,6 @@ async function getUserBy(query)
 module.exports = { 
     create: create, 
     countWhere:countWhere,
-    getUserBy:getUserBy
+    getUserBy:getRegisterBy
 
  };
