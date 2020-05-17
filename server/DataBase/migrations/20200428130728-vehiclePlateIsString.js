@@ -29,6 +29,8 @@ module.exports = {
         allowNull: false,
         unique: true
     }),
+    //removing duplicate constraint that gets created
+    queryInterface.removeConstraint("Vehicle", "Vehicle_Plate_key1"),
     ]).then(() => {
       logger.info("Migrations/vehiclePlateIsString: Migration reverted.");
     })

@@ -2251,3 +2251,216 @@
 [2020-05-17T02:59:05.556Z] : info : Server: Server is running
 [2020-05-17T02:59:05.759Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-17T02:59:05.850Z] : info : Server: database tables created if the dont exist
+[2020-05-11T22:15:55.977Z] : info : Server: Server is running
+[2020-05-11T22:15:56.256Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T22:15:56.341Z] : info : Server: database tables created if the dont exist
+[2020-05-11T22:16:11.221Z] : info : Check field: Field is valid
+[2020-05-11T22:16:11.314Z] : info : DriverController: Driver is valid
+[2020-05-11T22:16:11.318Z] : info : DriverController:Driver found
+[2020-05-11T22:16:11.318Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T22:16:11.323Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T22:16:11.323Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T22:17:01.011Z] : info : Check field: Field is valid
+[2020-05-11T22:17:01.067Z] : info : DriverController: Driver is valid
+[2020-05-11T22:17:01.068Z] : info : DriverController:Driver found
+[2020-05-11T22:17:01.069Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T22:17:01.070Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T22:17:01.070Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T22:49:29.499Z] : info : Check field: Field is valid
+[2020-05-11T22:49:29.775Z] : info : DriverController: Driver is valid
+[2020-05-11T22:49:29.778Z] : info : DriverController:Driver found
+[2020-05-11T22:49:29.778Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T22:49:29.779Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T22:49:29.779Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T22:51:17.308Z] : info : Server: Server is running
+[2020-05-11T22:51:18.126Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T22:51:18.432Z] : info : Server: database tables created if the dont exist
+[2020-05-11T22:51:29.333Z] : info : Check field: Field is valid
+[2020-05-11T22:51:29.342Z] : info : DriverController: Driver is valid
+[2020-05-11T22:51:29.347Z] : info : DriverController:Driver found
+[2020-05-11T22:51:29.347Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T22:51:29.350Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T22:51:29.351Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:09:48.322Z] : info : Server: Server is running
+[2020-05-11T23:09:48.482Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:09:48.526Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:10:02.462Z] : info : Check field: Field is valid
+[2020-05-11T23:10:02.522Z] : info : DriverController: Driver is not valid
+[2020-05-11T23:10:02.526Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T23:10:02.527Z] : info : api.js: could not find Driver
+[2020-05-11T23:10:07.264Z] : info : Check field: Field is valid
+[2020-05-11T23:10:07.267Z] : info : DriverController: Driver is not valid
+[2020-05-11T23:10:07.268Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T23:10:07.268Z] : info : api.js: could not find Driver
+[2020-05-11T23:10:11.772Z] : info : Check field: Field is valid
+[2020-05-11T23:10:11.774Z] : info : DriverController: Driver is valid
+[2020-05-11T23:10:11.777Z] : info : DriverController:Driver found
+[2020-05-11T23:10:11.777Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:10:11.780Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T23:10:11.780Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:10:58.954Z] : info : Server: Server is running
+[2020-05-11T23:10:59.092Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:10:59.138Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:11:11.173Z] : info : Check field: Field is valid
+[2020-05-11T23:11:11.233Z] : info : DriverController: Driver is valid
+[2020-05-11T23:11:11.237Z] : info : DriverController:Driver found
+[2020-05-11T23:11:11.237Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:11:11.245Z] : info : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver_Vehicle!
+[2020-05-11T23:11:11.245Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:14:32.648Z] : info : Server: Server is running
+[2020-05-11T23:14:32.793Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:14:32.840Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:14:42.838Z] : info : Check field: Field is valid
+[2020-05-11T23:14:42.847Z] : info : DriverController: Driver is valid
+[2020-05-11T23:14:42.851Z] : info : DriverController:Driver found
+[2020-05-11T23:14:42.851Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:14:42.997Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:14:42.997Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:29:41.412Z] : info : Server: Server is running
+[2020-05-11T23:29:41.570Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:29:41.617Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:29:55.598Z] : info : Check field: Field is valid
+[2020-05-11T23:29:55.662Z] : info : DriverController: Driver is valid
+[2020-05-11T23:29:55.667Z] : info : DriverController:Driver found
+[2020-05-11T23:29:55.668Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:29:55.680Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:29:55.680Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:33:52.612Z] : info : Server: Server is running
+[2020-05-11T23:33:52.758Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:33:52.806Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:34:04.281Z] : info : Check field: Field is valid
+[2020-05-11T23:34:04.335Z] : info : DriverController: Driver is valid
+[2020-05-11T23:34:04.340Z] : info : DriverController:Driver found
+[2020-05-11T23:34:04.340Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:34:04.353Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:34:04.356Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:36:35.698Z] : info : Check field: Field is valid
+[2020-05-11T23:36:35.700Z] : info : Save image: Image saved succesfully
+[2020-05-11T23:36:35.881Z] : info : DriverController: Driver was created successfully.
+[2020-05-11T23:36:35.881Z] : info : Signup driver: added succesfully
+[2020-05-11T23:37:20.312Z] : info : Check field: Field is valid
+[2020-05-11T23:37:20.314Z] : info : Save image: Image saved succesfully
+[2020-05-11T23:37:20.427Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-11T23:37:20.433Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-11T23:37:20.433Z] : info : Signup vehicle: added succesfully
+[2020-05-11T23:37:32.549Z] : info : Check field: Field is valid
+[2020-05-11T23:37:32.611Z] : info : DriverController: Driver is valid
+[2020-05-11T23:37:32.613Z] : info : DriverController:Driver found
+[2020-05-11T23:37:32.613Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:37:32.620Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:37:32.621Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:45:05.003Z] : info : Check field: Field is valid
+[2020-05-11T23:45:05.064Z] : info : DriverController: Driver is valid
+[2020-05-11T23:45:05.067Z] : info : DriverController:Driver found
+[2020-05-11T23:45:05.067Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:45:05.075Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:45:05.076Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:55:12.447Z] : info : Check field: Field is valid
+[2020-05-11T23:55:12.518Z] : info : DriverController: Driver is valid
+[2020-05-11T23:55:12.520Z] : info : DriverController:Driver found
+[2020-05-11T23:55:12.520Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:55:12.527Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:55:12.527Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:57:39.149Z] : info : Server: Server is running
+[2020-05-11T23:57:39.317Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:57:39.368Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:57:49.527Z] : info : Check field: Field is valid
+[2020-05-11T23:57:49.536Z] : info : DriverController: Driver is valid
+[2020-05-11T23:57:49.540Z] : info : DriverController:Driver found
+[2020-05-11T23:57:49.541Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:57:49.551Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:57:49.553Z] : info : api.js: returned Driver id succesfully
+[2020-05-11T23:59:30.889Z] : info : Server: Server is running
+[2020-05-11T23:59:31.152Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-11T23:59:31.202Z] : info : Server: database tables created if the dont exist
+[2020-05-11T23:59:41.910Z] : info : Check field: Field is valid
+[2020-05-11T23:59:41.919Z] : info : DriverController: Driver is valid
+[2020-05-11T23:59:41.923Z] : info : DriverController:Driver found
+[2020-05-11T23:59:41.923Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-11T23:59:41.937Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-11T23:59:41.940Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:02:42.669Z] : info : Server: Server is running
+[2020-05-12T00:02:42.810Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:02:42.861Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:02:52.299Z] : info : Check field: Field is valid
+[2020-05-12T00:02:52.309Z] : info : DriverController: Driver is valid
+[2020-05-12T00:02:52.312Z] : info : DriverController:Driver found
+[2020-05-12T00:02:52.313Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:02:52.324Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:02:52.326Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:04:08.618Z] : info : Server: Server is running
+[2020-05-12T00:04:08.765Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:04:08.814Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:04:20.182Z] : info : Server: Server is running
+[2020-05-12T00:04:20.322Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:04:20.374Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:04:33.437Z] : info : Check field: Field is valid
+[2020-05-12T00:04:33.581Z] : info : DriverController: Driver is valid
+[2020-05-12T00:04:33.585Z] : info : DriverController:Driver found
+[2020-05-12T00:04:33.585Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:04:33.597Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:04:33.597Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:06:27.589Z] : info : Server: Server is running
+[2020-05-12T00:06:27.752Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:06:27.800Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:06:35.955Z] : info : Check field: Field is valid
+[2020-05-12T00:06:35.964Z] : info : DriverController: Driver is valid
+[2020-05-12T00:06:35.968Z] : info : DriverController:Driver found
+[2020-05-12T00:06:35.969Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:06:35.979Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:06:35.979Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:09:16.984Z] : info : Check field: Field is valid
+[2020-05-12T00:09:17.050Z] : info : DriverController: Driver is valid
+[2020-05-12T00:09:17.052Z] : info : DriverController:Driver found
+[2020-05-12T00:09:17.053Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:09:17.061Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:09:17.061Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:11:02.125Z] : info : Check field: Field is valid
+[2020-05-12T00:11:02.188Z] : info : DriverController: Driver is valid
+[2020-05-12T00:11:02.191Z] : info : DriverController:Driver found
+[2020-05-12T00:11:02.192Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:11:02.198Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:11:02.199Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:19:13.612Z] : info : Server: Server is running
+[2020-05-12T00:19:13.782Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:19:13.836Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:19:24.482Z] : info : Check field: Field is valid
+[2020-05-12T00:19:24.490Z] : info : DriverController: Driver is valid
+[2020-05-12T00:19:24.494Z] : info : DriverController:Driver found
+[2020-05-12T00:19:24.494Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:19:24.505Z] : info : Driver_VehicleController: SequelizeDatabaseError: no existe la columna Driver.Plate
+[2020-05-12T00:19:24.505Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:20:40.775Z] : info : Server: Server is running
+[2020-05-12T00:20:40.946Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:20:40.997Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:20:46.746Z] : info : Check field: Field is valid
+[2020-05-12T00:20:46.754Z] : info : DriverController: Driver is valid
+[2020-05-12T00:20:46.757Z] : info : DriverController:Driver found
+[2020-05-12T00:20:46.757Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:20:46.766Z] : info : Driver_VehicleController: SequelizeDatabaseError: referencia a la entrada de la cláusula FROM para la tabla «Vehicle» no válida
+[2020-05-12T00:20:46.766Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:22:37.963Z] : info : Check field: Field is valid
+[2020-05-12T00:22:38.019Z] : info : DriverController: Driver is valid
+[2020-05-12T00:22:38.022Z] : info : DriverController:Driver found
+[2020-05-12T00:22:38.022Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:22:38.028Z] : info : Driver_VehicleController: SequelizeDatabaseError: referencia a la entrada de la cláusula FROM para la tabla «Vehicle» no válida
+[2020-05-12T00:22:38.028Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:25:55.067Z] : info : Server: Server is running
+[2020-05-12T00:25:55.254Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:25:55.332Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:26:03.765Z] : info : Check field: Field is valid
+[2020-05-12T00:26:03.774Z] : info : DriverController: Driver is valid
+[2020-05-12T00:26:03.778Z] : info : DriverController:Driver found
+[2020-05-12T00:26:03.778Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:26:03.778Z] : info : Driver_VehicleController: ReferenceError: Sequelize is not defined
+[2020-05-12T00:26:03.778Z] : info : api.js: returned Driver id succesfully
+[2020-05-12T00:35:29.935Z] : info : Server: Server is running
+[2020-05-12T00:35:30.085Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-12T00:35:30.134Z] : info : Server: database tables created if the dont exist
+[2020-05-12T00:35:44.223Z] : info : Check field: Field is valid
+[2020-05-12T00:35:44.279Z] : info : DriverController: Driver is valid
+[2020-05-12T00:35:44.284Z] : info : DriverController:Driver found
+[2020-05-12T00:35:44.284Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-12T00:35:44.297Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-12T00:35:44.297Z] : info : api.js: returned Driver id succesfully
+

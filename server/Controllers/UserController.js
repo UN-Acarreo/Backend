@@ -1,3 +1,5 @@
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Import model
 const UserModel = require('../Models/User');
@@ -12,13 +14,14 @@ async function createUser(req) {
 
         // Get atributes
         const { User_name, User_last_name, User_password, User_address, User_Email } = req.body.request;
-
+        //Hash the password
+        var User_password_hashed = bcrypt.hashSync(User_password, 10);
         // Create user
         await UserModel.create(
             {
                 User_name: User_name,
                 User_last_name: User_last_name,
-                User_password: User_password,
+                User_password: User_password_hashed,
                 User_address: User_address,
                 User_Email: User_Email
             }
@@ -49,17 +52,22 @@ async function validateUser(req) {
         const { User_Email, User_password } = req.body.request;
 
         // Validate user
-        count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
+        //count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
+        count = await UserModel.count({ where: { User_Email: User_Email} })
         if (count > 0) {
             logger.info("UserController: User is valid");
             let {status, data}=await getUserByEmail(User_Email)
             if(status==1)
             {
+                //Compare hashed passwords
+                if(bcrypt.compareSync(User_password, data.User_password) == false){
+                return {status: 0, data: 'Las contraseñas no coinciden'};
+                }
                 logger.info("UserController: succesfull call to getUserBeEmail")
                 return {status: 1, data: data};
             }else if(status==-1)
             {    logger.error("UserController: error from getUserBeEmail"+ error)
-                return {status: -2, data: error};  
+                return {status: -2, data: error};
             }
         }
         logger.info("UserController: User is not valid");
@@ -67,7 +75,7 @@ async function validateUser(req) {
 
     } catch (error) {
         logger.error("UserController: " + error);
-        return {status: -1, data: error};  
+        return {status: -1, data: error};
     }
 
 }
@@ -92,13 +100,13 @@ async function getUserByEmail(email)
         else{
             logger.info("UserController:User found")
             //users[0] should be the only user in array, .dataValues is Json containing atributes
-            return {status: 1,data: users[0].dataValues} 
+            return {status: 1,data: users[0].dataValues}
         }
-              
+
     } catch (error) {
         logger.info("UserController: "+ error)
         return {status:-1, data:error}
-        
+
     }
 
 }
