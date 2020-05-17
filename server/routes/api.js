@@ -74,8 +74,30 @@ async function check_fields(req){
       fieldName = "La capacidad de carga"
       return "La capacidad de carga no es válida"
     }
+    if((key=="Origin_coord")){
+
+    }
+    if((key=="Destination_coord")){
+
+    }
+    if((key == 'Weight') && !validator.isNumeric(field)){
+      logger.info('Check field: Phone "' + field + '" invalid')
+      fieldName = "Peso"
+      return "El Peso no es válido"
+    }
+    if((key=="Description")){
+      fieldName = "Descripcion"
+    }
+    if((key=="Date")){
+      fieldName = "Date"
+    }
+    if((key=="Id_user") && !validator.isNumeric(field)){
+      logger.info('Check field: Phone "' + field + '" invalid')
+      fieldName = "Id_user"
+      return "El id de usuario no es válido"
+    }
     //length validation
-    if(field.length == 0){
+    if(field.length == 0 && key!="Comments"){
       logger.info("Check field: Field can't be empty")
       return "El campo '" + fieldName + "' no puede estar vacio"
     }
@@ -388,7 +410,7 @@ router.post('/haulage/create', async function(req, res){
 
   if(haulage.status==-3){
     logger.error("api.js: error creating haulage: "+haulage.error);
-    return res.status(500).json({status: -1, error: "Hubo un problema registrado en la reserva de su acarreo"});
+    return res.status(500).json({status: -1, error: "Hubo un problema registrado la reserva de su acarreo"});
   } else if(haulage.status==-2){
     logger.error("api.js: error creating haulage: "+haulage.error);
     return res.status(500).json({status: -1, error: "Hubo un problema creando la ruta de su acarreo"});
