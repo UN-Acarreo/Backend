@@ -415,49 +415,6 @@ router.post('/haulage/create', async function(req, res){
   }
 });
 
-router.post('/haulage/assign-vehicles', async function(req, res){
-
-  let Id_haulage = req.body.request.Id_haulage;
-  let weight = await HaulageController.getWeight(Id_haulage);
-  if(weight.status!=1)
-  {
-    logger.error("api.js: weight not found");
-    return res.status(500).json({status: 1, error: weight.error});
-  }
-  let vehicles = await VehicleController.getListOfVehicles();
-  if(vehicles.status!=1)
-  {
-    logger.error("api.js: list of cars not found");
-    return res.status(500).json({status: -1, error: vehicles.error});
-  }
-  
-  var needed_vehicles =[]
-  var acum_capacity = 0;
-  vehicles.data.forEach(element => {
-    Id_vehicle=element.Id_vehicle;
-    Payload_capacity=element.Payload_capacity;
-    if(weight.data>acum_capacity)
-    {
-      needed_vehicles.push(element)
-      acum_capacity = acum_capacity+Payload_capacity
-    }
-  });
-  console.log("all vehicles: "+JSON.stringify(vehicles.data))
-  console.log("weight: "+weight.data)
-  console.log("acum_capacity: "+acum_capacity)
-
-  if(weight.data>acum_capacity)
-  {
-    logger.info("api.js: not enough cars");
-    return res.status(200).json({status: 0, message:"No hay suficientes vehiculos para cumplir su acarreo"});
-  }
-  else{
-    logger.info("api.js:enough cars");
-    return res.status(200).json({status: 1, data:needed_vehicles});
-  }
-  //this needs to 
-});
-
 //Route will be used to handle cancel POST service requests
 router.post('/haulage/cancel', function(req, res){
   //TODO cancel service
