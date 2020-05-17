@@ -7,12 +7,13 @@ const FieldsHandler = require("../BusinessLogic/FieldsHandler")
 const ImageHandler = require("../BusinessLogic/ImageHandler")
 const VehicleHandler = require("../BusinessLogic/VehicleHandler")
 const DriverHandler = require("../BusinessLogic/DriverHandler")
+const UserHandler = require("../BusinessLogic/UserHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
 
 //Controllers definition
-const UserController = require('../Controllers/UserController')
+//const UserController = require('../Controllers/UserController')
 const DriverController = require('../Controllers/DriverController')
 const VehicleController = require('../Controllers/VehicleController')
 const RatingController = require('../Controllers/RatingController')
@@ -54,7 +55,7 @@ router.post('/:type_of_user/login', async function(req, res){
   if(type_of_user=="client")
   {
     //Client login
-    let {status,data} = await UserController.validateUser(req);
+    let {status,data} = await UserHandler.validateUser(req);
     if(status==1)
     {
       logger.info("api.js: returned user id succesfully")
@@ -206,7 +207,7 @@ router.post('/client/signup', async function(req,res){
      return res.status(400).json({error: valid_fields})
   }
 
-  let success = await UserController.createUser(req);
+  let success = await UserHandler.createUser(req);
   if(success==1)
   {
     logger.info("Signup client: added succesfully");

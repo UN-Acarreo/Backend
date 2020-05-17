@@ -2464,3 +2464,231 @@
 [2020-05-12T00:35:44.297Z] : info : Driver_VehicleController: Driver vehicle found
 [2020-05-12T00:35:44.297Z] : info : api.js: returned Driver id succesfully
 
+[2020-05-17T19:32:35.796Z] : info : Server: Server is running
+[2020-05-17T19:32:36.061Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:32:36.172Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:33:04.709Z] : info : Check field: Field is valid
+[2020-05-17T19:33:05.074Z] : info : UserController: User was created successfully.
+[2020-05-17T19:33:05.075Z] : info : Signup client: added succesfully
+[2020-05-17T19:33:18.911Z] : info : Check field: Field is valid
+[2020-05-17T19:33:18.998Z] : info : DriverController: Driver is valid
+[2020-05-17T19:33:19.006Z] : info : DriverController:Driver found
+[2020-05-17T19:33:19.222Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-17T19:33:19.247Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-17T19:33:19.247Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T19:34:05.313Z] : info : Check field: Field is valid
+[2020-05-17T19:34:05.397Z] : info : UserController: User is valid
+[2020-05-17T19:34:05.402Z] : info : UserController:User found
+[2020-05-17T19:34:05.621Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T19:34:05.622Z] : info : api.js: returned user id succesfully
+[2020-05-17T19:34:42.760Z] : info : Server: Server is running
+[2020-05-17T19:34:42.990Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:34:43.081Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:34:50.750Z] : info : Check field: Field is valid
+[2020-05-17T19:34:50.765Z] : info : DriverController: Driver is valid
+[2020-05-17T19:34:50.772Z] : info : DriverController:Driver found
+[2020-05-17T19:34:50.990Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-17T19:34:51.037Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-17T19:34:51.037Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T19:35:10.013Z] : info : Check field: Field is valid
+[2020-05-17T19:35:10.099Z] : info : UserHandler: User is valid
+[2020-05-17T19:35:10.103Z] : info : UserHandler:User found
+[2020-05-17T19:35:10.299Z] : info : UserHandler: succesfull call to getUserBeEmail
+[2020-05-17T19:35:10.300Z] : info : api.js: returned user id succesfully
+[2020-05-17T19:46:52.611Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:47:05.991Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:47:12.905Z] : info : Server: Server is running
+[2020-05-17T19:47:13.208Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:47:13.407Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:55:41.417Z] : info : Check field: Field is valid
+[2020-05-17T19:55:41.786Z] : info : UserController: User was created successfully.
+[2020-05-17T19:56:10.774Z] : info : Check field: Field is valid
+[2020-05-17T19:56:11.146Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:57:41.418Z] : info : Check field: Field is valid
+[2020-05-17T19:57:41.855Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:58:10.787Z] : info : Check field: Field is valid
+[2020-05-17T19:58:11.139Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:08.658Z] : info : Check field: Field is valid
+[2020-05-17T19:59:08.918Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:22.212Z] : info : Server: Server is running
+[2020-05-17T19:59:22.487Z] : info : Check field: Field is valid
+[2020-05-17T19:59:22.836Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:59:22.877Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:22.878Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:22.990Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:59:32.517Z] : info : Check field: Field is valid
+[2020-05-17T19:59:32.691Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:32.692Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:35.680Z] : info : Check field: Field is valid
+[2020-05-17T19:59:35.902Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:35.903Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:42.962Z] : info : Server: Server is running
+[2020-05-17T19:59:43.054Z] : info : Check field: Field is valid
+[2020-05-17T19:59:43.464Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:59:43.535Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:43.537Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T19:59:43.677Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:59:52.206Z] : info : Server: Server is running
+[2020-05-17T19:59:52.494Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:59:52.632Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:00:27.351Z] : info : Server: Server is running
+[2020-05-17T20:00:27.624Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:00:27.757Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:00:31.791Z] : info : Check field: Field is valid
+[2020-05-17T20:00:32.018Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:00:32.019Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:00:32.019Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:00:45.190Z] : info : Check field: Field is valid
+[2020-05-17T20:00:45.524Z] : info : UserController: User was created successfully.
+[2020-05-17T20:00:45.526Z] : info : UserHandler: User was created successfully.
+[2020-05-17T20:00:45.526Z] : info : Signup client: added succesfully
+[2020-05-17T20:01:44.881Z] : info : Check field: Field is valid
+[2020-05-17T20:01:45.795Z] : info : UserController: User was created successfully.
+[2020-05-17T20:01:45.796Z] : info : UserHandler: User was created successfully.
+[2020-05-17T20:01:45.796Z] : info : Signup client: added succesfully
+[2020-05-17T20:02:11.385Z] : info : Check field: Field is valid
+[2020-05-17T20:02:11.976Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:02:11.978Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:02:11.982Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-05-17T20:02:25.699Z] : info : Check field: Name "" invalid
+[2020-05-17T20:23:36.093Z] : info : Check field: Field is valid
+[2020-05-17T20:23:36.094Z] : error : UserHandler: ReferenceError: UserModel is not defined
+[2020-05-17T20:23:36.095Z] : error : api.js: ReferenceError: UserModel is not defined
+[2020-05-17T20:25:19.335Z] : info : Server: Server is running
+[2020-05-17T20:25:19.509Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:25:19.582Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:25:23.391Z] : info : Check field: Field is valid
+[2020-05-17T20:25:23.407Z] : info : UserController:Number of users returned
+[2020-05-17T20:25:23.407Z] : info : UserHandler: User is not valid
+[2020-05-17T20:25:23.407Z] : info : api.js: could not find user
+[2020-05-17T20:28:05.143Z] : info : Check field: Field is valid
+[2020-05-17T20:28:05.247Z] : info : UserController:Number of users returned
+[2020-05-17T20:28:05.247Z] : info : UserHandler: email match
+[2020-05-17T20:28:05.268Z] : info : UserController: SequelizeDatabaseError: no existe la columna User.Field
+[2020-05-17T20:31:52.717Z] : info : Server: Server is running
+[2020-05-17T20:31:52.869Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:31:52.939Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:32:17.060Z] : info : Server: Server is running
+[2020-05-17T20:32:17.199Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:32:17.258Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:32:29.110Z] : info : Server: Server is running
+[2020-05-17T20:32:29.258Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:32:29.333Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:32:48.483Z] : info : Check field: Field is valid
+[2020-05-17T20:32:48.547Z] : info : UserController:Number of users returned
+[2020-05-17T20:32:48.548Z] : info : UserHandler: email match
+[2020-05-17T20:32:48.554Z] : info : UserController:User found
+[2020-05-17T20:32:48.724Z] : info : api.js: could not find user
+[2020-05-17T20:36:26.916Z] : info : Server: Server is running
+[2020-05-17T20:36:27.075Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:36:27.145Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:36:40.556Z] : info : Server: Server is running
+[2020-05-17T20:36:40.710Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:36:40.768Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:36:44.004Z] : info : Check field: Field is valid
+[2020-05-17T20:36:44.021Z] : info : UserController:Number of users returned
+[2020-05-17T20:36:44.021Z] : info : UserHandler: email match
+[2020-05-17T20:36:44.030Z] : info : UserController:User found
+[2020-05-17T20:36:44.257Z] : info : api.js: could not find user
+[2020-05-17T20:40:59.002Z] : info : Server: Server is running
+[2020-05-17T20:40:59.356Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:40:59.433Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:41:00.855Z] : info : Check field: Field is valid
+[2020-05-17T20:41:00.866Z] : info : UserController:Number of users returned
+[2020-05-17T20:41:00.866Z] : info : UserHandler: email match
+[2020-05-17T20:41:00.870Z] : info : UserController:User found
+[2020-05-17T20:41:01.024Z] : info : api.js: could not find user
+[2020-05-17T20:41:49.629Z] : info : Server: Server is running
+[2020-05-17T20:41:49.786Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:41:49.851Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:41:52.124Z] : info : Check field: Field is valid
+[2020-05-17T20:41:52.133Z] : info : UserController:Number of users returned
+[2020-05-17T20:41:52.133Z] : info : UserHandler: email match
+[2020-05-17T20:41:52.139Z] : info : UserController:User found
+[2020-05-17T20:41:52.292Z] : info : api.js: could not find user
+[2020-05-17T20:43:08.368Z] : info : Server: Server is running
+[2020-05-17T20:43:08.562Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:43:08.625Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:43:17.365Z] : info : Server: Server is running
+[2020-05-17T20:43:17.525Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:43:17.594Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:43:31.493Z] : info : Check field: Field is valid
+[2020-05-17T20:43:31.577Z] : info : UserController:Number of users returned
+[2020-05-17T20:43:31.577Z] : info : UserHandler: email match
+[2020-05-17T20:43:31.583Z] : info : UserController:User found
+[2020-05-17T20:43:31.764Z] : info : api.js: could not find user
+[2020-05-17T20:44:21.931Z] : info : Check field: Field is valid
+[2020-05-17T20:44:22.015Z] : info : UserController:Number of users returned
+[2020-05-17T20:44:22.016Z] : info : UserHandler: email match
+[2020-05-17T20:44:22.019Z] : info : UserController:User found
+[2020-05-17T20:44:22.138Z] : info : api.js: could not find user
+[2020-05-17T20:44:27.580Z] : info : Check field: Field is valid
+[2020-05-17T20:44:27.590Z] : info : UserController:Number of users returned
+[2020-05-17T20:44:27.591Z] : info : UserHandler: email match
+[2020-05-17T20:44:27.594Z] : info : UserController:User found
+[2020-05-17T20:44:27.715Z] : info : api.js: could not find user
+[2020-05-17T20:44:36.573Z] : info : Check field: Field is valid
+[2020-05-17T20:44:36.575Z] : info : UserController:Number of users returned
+[2020-05-17T20:44:36.575Z] : info : UserHandler: email match
+[2020-05-17T20:44:36.578Z] : info : UserController:User found
+[2020-05-17T20:44:36.698Z] : info : UserHandler: succesfull call to getUserBeEmail
+[2020-05-17T20:44:36.698Z] : info : api.js: returned user id succesfully
+[2020-05-17T20:45:50.876Z] : info : Server: Server is running
+[2020-05-17T20:45:51.030Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:45:51.095Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:46:00.871Z] : info : Server: Server is running
+[2020-05-17T20:46:01.116Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:46:01.197Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:46:05.357Z] : info : Check field: Field is valid
+[2020-05-17T20:46:05.367Z] : info : UserController:Number of users returned
+[2020-05-17T20:46:05.367Z] : info : UserHandler: email match
+[2020-05-17T20:46:05.372Z] : info : UserController:User found
+[2020-05-17T20:46:05.521Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-05-17T20:46:05.521Z] : info : api.js: returned user id succesfully
+[2020-05-17T20:47:25.823Z] : info : Server: Server is running
+[2020-05-17T20:47:25.990Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:47:26.069Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:47:40.713Z] : info : Server: Server is running
+[2020-05-17T20:47:40.874Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:47:40.942Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:47:44.536Z] : info : Check field: Field is valid
+[2020-05-17T20:47:44.545Z] : info : UserController:Number of users returned
+[2020-05-17T20:47:44.546Z] : info : UserHandler: email match
+[2020-05-17T20:47:44.552Z] : info : UserController:User found
+[2020-05-17T20:47:44.698Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-05-17T20:47:44.698Z] : info : api.js: returned user id succesfully
+[2020-05-17T20:50:37.698Z] : info : Server: Server is running
+[2020-05-17T20:50:37.879Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T20:50:37.957Z] : info : Server: database tables created if the dont exist
+[2020-05-17T20:51:01.954Z] : info : Check field: Field is valid
+[2020-05-17T20:51:02.023Z] : info : DriverController: Driver is not valid
+[2020-05-17T20:51:02.031Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T20:51:02.032Z] : info : api.js: could not find Driver
+[2020-05-17T20:51:14.144Z] : info : Check field: Field is valid
+[2020-05-17T20:51:14.209Z] : info : DriverController: Driver is not valid
+[2020-05-17T20:51:14.213Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T20:51:14.213Z] : info : api.js: could not find Driver
+[2020-05-17T20:51:23.342Z] : info : Check field: Field is valid
+[2020-05-17T20:51:23.348Z] : info : UserController:Number of users returned
+[2020-05-17T20:51:23.349Z] : info : UserHandler: email match
+[2020-05-17T20:51:23.353Z] : info : UserController:User found
+[2020-05-17T20:51:23.495Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-05-17T20:51:23.495Z] : info : api.js: returned user id succesfully
+[2020-05-17T20:51:53.010Z] : info : Check field: Field is valid
+[2020-05-17T20:51:53.178Z] : info : UserController: User was created successfully.
+[2020-05-17T20:51:53.179Z] : info : UserHandler: User was created successfully.
+[2020-05-17T20:51:53.179Z] : info : Signup client: added succesfully
+[2020-05-17T20:52:21.053Z] : info : Check field: Field is valid
+[2020-05-17T20:52:21.117Z] : info : DriverController: Driver is not valid
+[2020-05-17T20:52:21.120Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T20:52:21.120Z] : info : api.js: could not find Driver
+[2020-05-17T20:52:34.125Z] : info : Check field: Field is valid
+[2020-05-17T20:52:34.183Z] : info : UserController:Number of users returned
+[2020-05-17T20:52:34.184Z] : info : UserHandler: email match
+[2020-05-17T20:52:34.187Z] : info : UserController:User found
+[2020-05-17T20:52:34.323Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-05-17T20:52:34.324Z] : info : api.js: returned user id succesfully
+[2020-05-17T20:52:51.783Z] : info : Check field: Field is valid
+[2020-05-17T20:52:51.850Z] : info : DriverController: Driver is not valid
+[2020-05-17T20:52:51.852Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T20:52:51.853Z] : info : api.js: could not find Driver

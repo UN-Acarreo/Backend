@@ -1,4 +1,3 @@
-
 // Import model
 const Driver_VehicleModel = require('../Models/Driver_Vehicle');
 const DriverModel = require('../Models/Driver');
