@@ -11,10 +11,10 @@ async function createCargo(req) {
     try {
 
         // Get atributes
-        const { Weight, Description, Comments } = req.body.request;
+        const { Weight, Description, Comments } = req;
 
         // Create Cargo
-        await CargoModel.create(
+        let new_Cargo = await CargoModel.create(
             {
                 Weight: Weight,
                 Description: Description,
@@ -22,11 +22,11 @@ async function createCargo(req) {
             }
         );
         logger.info("CargoController: Cargo was created successfully.");
-        return 1;
+        return {status: 1, data: new_Cargo.Id_cargo};
         
     } catch (error) {
         logger.error("CargoController: " + error);
-        return error;
+        return {status: -1, error: error};
     }
 
 }

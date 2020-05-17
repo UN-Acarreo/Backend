@@ -2,8 +2,9 @@
 // Import model
 const Driver_VehicleModel = require('../Models/Driver_Vehicle');
 const DriverModel = require('../Models/Driver');
-const VehicleModel = require('../Models/Vehicle');
 
+//import vehicle model
+const VehicleModel = require('../Models/Vehicle');
 // Import logger
 const logger = require('./../utils/logger/logger');
 
@@ -30,7 +31,24 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
         logger.error("Driver_VehicleController: " + error);
         return error;
     }
+}
 
+async function getDriversByVehicleId(Id_vehicle)
+{
+    try {
+
+        let drivers = await Driver_VehicleModel.findAll({
+            where: {Id_vehicle : Id_vehicle},
+            raw:true
+        })
+        logger.info("Driver_VehicleController: list of driver returned.");
+        return {status:1,data:drivers};
+        
+    } catch (error) {
+        logger.error("Driver_VehicleController: " + error);
+        return error;
+    }
+    
 }
 
 // Get Vehicle by Driver Id
@@ -67,5 +85,7 @@ async function getVehicleByDriverId(id)
     }
 
 }
-
-module.exports = { createDriver_Vehicle: createDriver_Vehicle, getVehicleByDriverId: getVehicleByDriverId };
+module.exports = { 
+  createDriver_Vehicle: createDriver_Vehicle,
+  getVehicleByDriverId: getVehicleByDriverId,
+  getDriversByVehicleId:getDriversByVehicleId};

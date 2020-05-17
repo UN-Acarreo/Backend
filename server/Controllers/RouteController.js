@@ -11,24 +11,36 @@ async function createRoute(req) {
     try {
 
         // Get atributes
-        const { Origin_coord, Destination_coord, Duration } = req.body.request;
+        const { Origin_coord, Destination_coord } = req;
 
         // Create Route
-        await RouteModel.create(
+        const new_route = await RouteModel.create(
             {
                 Origin_coord: Origin_coord,
                 Destination_coord: Destination_coord,
-                Route_password: password,
-                Duration: Duration
+                Duration: 2 //Hardcoding 2 hours by default for now
             }
         );
         logger.info("RouteController: Route was created successfully.");
-        return 1;
+        return {status: 1, data: new_route.Id_route};  
         
     } catch (error) {
         logger.error("RouteController: " + error);
-        return error;
+        return {status: -1, error: error};
     }
 
 }
 module.exports = { createRoute: createRoute };
+
+/*
+async function test(){
+
+    let request_route ={Origin_coord:13241, Destination_coord:13134}
+    let req_route ={body:{request:request_route}};
+    let route_response = await createRoute(req_route);
+    console.log(route_response);
+}
+
+test();
+*/
+
