@@ -1,10 +1,10 @@
 const express = require ('express');
 const router = express.Router();
-const fs = require("fs");
 const path = require("path");
 
 //Handlers definition
 const FieldsHandler = require("../BusinessLogic/FieldsHandler")
+const ImageHandler = require("../BusinessLogic/ImageHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -25,31 +25,7 @@ const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_
 
 
 
-async function saveImage(baseImage, path, img_name) {
-        //Find extension of file
-        try{
-          const ext = baseImage.substring(baseImage.indexOf("/")+1, baseImage.indexOf(";base64"));
-          const fileType = baseImage.substring("data:".length,baseImage.indexOf("/"));
-          //Forming regex to extract base64 data of file.
-          const regex = new RegExp(`^data:${fileType}\/${ext};base64,`, 'gi');
-          //Extract base64 data.
-          const base64Data = baseImage.replace(regex, "");
-          //Set filename and extension
-          const filename = img_name+"."+ext
-          const fullpath = path + filename
 
-          //write the file
-          fs.writeFileSync(fullpath, base64Data, 'base64');
-          logger.info("Save image: Image saved succesfully")
-          return true
-          //return {filename, localPath};
-        }
-        catch(err){
-          logger.error("Save image: " + err)
-          return false
-        }
-
-    }
 
 //returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
 function getListOfNeededVehicles(free_vehicles,weight)
@@ -182,7 +158,7 @@ router.post('/driver/signup', async function(req, res){
   }
   //Save drivers image
   const filePath = path.join(__dirname, "../public/uploads/drivers/");
-  const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
@@ -225,7 +201,7 @@ router.post('/vehicle/signup', async function(req, res){
   }
   //Save vehicle image
   const filePath = path.join(__dirname, "../public/uploads/vehicles/");
-  const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
