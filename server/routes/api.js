@@ -119,8 +119,6 @@ function getListOfNeededVehicles(free_vehicles,weight)
   free_vehicles.forEach(element => {
     Id_vehicle=element.Id_vehicle;
     Payload_capacity=element.Payload_capacity;
-    console.log("Id vehicle: "+Id_vehicle);
-    console.log("Payload capacity: "+Payload_capacity);
     if(weight>acum_capacity)
     {
       needed_vehicles.push(element)
@@ -138,6 +136,19 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
 }
 
+async function chooseFreeDriver(Id_vehicle)
+{
+  let drivers = await Driver_Vehicle_Controller.getDriversByVehicleId(Id_vehicle);
+  if(drivers.status!=1){
+    logger.error("api.js: Cant get list of drivers");
+    return {status: -1, error: drivers.error};
+  }
+  //needs to check if drivers are bussy at hour of haulage
+  
+  return {status:1, data: drivers.data[0]};
+  
+}
+
 
 //Route will be used to handle login POST requests
 
@@ -151,7 +162,6 @@ router.post('/log-client-errors', async function(req, res){
   return res.status(200).send("ok");
 
 });
-
 
 //Login for user and driver
 //status 0 = user/driver not found
@@ -356,36 +366,53 @@ router.post('/haulage/create', async function(req, res){
     logger.error("api.js: list of cars not found");
     return res.status(500).json({status: -1, error: vehicles.error});
   }
+  //this are the vehicles that need to be used for the haulage
   let needed_vehicles=  getListOfNeededVehicles(vehicles.data,values.Weight)
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
     return res.status(200).json({status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo"});
   }
+  let needed_driver_vehicles=[];
+  needed_vehicles.data.forEach( async function(element) {
+    let driver = await chooseFreeDriver(element.Id_vehicle)
+    if(driver.status!=1){
+      logger.error("api.js: Cant get list of drivers");
+      return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
+    }
+    needed_driver_vehicles.push(driver.data);
+  });
 
   //creating haualge and other asosiated registers
   let haulage = await HaulageController.createHaulageWithRouteCargo(values);
-  if(haulage.status==-3)
-  {
+
+  if(haulage.status==-3){
     logger.error("api.js: error creating haulage: "+haulage.error);
     return res.status(500).json({status: -1, error: "Hubo un problema registrado en la reserva de su acarreo"});
-  
-  } else if(haulage.status==-2)
-  {
+  } else if(haulage.status==-2){
     logger.error("api.js: error creating haulage: "+haulage.error);
     return res.status(500).json({status: -1, error: "Hubo un problema creando la ruta de su acarreo"});
-
-  } else if(haulage.status==-1)
-  {
+  } else if(haulage.status==-1){
     logger.error("api.js: error creating haulage: "+haulage.error);
-    return res.status(500).json({status: -1, error: "Hubo un problema registrado la carga de su acarreo"});
-
-  }else
-  {
-    logger.info("api.js: haulage, cargo and route created: ");
-    return res.status(201).json({status: 1, data: {haulage_data:haulage.data,vehicles_data:needed_vehicles.data}});
+    return res.status(500).json({status: -1, error: "Hubo un problema registrado la carga de su acarreo"})
   }
 
+  logger.info("api.js: haulage, cargo and route created: ");
+
+  //creating records for haulage driver vehicles
+  response =
+  await Haulage_Driver_VehicleController.createAllHaulage_Driver_VehicleFromList(
+    needed_driver_vehicles,haulage.data.Id_haulage
+    )
+  if(response.status==1)
+  {
+    logger.info("api.js: all haulage_driver_vehicles created ");
+    return res.status(201).json({status: 1, data: {haulage_data:haulage.data,vehicles_data:needed_driver_vehicles}});
+  }
+  else{
+    logger.error("api.js: error creating haulage_driver_vehicles: "+response.error);
+    return res.status(500).json({status: -1, error: "Hubo un problema al almacenar los datos de su acarreo"})
+  }
 });
 
 router.post('/haulage/assign-vehicles', async function(req, res){
@@ -428,11 +455,6 @@ router.post('/haulage/assign-vehicles', async function(req, res){
     logger.info("api.js:enough cars");
     return res.status(200).json({status: 1, data:needed_vehicles});
   }
-
-
-
-  
-
   //this needs to 
 });
 
@@ -447,7 +469,6 @@ router.post('/haulage/cancel', function(req, res){
 router.get('/driver/schedule', function(req, res){
   res.status(200).json({Api: 'Send driver schedule'})
 });
-
 
 //Route will be used to send the drivers location GET request
 router.get('/driver/location', function(req, res){
