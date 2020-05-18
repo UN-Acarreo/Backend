@@ -2811,3 +2811,280 @@
 [2020-05-17T23:11:25.574Z] : info : UserController:User found
 [2020-05-17T23:11:25.745Z] : info : UserHandler: succesfull call to getUserByEmail
 [2020-05-17T23:11:25.746Z] : info : api.js: returned user id succesfully
+[2020-05-17T23:41:05.276Z] : info : Server: Server is running
+[2020-05-17T23:41:05.446Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:41:05.512Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:41:27.998Z] : info : Check field: Field is valid
+[2020-05-17T23:41:28.083Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:41:28.084Z] : info : DriverHandler: email match
+[2020-05-17T23:41:28.090Z] : info : DriverController:Driver found
+[2020-05-17T23:41:28.311Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:41:28.318Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:41:59.511Z] : info : Server: Server is running
+[2020-05-17T23:41:59.590Z] : info : Check field: Field is valid
+[2020-05-17T23:41:59.772Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:41:59.818Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:41:59.818Z] : info : DriverHandler: email match
+[2020-05-17T23:41:59.827Z] : info : DriverController:Driver found
+[2020-05-17T23:42:00.049Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:42:00.057Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:42:00.145Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:42:11.370Z] : info : Server: Server is running
+[2020-05-17T23:42:11.559Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:42:11.649Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:42:35.771Z] : info : Check field: Field is valid
+[2020-05-17T23:42:35.848Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:42:35.849Z] : info : DriverHandler: email match
+[2020-05-17T23:42:35.853Z] : info : DriverController:Driver found
+[2020-05-17T23:42:35.983Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:42:35.986Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:43:59.944Z] : info : Server: Server is running
+[2020-05-17T23:44:00.032Z] : info : Check field: Field is valid
+[2020-05-17T23:44:00.374Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:44:00.391Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:44:00.391Z] : info : DriverHandler: email match
+[2020-05-17T23:44:00.515Z] : info : DriverController:Driver found
+[2020-05-17T23:44:00.769Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:44:00.780Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:44:00.781Z] : info : Driver_VehicleHandler: undefined
+[2020-05-17T23:44:00.781Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T23:44:00.891Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:44:14.451Z] : info : Check field: Field is valid
+[2020-05-17T23:44:14.530Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:44:14.530Z] : info : DriverHandler: email match
+[2020-05-17T23:44:14.534Z] : info : DriverController:Driver found
+[2020-05-17T23:44:14.713Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:44:14.715Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:44:14.715Z] : info : Driver_VehicleHandler: undefined
+[2020-05-17T23:44:14.715Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T23:44:57.724Z] : info : Server: Server is running
+[2020-05-17T23:44:57.923Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:44:58.015Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:45:03.605Z] : info : Server: Server is running
+[2020-05-17T23:45:03.803Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:45:03.892Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:45:16.043Z] : info : Server: Server is running
+[2020-05-17T23:45:16.248Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:45:16.364Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:45:24.507Z] : info : Check field: Field is valid
+[2020-05-17T23:45:24.520Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:45:24.521Z] : info : DriverHandler: email match
+[2020-05-17T23:45:24.527Z] : info : DriverController:Driver found
+[2020-05-17T23:45:24.688Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:45:24.692Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:45:24.692Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:45:24.692Z] : info : api.js: returned Driver id succesfully
+[2020-05-17T23:49:30.278Z] : info : Server: Server is running
+[2020-05-17T23:49:30.510Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:49:30.611Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:50:10.062Z] : info : Server: Server is running
+[2020-05-17T23:50:10.287Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:50:10.394Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:50:23.130Z] : info : Check field: Field is valid
+[2020-05-17T23:50:23.213Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:50:23.214Z] : info : DriverHandler: email match
+[2020-05-17T23:50:23.222Z] : info : DriverController:Driver found
+[2020-05-17T23:50:23.479Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:50:23.485Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:50:23.486Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:50:23.486Z] : error : api.js: undefined
+[2020-05-17T23:51:03.604Z] : info : Server: Server is running
+[2020-05-17T23:51:03.825Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:51:03.917Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:51:12.778Z] : info : Check field: Field is valid
+[2020-05-17T23:51:12.796Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:51:12.797Z] : info : DriverHandler: email match
+[2020-05-17T23:51:12.805Z] : info : DriverController:Driver found
+[2020-05-17T23:51:13.028Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:51:13.035Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:51:13.035Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:51:13.036Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:52:29.936Z] : info : Server: Server is running
+[2020-05-17T23:52:30.250Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:52:30.348Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:52:41.133Z] : info : Server: Server is running
+[2020-05-17T23:52:41.327Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:52:41.419Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:53:07.337Z] : info : Check field: Field is valid
+[2020-05-17T23:53:07.415Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:53:07.416Z] : info : DriverHandler: email match
+[2020-05-17T23:53:07.423Z] : info : DriverController:Driver found
+[2020-05-17T23:53:07.646Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:54:31.660Z] : info : Server: Server is running
+[2020-05-17T23:54:31.755Z] : info : Check field: Field is valid
+[2020-05-17T23:54:31.960Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:54:31.977Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:54:31.978Z] : info : DriverHandler: email match
+[2020-05-17T23:54:31.987Z] : info : DriverController:Driver found
+[2020-05-17T23:54:32.180Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:54:32.186Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:54:32.186Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:54:32.187Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:54:32.257Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:56:19.970Z] : info : Server: Server is running
+[2020-05-17T23:56:20.182Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:56:20.271Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:56:25.726Z] : info : Check field: Field is valid
+[2020-05-17T23:56:25.742Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:56:25.742Z] : info : DriverHandler: email match
+[2020-05-17T23:56:25.749Z] : info : DriverController:Driver found
+[2020-05-17T23:56:25.978Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:56:25.984Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:56:25.984Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:56:25.985Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:58:54.453Z] : info : Server: Server is running
+[2020-05-17T23:58:54.664Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:58:54.746Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:59:14.285Z] : info : Check field: Field is valid
+[2020-05-17T23:59:14.556Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:59:14.558Z] : info : DriverHandler: email match
+[2020-05-17T23:59:14.579Z] : info : DriverController:Driver found
+[2020-05-17T23:59:14.832Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:59:38.466Z] : info : Server: Server is running
+[2020-05-17T23:59:38.578Z] : info : Check field: Field is valid
+[2020-05-17T23:59:38.783Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:59:38.806Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:59:38.806Z] : info : DriverHandler: email match
+[2020-05-17T23:59:38.822Z] : info : DriverController:Driver found
+[2020-05-17T23:59:39.159Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:59:39.168Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:59:39.168Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:59:39.168Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:59:39.260Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:59:43.563Z] : info : Check field: Field is valid
+[2020-05-17T23:59:43.566Z] : info : DriverController:Number of Drivers returned
+[2020-05-17T23:59:43.567Z] : info : DriverHandler: email match
+[2020-05-17T23:59:43.571Z] : info : DriverController:Driver found
+[2020-05-17T23:59:43.741Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-17T23:59:43.743Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:59:43.743Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-17T23:59:43.744Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:00:19.278Z] : info : Server: Server is running
+[2020-05-18T00:00:19.477Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:00:19.586Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:00:35.425Z] : info : Check field: Field is valid
+[2020-05-18T00:00:35.510Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:00:35.511Z] : info : DriverHandler: email match
+[2020-05-18T00:00:35.518Z] : info : DriverController:Driver found
+[2020-05-18T00:00:35.745Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:00:35.756Z] : info : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:00:35.756Z] : error : Driver_VehicleHandler: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:00:35.756Z] : error : api.js: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:01:15.933Z] : info : Server: Server is running
+[2020-05-18T00:01:16.128Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:01:16.220Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:01:50.473Z] : info : Check field: Field is valid
+[2020-05-18T00:01:50.538Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:01:50.538Z] : info : DriverHandler: email match
+[2020-05-18T00:01:50.542Z] : info : DriverController:Driver found
+[2020-05-18T00:01:50.671Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:01:50.680Z] : info : Driver_VehicleController: Error: Invalid value { Id_driver: 118 }
+[2020-05-18T00:01:50.680Z] : error : Driver_VehicleHandler: Error: Invalid value { Id_driver: 118 }
+[2020-05-18T00:01:50.680Z] : error : api.js: Error: Invalid value { Id_driver: 118 }
+[2020-05-18T00:02:52.983Z] : info : Server: Server is running
+[2020-05-18T00:02:53.188Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:02:53.276Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:03:26.347Z] : info : Server: Server is running
+[2020-05-18T00:03:26.612Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:03:26.712Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:03:41.790Z] : info : Check field: Field is valid
+[2020-05-18T00:03:41.885Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:03:41.886Z] : info : DriverHandler: email match
+[2020-05-18T00:03:41.893Z] : info : DriverController:Driver found
+[2020-05-18T00:03:42.123Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:03:42.147Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:03:42.148Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:05:02.072Z] : info : Server: Server is running
+[2020-05-18T00:05:02.207Z] : info : Check field: Field is valid
+[2020-05-18T00:05:02.475Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:05:02.491Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:05:02.492Z] : info : DriverHandler: email match
+[2020-05-18T00:05:02.501Z] : info : DriverController:Driver found
+[2020-05-18T00:05:02.746Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:05:02.777Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:05:02.778Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:05:02.839Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:05:59.564Z] : info : Server: Server is running
+[2020-05-18T00:05:59.765Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:05:59.853Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:07:55.472Z] : info : Server: Server is running
+[2020-05-18T00:07:55.676Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:07:55.765Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:08:24.578Z] : info : Server: Server is running
+[2020-05-18T00:08:24.793Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:08:24.878Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:08:28.220Z] : info : Check field: Field is valid
+[2020-05-18T00:08:28.235Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:08:28.235Z] : info : DriverHandler: email match
+[2020-05-18T00:08:28.242Z] : info : DriverController:Driver found
+[2020-05-18T00:08:28.465Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:08:28.488Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:08:28.489Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:10:28.242Z] : info : Check field: Field is valid
+[2020-05-18T00:10:28.333Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:10:28.333Z] : info : DriverHandler: email match
+[2020-05-18T00:10:28.336Z] : info : DriverController:Driver found
+[2020-05-18T00:10:28.496Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:10:28.513Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:10:28.513Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:15:33.805Z] : info : Server: Server is running
+[2020-05-18T00:15:33.982Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:15:34.073Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:15:46.693Z] : info : Check field: Field is valid
+[2020-05-18T00:15:46.766Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:15:46.766Z] : info : DriverHandler: email match
+[2020-05-18T00:15:46.771Z] : info : DriverController:Driver found
+[2020-05-18T00:15:46.905Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:15:46.923Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:15:46.924Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:15:46.924Z] : info : api.js: returned Driver id succesfully
+[2020-05-18T00:17:37.384Z] : info : Server: Server is running
+[2020-05-18T00:17:37.592Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:17:37.699Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:17:50.499Z] : info : Check field: Field is valid
+[2020-05-18T00:17:50.583Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:17:50.583Z] : info : DriverHandler: email match
+[2020-05-18T00:17:50.591Z] : info : DriverController:Driver found
+[2020-05-18T00:17:50.812Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:17:50.822Z] : error : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:19:50.506Z] : info : Check field: Field is valid
+[2020-05-18T00:19:50.663Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:19:50.664Z] : info : DriverHandler: email match
+[2020-05-18T00:19:50.671Z] : info : DriverController:Driver found
+[2020-05-18T00:19:50.840Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:19:50.842Z] : error : Driver_VehicleController: TypeError: include.model.getTableName is not a function
+[2020-05-18T00:23:34.332Z] : info : Server: Server is running
+[2020-05-18T00:23:34.554Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:23:34.683Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:25:31.309Z] : info : Server: Server is running
+[2020-05-18T00:25:31.542Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:25:31.651Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:25:38.960Z] : info : Server: Server is running
+[2020-05-18T00:25:39.229Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:25:39.309Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:26:31.920Z] : info : Server: Server is running
+[2020-05-18T00:26:32.142Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:26:32.253Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:27:00.656Z] : info : Server: Server is running
+[2020-05-18T00:27:01.062Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:27:01.237Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:27:07.261Z] : info : Check field: Field is valid
+[2020-05-18T00:27:07.278Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T00:27:07.279Z] : info : DriverHandler: email match
+[2020-05-18T00:27:07.285Z] : info : DriverController:Driver found
+[2020-05-18T00:27:07.509Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T00:27:07.533Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T00:27:07.534Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T00:27:07.535Z] : info : api.js: returned Driver id succesfully
+[2020-05-18T00:29:22.386Z] : info : Server: Server is running
+[2020-05-18T00:29:22.610Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:29:22.716Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:29:36.574Z] : info : Server: Server is running
+[2020-05-18T00:29:36.841Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:29:36.949Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:29:47.484Z] : info : Server: Server is running
+[2020-05-18T00:29:47.779Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:29:47.889Z] : info : Server: database tables created if the dont exist
+[2020-05-18T00:30:29.736Z] : info : Server: Server is running
+[2020-05-18T00:30:30.076Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T00:30:30.375Z] : info : Server: database tables created if the dont exist

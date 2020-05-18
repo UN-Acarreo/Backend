@@ -10,7 +10,33 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
     logger.error("Driver_VehicleController: " + error);
     return error;
 }
+
+async function getVehicleByDriverId(id)
+{
+    //query to find Vehicles by given drivers Id
+
+    let vehicle = await Driver_VehicleController.getRegisterBy({Id_driver: id},"Vehicle")  
+    if(vehicle.status==1)
+    {
+        //query returns array of Drivers that match were clause
+        if(vehicle.data.length==0)
+        {
+            logger.info("Driver_VehicleHandler: id doesnt match known Driver with Vehicle")
+            return {status:0, data:"not found"}
+        }
+        else{
+            logger.info("Driver_VehicleHandler: Driver vehicle found")
+            return {status: 1, data: vehicle.data} 
+        }
+    }      
+    else{
+        logger.error("Driver_VehicleHandler: "+ drivers.error)
+        return {status:-1, error:drivers.error}
+    }
+
+}
 module.exports = { 
-    createDriver_Vehicle: createDriver_Vehicle
+    createDriver_Vehicle: createDriver_Vehicle,
+    getVehicleByDriverId: getVehicleByDriverId
     };
   

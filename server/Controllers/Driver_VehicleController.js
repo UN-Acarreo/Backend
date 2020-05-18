@@ -50,22 +50,28 @@ async function getDriversByVehicleId(Id_vehicle)
     
 }
 
-// Get Vehicle by Driver Id
+
+
 //status 0 = Driver not found
 //status 1 = Driver found, Driver returned
 //status -1 = error, error message returned
-async function getVehicleByDriverId(id)
+async function getRegisterBy(query,registerToGet)
 {
+    const Model = 
+    console.log(query)
+    console.log(registerToGet)
     //query to find Driver by given email (which is unique)
     try {
+        //Model can be driver of vehicle, depending of what is needed
+        const Model = require('../Models/'+registerToGet);
         let drivers = await DriverModel.findAll(
-            { where: { Id_driver: id }, 
+            { where:  query , 
               attributes: [],
-              include: [{ model: VehicleModel, attributes: ['Plate', 'Brand', 'Model', 'Payload_capacity', 'Photo']}]
+              include: [{model: Model}]
             }
         )
         
-        //query returns array of Drivers that match were clause
+        //query returns array of Drivers or vehicles that match were clause
         if(drivers.length==0)
         {
             logger.info("Driver_VehicleController: id doesnt match known Driver with Vehicle")
@@ -73,19 +79,21 @@ async function getVehicleByDriverId(id)
         }
         else{
             logger.info("Driver_VehicleController: Driver vehicle found")
+            console.log(drivers[0].dataValues)
             //Drivers[0] should be the only Driver in array, .dataValues is Json containing atributes
             return {status: 1,data: drivers[0].dataValues} 
         }
               
     } catch (error) {
-        logger.info("Driver_VehicleController: "+ error)
-        return {status:-1, data:error}
+        logger.error("Driver_VehicleController: "+ error)
+        return {status:-1, error:error}
         
     }
-
 }
+
+
 module.exports = {
 
     create: create,
-    getVehicleByDriverId: getVehicleByDriverId,
+    getRegisterBy: getRegisterBy,
     getDriversByVehicleId:getDriversByVehicleId};
