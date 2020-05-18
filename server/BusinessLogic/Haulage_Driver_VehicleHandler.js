@@ -5,8 +5,9 @@ const logger = require('./../utils/logger/logger');
 
 async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_haulage){
 
-
+   
     for (const element of list_driver_vehicles) {
+        
         let new_h_d_v = await Haulage_Driver_VehicleController.create(
             Id_haulage, element.Id_driver, element.Id_vehicle, false
             )  

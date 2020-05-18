@@ -2,8 +2,10 @@
 const logger = require('./../utils/logger/logger');
 
 //Controller definition
-const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController');
 const DriverController = require('../Controllers/DriverController');
+
+//Handler definition
+const Driver_VehicleHandler = require('./Driver_VehicleHandler')
 
 //Used to hash password
 var bcrypt = require('bcryptjs');
@@ -68,7 +70,7 @@ async function validateDriver(req) {
 
 async function chooseFreeDriver(Id_vehicle)
 {
-  let drivers = await Driver_Vehicle_Controller.getDriversByVehicleId(Id_vehicle);
+  let drivers = await Driver_VehicleHandler.getDriversByVehicleId(Id_vehicle);
   if(drivers.status!=1){
     logger.error("DriverHandler: Cant get list of drivers");
     return {status: -1, error: drivers.error};

@@ -32,24 +32,6 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
     }
 }
 
-async function getDriversByVehicleId(Id_vehicle)
-{
-    try {
-
-        let drivers = await Driver_VehicleModel.findAll({
-            where: {Id_vehicle : Id_vehicle},
-            raw:true
-        })
-        logger.info("Driver_VehicleController: list of driver returned.");
-        return {status:1,data:drivers};
-        
-    } catch (error) {
-        logger.error("Driver_VehicleController: " + error);
-        return error;
-    }
-    
-}
-
 
 
 //status 0 = Driver not found
@@ -57,20 +39,24 @@ async function getDriversByVehicleId(Id_vehicle)
 //status -1 = error, error message returned
 async function getRegisterBy(query,registerToGet)
 {
-    const Model = 
-    console.log(query)
-    console.log(registerToGet)
     //query to find Driver by given email (which is unique)
     try {
-        //Model can be driver of vehicle, depending of what is needed
-        const Model = require('../Models/'+registerToGet);
-        let registers = await DriverModel.findAll(
-            { where:  query , 
-              attributes: [],
-              include: [{model: Model}]
-            }
-        )
-        
+        let registers;
+        if(registerToGet=="Vehicle")
+        {
+            registers = await DriverModel.findAll(
+                { where:  query , 
+                  attributes: [],
+                  include: [{model: VehicleModel}]
+                }
+            )
+        }else if(registerToGet=="Driver")
+        {
+            registers = await Driver_VehicleModel.findAll({
+                where: query,
+                raw:true
+            })
+        }
         //query returns array of Drivers or vehicles that match were clause
         if(registers.length==0)
         {
@@ -79,10 +65,14 @@ async function getRegisterBy(query,registerToGet)
         }
         else{
             logger.info("Driver_VehicleController: Driver vehicle found")
-            console.log(registers)
-            //console.log(registers[0])
-            //registers[0] should be the only Driver in array, .dataValues is Json containing atributes
-            return {status: 1,data: registers[0].dataValues} 
+            if(registerToGet=="Vehicle")
+            {
+                return {status: 1,data: registers[0].dataValues} 
+            }else if(registerToGet=="Driver")
+            {
+                return {status: 1,data: registers}
+            }
+            
         }
               
     } catch (error) {
@@ -96,5 +86,5 @@ async function getRegisterBy(query,registerToGet)
 module.exports = {
 
     create: create,
-    getRegisterBy: getRegisterBy,
-    getDriversByVehicleId:getDriversByVehicleId};
+    getRegisterBy: getRegisterBy
+};

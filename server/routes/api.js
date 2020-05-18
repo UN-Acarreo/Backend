@@ -252,20 +252,23 @@ router.post('/haulage/create', async function(req, res){
   }
   //this are the vehicles that need to be used for the haulage
   let needed_vehicles=  VehicleHandler.getListOfNeededVehicles(vehicles.data,values.Weight)
+  
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
     return res.status(200).json({status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo"});
   }
   let needed_driver_vehicles=[];
-  needed_vehicles.data.forEach( async function(element) {
+
+  for (const element of needed_vehicles.data) {
     let driver = await DriverHandler.chooseFreeDriver(element.Id_vehicle)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
       return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
     }
     needed_driver_vehicles.push(driver.data);
-  });
+  }
+  
 
   //creating haualge and other asosiated registers
   let haulage = await HaulageHandler.createHaulageWithRouteCargo(values);
@@ -282,7 +285,6 @@ router.post('/haulage/create', async function(req, res){
   }
 
   logger.info("api.js: haulage, cargo and route created: ");
-
   //creating records for haulage driver vehicles
   response =
   await Haulage_Driver_VehicleHandler.createAllHaulage_Driver_VehicleFromList(

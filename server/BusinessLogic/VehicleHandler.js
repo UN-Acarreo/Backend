@@ -14,7 +14,7 @@ async function createVehicle(req)
     if(result.status==1)
     {
       logger.info("VehicleHandler: Vehicle was created successfully.");
-      console.log("data:"+result.data)
+      
       return {status: 1, data: result.data}
     }
     logger.error("VehicleHandler: " + result.error);
@@ -26,8 +26,9 @@ function getListOfNeededVehicles(free_vehicles,weight)
 {
   var needed_vehicles =[]
   var acum_capacity = 0;
-  console.log("weight: "+weight);
-  free_vehicles.forEach(element => {
+  
+
+  for (const element of free_vehicles) {
     Id_vehicle=element.Id_vehicle;
     Payload_capacity=element.Payload_capacity;
     if(weight>acum_capacity)
@@ -35,7 +36,7 @@ function getListOfNeededVehicles(free_vehicles,weight)
       needed_vehicles.push(element)
       acum_capacity = acum_capacity+Payload_capacity
     }
-  });
+  }
   if(weight>acum_capacity)
   {
     logger.info("VehicleHandler: not enough cars");
