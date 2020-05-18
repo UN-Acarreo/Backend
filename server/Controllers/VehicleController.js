@@ -35,7 +35,7 @@ async function create(Plate, Brand, Model, Payload_capacity, Photo) {
         return {status: -1, error: error};
     }
 }
-async function getListOfVehicles()
+async function getAll()
 {
     try {
         let vehicles = await VehicleModel.findAll(
@@ -54,5 +54,5 @@ async function getListOfVehicles()
 }
 module.exports = { 
     create: create,
-    getListOfVehicles : getListOfVehicles 
+    getAll : getAll 
 };

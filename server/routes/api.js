@@ -9,13 +9,14 @@ const VehicleHandler = require("../BusinessLogic/VehicleHandler")
 const DriverHandler = require("../BusinessLogic/DriverHandler")
 const UserHandler = require("../BusinessLogic/UserHandler")
 const Driver_Vehicle_Handler = require("../BusinessLogic/Driver_VehicleHandler")
+const HaulageHandler = require("../BusinessLogic/HaulageHandler")
+const Haulage_Driver_VehicleHandler = require("../BusinessLogic/Haulage_Driver_VehicleHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
 
 //Controllers definition
 //const UserController = require('../Controllers/UserController')
-const DriverController = require('../Controllers/DriverController')
 const VehicleController = require('../Controllers/VehicleController')
 const RatingController = require('../Controllers/RatingController')
 const RouteController =  require('../Controllers/RouteController')
@@ -23,7 +24,6 @@ const StatusController = require('../Controllers/StatusController')
 const CargoController = require('../Controllers/CargoController')
 const BillController = require('../Controllers/BillController')
 const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
-const HaulageController = require('../Controllers/HaulageController')
 const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
 
 //Route will be used to handle login POST requests
@@ -244,7 +244,7 @@ router.post('/haulage/create', async function(req, res){
   //check for vehicle
 
   //this needs to be a list with all vehicles free the day of haulage for now its all of them
-  let vehicles = await VehicleController.getListOfVehicles();
+  let vehicles = await VehicleController.getAll();
   if(vehicles.status!=1)
   {
     logger.error("api.js: list of cars not found");
@@ -268,7 +268,7 @@ router.post('/haulage/create', async function(req, res){
   });
 
   //creating haualge and other asosiated registers
-  let haulage = await HaulageController.createHaulageWithRouteCargo(values);
+  let haulage = await HaulageHandler.createHaulageWithRouteCargo(values);
 
   if(haulage.status==-3){
     logger.error("api.js: error creating haulage: "+haulage.error);
@@ -285,7 +285,7 @@ router.post('/haulage/create', async function(req, res){
 
   //creating records for haulage driver vehicles
   response =
-  await Haulage_Driver_VehicleController.createAllHaulage_Driver_VehicleFromList(
+  await Haulage_Driver_VehicleHandler.createAllHaulage_Driver_VehicleFromList(
     needed_driver_vehicles,haulage.data.Id_haulage
     )
   if(response.status==1)

@@ -64,7 +64,7 @@ async function getRegisterBy(query,registerToGet)
     try {
         //Model can be driver of vehicle, depending of what is needed
         const Model = require('../Models/'+registerToGet);
-        let drivers = await DriverModel.findAll(
+        let registers = await DriverModel.findAll(
             { where:  query , 
               attributes: [],
               include: [{model: Model}]
@@ -72,16 +72,17 @@ async function getRegisterBy(query,registerToGet)
         )
         
         //query returns array of Drivers or vehicles that match were clause
-        if(drivers.length==0)
+        if(registers.length==0)
         {
             logger.info("Driver_VehicleController: id doesnt match known Driver with Vehicle")
             return {status:0, data:"not found"}
         }
         else{
             logger.info("Driver_VehicleController: Driver vehicle found")
-            console.log(drivers[0].dataValues)
-            //Drivers[0] should be the only Driver in array, .dataValues is Json containing atributes
-            return {status: 1,data: drivers[0].dataValues} 
+            console.log(registers)
+            //console.log(registers[0])
+            //registers[0] should be the only Driver in array, .dataValues is Json containing atributes
+            return {status: 1,data: registers[0].dataValues} 
         }
               
     } catch (error) {
