@@ -1,18 +1,19 @@
-//Used to hash password
-var bcrypt = require('bcryptjs');
 
-// Import model
-const DriverModel = require('../Models/Driver');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Create Driver
 async function create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo) {
 
     try {
         // Create Driver
-        var result = await DriverModel.create(
+        var result = await ModelFactory.getModel("Driver").create(
             {
                 Driver_name: Driver_name,
                 Driver_last_name: Driver_last_name,
@@ -62,7 +63,8 @@ async function getRegisterBy(query)
 {
     //query to find Driver by given email (which is unique)
     try {
-        let drivers = await DriverModel.findAll(
+
+        let drivers = await ModelFactory.getModel("Driver").findAll(
             { where: query }
             )
         //query returns array of Drivers that match were clause

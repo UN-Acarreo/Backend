@@ -1,12 +1,17 @@
 
-// Import model
-const HaulageModel = require('../Models/Haulage');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
 
+
 //import cargoModel
 const cargoModel =require('../Models/Cargo');
+
+//import routeController
+const RouteController =require('./RouteController');
+
 
 //importing description values
 const descprition = require('../constants');
@@ -24,7 +29,7 @@ async function create(req) {
         const { Date, Id_user, Id_route, Id_cargo} = req;
         
         // Create Haulage
-        let new_haulage = await HaulageModel.create(
+        let new_haulage = await ModelFactory.getModel("Haulage").create(
             {
                 Date: Date,
                 Id_user: Id_user,
@@ -46,11 +51,11 @@ async function create(req) {
 async function getWeight(Id_haulage){
     try{
 
-        let weight = await HaulageModel.findByPk(Id_haulage,
+        let weight = await ModelFactory.getModel("Haulage").findByPk(Id_haulage,
             {
                 attributes: [],
                 //raw:true,
-                include: [{ model: cargoModel, attributes: ['Weight']}]
+                include: [{ model: ModelFactory.getModel("Cargo"), attributes: ['Weight']}]
             }
         )
         //console.log(weight.dataValues)

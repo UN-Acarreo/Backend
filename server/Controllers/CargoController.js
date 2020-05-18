@@ -1,6 +1,6 @@
 
-// Import model
-const CargoModel = require('../Models/Cargo');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -14,7 +14,7 @@ async function create(req) {
         const { Weight, Description, Comments } = req;
 
         // Create Cargo
-        let new_Cargo = await CargoModel.create(
+        let new_Cargo = await ModelFactory.getModel("Cargo").create(
             {
                 Weight: Weight,
                 Description: Description,

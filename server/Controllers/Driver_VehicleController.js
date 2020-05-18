@@ -1,9 +1,9 @@
-// Import model
-const Driver_VehicleModel = require('../Models/Driver_Vehicle');
-const DriverModel = require('../Models/Driver');
 
-//import vehicle model
-const VehicleModel = require('../Models/Vehicle');
+
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
+
+
 // Import logger
 const logger = require('./../utils/logger/logger');
 
@@ -16,7 +16,7 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
         //const { Id_driver, Id_vehicle, Is_owner } = req.body.request;
 
         // Create Driver_Vehicle
-        await Driver_VehicleModel.create(
+        await ModelFactory.getModel("Driver_Vehicle").create(
             {
                 Id_driver: Id_driver,
                 Id_vehicle: Id_vehicle,
@@ -31,6 +31,7 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
         return {status:-1, error:error};
     }
 }
+
 
 
 
@@ -59,6 +60,7 @@ async function getRegisterBy(query,registerToGet)
         }
         //query returns array of Drivers or vehicles that match were clause
         if(registers.length==0)
+
         {
             logger.info("Driver_VehicleController: id doesnt match known Driver with Vehicle")
             return {status:0, data:"not found"}

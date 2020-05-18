@@ -2463,7 +2463,6 @@
 [2020-05-12T00:35:44.284Z] : info : DriverController: succesfull call to getDriverBeEmail
 [2020-05-12T00:35:44.297Z] : info : Driver_VehicleController: Driver vehicle found
 [2020-05-12T00:35:44.297Z] : info : api.js: returned Driver id succesfully
-
 [2020-05-17T19:32:35.796Z] : info : Server: Server is running
 [2020-05-17T19:32:36.061Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-17T19:32:36.172Z] : info : Server: database tables created if the dont exist
@@ -3611,3 +3610,123 @@
 [2020-05-18T02:59:23.791Z] : info : Server: Server is running
 [2020-05-18T02:59:24.054Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-18T02:59:24.172Z] : info : Server: database tables created if the dont exist
+
+[2020-05-17T17:47:13.162Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:09:17.554Z] : info : Server: Server is running
+[2020-05-17T19:09:19.617Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T19:09:20.471Z] : info : Server: database tables created if the dont exist
+[2020-05-17T19:18:10.684Z] : info : Check field: Field is valid
+[2020-05-17T19:18:10.807Z] : info : DriverController: Driver is valid
+[2020-05-17T19:18:10.810Z] : info : DriverController:Driver found
+[2020-05-17T19:18:10.816Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T19:18:10.816Z] : info : api.js: could not find Driver
+[2020-05-17T19:18:15.202Z] : info : Check field: Field is valid
+[2020-05-17T19:18:15.204Z] : info : DriverController: Driver is valid
+[2020-05-17T19:18:15.206Z] : info : DriverController:Driver found
+[2020-05-17T19:18:15.207Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T19:18:15.207Z] : info : api.js: could not find Driver
+[2020-05-17T19:18:21.720Z] : info : Check field: Field is valid
+[2020-05-17T19:18:21.722Z] : info : UserController: User is valid
+[2020-05-17T19:18:21.724Z] : info : UserController:User found
+[2020-05-17T19:18:21.724Z] : info : api.js: could not find user
+[2020-05-17T19:18:36.831Z] : info : Check field: Field is valid
+[2020-05-17T19:18:36.875Z] : info : UserController: User is valid
+[2020-05-17T19:18:36.877Z] : info : UserController:User found
+[2020-05-17T19:18:36.877Z] : info : api.js: could not find user
+[2020-05-17T19:18:42.379Z] : info : Check field: Field is valid
+[2020-05-17T19:18:42.381Z] : info : UserController: User is valid
+[2020-05-17T19:18:42.383Z] : info : UserController:User found
+[2020-05-17T19:18:42.383Z] : info : api.js: could not find user
+[2020-05-17T19:19:04.646Z] : info : Check field: Field is valid
+[2020-05-17T19:19:04.688Z] : info : UserController: User is valid
+[2020-05-17T19:19:04.690Z] : info : UserController:User found
+[2020-05-17T19:19:04.690Z] : info : api.js: could not find user
+[2020-05-17T19:20:05.402Z] : info : Check field: Field is valid
+[2020-05-17T19:20:05.638Z] : info : UserController: User was created successfully.
+[2020-05-17T19:20:05.638Z] : info : Signup client: added succesfully
+[2020-05-17T19:21:20.778Z] : info : Check field: Field is valid
+[2020-05-17T19:21:20.818Z] : info : DriverController: Driver is valid
+[2020-05-17T19:21:20.820Z] : info : DriverController:Driver found
+[2020-05-17T19:21:20.822Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T19:21:20.822Z] : info : api.js: could not find Driver
+[2020-05-17T19:21:23.069Z] : info : Check field: Field is valid
+[2020-05-17T19:21:23.072Z] : info : UserController: User is valid
+[2020-05-17T19:21:23.074Z] : info : UserController:User found
+[2020-05-17T19:21:23.159Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T19:21:23.159Z] : info : api.js: returned user id succesfully
+[2020-05-17T22:29:23.079Z] : info : Server: Server is running
+[2020-05-17T22:29:23.197Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T22:29:23.305Z] : info : Server: database tables created if the dont exist
+[2020-05-17T22:29:33.104Z] : info : Server: Server is running
+[2020-05-17T22:29:33.215Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T22:29:33.253Z] : info : Server: database tables created if the dont exist
+[2020-05-17T22:35:50.520Z] : info : Check field: Field is valid
+[2020-05-17T22:35:50.585Z] : info : DriverController: Driver is valid
+[2020-05-17T22:35:50.590Z] : info : DriverController:Driver found
+[2020-05-17T22:35:50.596Z] : info : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-17T22:35:50.596Z] : info : api.js: could not find Driver
+[2020-05-17T22:35:53.894Z] : info : Check field: Field is valid
+[2020-05-17T22:35:53.898Z] : info : UserController: User is valid
+[2020-05-17T22:35:53.901Z] : info : UserController:User found
+[2020-05-17T22:35:53.999Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T22:35:53.999Z] : info : api.js: returned user id succesfully
+[2020-05-17T22:42:43.889Z] : info : Server: Server is running
+[2020-05-17T22:42:43.999Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T22:42:44.041Z] : info : Server: database tables created if the dont exist
+[2020-05-17T22:43:03.988Z] : info : Check field: Field is valid
+[2020-05-17T22:43:03.989Z] : error : UserController: TypeError: ModelFactory.getModel is not a function
+[2020-05-17T22:43:03.989Z] : error : api.js: TypeError: ModelFactory.getModel is not a function
+[2020-05-17T22:59:59.253Z] : info : Server: Server is running
+[2020-05-17T22:59:59.389Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T22:59:59.427Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:00:05.838Z] : info : Check field: Field is valid
+[2020-05-17T23:00:05.839Z] : error : UserController: TypeError: ModelFactory is not a constructor
+[2020-05-17T23:00:05.839Z] : error : api.js: TypeError: ModelFactory is not a constructor
+[2020-05-17T23:16:24.117Z] : info : Server: Server is running
+[2020-05-17T23:16:24.239Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:16:24.280Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:16:59.609Z] : info : Check field: Field is valid
+[2020-05-17T23:16:59.664Z] : info : UserController: User is valid
+[2020-05-17T23:16:59.670Z] : info : UserController:User found
+[2020-05-17T23:16:59.777Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T23:16:59.777Z] : info : api.js: returned user id succesfully
+[2020-05-17T23:21:02.930Z] : info : Server: Server is running
+[2020-05-17T23:21:03.053Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:21:03.092Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:21:19.165Z] : info : Check field: Field is valid
+[2020-05-17T23:21:19.210Z] : info : UserController: User is valid
+[2020-05-17T23:21:19.214Z] : info : UserController:User found
+[2020-05-17T23:21:19.311Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T23:21:19.311Z] : info : api.js: returned user id succesfully
+[2020-05-17T23:23:04.384Z] : info : Server: Server is running
+[2020-05-17T23:23:04.523Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:23:04.588Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:23:17.712Z] : info : Check field: Field is valid
+[2020-05-17T23:23:17.757Z] : info : UserController: User is valid
+[2020-05-17T23:23:17.762Z] : info : UserController:User found
+[2020-05-17T23:23:17.859Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T23:23:17.859Z] : info : api.js: returned user id succesfully
+[2020-05-17T23:39:04.357Z] : info : Server: Server is running
+[2020-05-17T23:39:04.479Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-17T23:39:04.520Z] : info : Server: database tables created if the dont exist
+[2020-05-17T23:39:20.071Z] : info : Check field: Field is valid
+[2020-05-17T23:39:20.114Z] : info : UserController: User is valid
+[2020-05-17T23:39:20.118Z] : info : UserController:User found
+[2020-05-17T23:39:20.218Z] : info : UserController: succesfull call to getUserBeEmail
+[2020-05-17T23:39:20.218Z] : info : api.js: returned user id succesfully
+[2020-05-17T23:40:43.830Z] : info : Check field: Field is valid
+[2020-05-17T23:40:43.835Z] : info : Save image: Image saved succesfully
+[2020-05-17T23:40:44.064Z] : info : DriverController: Driver was created successfully.
+[2020-05-17T23:40:44.065Z] : info : Signup driver: added succesfully
+[2020-05-17T23:40:59.715Z] : info : Check field: Field is valid
+[2020-05-17T23:40:59.718Z] : info : Save image: Image saved succesfully
+[2020-05-17T23:40:59.846Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-17T23:40:59.852Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-17T23:40:59.852Z] : info : Signup vehicle: added succesfully
+[2020-05-17T23:41:13.858Z] : info : Check field: Field is valid
+[2020-05-17T23:41:13.899Z] : info : DriverController: Driver is valid
+[2020-05-17T23:41:13.901Z] : info : DriverController:Driver found
+[2020-05-17T23:41:13.978Z] : info : DriverController: succesfull call to getDriverBeEmail
+[2020-05-17T23:41:13.987Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-17T23:41:13.987Z] : info : api.js: returned Driver id succesfully
+

@@ -1,6 +1,6 @@
 
-// Import model
-const Haulage_Driver_VehicleModel = require('../Models/Haulage_Driver_Vehicle');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -12,7 +12,7 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 
 
         // Create Haulage_Driver_Vehicle
-        await Haulage_Driver_VehicleModel.create(
+        await ModelFactory.getModel("Haulage_Driver_Vehicle").create(
             {
                 Id_haulage: Id_haulage,
                 Id_driver: Id_driver,
@@ -35,7 +35,7 @@ async function getRegisterBy(query) {
     
     try {
         
-        let list = await Haulage_Driver_VehicleModel.findAll(
+        let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll(
             { 
                 where: query,
                 attributes: ['Id_driver','Id_vehicle']

@@ -1,6 +1,6 @@
 
-// Import model
-const StatusModel = require('../Models/Status');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -14,7 +14,7 @@ async function create(req) {
         const { status_description } = req.body.request;
 
         // Create Status
-        await StatusModel.create(
+        await ModelFactory.getModel("Status").create(
             {
                 status_description: status_description
             }

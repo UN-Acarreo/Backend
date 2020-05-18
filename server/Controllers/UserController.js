@@ -1,17 +1,20 @@
-//Used to hash password
-var bcrypt = require('bcryptjs');
 
-// Import model
-const UserModel = require('../Models/User');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Create user
 async function create(User_name, User_last_name, User_password_hashed, User_address, User_Email) {
     try {
         // Create user
-        let new_user = await UserModel.create(
+
+        let new_user = await ModelFactory.getModel("User").create(
+
             {
                 User_name: User_name,
                 User_last_name: User_last_name,
@@ -42,6 +45,7 @@ async function countWhere(query) {
         count = await UserModel.count({ where: query })
         logger.info("UserController:Number of users returned")
         return{status:1, data:count}
+
     } catch (error) {
         logger.error("UserController: " + error);
         return {status: -1, error: error};
@@ -56,8 +60,10 @@ async function getRegisterBy(query)
 {
     //query to find user by given email (which is unique)
     try {
-        let users = await UserModel.findAll(
+
+        let users = await ModelFactory.getModel("User").findAll(
             { where: query }
+
             )
         //query returns array of users that match were clause
         if(users.length==0)

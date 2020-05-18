@@ -1,6 +1,6 @@
 
-// Import model
-const RouteModel = require('../Models/Route');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -14,7 +14,7 @@ async function create(req) {
         const { Origin_coord, Destination_coord } = req;
 
         // Create Route
-        const new_route = await RouteModel.create(
+        const new_route = await ModelFactory.getModel("Route").create(
             {
                 Origin_coord: Origin_coord,
                 Destination_coord: Destination_coord,
