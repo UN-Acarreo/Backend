@@ -33,7 +33,7 @@ router.post('/log-client-errors', async function(req, res){
 
   let error = req.body.error.message;
   let errorInfo = req.body.error.stack;
-  console.log(req.body.message);
+  //console.log(req.body.message);
   logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " "+ JSON.stringify(errorInfo))
   return res.status(200).send("ok");
 

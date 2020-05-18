@@ -7,7 +7,7 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 
     for (const element of list_driver_vehicles) {
-        let new_h_d_v = await Haulage_Driver_VehicleController.createHaulage_Driver_Vehicle(
+        let new_h_d_v = await Haulage_Driver_VehicleController.create(
             Id_haulage, element.Id_driver, element.Id_vehicle, false
             )  
         if(new_h_d_v.status==-1)

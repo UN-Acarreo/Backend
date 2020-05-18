@@ -6,7 +6,7 @@ const RouteModel = require('../Models/Route');
 const logger = require('./../utils/logger/logger');
 
 // Create Route
-async function createRoute(req) {
+async function create(req) {
 
     try {
 
@@ -30,7 +30,7 @@ async function createRoute(req) {
     }
 
 }
-module.exports = { createRoute: createRoute };
+module.exports = { create: create };
 
 /*
 async function test(){

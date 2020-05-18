@@ -13,19 +13,19 @@ const CargoController =require('../Controllers/CargoController');
 //returns status -3 if route and cargo were created but not haulage, error is returns as well
 async function createHaulageWithRouteCargo(values)
 {
-    let route = await RouteController.createRoute({
+    let route = await RouteController.create({
         Origin_coord: values.Origin_coord, Destination_coord: values.Destination_coord
       });
       if(route.status==1)
       {
         //route created, creating cargo
-        let cargo = await CargoController.createCargo({
+        let cargo = await CargoController.create({
           Weight: values.Weight, Description: values.Description, Comments: values.Comments
         });
         if(cargo.status==1)
         {
           //cargo created, creating haulage
-          let haulage = await HaulageController.createHaulage({
+          let haulage = await HaulageController.create({
             Date: values.Date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
           });
           if(haulage.status == 1)

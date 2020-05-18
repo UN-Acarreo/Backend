@@ -6,7 +6,7 @@ const Haulage_Driver_VehicleModel = require('../Models/Haulage_Driver_Vehicle');
 const logger = require('./../utils/logger/logger');
 
 // Create Haulage_Driver_Vehicle
-async function createHaulage_Driver_Vehicle(Id_haulage, Id_driver, Id_vehicle, Is_active) {
+async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 
     try {
 
@@ -49,6 +49,6 @@ async function getListOfBussyDriverVehicle() {
         
 }
 module.exports = { 
-    createHaulage_Driver_Vehicle: createHaulage_Driver_Vehicle, 
+    create: create, 
     getListOfBussyDriverVehicle: getListOfBussyDriverVehicle
  };

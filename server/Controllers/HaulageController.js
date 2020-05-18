@@ -17,7 +17,7 @@ const CargoController = require('../Controllers/CargoController');
 // Create Haulage
 //returns status 1 if created succesfully, data is new haulage
 //returns status -1 if error
-async function createHaulage(req) {
+async function create(req) {
 
     try {
         // Get atributes
@@ -64,7 +64,7 @@ async function getWeight(Id_haulage){
 } 
 */
 module.exports = { 
-    createHaulage: createHaulage
+    create: create
 };
 
 
