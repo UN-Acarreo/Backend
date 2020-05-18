@@ -30,8 +30,8 @@ async function getVehicleByDriverId(id)
         }
     }      
     else{
-        logger.error("Driver_VehicleHandler: "+ drivers.error)
-        return {status:-1, error:drivers.error}
+        logger.error("Driver_VehicleHandler: "+ vehicle.error)
+        return {status:-1, error:vehicle.error}
     }
 
 }

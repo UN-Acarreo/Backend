@@ -3449,3 +3449,122 @@
 [2020-05-18T01:59:06.106Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
 [2020-05-18T01:59:06.106Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
 [2020-05-18T01:59:06.107Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-18T02:00:21.211Z] : info : Server: Server is running
+[2020-05-18T02:00:21.462Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:00:21.529Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:03:52.759Z] : info : Check field: Field is valid
+[2020-05-18T02:03:52.780Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-05-18T02:03:53.088Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-18T02:03:53.123Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-18T02:03:53.124Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»
+[2020-05-18T02:03:58.212Z] : info : Check field: Field is valid
+[2020-05-18T02:03:58.214Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-05-18T02:03:58.333Z] : info : DriverController: Driver was created successfully.
+[2020-05-18T02:03:58.333Z] : info : DriverHandler: Driver was created successfully.
+[2020-05-18T02:03:58.334Z] : info : Signup driver: added succesfully
+[2020-05-18T02:04:08.234Z] : info : Check field: Field is valid
+[2020-05-18T02:04:08.236Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-05-18T02:04:08.242Z] : info : VehicleController: Vehicle was created successfully.
+[2020-05-18T02:04:08.243Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-05-18T02:04:08.253Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-18T02:04:08.254Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-05-18T02:04:08.255Z] : info : Signup vehicle: added succesfully
+[2020-05-18T02:04:29.933Z] : info : Check field: Field is valid
+[2020-05-18T02:04:30.010Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:04:30.011Z] : info : DriverHandler: email match
+[2020-05-18T02:04:30.016Z] : info : DriverController:Driver found
+[2020-05-18T02:04:30.129Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T02:04:30.145Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T02:04:30.148Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T02:04:30.148Z] : info : api.js: returned Driver id succesfully
+[2020-05-18T02:06:14.594Z] : info : Check field: Field is valid
+[2020-05-18T02:06:14.777Z] : info : UserController: User was created successfully.
+[2020-05-18T02:06:14.778Z] : info : UserHandler: User was created successfully.
+[2020-05-18T02:06:14.779Z] : info : Signup client: added succesfully
+[2020-05-18T02:06:36.017Z] : info : Check field: Field is valid
+[2020-05-18T02:06:36.080Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:06:36.081Z] : info : DriverHandler: Driver is not valid
+[2020-05-18T02:06:36.087Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:06:38.839Z] : info : Check field: Field is valid
+[2020-05-18T02:06:38.842Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:06:38.843Z] : info : DriverHandler: Driver is not valid
+[2020-05-18T02:06:38.846Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:07:53.347Z] : info : Check field: Field is valid
+[2020-05-18T02:07:53.407Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:07:53.407Z] : info : DriverHandler: email match
+[2020-05-18T02:07:53.411Z] : info : DriverController:Driver found
+[2020-05-18T02:07:53.526Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-05-18T02:07:53.535Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-18T02:07:53.539Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-18T02:07:53.540Z] : info : api.js: returned Driver id succesfully
+[2020-05-18T02:08:09.970Z] : info : Check field: Field is valid
+[2020-05-18T02:08:10.033Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:08:10.035Z] : info : DriverHandler: email match
+[2020-05-18T02:08:10.039Z] : info : DriverController:Driver found
+[2020-05-18T02:08:10.164Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:10:09.996Z] : info : Check field: Field is valid
+[2020-05-18T02:10:10.079Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:10:10.080Z] : info : DriverHandler: email match
+[2020-05-18T02:10:10.083Z] : info : DriverController:Driver found
+[2020-05-18T02:10:10.206Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:10:33.018Z] : info : Check field: Field is valid
+[2020-05-18T02:10:33.083Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:10:33.084Z] : info : DriverHandler: email match
+[2020-05-18T02:10:33.088Z] : info : DriverController:Driver found
+[2020-05-18T02:10:33.210Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:10:45.307Z] : info : Check field: Field is valid
+[2020-05-18T02:10:45.377Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:10:45.378Z] : info : DriverHandler: email match
+[2020-05-18T02:10:45.381Z] : info : DriverController:Driver found
+[2020-05-18T02:10:45.506Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:10:54.969Z] : info : Server: Server is running
+[2020-05-18T02:10:55.108Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:10:55.168Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:11:12.579Z] : info : Check field: Field is valid
+[2020-05-18T02:11:12.646Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:11:12.646Z] : info : DriverHandler: email match
+[2020-05-18T02:11:12.654Z] : info : DriverController:Driver found
+[2020-05-18T02:11:12.840Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:11:12.840Z] : error : Driver_VehicleHandler: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:11:12.841Z] : error : api.js: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:14:41.703Z] : info : Check field: Field is valid
+[2020-05-18T02:14:41.761Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:14:41.762Z] : info : DriverHandler: email match
+[2020-05-18T02:14:41.765Z] : info : DriverController:Driver found
+[2020-05-18T02:14:41.896Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:14:41.896Z] : error : Driver_VehicleHandler: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:14:41.896Z] : error : api.js: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:14:54.215Z] : info : Server: Server is running
+[2020-05-18T02:14:54.371Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:14:54.446Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:15:10.705Z] : info : Check field: Field is valid
+[2020-05-18T02:15:10.770Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:15:10.770Z] : info : DriverHandler: email match
+[2020-05-18T02:15:10.776Z] : info : DriverController:Driver found
+[2020-05-18T02:15:10.930Z] : error : Driver_VehicleController: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:15:10.931Z] : error : Driver_VehicleHandler: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:15:10.931Z] : error : api.js: Error: WHERE parameter "Id_driver" has invalid "undefined" value
+[2020-05-18T02:18:09.798Z] : info : Check field: Field is valid
+[2020-05-18T02:18:09.864Z] : info : UserController:Number of users returned
+[2020-05-18T02:18:09.865Z] : info : UserHandler: email match
+[2020-05-18T02:18:09.867Z] : info : UserController:User found
+[2020-05-18T02:18:09.989Z] : info : api.js: could not find user
+[2020-05-18T02:20:09.140Z] : info : Server: Server is running
+[2020-05-18T02:20:09.346Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:20:09.453Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:20:11.147Z] : info : Check field: Field is valid
+[2020-05-18T02:20:11.158Z] : info : UserController:Number of users returned
+[2020-05-18T02:20:11.158Z] : info : UserHandler: email match
+[2020-05-18T02:20:11.163Z] : info : UserController:User found
+[2020-05-18T02:20:11.292Z] : info : api.js: could not find user
+[2020-05-18T02:20:14.634Z] : info : Check field: Field is valid
+[2020-05-18T02:20:14.643Z] : info : DriverController:Number of Drivers returned
+[2020-05-18T02:20:14.643Z] : info : DriverHandler: email match
+[2020-05-18T02:20:14.646Z] : info : DriverController:Driver found
+[2020-05-18T02:20:14.757Z] : info : api.js: could not find Driver
+[2020-05-18T02:21:13.734Z] : info : Server: Server is running
+[2020-05-18T02:21:13.960Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:21:14.025Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:21:38.551Z] : info : Server: Server is running
+[2020-05-18T02:21:38.750Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:21:38.840Z] : info : Server: database tables created if the dont exist

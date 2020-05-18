@@ -82,16 +82,16 @@ router.post('/:type_of_user/login', async function(req, res){
     let new_req ={body:{request:new_request}};
 
     let {status,data} = await DriverHandler.validateDriver(new_req);
-    //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
-    let vehicle =  await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver);
-    if(vehicle.status!=1)
-    {
-      logger.error("api.js: "+vehicle.error)
-      return res.status(500).json({status: -1, error: "Error del servidor"});
-    }
-
+   
     if(status==1)
     {
+      //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
+      let vehicle =  await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver);
+      if(vehicle.status!=1)
+      {
+        logger.error("api.js: "+vehicle.error)
+        return res.status(500).json({status: -1, error: "Error del servidor"});
+      }
       logger.info("api.js: returned Driver id succesfully")
       return res.status(200).json({status: 1, db_driver_id: data, vehicle_data: vehicle.data});
 
