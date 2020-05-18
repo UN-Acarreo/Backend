@@ -6,7 +6,7 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 // Create Cargo
-async function createCargo(req) {
+async function create(req) {
 
     try {
 
@@ -30,4 +30,4 @@ async function createCargo(req) {
     }
 
 }
-module.exports = { createCargo: createCargo };
+module.exports = { create: create };

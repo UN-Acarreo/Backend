@@ -9,16 +9,12 @@ const logger = require('./../utils/logger/logger');
 var bcrypt = require('bcryptjs');
 
 // Create user
-async function createUser(req) {
-
+async function create(User_name, User_last_name, User_password_hashed, User_address, User_Email) {
     try {
-
-        // Get atributes
-        const { User_name, User_last_name, User_password, User_address, User_Email } = req.body.request;
-        //Hash the password
-        var User_password_hashed = bcrypt.hashSync(User_password, 10);
         // Create user
-        await ModelFactory.getModel("User").create(
+
+        let new_user = await ModelFactory.getModel("User").create(
+
             {
                 User_name: User_name,
                 User_last_name: User_last_name,
@@ -31,66 +27,43 @@ async function createUser(req) {
             }
         );
         logger.info("UserController: User was created successfully.");
-        return 1;
+        return {status:1,data:new_user.Id_user};
 
     } catch (error) {
         logger.error("UserController: " + error);
-        return error;
+        return {status:-1, error: error};
     }
 
 }
 
-// Validate user
-//status 0 = user not found
-//status 1 = user found, id returned
+// Counts all register that matches field
+//status 1 = number of count returned
 //status -1 = error in UserModel.count, error message returned
-//status -2 = error in UserModel.findAll from getUserByEmail, error message returned
-async function validateUser(req) {
+async function countWhere(query) {
 
     try {
-
-        // Get atributes
-        const { User_Email, User_password } = req.body.request;
-
-        // Validate user
-        //count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
-        count = await ModelFactory.getModel("User").count({ where: { User_Email: User_Email} })
-        if (count > 0) {
-            logger.info("UserController: User is valid");
-            let {status, data}=await getUserByEmail(User_Email)
-            if(status==1)
-            {
-                //Compare hashed passwords
-                if(bcrypt.compareSync(User_password, data.User_password) == false){
-                return {status: 0, data: 'Las contraseñas no coinciden'};
-                }
-                logger.info("UserController: succesfull call to getUserBeEmail")
-                return {status: 1, data: data};
-            }else if(status==-1)
-            {    logger.error("UserController: error from getUserBeEmail"+ error)
-                return {status: -2, data: error};
-            }
-        }
-        logger.info("UserController: User is not valid");
-        return {status: 0, data: false};  ;
+        count = await ModelFactory.getModel("User").count({ where: query })
+        logger.info("UserController:Number of users returned")
+        return{status:1, data:count}
 
     } catch (error) {
         logger.error("UserController: " + error);
-        return {status: -1, data: error};
+        return {status: -1, error: error};
     }
-
 }
 
 // Get user by email
 //status 0 = user not found
 //status 1 = user found, user returned
 //status -1 = error, error message returned
-async function getUserByEmail(email)
+async function getRegisterBy(query)
 {
     //query to find user by given email (which is unique)
     try {
+
         let users = await ModelFactory.getModel("User").findAll(
-            { where: { User_Email: email } }
+            { where: query }
+
             )
         //query returns array of users that match were clause
         if(users.length==0)
@@ -109,7 +82,10 @@ async function getUserByEmail(email)
         return {status:-1, data:error}
 
     }
-
 }
+module.exports = { 
+    create: create, 
+    countWhere:countWhere,
+    getUserBy:getRegisterBy
 
-module.exports = { createUser: createUser, validateUser: validateUser };
+ };

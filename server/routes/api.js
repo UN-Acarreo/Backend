@@ -1,15 +1,22 @@
 const express = require ('express');
 const router = express.Router();
-const fs = require("fs");
 const path = require("path");
-var validator = require('validator');
+
+//Handlers definition
+const FieldsHandler = require("../BusinessLogic/FieldsHandler")
+const ImageHandler = require("../BusinessLogic/ImageHandler")
+const VehicleHandler = require("../BusinessLogic/VehicleHandler")
+const DriverHandler = require("../BusinessLogic/DriverHandler")
+const UserHandler = require("../BusinessLogic/UserHandler")
+const Driver_Vehicle_Handler = require("../BusinessLogic/Driver_VehicleHandler")
+const HaulageHandler = require("../BusinessLogic/HaulageHandler")
+const Haulage_Driver_VehicleHandler = require("../BusinessLogic/Haulage_Driver_VehicleHandler")
 
 // Import logger
 const logger = require('./../utils/logger/logger');
 
 //Controllers definition
-const UserController = require('../Controllers/UserController')
-const DriverController = require('../Controllers/DriverController')
+//const UserController = require('../Controllers/UserController')
 const VehicleController = require('../Controllers/VehicleController')
 const RatingController = require('../Controllers/RatingController')
 const RouteController =  require('../Controllers/RouteController')
@@ -17,160 +24,7 @@ const StatusController = require('../Controllers/StatusController')
 const CargoController = require('../Controllers/CargoController')
 const BillController = require('../Controllers/BillController')
 const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
-const HaulageController = require('../Controllers/HaulageController')
 const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
-
-
-//Function used to check the request fields (valid emails, valid field lengths and valid text fields)
-async function check_fields(req){
-  data = req.body.request
-  for (const key of Object.keys(data)) {
-    field = data[key]
-    fieldName = ""
-    if((key == 'User_name' || key == 'Driver_name')
-        && !validator.isAlpha(validator.blacklist(field, ' '))){
-        logger.info('Check field: Name "' + field + '" invalid')
-        fieldName = "Nombre"
-        return "El Nombre no es válido"
-    }
-    if((key == 'User_last_name' || key == 'Driver_last_name')
-        && !validator.isAlpha(validator.blacklist(field, ' '))){
-        logger.info('Check field: Lastname "' + field + '" invalid')
-        fieldName = "Apellido"
-        return "El Apellido no es válido"
-    }
-    if((key == 'Driver_password' || key == 'User_password')){
-        fieldName = "Contraseña"
-    }
-    if((key == 'Driver_address' || key == 'User_address')){
-        fieldName = "Dirección"
-    }
-    if((key == 'Identity_card') && !validator.isNumeric(field)){
-       logger.info('Check field: Identity card "' + field + '" invalid')
-       fieldName = "Cédula"
-       return "La Cédula no es válida"
-    }
-    if((key == 'Driver_phone') && !validator.isNumeric(field)){
-      logger.info('Check field: Phone "' + field + '" invalid')
-      fieldName = "Teléfono"
-      return "El Teléfono no es válido"
-    }
-    if((key == 'User_Email' || key == 'Driver_Email') && !validator.isEmail(field)){
-       logger.info('Check field: E-Mail "' + field + '" invalid')
-       fieldName = "E-Mail"
-       return "El E-Mail no es válido"
-    }
-    if((key == 'Plate')){
-      fieldName = "Placa"
-    }
-    if((key == 'Brand')){
-      fieldName = "Marca"
-    }
-    if((key == 'Model')){
-      fieldName = "Modelo"
-    }
-    if((key == 'Payload_capacity') && !validator.isNumeric(field)){
-      logger.info('Check field: Payload capacity "' + field + '" invalid')
-      fieldName = "La capacidad de carga"
-      return "La capacidad de carga no es válida"
-    }
-    if((key=="Origin_coord")){
-
-    }
-    if((key=="Destination_coord")){
-
-    }
-    if((key == 'Weight') && !validator.isNumeric(field)){
-      logger.info('Check field: Phone "' + field + '" invalid')
-      fieldName = "Peso"
-      return "El Peso no es válido"
-    }
-    if((key=="Description")){
-      fieldName = "Descripcion"
-    }
-    if((key=="Date")){
-      fieldName = "Date"
-    }
-    if((key=="Id_user") && !validator.isNumeric(field)){
-      logger.info('Check field: Phone "' + field + '" invalid')
-      fieldName = "Id_user"
-      return "El id de usuario no es válido"
-    }
-    //length validation
-    if(field.length == 0 && key!="Comments"){
-      logger.info("Check field: Field can't be empty")
-      return "El campo '" + fieldName + "' no puede estar vacio"
-    }
-  }
-  logger.info("Check field: Field is valid")
-  return true;
-}
-
-async function saveImage(baseImage, path, img_name) {
-        //Find extension of file
-        try{
-          const ext = baseImage.substring(baseImage.indexOf("/")+1, baseImage.indexOf(";base64"));
-          const fileType = baseImage.substring("data:".length,baseImage.indexOf("/"));
-          //Forming regex to extract base64 data of file.
-          const regex = new RegExp(`^data:${fileType}\/${ext};base64,`, 'gi');
-          //Extract base64 data.
-          const base64Data = baseImage.replace(regex, "");
-          //Set filename and extension
-          const filename = img_name+"."+ext
-          const fullpath = path + filename
-
-          //write the file
-          fs.writeFileSync(fullpath, base64Data, 'base64');
-          logger.info("Save image: Image saved succesfully")
-          return true
-          //return {filename, localPath};
-        }
-        catch(err){
-          logger.error("Save image: " + err)
-          return false
-        }
-
-    }
-
-//returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
-function getListOfNeededVehicles(free_vehicles,weight)
-{
-  var needed_vehicles =[]
-  var acum_capacity = 0;
-  console.log("weight: "+weight);
-  free_vehicles.forEach(element => {
-    Id_vehicle=element.Id_vehicle;
-    Payload_capacity=element.Payload_capacity;
-    if(weight>acum_capacity)
-    {
-      needed_vehicles.push(element)
-      acum_capacity = acum_capacity+Payload_capacity
-    }
-  });
-  if(weight>acum_capacity)
-  {
-    logger.info("api.js: not enough cars");
-    return {status: 0, data:needed_vehicles};
-  }
-  else{
-    logger.info("api.js:enough cars");
-    return {status: 1, data:needed_vehicles};;
-  }
-}
-
-async function chooseFreeDriver(Id_vehicle)
-{
-  let drivers = await Driver_Vehicle_Controller.getDriversByVehicleId(Id_vehicle);
-  if(drivers.status!=1){
-    logger.error("api.js: Cant get list of drivers");
-    return {status: -1, error: drivers.error};
-  }
-  //needs to check if drivers are bussy at hour of haulage
-  
-  return {status:1, data: drivers.data[0]};
-  
-}
-
 
 //Route will be used to handle login POST requests
 
@@ -179,7 +33,7 @@ router.post('/log-client-errors', async function(req, res){
 
   let error = req.body.error.message;
   let errorInfo = req.body.error.stack;
-  console.log(req.body.message);
+  //console.log(req.body.message);
   logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " "+ JSON.stringify(errorInfo))
   return res.status(200).send("ok");
 
@@ -195,14 +49,14 @@ router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
   //data validation
-  const valid_fields = await check_fields(req);
+  const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({status:-2, error: valid_fields})
   }
   if(type_of_user=="client")
   {
     //Client login
-    let {status,data} = await UserController.validateUser(req);
+    let {status,data} = await UserHandler.validateUser(req);
     if(status==1)
     {
       logger.info("api.js: returned user id succesfully")
@@ -227,13 +81,19 @@ router.post('/:type_of_user/login', async function(req, res){
     };
     let new_req ={body:{request:new_request}};
 
-    let {status,data} = await DriverController.validateDriver(new_req);
-    let vehicle_status, vehicle_data = await (await Driver_Vehicle_Controller.getVehicleByDriverId(data.Id_driver)).data;
-
+    let {status,data} = await DriverHandler.validateDriver(new_req);
+   
     if(status==1)
     {
+      //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
+      let vehicle =  await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver);
+      if(vehicle.status!=1)
+      {
+        logger.error("api.js: "+vehicle.error)
+        return res.status(500).json({status: -1, error: "Error del servidor"});
+      }
       logger.info("api.js: returned Driver id succesfully")
-      return res.status(200).json({status: 1, db_driver_id: data, vehicle_data: vehicle_data});
+      return res.status(200).json({status: 1, db_driver_id: data, vehicle_data: vehicle.data});
 
     }else if(status==0)
     {
@@ -257,13 +117,14 @@ router.post('/:type_of_user/login', async function(req, res){
 
 //Route will be used to handle driver sign up POST requests
 router.post('/driver/signup', async function(req, res){
-  const valid_fields = await check_fields(req);
+
+  const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
   //Save drivers image
   const filePath = path.join(__dirname, "../public/uploads/drivers/");
-  const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
@@ -275,12 +136,12 @@ router.post('/driver/signup', async function(req, res){
   req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card+"."+extension
 
   //Save driver on db
-  let saved = await DriverController.createDriver(req);
+  let saved = await DriverHandler.createDriver(req);
   //console.log('variabe: '+saved)
   if(saved.status == 1)
   {
     logger.info("Signup driver: added succesfully");
-    return res.status(201).json({status: 1, db_driver_id: saved.id});
+    return res.status(201).json({status: 1, db_driver_id: saved.data});
   }
   else{
     message = saved.message.toString()
@@ -300,13 +161,13 @@ router.post('/driver/signup', async function(req, res){
 });
 
 router.post('/vehicle/signup', async function(req, res){
-  const valid_fields = await check_fields(req);
+  const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
   //Save vehicle image
   const filePath = path.join(__dirname, "../public/uploads/vehicles/");
-  const imageSaved = await saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
@@ -318,7 +179,7 @@ router.post('/vehicle/signup', async function(req, res){
   req.body.request.Photo = '/uploads/vehicles/'+req.body.request.Identity_card+"."+extension
 
   //Save vehicle on db
-  let saved_vehicle = await VehicleController.createVehicle(req);
+  let saved_vehicle = await VehicleHandler.createVehicle(req);
   //error saving the vehicle
   if(saved_vehicle.status != 1 && saved_vehicle.message){
      message = saved_vehicle.message.toString()
@@ -330,7 +191,7 @@ router.post('/vehicle/signup', async function(req, res){
   }
 
   //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
-  let success_driver_vehicle = await Driver_Vehicle_Controller.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.id, req.body.request.Is_owner)
+  let success_driver_vehicle = await Driver_Vehicle_Handler.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
 
 
   if(success_driver_vehicle == 1)
@@ -349,12 +210,12 @@ router.post('/vehicle/signup', async function(req, res){
 
 //Route will be used to handle client sign up POST requests
 router.post('/client/signup', async function(req,res){
-  const valid_fields = await check_fields(req);
+  const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
 
-  let success = await UserController.createUser(req);
+  let success = await UserHandler.createUser(req);
   if(success==1)
   {
     logger.info("Signup client: added succesfully");
@@ -374,7 +235,7 @@ router.post('/client/signup', async function(req,res){
 //returns -1 if error creating route, cargo or haulage
 router.post('/haulage/create', async function(req, res){
   
-  const valid_fields = await check_fields(req);
+  const valid_fields = await FieldsHandler.check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
@@ -383,31 +244,34 @@ router.post('/haulage/create', async function(req, res){
   //check for vehicle
 
   //this needs to be a list with all vehicles free the day of haulage for now its all of them
-  let vehicles = await VehicleController.getListOfVehicles();
+  let vehicles = await VehicleController.getAll();
   if(vehicles.status!=1)
   {
     logger.error("api.js: list of cars not found");
     return res.status(500).json({status: -1, error: vehicles.error});
   }
   //this are the vehicles that need to be used for the haulage
-  let needed_vehicles=  getListOfNeededVehicles(vehicles.data,values.Weight)
+  let needed_vehicles=  VehicleHandler.getListOfNeededVehicles(vehicles.data,values.Weight)
+  
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
     return res.status(200).json({status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo"});
   }
   let needed_driver_vehicles=[];
-  needed_vehicles.data.forEach( async function(element) {
-    let driver = await chooseFreeDriver(element.Id_vehicle)
+
+  for (const element of needed_vehicles.data) {
+    let driver = await DriverHandler.chooseFreeDriver(element.Id_vehicle)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
       return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
     }
     needed_driver_vehicles.push(driver.data);
-  });
+  }
+  
 
   //creating haualge and other asosiated registers
-  let haulage = await HaulageController.createHaulageWithRouteCargo(values);
+  let haulage = await HaulageHandler.createHaulageWithRouteCargo(values);
 
   if(haulage.status==-3){
     logger.error("api.js: error creating haulage: "+haulage.error);
@@ -421,10 +285,9 @@ router.post('/haulage/create', async function(req, res){
   }
 
   logger.info("api.js: haulage, cargo and route created: ");
-
   //creating records for haulage driver vehicles
   response =
-  await Haulage_Driver_VehicleController.createAllHaulage_Driver_VehicleFromList(
+  await Haulage_Driver_VehicleHandler.createAllHaulage_Driver_VehicleFromList(
     needed_driver_vehicles,haulage.data.Id_haulage
     )
   if(response.status==1)

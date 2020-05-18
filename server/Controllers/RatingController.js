@@ -6,7 +6,7 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 // Create Rating
-async function createRating(req) {
+async function create(req) {
 
     try {
 
@@ -31,4 +31,4 @@ async function createRating(req) {
     }
 
 }
-module.exports = { createRating: createRating };
+module.exports = { create: create };

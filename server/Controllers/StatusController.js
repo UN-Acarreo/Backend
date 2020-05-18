@@ -6,7 +6,7 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 // Create Status
-async function createStatus(req) {
+async function create(req) {
 
     try {
 
@@ -28,4 +28,4 @@ async function createStatus(req) {
     }
 
 }
-module.exports = { createStatus: createStatus };
+module.exports = { create: create };

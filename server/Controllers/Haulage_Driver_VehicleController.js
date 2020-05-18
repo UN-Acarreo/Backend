@@ -6,7 +6,7 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 // Create Haulage_Driver_Vehicle
-async function createHaulage_Driver_Vehicle(Id_haulage, Id_driver, Id_vehicle, Is_active) {
+async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 
     try {
 
@@ -30,30 +30,14 @@ async function createHaulage_Driver_Vehicle(Id_haulage, Id_driver, Id_vehicle, I
 
 }
 
-async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_haulage){
 
-   
-    list_driver_vehicles.forEach( async function(element) {
-        let new_h_d_v = await createHaulage_Driver_Vehicle(
-            Id_haulage, element.Id_driver, element.Id_vehicle, false
-            )  
-        if(new_h_d_v.status==-1)
-        {
-                logger.error("Haulage_Driver_VehicleController: " + error);
-                return {status:-1,error:error};
-        }
-    });
-    logger.info("Haulage_Driver_VehicleController: all registers were created successfully.");
-    return {status:1};
-}
-
-async function getListOfBussyDriverVehicle() {
+async function getRegisterBy(query) {
     
     try {
         
         let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll(
             { 
-                where: { Is_active: "true" },
+                where: query,
                 attributes: ['Id_driver','Id_vehicle']
             });
         logger.info("Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.");
@@ -65,7 +49,6 @@ async function getListOfBussyDriverVehicle() {
         
 }
 module.exports = { 
-    createHaulage_Driver_Vehicle: createHaulage_Driver_Vehicle, 
-    getListOfBussyDriverVehicle: getListOfBussyDriverVehicle,
-    createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList
+    create: create, 
+    getRegisterBy: getRegisterBy
  };

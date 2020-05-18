@@ -6,7 +6,7 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 // Create Bill
-async function createBill(req) {
+async function create(req) {
 
     try {
 
@@ -29,4 +29,4 @@ async function createBill(req) {
     }
 
 }
-module.exports = { createBill: createBill };
+module.exports = { create: create };
