@@ -41,7 +41,7 @@ async function createHaulage(req) {
          return {status: -1, error:error};
     }
 }
-
+/*
 //returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
 async function getWeight(Id_haulage){
     try{
@@ -62,9 +62,9 @@ async function getWeight(Id_haulage){
     }
 
 } 
+*/
 module.exports = { 
-    createHaulage: createHaulage,
-    getWeight : getWeight
+    createHaulage: createHaulage
 };
 
 
