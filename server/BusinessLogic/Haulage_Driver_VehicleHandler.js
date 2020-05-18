@@ -19,6 +19,19 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
     logger.info("Haulage_Driver_VehicleHandler: all registers were created successfully.");
     return {status:1};
 }
+async function getListOfBussyDriverVehicle() {
+    let list = await Haulage_Driver_VehicleController.getRegisterBy({ Is_active: "true" })
+    if(list.status==1)
+    {
+        logger.info("Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.");
+        return {status: 1, data: list};
+    }
+    else{
+        logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+error);
+        return {status: -1, error: error};
+    }      
+}
 module.exports ={
-    createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList
+    createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
+    getListOfBussyDriverVehicle : getListOfBussyDriverVehicle
 }

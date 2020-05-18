@@ -31,13 +31,13 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 }
 
 
-async function getListOfBussyDriverVehicle() {
+async function getRegisterBy(query) {
     
     try {
         
         let list = await Haulage_Driver_VehicleModel.findAll(
             { 
-                where: { Is_active: "true" },
+                where: query,
                 attributes: ['Id_driver','Id_vehicle']
             });
         logger.info("Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.");
@@ -50,5 +50,5 @@ async function getListOfBussyDriverVehicle() {
 }
 module.exports = { 
     create: create, 
-    getListOfBussyDriverVehicle: getListOfBussyDriverVehicle
+    getRegisterBy: getRegisterBy
  };

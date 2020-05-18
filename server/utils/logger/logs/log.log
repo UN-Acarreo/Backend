@@ -3568,3 +3568,46 @@
 [2020-05-18T02:21:38.551Z] : info : Server: Server is running
 [2020-05-18T02:21:38.750Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-18T02:21:38.840Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:49:13.066Z] : info : Server: Server is running
+[2020-05-18T02:49:13.245Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:49:13.341Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:49:19.530Z] : info : Check field: Field is valid
+[2020-05-18T02:49:19.537Z] : info : VehicleController: list was returned successfully.
+[2020-05-18T02:49:19.539Z] : info : VehicleHandler:enough cars
+[2020-05-18T02:49:19.557Z] : info : Driver_VehicleController: list of driver returned.
+[2020-05-18T02:49:19.558Z] : info : Driver_VehicleController: list of driver returned.
+[2020-05-18T02:49:19.564Z] : info : RouteController: Route was created successfully.
+[2020-05-18T02:49:19.574Z] : info : CargoController: Cargo was created successfully.
+[2020-05-18T02:49:19.613Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-18T02:49:19.613Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-18T02:49:19.613Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-18T02:49:19.629Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-18T02:49:19.635Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-18T02:49:19.635Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-18T02:49:19.636Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-18T02:50:03.277Z] : info : Server: Server is running
+[2020-05-18T02:50:03.475Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:50:03.560Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:50:04.239Z] : info : Check field: Field is valid
+[2020-05-18T02:50:04.250Z] : info : VehicleController: list was returned successfully.
+[2020-05-18T02:50:04.251Z] : info : VehicleHandler:enough cars
+[2020-05-18T02:50:04.272Z] : info : Driver_VehicleController: list of driver returned.
+[2020-05-18T02:50:04.273Z] : info : Driver_VehicleController: list of driver returned.
+[2020-05-18T02:50:04.281Z] : info : RouteController: Route was created successfully.
+[2020-05-18T02:50:04.289Z] : info : CargoController: Cargo was created successfully.
+[2020-05-18T02:50:04.312Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-18T02:50:04.312Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-18T02:50:04.313Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-18T02:50:04.330Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-18T02:50:04.337Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-18T02:50:04.337Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-18T02:50:04.337Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-18T02:50:26.158Z] : info : Server: Server is running
+[2020-05-18T02:50:26.410Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:50:26.513Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:55:02.743Z] : info : Server: Server is running
+[2020-05-18T02:55:03.129Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:55:03.235Z] : info : Server: database tables created if the dont exist
+[2020-05-18T02:59:23.791Z] : info : Server: Server is running
+[2020-05-18T02:59:24.054Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-18T02:59:24.172Z] : info : Server: database tables created if the dont exist
