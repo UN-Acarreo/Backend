@@ -40,8 +40,8 @@ async function validateUser(req) {
     count = await UserController.countWhere({User_Email:User_Email})
     if(count.status!=1)
     {
-        logger.error("UserHandler: " + error);
-        return {status: -1, data: error};
+        logger.error("UserHandler: " + count.error);
+        return {status: -1, data: count.error};
     }
     if (count.data > 0) {
         logger.info("UserHandler: email match");

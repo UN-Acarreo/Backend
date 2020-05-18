@@ -44,16 +44,16 @@ async function getRegisterBy(query,registerToGet)
     try {
         let registers;
         if(registerToGet=="Vehicle")
-        {
-            registers = await DriverModel.findAll(
+        { 
+            registers = await  ModelFactory.getModel("Driver").findAll(
                 { where:  query , 
                   attributes: [],
-                  include: [{model: VehicleModel}]
+                  include: [{model: ModelFactory.getModel("Vehicle")}]
                 }
             )
         }else if(registerToGet=="Driver")
         {
-            registers = await Driver_VehicleModel.findAll({
+            registers = await ModelFactory.getModel("Driver_Vehicle").findAll({
                 where: query,
                 raw:true
             })

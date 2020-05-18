@@ -42,7 +42,7 @@ async function create(User_name, User_last_name, User_password_hashed, User_addr
 async function countWhere(query) {
 
     try {
-        count = await UserModel.count({ where: query })
+        count = await ModelFactory.getModel("User").count({ where: query })
         logger.info("UserController:Number of users returned")
         return{status:1, data:count}
 

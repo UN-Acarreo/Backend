@@ -46,7 +46,7 @@ async function create(Driver_name, Driver_last_name, Driver_password_hashed, Dri
 async function countWhere(query) {
 
     try {
-        count = await DriverModel.count({ where: query })
+        count = await ModelFactory.getModel("Driver").count({ where: query })
         logger.info("DriverController:Number of Drivers returned")
         return{status:1, data:count}
     } catch (error) {

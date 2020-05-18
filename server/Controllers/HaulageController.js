@@ -6,9 +6,6 @@ ModelFactory = require('../Models/ModelFactory');
 const logger = require('./../utils/logger/logger');
 
 
-//import cargoModel
-const cargoModel =require('../Models/Cargo');
-
 //import routeController
 const RouteController =require('./RouteController');
 
