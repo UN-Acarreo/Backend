@@ -1,10 +1,7 @@
 
-// Import model
-const Driver_VehicleModel = require('../Models/Driver_Vehicle');
-const DriverModel = require('../Models/Driver');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
-//import vehicle model
-const VehicleModel = require('../Models/Vehicle');
 // Import logger
 const logger = require('./../utils/logger/logger');
 
@@ -17,7 +14,7 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
         //const { Id_driver, Id_vehicle, Is_owner } = req.body.request;
 
         // Create Driver_Vehicle
-        await Driver_VehicleModel.create(
+        await ModelFactory.getModel("Driver_Vehicle").create(
             {
                 Id_driver: Id_driver,
                 Id_vehicle: Id_vehicle,
@@ -37,7 +34,7 @@ async function getDriversByVehicleId(Id_vehicle)
 {
     try {
 
-        let drivers = await Driver_VehicleModel.findAll({
+        let drivers = await ModelFactory.getModel("Driver_Vehicle").findAll({
             where: {Id_vehicle : Id_vehicle},
             raw:true
         })
@@ -59,10 +56,10 @@ async function getVehicleByDriverId(id)
 {
     //query to find Driver by given email (which is unique)
     try {
-        let drivers = await DriverModel.findAll(
+        let drivers = await ModelFactory.getModel("Driver").findAll(
             { where: { Id_driver: id }, 
               attributes: [],
-              include: [{ model: VehicleModel, attributes: ['Plate', 'Brand', 'Model', 'Payload_capacity', 'Photo']}]
+              include: [{ model: ModelFactory.getModel("Vehicle"), attributes: ['Plate', 'Brand', 'Model', 'Payload_capacity', 'Photo']}]
             }
         )
         

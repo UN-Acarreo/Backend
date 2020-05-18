@@ -1,9 +1,6 @@
 
-// Import model
-const VehicleModel = require('../Models/Vehicle');
-
-//import driver model
-const Driver_Vehicle = require('../Models/Driver_Vehicle')
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -17,7 +14,7 @@ async function createVehicle(req) {
         const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
 
         // Create Vehicle
-        var result = await VehicleModel.create(
+        var result = await ModelFactory.getModel("Vehicle").create(
             {
                 Plate: Plate,
                 Brand: Brand,
@@ -41,7 +38,7 @@ async function createVehicle(req) {
 async function getListOfVehicles()
 {
     try {
-        let vehicles = await VehicleModel.findAll(
+        let vehicles = await ModelFactory.getModel("Vehicle").findAll(
             { 
                 attributes: ['Id_vehicle','Payload_capacity'],
                 raw: true,

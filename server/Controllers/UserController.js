@@ -1,11 +1,12 @@
-//Used to hash password
-var bcrypt = require('bcryptjs');
 
-// Import model
-const UserModel = require('../Models/User');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Create user
 async function createUser(req) {
@@ -17,7 +18,7 @@ async function createUser(req) {
         //Hash the password
         var User_password_hashed = bcrypt.hashSync(User_password, 10);
         // Create user
-        await UserModel.create(
+        await ModelFactory.getModel("User").create(
             {
                 User_name: User_name,
                 User_last_name: User_last_name,
@@ -53,7 +54,7 @@ async function validateUser(req) {
 
         // Validate user
         //count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
-        count = await UserModel.count({ where: { User_Email: User_Email} })
+        count = await ModelFactory.getModel("User").count({ where: { User_Email: User_Email} })
         if (count > 0) {
             logger.info("UserController: User is valid");
             let {status, data}=await getUserByEmail(User_Email)
@@ -88,7 +89,7 @@ async function getUserByEmail(email)
 {
     //query to find user by given email (which is unique)
     try {
-        let users = await UserModel.findAll(
+        let users = await ModelFactory.getModel("User").findAll(
             { where: { User_Email: email } }
             )
         //query returns array of users that match were clause

@@ -1,6 +1,6 @@
 
-// Import model
-const RatingModel = require('../Models/Rating');
+// Import ModelFactory
+ModelFactory = require('../Models/ModelFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -14,7 +14,7 @@ async function createRating(req) {
         const { Puntuality, Cargo_state, Customer_support, Comments } = req.body.request;
 
         // Create Rating
-        await RatingModel.create(
+        await ModelFactory.getModel("Rating").create(
             {
                 Puntuality: Puntuality,
                 Cargo_state: Cargo_state,
