@@ -1,11 +1,9 @@
+
+// Import ControllerFactory
+ControllerFactory = require('../../Controllers/ControllerFactory');
+
 // Import logger
-const logger = require('./../utils/logger/logger');
-
-//Controller definition
-const DriverController = require('../Controllers/DriverController');
-
-//Handler definition
-const Driver_VehicleHandler = require('./Driver_VehicleHandler')
+const logger = require('../../utils/logger/logger');
 
 //Used to hash password
 var bcrypt = require('bcryptjs');
@@ -18,7 +16,7 @@ async function createDriver(req) {
     //Hash the password
     var Driver_password_hashed = bcrypt.hashSync(Driver_password, 10);
     // Create Driver
-    var result = await DriverController.create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo)
+    var result = await ControllerFactory.getController("Driver").create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo)
     if(result.status==1)
     {
       logger.info("DriverHandler: Driver was created successfully.");
@@ -42,7 +40,7 @@ async function validateDriver(req) {
 
   // Validate Driver
   //count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
-  count = await DriverController.countWhere({Driver_Email:Driver_Email})
+  count = await ControllerFactory.getController("Driver").countWhere({Driver_Email:Driver_Email})
   if(count.status!=1)
   {
       logger.error("DriverHandler: " + error);
@@ -50,7 +48,7 @@ async function validateDriver(req) {
   }
   if (count.data > 0) {
       logger.info("DriverHandler: email match");
-      let driver =await DriverController.getRegisterBy({Driver_Email:Driver_Email})
+      let driver =await ControllerFactory.getController("Driver").getRegisterBy({Driver_Email:Driver_Email})
       if(driver.status==1)
       {
           //Compare hashed passwords
@@ -68,21 +66,7 @@ async function validateDriver(req) {
       return {status: 0, data: false};  ;
 }
 
-async function chooseFreeDriver(Id_vehicle)
-{
-  let drivers = await Driver_VehicleHandler.getDriversByVehicleId(Id_vehicle);
-  if(drivers.status!=1){
-    logger.error("DriverHandler: Cant get list of drivers");
-    return {status: -1, error: drivers.error};
-  }
-  //needs to check if drivers are bussy at hour of haulage
-  
-  return {status:1, data: drivers.data[0]};
-  
-}
-
 module.exports = {
-    chooseFreeDriver : chooseFreeDriver,
     validateDriver: validateDriver,
     createDriver : createDriver
   };

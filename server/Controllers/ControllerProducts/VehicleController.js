@@ -1,9 +1,9 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
 
 // Create Vehicle
 async function create(Plate, Brand, Model, Payload_capacity, Photo) {

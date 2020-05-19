@@ -1,20 +1,12 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
-
-
-//import routeController
-const RouteController =require('./RouteController');
-
+const logger = require('../../utils/logger/logger');
 
 //importing description values
 const descprition = require('../constants');
-
-//import cargoController
-const CargoController = require('../Controllers/CargoController');
 
 // Create Haulage
 //returns status 1 if created succesfully, data is new haulage

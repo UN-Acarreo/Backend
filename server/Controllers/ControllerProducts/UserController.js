@@ -1,12 +1,9 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
-
-//Used to hash password
-var bcrypt = require('bcryptjs');
+const logger = require('../../utils/logger/logger');
 
 // Create user
 async function create(User_name, User_last_name, User_password_hashed, User_address, User_Email) {

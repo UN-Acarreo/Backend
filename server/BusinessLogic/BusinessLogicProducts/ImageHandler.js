@@ -1,6 +1,10 @@
-const fs = require("fs");
+
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
+
+// Import file system module
+const fs = require("fs");
+
 async function saveImage(baseImage, path, img_name) {
     //Find extension of file
     try{
