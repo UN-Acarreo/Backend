@@ -5,6 +5,7 @@ var validator = require('validator');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+// Check fields
 async function check_fields(req){
     data = req.body.request
     for (const key of Object.keys(data)) {

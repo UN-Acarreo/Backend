@@ -30,7 +30,7 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 
 }
 
-
+// get Register by
 async function getRegisterBy(query) {
     
     try {
@@ -48,6 +48,7 @@ async function getRegisterBy(query) {
     }
         
 }
+
 module.exports = { 
     create: create, 
     getRegisterBy: getRegisterBy

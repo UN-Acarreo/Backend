@@ -5,6 +5,7 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+// create all Haulage_Driver_Vehicle from list
 async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_haulage){
 
     for (const element of list_driver_vehicles) {
@@ -20,6 +21,8 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
     logger.info("Haulage_Driver_VehicleHandler: all registers were created successfully.");
     return {status:1};
 }
+
+// get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle() {
     let list = await ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy({ Is_active: "true" })
     if(list.status==1)
@@ -32,6 +35,7 @@ async function getListOfBussyDriverVehicle() {
         return {status: -1, error: error};
     }      
 }
+
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
     getListOfBussyDriverVehicle : getListOfBussyDriverVehicle

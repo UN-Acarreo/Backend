@@ -80,6 +80,7 @@ async function getRegisterBy(query)
 
     }
 }
+
 module.exports = { 
     create: create, 
     countWhere:countWhere,

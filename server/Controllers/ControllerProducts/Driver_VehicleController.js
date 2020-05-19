@@ -30,9 +30,6 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
     }
 }
 
-
-
-
 //status 0 = Driver not found
 //status 1 = Driver found, Driver returned
 //status -1 = error, error message returned
@@ -82,9 +79,7 @@ async function getRegisterBy(query,registerToGet)
     }
 }
 
-
 module.exports = {
-
     create: create,
     getRegisterBy: getRegisterBy
 };

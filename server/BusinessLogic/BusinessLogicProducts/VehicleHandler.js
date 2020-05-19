@@ -5,6 +5,7 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+// Create vehicle
 async function createVehicle(req) 
 {
     // Get atributes
@@ -23,7 +24,8 @@ async function createVehicle(req)
     return {status: -1, message: result.error};
   }
 
-//returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
+// get list of needed vehicles
+// returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
 function getListOfNeededVehicles(free_vehicles,weight)
 {
   var needed_vehicles =[]
@@ -50,7 +52,7 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
 }
 
-//returns all vehicles
+// Get all vehicles
 function getAllVehicles()
 {
   return ControllerFactory.getController("Vehicle").getAll();

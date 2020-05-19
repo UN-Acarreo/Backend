@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Cargo Model
 const Cargo = DataBase.define('Cargo', {
     // attributes
     Id_cargo: {
@@ -23,6 +25,5 @@ const Cargo = DataBase.define('Cargo', {
   }, {
     freezeTableName: true,
   });
-
 
 module.exports = Cargo;

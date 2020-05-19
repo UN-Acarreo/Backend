@@ -5,6 +5,7 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+// Create Driver_Vehicle
 async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
 
     // Create Driver_Vehicle
@@ -14,12 +15,13 @@ async function createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner ) {
         return 1;
     logger.error("Driver_VehicleController: " + error);
     return error;
+
 }
 
+// Get vehicle by driver id
 async function getVehicleByDriverId(id)
 {
     //query to find Vehicles by given drivers Id
-
     let vehicle = await ControllerFactory.getController("Driver_Vehicle").getRegisterBy({Id_driver: id},"Vehicle")  
     
     if(vehicle.status==1)
@@ -42,6 +44,8 @@ async function getVehicleByDriverId(id)
     }
 
 }
+
+// Get driver by vehicle id
 async function getDriversByVehicleId(Id_vehicle){
     //query to find Vehicles by given drivers Id
 
@@ -67,6 +71,7 @@ async function getDriversByVehicleId(Id_vehicle){
 
 }
 
+// Choose free driver
 async function chooseFreeDriver(Id_vehicle)
 {
   let drivers = await getDriversByVehicleId(Id_vehicle);

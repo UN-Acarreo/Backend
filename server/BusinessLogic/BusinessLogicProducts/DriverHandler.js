@@ -28,7 +28,6 @@ async function createDriver(req) {
     }
 }
 
-
 // Validate Driver
 //status 0 = Driver not found
 //status 1 = Driver found, id returned

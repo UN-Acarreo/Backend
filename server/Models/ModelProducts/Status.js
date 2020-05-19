@@ -1,5 +1,7 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
+
 
 const Status = DataBase.define('Status', {
     // attributes

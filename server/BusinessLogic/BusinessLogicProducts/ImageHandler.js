@@ -5,6 +5,7 @@ const logger = require('../../utils/logger/logger');
 // Import file system module
 const fs = require("fs");
 
+// Save image
 async function saveImage(baseImage, path, img_name) {
     //Find extension of file
     try{
@@ -30,6 +31,7 @@ async function saveImage(baseImage, path, img_name) {
     }
 
 }
+
 module.exports = {
     saveImage : saveImage
   };
