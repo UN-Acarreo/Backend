@@ -6,7 +6,7 @@ ModelFactory = require('../../Models/ModelFactory');
 const logger = require('../../utils/logger/logger');
 
 //importing description values
-const descprition = require('../constants');
+const descprition = require('../../constants');
 
 // Create Haulage
 //returns status 1 if created succesfully, data is new haulage
@@ -24,7 +24,7 @@ async function create(req) {
                 Id_user: Id_user,
                 Id_route: Id_route,
                 Id_cargo: Id_cargo,
-                Id_status: descprition.status_description.WAITING_FOR_DRIVER
+                Id_status: descprition.status_description.RESERVED
             }
         );
         logger.info("HaulageController: Haulage was created successfully.");
