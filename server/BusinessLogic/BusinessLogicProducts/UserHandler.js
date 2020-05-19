@@ -1,11 +1,12 @@
-//Used to hash password
-var bcrypt = require('bcryptjs');
 
-// Import Controller
-const UserController = require('../Controllers/UserController');
+// Import ControllerFactory
+ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
+
+//Used to hash password
+var bcrypt = require('bcryptjs');
 
 // Create user
 async function createUser(req) {
@@ -14,7 +15,7 @@ async function createUser(req) {
     //Hash the password
     var User_password_hashed = bcrypt.hashSync(User_password, 10);
     // Create user
-    let user = await UserController.create(User_name, User_last_name, User_password_hashed, User_address, User_Email)
+    let user = await ControllerFactory.getController("User").create(User_name, User_last_name, User_password_hashed, User_address, User_Email)
     if(user.status==1)
     {
         logger.info("UserHandler: User was created successfully.");
@@ -37,7 +38,7 @@ async function validateUser(req) {
 
     // Validate user
     //count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
-    count = await UserController.countWhere({User_Email:User_Email})
+    count = await ControllerFactory.getController("User").countWhere({User_Email:User_Email})
     if(count.status!=1)
     {
         logger.error("UserHandler: " + count.error);
@@ -45,7 +46,7 @@ async function validateUser(req) {
     }
     if (count.data > 0) {
         logger.info("UserHandler: email match");
-        let user =await UserController.getUserBy({User_Email:User_Email})
+        let user =await ControllerFactory.getController("User").getUserBy({User_Email:User_Email})
         if(user.status==1)
         {
             //Compare hashed passwords

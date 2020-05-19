@@ -1,3 +1,4 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 const Cargo = require("./Cargo");
@@ -6,6 +7,7 @@ const Route = require("./Route");
 const Status = require("./Status");
 const User = require("./User")
 
+// Define Haulage Model
 const Haulage = DataBase.define('Haulage', {
     // attributes
     Id_haulage: {
@@ -41,7 +43,7 @@ const Haulage = DataBase.define('Haulage', {
         freezeTableName: true,
     });
 
-
+// Establish relations
 Haulage.belongsTo(Cargo,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
 Cargo.hasOne(Haulage,{foreignKey: "Id_cargo", sourceKey: "Id_cargo"});
 

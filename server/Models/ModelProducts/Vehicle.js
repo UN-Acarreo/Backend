@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Vehicle Model
 const Vehicle = DataBase.define('Vehicle', {
     // attributes
     Id_vehicle: {

@@ -1,9 +1,9 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
 
 // Create Vehicle
 async function create(Plate, Brand, Model, Payload_capacity, Photo) {
@@ -32,6 +32,8 @@ async function create(Plate, Brand, Model, Payload_capacity, Photo) {
         return {status: -1, error: error};
     }
 }
+
+// get all vehicles
 async function getAll()
 {
     try {
@@ -49,6 +51,7 @@ async function getAll()
         return {status: -1, error: error};
     }
 }
+
 module.exports = { 
     create: create,
     getAll : getAll 

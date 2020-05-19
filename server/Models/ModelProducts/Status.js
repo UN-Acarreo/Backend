@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Route Model
 const Status = DataBase.define('Status', {
     // attributes
     Id_status: {

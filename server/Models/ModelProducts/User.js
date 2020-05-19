@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define User Model
 const User = DataBase.define('User', {
     // attributes
     Id_user: {

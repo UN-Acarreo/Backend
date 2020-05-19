@@ -1,15 +1,18 @@
+
+// Import ControllerFactory
+ControllerFactory = require('../../Controllers/ControllerFactory');
+
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
 
-const VehicleController = require('../Controllers/VehicleController');
-
+// Create vehicle
 async function createVehicle(req) 
 {
     // Get atributes
     const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
 
     // Create Vehicle
-    var result = await VehicleController.create(Plate, Brand, Model, Payload_capacity, Photo)
+    var result = await ControllerFactory.getController("Vehicle").create(Plate, Brand, Model, Payload_capacity, Photo)
 
     if(result.status==1)
     {
@@ -21,7 +24,8 @@ async function createVehicle(req)
     return {status: -1, message: result.error};
   }
 
-//returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
+// get list of needed vehicles
+// returns 1 if cars are enough or 0 if weight is to high, also returns needed cars list
 function getListOfNeededVehicles(free_vehicles,weight)
 {
   var needed_vehicles =[]
@@ -48,8 +52,14 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
 }
 
+// Get all vehicles
+function getAllVehicles()
+{
+  return ControllerFactory.getController("Vehicle").getAll();
+}
 
 module.exports = {
     getListOfNeededVehicles : getListOfNeededVehicles,
-    createVehicle : createVehicle
+    createVehicle : createVehicle,
+    getAllVehicles: getAllVehicles
   };

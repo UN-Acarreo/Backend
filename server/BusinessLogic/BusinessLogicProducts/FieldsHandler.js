@@ -1,7 +1,11 @@
+
 //Function used to check the request fields (valid emails, valid field lengths and valid text fields)
 var validator = require('validator');
+
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
+
+// Check fields
 async function check_fields(req){
     data = req.body.request
     for (const key of Object.keys(data)) {

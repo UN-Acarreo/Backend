@@ -1,9 +1,9 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
 
 // Create Cargo
 async function create(req) {
@@ -30,4 +30,5 @@ async function create(req) {
     }
 
 }
+
 module.exports = { create: create };

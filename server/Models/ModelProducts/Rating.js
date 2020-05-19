@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Rating Model
 const Rating = DataBase.define('Rating', {
     // attributes
     Id_rating: {
@@ -27,6 +29,5 @@ const Rating = DataBase.define('Rating', {
     }, {
         freezeTableName: true,
     });
-
 
 module.exports = Rating;

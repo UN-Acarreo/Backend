@@ -1,20 +1,12 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
-
-
-//import routeController
-const RouteController =require('./RouteController');
-
+const logger = require('../../utils/logger/logger');
 
 //importing description values
-const descprition = require('../constants');
-
-//import cargoController
-const CargoController = require('../Controllers/CargoController');
+const descprition = require('../../constants');
 
 // Create Haulage
 //returns status 1 if created succesfully, data is new haulage
@@ -32,7 +24,7 @@ async function create(req) {
                 Id_user: Id_user,
                 Id_route: Id_route,
                 Id_cargo: Id_cargo,
-                Id_status: descprition.status_description.WAITING_FOR_DRIVER
+                Id_status: descprition.status_description.RESERVED
             }
         );
         logger.info("HaulageController: Haulage was created successfully.");
@@ -43,6 +35,7 @@ async function create(req) {
          return {status: -1, error:error};
     }
 }
+
 /*
 //returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
 async function getWeight(Id_haulage){
@@ -65,6 +58,7 @@ async function getWeight(Id_haulage){
 
 } 
 */
+
 module.exports = { 
     create: create
 };

@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Route Model
 const Route = DataBase.define('Route', {
     // attributes
     Id_route: {
@@ -23,6 +25,5 @@ const Route = DataBase.define('Route', {
     }, {
         freezeTableName: true,
     });
-
 
 module.exports = Route;

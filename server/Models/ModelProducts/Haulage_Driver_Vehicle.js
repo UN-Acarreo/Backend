@@ -1,8 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
-const  Haulage = require("./Haulage");
-const  Driver_Vehicle = require("./Driver_Vehicle");
 
+// Define Haulage_Driver_Vehicle Model
 const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
     // attributes
     Id_haulage: {
@@ -26,5 +26,4 @@ const Haulage_Driver_Vehicle = DataBase.define('Haulage_Driver_Vehicle', {
         freezeTableName: true,
     });
 
-// This wont have any foreing keys at the moment, these will be created in a migration
 module.exports = Haulage_Driver_Vehicle;

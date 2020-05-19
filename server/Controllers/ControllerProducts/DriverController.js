@@ -1,12 +1,9 @@
 
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
-
-//Used to hash password
-var bcrypt = require('bcryptjs');
+const logger = require('../../utils/logger/logger');
 
 // Create Driver
 async function create(Driver_name, Driver_last_name, Driver_password_hashed, Driver_address, Driver_Email, Driver_phone, Identity_card, Driver_photo) {

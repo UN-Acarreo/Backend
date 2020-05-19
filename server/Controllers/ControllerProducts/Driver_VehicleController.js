@@ -1,11 +1,9 @@
 
-
 // Import ModelFactory
-ModelFactory = require('../Models/ModelFactory');
-
+ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
-const logger = require('./../utils/logger/logger');
+const logger = require('../../utils/logger/logger');
 
 // Create Driver_Vehicle
 async function create( Id_driver, Id_vehicle, Is_owner ) {
@@ -31,9 +29,6 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
         return {status:-1, error:error};
     }
 }
-
-
-
 
 //status 0 = Driver not found
 //status 1 = Driver found, Driver returned
@@ -84,9 +79,7 @@ async function getRegisterBy(query,registerToGet)
     }
 }
 
-
 module.exports = {
-
     create: create,
     getRegisterBy: getRegisterBy
 };

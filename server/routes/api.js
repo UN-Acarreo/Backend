@@ -1,34 +1,15 @@
+
 const express = require ('express');
 const router = express.Router();
 const path = require("path");
 
-//Handlers definition
-const FieldsHandler = require("../BusinessLogic/FieldsHandler")
-const ImageHandler = require("../BusinessLogic/ImageHandler")
-const VehicleHandler = require("../BusinessLogic/VehicleHandler")
-const DriverHandler = require("../BusinessLogic/DriverHandler")
-const UserHandler = require("../BusinessLogic/UserHandler")
-const Driver_Vehicle_Handler = require("../BusinessLogic/Driver_VehicleHandler")
-const HaulageHandler = require("../BusinessLogic/HaulageHandler")
-const Haulage_Driver_VehicleHandler = require("../BusinessLogic/Haulage_Driver_VehicleHandler")
+// Import BusinessLogicFactory
+BusinessLogicFactory = require('../BusinessLogic/BusinessLogicFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
 
-//Controllers definition
-//const UserController = require('../Controllers/UserController')
-const VehicleController = require('../Controllers/VehicleController')
-const RatingController = require('../Controllers/RatingController')
-const RouteController =  require('../Controllers/RouteController')
-const StatusController = require('../Controllers/StatusController')
-const CargoController = require('../Controllers/CargoController')
-const BillController = require('../Controllers/BillController')
-const Driver_Vehicle_Controller = require('../Controllers/Driver_VehicleController')
-const Haulage_Driver_VehicleController = require('../Controllers/Haulage_Driver_VehicleController')
-
 //Route will be used to handle login POST requests
-
-
 router.post('/log-client-errors', async function(req, res){
 
   let error = req.body.error.message;
@@ -48,15 +29,15 @@ router.post('/log-client-errors', async function(req, res){
 router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
-  //data validation
-  const valid_fields = await FieldsHandler.check_fields(req);
+  //data validation  
+  const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({status:-2, error: valid_fields})
   }
   if(type_of_user=="client")
   {
     //Client login
-    let {status,data} = await UserHandler.validateUser(req);
+    let {status,data} = await BusinessLogicFactory.getBusinessLogic("User").validateUser(req);
     if(status==1)
     {
       logger.info("api.js: returned user id succesfully")
@@ -81,12 +62,12 @@ router.post('/:type_of_user/login', async function(req, res){
     };
     let new_req ={body:{request:new_request}};
 
-    let {status,data} = await DriverHandler.validateDriver(new_req);
+    let {status,data} = await BusinessLogicFactory.getBusinessLogic("Driver").validateDriver(new_req);
    
     if(status==1)
     {
       //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
-      let vehicle =  await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver);
+      let vehicle =  await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").getVehicleByDriverId(data.Id_driver);
       if(vehicle.status!=1)
       {
         logger.error("api.js: "+vehicle.error)
@@ -118,13 +99,13 @@ router.post('/:type_of_user/login', async function(req, res){
 //Route will be used to handle driver sign up POST requests
 router.post('/driver/signup', async function(req, res){
 
-  const valid_fields = await FieldsHandler.check_fields(req);
+  const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
   //Save drivers image
   const filePath = path.join(__dirname, "../public/uploads/drivers/");
-  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await BusinessLogicFactory.getBusinessLogic("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
@@ -136,7 +117,7 @@ router.post('/driver/signup', async function(req, res){
   req.body.request.Driver_photo = '/uploads/drivers/'+req.body.request.Identity_card+"."+extension
 
   //Save driver on db
-  let saved = await DriverHandler.createDriver(req);
+  let saved = await BusinessLogicFactory.getBusinessLogic("Driver").createDriver(req);
   //console.log('variabe: '+saved)
   if(saved.status == 1)
   {
@@ -161,13 +142,13 @@ router.post('/driver/signup', async function(req, res){
 });
 
 router.post('/vehicle/signup', async function(req, res){
-  const valid_fields = await FieldsHandler.check_fields(req);
+  const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
   //Save vehicle image
   const filePath = path.join(__dirname, "../public/uploads/vehicles/");
-  const imageSaved = await ImageHandler.saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+  const imageSaved = await BusinessLogicFactory.getBusinessLogic("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
   if(imageSaved == false){
       logger.info('Signup driver: Error in save image')
       return res.status(400).json({error: 'No se puede guardar la imagen seleccionada'})
@@ -179,7 +160,7 @@ router.post('/vehicle/signup', async function(req, res){
   req.body.request.Photo = '/uploads/vehicles/'+req.body.request.Identity_card+"."+extension
 
   //Save vehicle on db
-  let saved_vehicle = await VehicleHandler.createVehicle(req);
+  let saved_vehicle = await BusinessLogicFactory.getBusinessLogic("Vehicle").createVehicle(req);
   //error saving the vehicle
   if(saved_vehicle.status != 1 && saved_vehicle.message){
      message = saved_vehicle.message.toString()
@@ -191,7 +172,7 @@ router.post('/vehicle/signup', async function(req, res){
   }
 
   //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
-  let success_driver_vehicle = await Driver_Vehicle_Handler.createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
+  let success_driver_vehicle = await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
 
 
   if(success_driver_vehicle == 1)
@@ -210,12 +191,12 @@ router.post('/vehicle/signup', async function(req, res){
 
 //Route will be used to handle client sign up POST requests
 router.post('/client/signup', async function(req,res){
-  const valid_fields = await FieldsHandler.check_fields(req);
+  const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
 
-  let success = await UserHandler.createUser(req);
+  let success = await BusinessLogicFactory.getBusinessLogic("User").createUser(req);
   if(success==1)
   {
     logger.info("Signup client: added succesfully");
@@ -235,7 +216,7 @@ router.post('/client/signup', async function(req,res){
 //returns -1 if error creating route, cargo or haulage
 router.post('/haulage/create', async function(req, res){
   
-  const valid_fields = await FieldsHandler.check_fields(req);
+  const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
   }
@@ -244,14 +225,14 @@ router.post('/haulage/create', async function(req, res){
   //check for vehicle
 
   //this needs to be a list with all vehicles free the day of haulage for now its all of them
-  let vehicles = await VehicleController.getAll();
+  let vehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getAllVehicles();
   if(vehicles.status!=1)
   {
     logger.error("api.js: list of cars not found");
     return res.status(500).json({status: -1, error: vehicles.error});
   }
   //this are the vehicles that need to be used for the haulage
-  let needed_vehicles=  VehicleHandler.getListOfNeededVehicles(vehicles.data,values.Weight)
+  let needed_vehicles=  BusinessLogicFactory.getBusinessLogic("Vehicle").getListOfNeededVehicles(vehicles.data,values.Weight)
   
   if(needed_vehicles.status!=1)
   {
@@ -261,7 +242,7 @@ router.post('/haulage/create', async function(req, res){
   let needed_driver_vehicles=[];
 
   for (const element of needed_vehicles.data) {
-    let driver = await DriverHandler.chooseFreeDriver(element.Id_vehicle)
+    let driver = await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").chooseFreeDriver(element.Id_vehicle)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
       return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
@@ -271,7 +252,7 @@ router.post('/haulage/create', async function(req, res){
   
 
   //creating haualge and other asosiated registers
-  let haulage = await HaulageHandler.createHaulageWithRouteCargo(values);
+  let haulage = await BusinessLogicFactory.getBusinessLogic("Haulage").createHaulageWithRouteCargo(values);
 
   if(haulage.status==-3){
     logger.error("api.js: error creating haulage: "+haulage.error);
@@ -287,7 +268,7 @@ router.post('/haulage/create', async function(req, res){
   logger.info("api.js: haulage, cargo and route created: ");
   //creating records for haulage driver vehicles
   response =
-  await Haulage_Driver_VehicleHandler.createAllHaulage_Driver_VehicleFromList(
+  await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").createAllHaulage_Driver_VehicleFromList(
     needed_driver_vehicles,haulage.data.Id_haulage
     )
   if(response.status==1)

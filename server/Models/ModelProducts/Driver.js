@@ -1,6 +1,8 @@
+
 const Sequelize = require('sequelize');
 const DataBase = require('../../DataBase/database.js');
 
+// Define Driver Model
 const Driver = DataBase.define('Driver', {
     // attributes
     Id_driver: {
