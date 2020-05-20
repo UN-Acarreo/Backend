@@ -240,6 +240,7 @@ router.post('/haulage/create', async function(req, res){
   let bussyVehicles = free_drivers_and_vehicles.data.bussyVehicles
   let bussyDrivers = free_drivers_and_vehicles.data.bussyDrivers
 
+
   //getting list of free vehicles
   let freeVehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getFreeVehicles(bussyVehicles)
   if(freeVehicles.status!=1)
@@ -247,11 +248,9 @@ router.post('/haulage/create', async function(req, res){
     logger.error("api.js: Error getting list of free cars:"+freeVehicles.error);
     return res.status(500).json({status: -1, error: freeVehicles.error});
   }
-  console.log("free vehciles")
-  console.log(freeVehicles)
+ 
   //this are the vehicles that need to be used for the haulage (this function is not async so there is no need for await)
   let needed_vehicles=  BusinessLogicFactory.getBusinessLogic("Vehicle").getListOfNeededVehicles(freeVehicles.data,values.Weight)
-  console.log(needed_vehicles)
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
@@ -260,7 +259,7 @@ router.post('/haulage/create', async function(req, res){
   let needed_driver_vehicles=[];
 
   for (const element of needed_vehicles.data) {
-    let driver = await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").chooseFreeDriver(element.Id_vehicle)
+    let driver = await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").chooseFreeDriver(element.Id_vehicle,bussyDrivers)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
       return res.status(500).json({status: -1, error: "Hubo un problema asignando los conductores"});

@@ -55,21 +55,27 @@ function getListOfNeededVehicles(free_vehicles,weight)
 // Get Free vehicles that are not reserved in date
 async function getFreeVehicles(bussyVehicles)
 {
+  console.log("getFreeVehicles: bussy vehicles")
+  console.log(bussyVehicles)
   let freeVehicles = []
   var allVehicles = await ControllerFactory.getController("Vehicle").getAll();
+  console.log("all vehicles")
+  console.log(allVehicles.data)
   if(allVehicles.status!=1)
   {
     logger.error("VehicleHandler:error getting all vehicles:"+allVehicles.error);
     return {status: -1, error:allVehicles.error};
   }
   for (const vehicle of allVehicles.data) {
-    if(!bussyVehicles.has(vehicle))
+    if(!bussyVehicles.has(vehicle.Id_vehicle))
     {
       freeVehicles.push(vehicle)
     }    
   }
+  console.log("freeVehicles")
+  console.log(freeVehicles)
   logger.error("VehicleHandler:list of free vehciles ready:");
-    return {status: 1, data:freeVehicles}; 
+  return {status: 1, data:freeVehicles}; 
 
 }
 

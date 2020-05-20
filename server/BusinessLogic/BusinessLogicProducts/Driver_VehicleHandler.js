@@ -72,16 +72,23 @@ async function getDriversByVehicleId(Id_vehicle){
 }
 
 // Choose free driver
-async function chooseFreeDriver(Id_vehicle)
+async function chooseFreeDriver(Id_vehicle,bussy_drivers)
 {
   let drivers = await getDriversByVehicleId(Id_vehicle);
   if(drivers.status!=1){
     logger.error("DriverHandler: Cant get list of drivers");
     return {status: -1, error: drivers.error};
   }
+  let chosenDriver
+  for (const driver of drivers.data) {
+      if(!bussy_drivers.has(driver.Id_driver))
+      {
+          chosenDriver = driver
+      }
+  }
   //needs to check if drivers are bussy at hour of haulage
   
-  return {status:1, data: drivers.data[0]};
+  return {status:1, data: chosenDriver};
   
 }
 

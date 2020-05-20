@@ -27,7 +27,6 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 // get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle(start_date,duration) {
-    console.log(duration)
     let end_date = new Date(
         start_date.getFullYear(), 
         start_date.getMonth(), 
@@ -35,10 +34,6 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
         start_date.getHours()+duration.hours,
         start_date.getMinutes()+duration.minutes
         )
-    console.log("start date")
-    console.log(start_date)
-    console.log("end date")
-    console.log(end_date)
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
         ({
@@ -58,8 +53,6 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
         logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+activeHaulages.error);
         return {status: -1, error: activeHaulages.error};  
     }
-    console.log(activeHaulages)
-
     let bussyDrivers = []
     let bussyVehicles = []
     //for each haulage i am getting driver vehicles asociated
@@ -83,9 +76,6 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
     }
     let bussyDriversSet = new Set(bussyDrivers)
     let bussyVehiclesSet = new Set(bussyVehicles)
-    console.log("bussy drivers and vehciles")
-    console.log(bussyDriversSet)
-    console.log(bussyVehiclesSet)
 
     logger.info("Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.");
     return {status: 1, data: {bussyDrivers:bussyDriversSet,bussyVehicles:bussyVehiclesSet}};
