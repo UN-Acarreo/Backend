@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require("path");
 
 // Import BusinessLogicFactory
-BusinessLogicFactory = require('../BusinessLogic/BusinessLogicFactory');
+const BusinessLogicFactory = require('../BusinessLogic/BusinessLogicFactory');
 
 // Import logger
 const logger = require('./../utils/logger/logger');
@@ -224,16 +224,34 @@ router.post('/haulage/create', async function(req, res){
   values = req.body.request;
   //check for vehicle
 
-  //this needs to be a list with all vehicles free the day of haulage for now its all of them
-  let vehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getFreeVehicles(values.Date);
-  if(vehicles.status!=1)
+  //this is a set with all vehicles and a set of drivers bussy the day of haulage
+  let free_drivers_and_vehicles =
+   await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").getListOfBussyDriverVehicle(
+     new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute),
+     {hours:parseInt(values.Duration),minutes:0}
+     );
+
+  if(free_drivers_and_vehicles.status!=1)
   {
-    logger.error("api.js: list of cars not found");
-    return res.status(500).json({status: -1, error: vehicles.error});
+    logger.error("api.js: list of bussy cars not found "+free_drivers_and_vehicles.error);
+    return res.status(500).json({status: -1, error: free_drivers_and_vehicles.error});
   }
-  //this are the vehicles that need to be used for the haulage
-  let needed_vehicles=  BusinessLogicFactory.getBusinessLogic("Vehicle").getListOfNeededVehicles(vehicles.data,values.Weight)
-  
+
+  let bussyVehicles = free_drivers_and_vehicles.data.bussyVehicles
+  let bussyDrivers = free_drivers_and_vehicles.data.bussyDrivers
+
+  //getting list of free vehicles
+  let freeVehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getFreeVehicles(bussyVehicles)
+  if(freeVehicles.status!=1)
+  {
+    logger.error("api.js: Error getting list of free cars:"+freeVehicles.error);
+    return res.status(500).json({status: -1, error: freeVehicles.error});
+  }
+  console.log("free vehciles")
+  console.log(freeVehicles)
+  //this are the vehicles that need to be used for the haulage (this function is not async so there is no need for await)
+  let needed_vehicles=  BusinessLogicFactory.getBusinessLogic("Vehicle").getListOfNeededVehicles(freeVehicles.data,values.Weight)
+  console.log(needed_vehicles)
   if(needed_vehicles.status!=1)
   {
     logger.info("api.js: Cant create haulage, no vehicles available");
@@ -245,7 +263,7 @@ router.post('/haulage/create', async function(req, res){
     let driver = await BusinessLogicFactory.getBusinessLogic("Driver_Vehicle").chooseFreeDriver(element.Id_vehicle)
     if(driver.status!=1){
       logger.error("api.js: Cant get list of drivers");
-      return res.status(500).json({status: 0, error: "Hubo un problema asignando los conductores"});
+      return res.status(500).json({status: -1, error: "Hubo un problema asignando los conductores"});
     }
     needed_driver_vehicles.push(driver.data);
   }

@@ -11,14 +11,16 @@ async function create(req) {
     try {
 
         // Get atributes
-        const { Origin_coord, Destination_coord } = req;
+        const { Origin_coord, Destination_coord,Duration } = req;
+        console.log("duracion")
+        console.log(Duration)
 
         // Create Route
         const new_route = await ModelFactory.getModel("Route").create(
             {
                 Origin_coord: Origin_coord,
                 Destination_coord: Destination_coord,
-                Duration: 2 //Hardcoding 2 hours by default for now
+                Duration: Duration 
             }
         );
         logger.info("RouteController: Route was created successfully.");

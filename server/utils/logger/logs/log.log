@@ -4515,3 +4515,414 @@
 [2020-05-20T04:07:22.455Z] : info : HaulageController: list was found successfully.
 [2020-05-20T04:07:22.466Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
 [2020-05-20T04:07:22.468Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:20:39.260Z] : info : Server: Server is running
+[2020-05-20T04:20:39.422Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:20:39.494Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:20:44.121Z] : info : Check field: Field is valid
+[2020-05-20T04:26:52.072Z] : info : Server: Server is running
+[2020-05-20T04:26:52.293Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:26:52.391Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:27:03.703Z] : info : Server: Server is running
+[2020-05-20T04:27:04.003Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:27:04.110Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:27:08.111Z] : info : Check field: Field is valid
+[2020-05-20T04:27:08.145Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:27:08.146Z] : error : Haulage_Driver_VehicleHandler: Error getting list:SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:27:08.147Z] : error : api.js: list of cars not found
+[2020-05-20T04:29:55.556Z] : info : Server: Server is running
+[2020-05-20T04:29:55.744Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:29:55.831Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:30:00.319Z] : info : Check field: Field is valid
+[2020-05-20T04:30:00.376Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:30:00.378Z] : error : Haulage_Driver_VehicleHandler: Error getting list:SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:30:00.378Z] : error : api.js: list of cars not found
+[2020-05-20T04:30:49.053Z] : info : Server: Server is running
+[2020-05-20T04:30:49.257Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:30:49.342Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:31:35.088Z] : info : Server: Server is running
+[2020-05-20T04:31:35.303Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:31:35.405Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:31:37.723Z] : info : Check field: Field is valid
+[2020-05-20T04:31:37.766Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:31:37.766Z] : error : Haulage_Driver_VehicleHandler: Error getting list:SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T04:31:37.767Z] : error : api.js: list of cars not found
+[2020-05-20T04:32:47.863Z] : info : Server: Server is running
+[2020-05-20T04:32:48.075Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:32:48.167Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:33:10.826Z] : info : Server: Server is running
+[2020-05-20T04:33:11.048Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:33:11.134Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:33:14.652Z] : info : Check field: Field is valid
+[2020-05-20T04:33:14.670Z] : info : HaulageController: list was found successfully.
+[2020-05-20T04:33:14.671Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:35:22.828Z] : info : Server: Server is running
+[2020-05-20T04:35:23.080Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:35:23.175Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:36:34.567Z] : info : Server: Server is running
+[2020-05-20T04:36:34.769Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:36:34.856Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:37:16.989Z] : info : Server: Server is running
+[2020-05-20T04:37:17.250Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:37:17.369Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:39:07.279Z] : info : Server: Server is running
+[2020-05-20T04:39:07.472Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:39:07.562Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:40:06.477Z] : info : Server: Server is running
+[2020-05-20T04:40:06.662Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:40:06.752Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:40:16.622Z] : info : Server: Server is running
+[2020-05-20T04:40:16.873Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:40:16.978Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:43:15.912Z] : info : Server: Server is running
+[2020-05-20T04:43:16.134Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:43:16.225Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:44:25.609Z] : info : Server: Server is running
+[2020-05-20T04:44:25.797Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:44:25.884Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:45:05.217Z] : info : Server: Server is running
+[2020-05-20T04:45:05.402Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:45:05.516Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:45:07.256Z] : info : Server: Server is running
+[2020-05-20T04:45:07.447Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:45:07.534Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:47:14.124Z] : info : Server: Server is running
+[2020-05-20T04:47:14.380Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:47:14.471Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:48:16.318Z] : info : Server: Server is running
+[2020-05-20T04:48:16.540Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:48:16.630Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:48:37.050Z] : info : Server: Server is running
+[2020-05-20T04:48:37.235Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:48:37.325Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:49:03.152Z] : info : Server: Server is running
+[2020-05-20T04:49:03.366Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:49:03.457Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:50:44.864Z] : info : Server: Server is running
+[2020-05-20T04:50:45.091Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:50:45.177Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:51:16.943Z] : info : Server: Server is running
+[2020-05-20T04:51:17.214Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:51:17.311Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:51:25.694Z] : info : Server: Server is running
+[2020-05-20T04:51:25.919Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:51:26.009Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:51:54.558Z] : info : Server: Server is running
+[2020-05-20T04:51:54.766Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:51:54.856Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:51:59.385Z] : info : Server: Server is running
+[2020-05-20T04:51:59.585Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:51:59.678Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:52:02.959Z] : info : Check field: Field is valid
+[2020-05-20T04:52:02.988Z] : info : HaulageController: list was found successfully.
+[2020-05-20T04:52:02.988Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:52:02.992Z] : error : VehicleHandler:error getting all vehicles:undefined
+[2020-05-20T04:52:03.002Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T04:54:08.849Z] : info : Server: Server is running
+[2020-05-20T04:54:09.059Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:54:09.149Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:54:36.068Z] : info : Server: Server is running
+[2020-05-20T04:54:36.283Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:54:36.373Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:54:47.282Z] : info : Server: Server is running
+[2020-05-20T04:54:47.460Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:54:47.552Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:54:51.678Z] : info : Check field: Field is valid
+[2020-05-20T04:54:51.705Z] : info : HaulageController: list was found successfully.
+[2020-05-20T04:54:51.705Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:55:22.458Z] : info : Server: Server is running
+[2020-05-20T04:55:22.686Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:55:22.783Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:55:32.596Z] : info : Server: Server is running
+[2020-05-20T04:55:32.795Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:55:32.859Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:55:35.988Z] : info : Check field: Field is valid
+[2020-05-20T04:55:36.007Z] : info : HaulageController: list was found successfully.
+[2020-05-20T04:55:36.007Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:55:36.015Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T04:55:36.016Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T04:57:33.182Z] : info : Server: Server is running
+[2020-05-20T04:57:33.378Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:57:33.466Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:58:04.841Z] : info : Server: Server is running
+[2020-05-20T04:58:05.070Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T04:58:05.169Z] : info : Server: database tables created if the dont exist
+[2020-05-20T04:58:07.088Z] : info : Check field: Field is valid
+[2020-05-20T04:58:07.119Z] : info : HaulageController: list was found successfully.
+[2020-05-20T04:58:07.120Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T04:58:07.132Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T04:58:07.133Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T04:58:07.134Z] : info : VehicleHandler:enough cars
+[2020-05-20T04:58:07.145Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T04:58:07.146Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T04:58:07.150Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T04:58:07.150Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T04:58:07.160Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T04:58:07.160Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T04:58:07.160Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:00:53.852Z] : info : Server: Server is running
+[2020-05-20T05:00:54.057Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:00:54.154Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:00:57.678Z] : info : Server: Server is running
+[2020-05-20T05:00:57.928Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:00:58.011Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:00:59.035Z] : info : Check field: Field is valid
+[2020-05-20T05:00:59.067Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:00:59.068Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:00:59.077Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:00:59.078Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:00:59.079Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:00:59.094Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:00:59.095Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:00:59.098Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:00:59.099Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:00:59.108Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:00:59.109Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:00:59.109Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:01:42.454Z] : info : Server: Server is running
+[2020-05-20T05:01:42.633Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:01:42.700Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:01:46.293Z] : info : Check field: Field is valid
+[2020-05-20T05:01:46.315Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:01:46.316Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:01:46.323Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:01:46.323Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:01:46.324Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:01:46.330Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:01:46.331Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:01:46.335Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:01:46.335Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:01:46.342Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:01:46.342Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:01:46.342Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:02:48.146Z] : info : Server: Server is running
+[2020-05-20T05:02:48.378Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:02:48.467Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:02:50.393Z] : info : Check field: Field is valid
+[2020-05-20T05:02:50.421Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:02:50.422Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:02:50.432Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:02:50.432Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:02:50.433Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:02:50.444Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:02:50.445Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:02:50.449Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:02:50.449Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:02:50.461Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:02:50.461Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:02:50.462Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:03:29.416Z] : info : Server: Server is running
+[2020-05-20T05:03:29.618Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:03:29.697Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:03:36.198Z] : info : Check field: Field is valid
+[2020-05-20T05:03:36.226Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:03:36.227Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:03:36.237Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:03:36.237Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:03:36.238Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:03:36.252Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:03:36.253Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:03:36.257Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:03:36.257Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:03:36.266Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:03:36.266Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:03:36.267Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:03:49.598Z] : info : Server: Server is running
+[2020-05-20T05:03:49.818Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:03:49.917Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:04:17.553Z] : info : Server: Server is running
+[2020-05-20T05:04:17.742Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:04:17.810Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:04:22.456Z] : info : Check field: Field is valid
+[2020-05-20T05:04:22.477Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:04:22.478Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:04:22.486Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:04:22.487Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:04:22.488Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:04:22.499Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:04:22.499Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:04:22.502Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:04:22.502Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:04:22.515Z] : error : RouteController: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:04:22.515Z] : error : HaulageHandler: Could not create route haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:04:22.516Z] : error : api.js: error creating haulage: SequelizeValidationError: notNull Violation: Route.Duration cannot be null
+[2020-05-20T05:05:33.508Z] : info : Server: Server is running
+[2020-05-20T05:05:33.720Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:05:33.805Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:05:58.357Z] : info : Server: Server is running
+[2020-05-20T05:05:58.570Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:05:58.660Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:05:59.519Z] : info : Check field: Field is valid
+[2020-05-20T05:05:59.559Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:05:59.560Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:05:59.569Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:05:59.569Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:05:59.571Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:05:59.581Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:05:59.581Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:05:59.584Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:05:59.584Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:05:59.602Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:05:59.610Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:05:59.628Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T05:05:59.629Z] : error : HaulageHandler: Could not create haulage: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo timestamp with time zone: «Invalid date»
+[2020-05-20T05:05:59.629Z] : error : api.js: error creating haulage: undefined
+[2020-05-20T05:07:58.076Z] : info : Server: Server is running
+[2020-05-20T05:07:58.317Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:07:58.411Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:08:07.081Z] : info : Check field: Field is valid
+[2020-05-20T05:08:07.109Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:08:07.110Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:08:07.119Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:08:07.119Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:08:07.120Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:08:07.136Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:07.137Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:07.139Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:07.140Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:07.159Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:08:07.167Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:08:07.181Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:08:07.182Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:08:07.182Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:08:07.194Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:07.198Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:07.199Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:08:07.199Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:08:23.313Z] : info : Check field: Field is valid
+[2020-05-20T05:08:23.397Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:08:23.398Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:08:23.403Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:08:23.403Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:08:23.404Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:08:23.407Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:23.408Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:23.409Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:23.410Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:23.420Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:08:23.425Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:08:23.439Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:08:23.439Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:08:23.439Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:08:23.448Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:23.453Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:23.453Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:08:23.453Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:08:29.168Z] : info : Check field: Field is valid
+[2020-05-20T05:08:29.171Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:08:29.172Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:08:29.174Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:08:29.174Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:08:29.174Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:08:29.177Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:29.177Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:29.179Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:08:29.179Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:08:29.186Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:08:29.189Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:08:29.193Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:08:29.194Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:08:29.194Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:08:29.198Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:29.203Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:08:29.203Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:08:29.204Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:09:09.626Z] : info : Server: Server is running
+[2020-05-20T05:09:09.813Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:09:09.904Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:11:40.231Z] : info : Server: Server is running
+[2020-05-20T05:11:40.443Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:11:40.535Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:13:34.344Z] : info : Check field: Field is valid
+[2020-05-20T05:13:34.450Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:13:34.451Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:13:34.461Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:13:34.462Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:13:34.463Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:13:34.472Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:13:34.472Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:13:34.476Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:13:34.476Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:13:34.502Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:13:34.512Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:13:34.528Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:13:34.528Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:13:34.528Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:13:34.542Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:13:34.547Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:13:34.548Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:13:34.548Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:16:08.694Z] : info : Server: Server is running
+[2020-05-20T05:16:08.905Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:16:09.000Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:16:24.526Z] : info : Server: Server is running
+[2020-05-20T05:16:24.751Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:16:24.823Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:16:31.788Z] : info : Server: Server is running
+[2020-05-20T05:16:31.995Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:16:32.061Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:16:35.880Z] : info : Check field: Field is valid
+[2020-05-20T05:16:35.900Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:16:35.902Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:16:35.909Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:16:35.909Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:16:35.910Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:16:35.921Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:16:35.921Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:16:35.923Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:16:35.924Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:16:35.940Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:16:35.967Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:16:35.995Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:16:35.996Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:16:35.996Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:16:36.014Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:16:36.019Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:16:36.020Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:16:36.020Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:19:17.043Z] : info : Check field: Field is valid
+[2020-05-20T05:19:17.146Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:19:17.147Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:19:17.153Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:19:17.154Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:19:17.154Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:19:17.160Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:19:17.160Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:19:17.164Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:19:17.164Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:19:17.171Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:19:17.178Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:19:17.190Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:19:17.190Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:19:17.190Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:19:17.202Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:19:17.208Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:19:17.208Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:19:17.209Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:21:49.238Z] : info : Server: Server is running
+[2020-05-20T05:21:49.429Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:21:49.513Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:22:55.731Z] : info : Server: Server is running
+[2020-05-20T05:22:55.932Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:22:56.022Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:25:09.882Z] : info : Server: Server is running
+[2020-05-20T05:25:10.090Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:25:10.185Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:25:15.323Z] : info : Check field: Field is valid
+[2020-05-20T05:25:15.353Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:25:15.354Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:25:15.362Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:25:15.362Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:25:15.363Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:25:15.375Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:25:15.375Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:25:15.379Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:25:15.379Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:25:15.400Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:25:15.408Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:25:15.424Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:25:15.424Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:25:15.424Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:25:15.437Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:25:15.442Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:25:15.442Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:25:15.442Z] : info : api.js: all haulage_driver_vehicles created 

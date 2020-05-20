@@ -27,14 +27,18 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 // get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle(start_date,duration) {
+    console.log(duration)
     let end_date = new Date(
         start_date.getFullYear(), 
         start_date.getMonth(), 
         start_date.getDate(),
         start_date.getHours()+duration.hours,
-        start_date.getMinutes()+duration.minuts
+        start_date.getMinutes()+duration.minutes
         )
-
+    console.log("start date")
+    console.log(start_date)
+    console.log("end date")
+    console.log(end_date)
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
         ({
@@ -68,7 +72,7 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
             });
         if(bussyDriver_Vehicles.status==-1)
         {
-            logger.error("Haulage_Driver_VehicleHandler: Error getting list: "+activeHaulages.error);
+            logger.error("Haulage_Driver_VehicleHandler: Error getting list second for: "+activeHaulages.error);
             return {status: -1, error: bussyDriver_Vehicles.error};
         }
         for(const driver_vehicle of bussyDriver_Vehicles.data)
@@ -79,12 +83,12 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
     }
     let bussyDriversSet = new Set(bussyDrivers)
     let bussyVehiclesSet = new Set(bussyVehicles)
-    bussyDrivers = Array.from(bussyDriversSet)
-    bussyVehicles = Array.from(bussyVehiclesSet)
-    console.log(bussyDrivers)
-    console.log(bussyVehicles)
+    console.log("bussy drivers and vehciles")
+    console.log(bussyDriversSet)
+    console.log(bussyVehiclesSet)
+
     logger.info("Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.");
-    return {status: 1, data: {bussyDrivers:bussyDrivers,bussyVehicles:bussyVehicles}};
+    return {status: 1, data: {bussyDrivers:bussyDriversSet,bussyVehicles:bussyVehiclesSet}};
 
 }
 
