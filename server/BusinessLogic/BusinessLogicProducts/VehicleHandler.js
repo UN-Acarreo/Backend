@@ -52,14 +52,14 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
 }
 
-// Get all vehicles
-function getAllVehicles()
+// Get Free vehicles that are not reserved in date
+function getFreeVehicles(date)
 {
-  return ControllerFactory.getController("Vehicle").getAll();
+  var allVehicles =  ControllerFactory.getController("Vehicle").getAll();
 }
 
 module.exports = {
     getListOfNeededVehicles : getListOfNeededVehicles,
     createVehicle : createVehicle,
-    getAllVehicles: getAllVehicles
+    getFreeVehicles: getFreeVehicles
   };

@@ -3975,3 +3975,398 @@
 [2020-05-19T01:39:40.527Z] : info : Driver_VehicleController: Driver vehicle found
 [2020-05-19T01:39:40.527Z] : info : Driver_VehicleHandler: Driver vehicle found
 [2020-05-19T01:39:40.527Z] : info : api.js: returned Driver id succesfully
+[2020-05-19T23:28:30.094Z] : info : Server: Server is running
+[2020-05-19T23:28:30.561Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:28:30.754Z] : info : Server: database tables created if the dont exist
+[2020-05-19T23:28:58.583Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:28:58.631Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:28:58.664Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-19T23:30:09.536Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:30:09.542Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:30:09.548Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-19T23:34:57.205Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeEagerLoadingError: Haulage is not associated to Haulage_Driver_Vehicle!
+[2020-05-19T23:34:57.364Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:37:43.558Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeEagerLoadingError: Haulage is not associated to Driver_Vehicle!
+[2020-05-19T23:37:43.797Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:47:29.981Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:47:30.069Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:47:30.073Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-19T23:48:20.591Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:48:20.619Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:48:20.623Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-19T23:49:22.695Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:49:22.699Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:49:22.705Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-19T23:50:18.302Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-19T23:50:18.521Z] : info : Haulage_Driver_VehicleController: list of all registers returned successfully.
+[2020-05-19T23:50:18.554Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T00:22:26.307Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T00:22:26.314Z] : info : HaulageController: list was found successfully.
+[2020-05-20T00:22:26.322Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T00:26:55.547Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T00:26:55.556Z] : info : HaulageController: list was found successfully.
+[2020-05-20T00:26:55.560Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T00:56:00.103Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T00:56:00.112Z] : info : HaulageController: list was found successfully.
+[2020-05-20T00:56:00.116Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T00:59:18.755Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T00:59:18.761Z] : info : HaulageController: list was found successfully.
+[2020-05-20T00:59:18.765Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:01:39.038Z] : error : Haulage_Driver_VehicleController: Error getting list:ReferenceError: Op is not defined
+[2020-05-20T01:01:39.191Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:03:39.481Z] : error : Haulage_Driver_VehicleController: Error getting list:ReferenceError: Op is not defined
+[2020-05-20T01:03:39.727Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:13:36.778Z] : error : Haulage_Driver_VehicleController: Error getting list:ReferenceError: Op is not defined
+[2020-05-20T01:13:36.782Z] : error : Haulage_Driver_VehicleHandler: Error getting list:ReferenceError: Op is not defined
+[2020-05-20T01:13:36.943Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:16:57.845Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:16:57.894Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeDatabaseError: no existe la columna Haulage_Driver_Vehicle.Id_status
+[2020-05-20T01:16:57.895Z] : error : Haulage_Driver_VehicleHandler: Error getting list:SequelizeDatabaseError: no existe la columna Haulage_Driver_Vehicle.Id_status
+[2020-05-20T01:19:20.940Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:19:20.947Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:19:20.951Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:21:11.820Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:21:11.828Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:21:11.832Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:39:19.336Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:39:19.342Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:39:19.346Z] : info : Haulage_Driver_VehicleController: register found.
+[2020-05-20T01:39:19.347Z] : info : Haulage_Driver_VehicleController: register found.
+[2020-05-20T01:39:19.349Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:43:08.570Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:43:08.580Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:43:08.587Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:43:08.588Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:45:25.268Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:45:25.276Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:45:25.286Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:45:25.287Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:45:55.861Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:45:55.868Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:45:55.875Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:45:55.876Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:46:36.100Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:46:36.108Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:46:36.120Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:46:36.121Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:46:55.032Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:46:55.040Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:46:55.047Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:46:55.048Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:47:17.925Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:47:17.931Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:47:17.942Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:47:17.943Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:48:09.935Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:48:09.941Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:48:09.949Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:48:09.950Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:49:06.621Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:49:06.625Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:49:06.634Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:49:06.635Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:49:23.327Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:49:23.334Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:49:23.342Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:49:23.342Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:50:39.994Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:50:40.001Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:50:40.009Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:50:40.010Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:52:24.538Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:52:24.547Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:52:24.558Z] : error : Haulage_Driver_VehicleController: Error getting list:Error: WHERE parameter "Id_haulage" has invalid "undefined" value
+[2020-05-20T01:52:24.558Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T01:52:52.415Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:52:52.420Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:52:52.430Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.433Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.436Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.440Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.443Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.448Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.453Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.460Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.463Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.468Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.475Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.479Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.482Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:52:52.494Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.520Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:53:19.528Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:53:19.542Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.545Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.548Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.552Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.555Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.560Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.563Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.567Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.571Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.574Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.578Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.582Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.586Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:53:19.594Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.176Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:55:48.181Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:55:48.194Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.197Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.201Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.204Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.207Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.211Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.215Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.220Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.224Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.229Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.233Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.237Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.241Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:55:48.247Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.844Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:57:23.850Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:57:23.864Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.867Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.870Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.874Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.878Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.882Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.886Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.891Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.896Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.900Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.904Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.908Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.913Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:57:23.924Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.644Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T01:58:11.650Z] : info : HaulageController: list was found successfully.
+[2020-05-20T01:58:11.664Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.668Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.671Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.674Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.677Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.680Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.684Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.688Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.693Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.697Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.702Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.707Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.712Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T01:58:11.721Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.583Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:00:33.589Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:00:33.603Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.606Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.610Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.613Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.616Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.620Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.625Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.630Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.634Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.639Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.643Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.647Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.650Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:33.658Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.416Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:00:47.422Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:00:47.436Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.440Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.444Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.447Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.450Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.455Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.458Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.462Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.466Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.469Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.474Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.479Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.483Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:00:47.491Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.649Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:01:43.658Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:01:43.671Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.674Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.677Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.681Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.685Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.688Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.693Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.697Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.701Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.705Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.710Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.715Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.719Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:01:43.729Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:01.203Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:04:01.209Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:04:01.230Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeDatabaseError: no existe la columna «Id_driver,Id_vehicle»
+[2020-05-20T02:04:01.230Z] : error : Haulage_Driver_VehicleHandler: Error getting list: undefined
+[2020-05-20T02:04:15.187Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:04:15.194Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:04:15.203Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.205Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.208Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.210Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.213Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.215Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.219Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.223Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.226Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.230Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.233Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.236Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.238Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:04:15.242Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.052Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:06:03.059Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:06:03.069Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.073Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.076Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.079Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.083Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.087Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.092Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.097Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.103Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.107Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.111Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.115Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.119Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:03.121Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.412Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:06:37.419Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:06:37.427Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.431Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.433Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.436Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.439Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.442Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.445Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.448Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.451Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.454Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.457Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.460Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.463Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:06:37.464Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:17:43.134Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:17:43.138Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:17:43.145Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:28.306Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:18:28.313Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:18:28.322Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.283Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:18:57.290Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:18:57.300Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.304Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.308Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.311Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.315Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.319Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.341Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.350Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.357Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.363Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.369Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.377Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.384Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:18:57.387Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.924Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:23:46.931Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:23:46.938Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.942Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.947Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.951Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.955Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.960Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.965Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.972Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.977Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.982Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.988Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.993Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:46.997Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:23:47.003Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.952Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:24:43.958Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:24:43.966Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.970Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.973Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.976Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.981Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.987Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.993Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:43.998Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.005Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.010Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.016Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.022Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.028Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:24:44.031Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.743Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:28:27.751Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:28:27.761Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.764Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.766Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.769Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.772Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.775Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.778Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.782Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.785Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.788Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.792Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.795Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.798Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:28:27.801Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.700Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:30:44.709Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:30:44.719Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.724Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.727Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.730Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.732Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.734Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.736Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.740Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.744Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.747Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.750Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.753Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.756Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:30:44.762Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.308Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:48:04.315Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:48:04.322Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.325Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.327Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.329Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.331Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.333Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.335Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.336Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.339Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.342Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.344Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.346Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.348Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:48:04.351Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:53:10.476Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:53:10.482Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:53:10.483Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:53:23.933Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:53:23.939Z] : info : HaulageController: list was found successfully.
+[2020-05-20T02:53:23.940Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T02:54:56.026Z] : info : Server: Server is running
+[2020-05-20T02:54:56.177Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T02:54:56.243Z] : info : Server: database tables created if the dont exist
+[2020-05-20T02:55:02.684Z] : info : Check field: Field is valid
+[2020-05-20T02:55:02.743Z] : info : VehicleController: list was returned successfully.

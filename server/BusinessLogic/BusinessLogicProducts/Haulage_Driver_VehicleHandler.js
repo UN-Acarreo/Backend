@@ -1,16 +1,19 @@
 
 // Import ControllerFactory
 ControllerFactory = require('../../Controllers/ControllerFactory');
+description = require("../../constants").status_description
 
 // Import logger
 const logger = require('../../utils/logger/logger');
+//Op works for more advanced querys
+const { Op } = require("sequelize");
 
 // create all Haulage_Driver_Vehicle from list
 async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_haulage){
 
     for (const element of list_driver_vehicles) {
         let new_h_d_v = await ControllerFactory.getController("Haulage_Driver_Vehicle").create(
-            Id_haulage, element.Id_driver, element.Id_vehicle, false
+            Id_haulage, element.Id_driver, element.Id_vehicle, true
             )  
         if(new_h_d_v.status==-1)
         {
@@ -24,19 +27,80 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 // get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle() {
-    let list = await ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy({ Is_active: "true" })
-    if(list.status==1)
+    date = new Date(2018, 11, 24, 10, 33)
+    console.log("date: ")
+    console.log(date)
+    //getting all haulages that are active
+    let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy(
+        {
+            [Op.not]: 
+                [{ 
+                    Id_status: [description.IN_PROGRESS,
+                    description.RESERVED,
+                    description.WAITING_FOR_DRIVER] 
+                }],
+            where:
+            {
+                jjj: {
+                    [Op.between]: [new Date(2018, 11, 24, 10, 33), new Date(2018, 11, 24, 10, 50)]
+                }
+            }
+                /*
+            start_datetime: 
+                {
+                    [Op.gte]: moment().add(7, 'days').toDate()
+                }
+                */
+            
+        }
+    )
+    if(activeHaulages.status!=1)
     {
-        logger.info("Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.");
-        return {status: 1, data: list};
+        logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+activeHaulages.error);
+        return {status: -1, error: activeHaulages.error};  
     }
-    else{
-        logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+error);
-        return {status: -1, error: error};
-    }      
+
+    ////////////////////////77
+
+    //List of haulages needs to be checkd to include only active haulages in date
+
+    ////////////////////////
+
+    let bussyDrivers = []
+    let bussyVehicles = []
+    //for each haulage i am getting driver vehicles asociated
+    for (const element  of activeHaulages.data) {
+        let Id_haulage= element.Id_haulage
+        //bussyDriver_Vehicle is a list with all driver vehicles asociated
+        let bussyDriver_Vehicles = await 
+        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy({
+            Id_haulage:Id_haulage
+            });
+        if(bussyDriver_Vehicles.status==-1)
+        {
+            logger.error("Haulage_Driver_VehicleHandler: Error getting list: "+activeHaulages.error);
+            return {status: -1, error: bussyDriver_Vehicles.error};
+        }
+        for(const driver_vehicle of bussyDriver_Vehicles.data)
+        {
+            bussyDrivers.push(driver_vehicle.Id_driver)
+            bussyVehicles.push(driver_vehicle.Id_vehicle)
+        }
+    }
+    let bussyDriversSet = new Set(bussyDrivers)
+    let bussyVehiclesSet = new Set(bussyVehicles)
+    bussyDrivers = Array.from(bussyDriversSet)
+    bussyVehicles = Array.from(bussyVehiclesSet)
+    console.log(bussyDrivers)
+    console.log(bussyVehicles)
+    logger.info("Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.");
+    return {status: 1, data: {bussyDrivers:bussyDrivers,bussyVehicles:bussyVehicles}};
+
 }
 
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
     getListOfBussyDriverVehicle : getListOfBussyDriverVehicle
 }
+
+getListOfBussyDriverVehicle()

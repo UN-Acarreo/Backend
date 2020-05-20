@@ -225,7 +225,7 @@ router.post('/haulage/create', async function(req, res){
   //check for vehicle
 
   //this needs to be a list with all vehicles free the day of haulage for now its all of them
-  let vehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getAllVehicles();
+  let vehicles = await BusinessLogicFactory.getBusinessLogic("Vehicle").getFreeVehicles(values.Date);
   if(vehicles.status!=1)
   {
     logger.error("api.js: list of cars not found");
