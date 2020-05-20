@@ -4926,3 +4926,61 @@
 [2020-05-20T05:25:15.442Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
 [2020-05-20T05:25:15.442Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
 [2020-05-20T05:25:15.442Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:46:29.989Z] : info : Server: Server is running
+[2020-05-20T05:46:30.194Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:46:30.279Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:46:33.843Z] : info : Check field: Field is valid
+[2020-05-20T05:46:33.870Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:46:33.882Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.887Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.891Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.894Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.896Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.899Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.901Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.905Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:46:33.917Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:46:33.918Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:46:33.920Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:46:33.931Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:46:33.931Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:46:33.934Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:46:33.934Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:46:33.950Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:46:33.958Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:46:33.971Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:46:33.971Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:46:33.973Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:46:33.983Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:46:33.988Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:46:33.989Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:46:33.990Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-20T05:50:00.207Z] : info : Server: Server is running
+[2020-05-20T05:50:00.412Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-20T05:50:00.498Z] : info : Server: database tables created if the dont exist
+[2020-05-20T05:50:08.577Z] : info : Check field: Field is valid
+[2020-05-20T05:50:08.602Z] : info : HaulageController: list was found successfully.
+[2020-05-20T05:50:08.612Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.614Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.618Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.621Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.624Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.628Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.631Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.634Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-20T05:50:08.653Z] : info : VehicleController: list was returned successfully.
+[2020-05-20T05:50:08.656Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-20T05:50:08.659Z] : info : VehicleHandler:enough cars
+[2020-05-20T05:50:08.673Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:50:08.674Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:50:08.678Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-20T05:50:08.679Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-20T05:50:08.700Z] : info : RouteController: Route was created successfully.
+[2020-05-20T05:50:08.709Z] : info : CargoController: Cargo was created successfully.
+[2020-05-20T05:50:08.724Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-20T05:50:08.725Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-20T05:50:08.726Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-20T05:50:08.737Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:50:08.742Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-20T05:50:08.743Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-20T05:50:08.745Z] : info : api.js: all haulage_driver_vehicles created 

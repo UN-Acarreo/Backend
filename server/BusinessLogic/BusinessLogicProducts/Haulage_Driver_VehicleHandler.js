@@ -42,7 +42,7 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
         ({
-            [Op.not]: 
+            [Op.or]: 
                 [{ 
                     Id_status: [description.IN_PROGRESS,
                     description.RESERVED,
