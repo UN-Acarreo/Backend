@@ -41,7 +41,7 @@ async function getRegisterBy(query){
 
         let list = await ModelFactory.getModel("Haulage").findAll(
             {
-                were:query,
+                where:query,
                 raw:true,
                 attributes:["Id_haulage","Date"]
             }

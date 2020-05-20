@@ -26,45 +26,35 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 }
 
 // get list of bussy DriverVehicle
-async function getListOfBussyDriverVehicle() {
-    date = new Date(2018, 11, 24, 10, 33)
-    console.log("date: ")
-    console.log(date)
-    //getting all haulages that are active
-    let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy(
-        {
+async function getListOfBussyDriverVehicle(start_date,duration) {
+    let end_date = new Date(
+        start_date.getFullYear(), 
+        start_date.getMonth(), 
+        start_date.getDate(),
+        start_date.getHours()+duration.hours,
+        start_date.getMinutes()+duration.minuts
+        )
+
+    //getting all haulages that are active at time of haulage
+    let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
+        ({
             [Op.not]: 
                 [{ 
                     Id_status: [description.IN_PROGRESS,
                     description.RESERVED,
                     description.WAITING_FOR_DRIVER] 
                 }],
-            where:
-            {
-                jjj: {
-                    [Op.between]: [new Date(2018, 11, 24, 10, 33), new Date(2018, 11, 24, 10, 50)]
-                }
+            Date: {
+                    [Op.between]: [start_date,end_date]
             }
-                /*
-            start_datetime: 
-                {
-                    [Op.gte]: moment().add(7, 'days').toDate()
-                }
-                */
             
-        }
-    )
+        })
     if(activeHaulages.status!=1)
     {
         logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+activeHaulages.error);
         return {status: -1, error: activeHaulages.error};  
     }
-
-    ////////////////////////77
-
-    //List of haulages needs to be checkd to include only active haulages in date
-
-    ////////////////////////
+    console.log(activeHaulages)
 
     let bussyDrivers = []
     let bussyVehicles = []
@@ -103,4 +93,3 @@ module.exports ={
     getListOfBussyDriverVehicle : getListOfBussyDriverVehicle
 }
 
-getListOfBussyDriverVehicle()
