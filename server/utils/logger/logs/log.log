@@ -5289,3 +5289,247 @@
 [2020-05-20T14:20:02.695Z] : info : Server: Server is running
 [2020-05-20T14:20:02.889Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-05-20T14:20:03.007Z] : info : Server: database tables created if the dont exist
+[2020-05-23T23:16:41.851Z] : info : Server: Server is running
+[2020-05-23T23:16:42.023Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-23T23:16:42.088Z] : info : Server: database tables created if the dont exist
+[2020-05-23T23:16:46.755Z] : info : Check field: Field is valid
+[2020-05-23T23:16:46.779Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:16:46.780Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:16:46.789Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:16:46.790Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:16:46.791Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:16:46.803Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:16:46.803Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:16:46.807Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:16:46.808Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:16:46.892Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:16:46.946Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:16:46.961Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:16:46.962Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:16:46.962Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:16:46.984Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:16:46.989Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:16:46.990Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:16:46.990Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:16:49.386Z] : info : Check field: Field is valid
+[2020-05-23T23:16:49.391Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:16:49.397Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:16:49.398Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:16:49.403Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:16:49.403Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:16:49.404Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:16:49.404Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:17:02.609Z] : info : Check field: Field is valid
+[2020-05-23T23:17:02.692Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:17:02.696Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:02.696Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:02.702Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:17:02.702Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:17:02.702Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:17:02.702Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:17:07.677Z] : info : Check field: Field is valid
+[2020-05-23T23:17:07.681Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:17:07.681Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:07.684Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:17:07.684Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:17:07.684Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:17:07.690Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:17:07.690Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:17:07.694Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:17:07.694Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:17:07.703Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:17:07.708Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:17:07.721Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:17:07.722Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:17:07.722Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:17:07.733Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:17:07.737Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:17:07.738Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:17:07.738Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:17:34.291Z] : info : Server: Server is running
+[2020-05-23T23:17:34.595Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-23T23:17:34.702Z] : info : Server: database tables created if the dont exist
+[2020-05-23T23:17:43.728Z] : info : Server: Server is running
+[2020-05-23T23:17:43.941Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-05-23T23:17:44.031Z] : info : Server: database tables created if the dont exist
+[2020-05-23T23:17:53.205Z] : info : Check field: Field is valid
+[2020-05-23T23:17:53.236Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:17:53.237Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:53.247Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:17:53.249Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:17:53.250Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:17:53.258Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:17:53.259Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:17:53.262Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:17:53.262Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:17:53.287Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:17:53.297Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:17:53.314Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:17:53.314Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:17:53.315Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:17:53.327Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:17:53.331Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:17:53.331Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:17:53.331Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:17:56.780Z] : info : Check field: Field is valid
+[2020-05-23T23:17:56.784Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:17:56.788Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:56.788Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:17:56.791Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:17:56.791Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:17:56.792Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:17:56.792Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:18:01.861Z] : info : Check field: Field is valid
+[2020-05-23T23:18:01.865Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:01.868Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:01.868Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:01.870Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:01.871Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:01.871Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:18:01.871Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:18:13.931Z] : info : Check field: Field is valid
+[2020-05-23T23:18:14.014Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:14.018Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:14.019Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:14.025Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:14.026Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:14.026Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:18:14.026Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:18:18.976Z] : info : Check field: Field is valid
+[2020-05-23T23:18:18.979Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:18.982Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:18.982Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:18.985Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:18.985Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:18.985Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:18:18.985Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:18:29.837Z] : info : Check field: Field is valid
+[2020-05-23T23:18:29.910Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:29.910Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:29.916Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:29.916Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:29.916Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:18:29.924Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:29.924Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:29.927Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:29.927Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:29.936Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:18:29.944Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:18:29.956Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:18:29.956Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:18:29.956Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:18:29.983Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:29.989Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:29.989Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:18:29.989Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:18:40.941Z] : info : Check field: Field is valid
+[2020-05-23T23:18:41.025Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:41.029Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:41.029Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:41.033Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:41.033Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:41.033Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:18:41.033Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:18:52.828Z] : info : Check field: Field is valid
+[2020-05-23T23:18:52.902Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:52.903Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:52.924Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:52.924Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:52.925Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:18:52.932Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:52.932Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:52.935Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:52.935Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:52.950Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:18:52.958Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:18:52.981Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:18:52.981Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:18:52.981Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:18:52.993Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:52.998Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:52.998Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:18:52.998Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:18:56.797Z] : info : Check field: Field is valid
+[2020-05-23T23:18:56.800Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:18:56.800Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:18:56.803Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:18:56.803Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:18:56.803Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:18:56.808Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:56.808Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:56.810Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:18:56.810Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:18:56.814Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:18:56.821Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:18:56.826Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:18:56.826Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:18:56.826Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:18:56.885Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:56.898Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:18:56.898Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:18:56.899Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:19:00.714Z] : info : Check field: Field is valid
+[2020-05-23T23:19:00.718Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:19:00.718Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:19:00.721Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:19:00.721Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:19:00.721Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:19:00.723Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:00.723Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:00.725Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:00.726Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:00.736Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:19:00.740Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:19:00.748Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:19:00.748Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:19:00.748Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:19:00.753Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:00.771Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:00.771Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:19:00.771Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:19:06.725Z] : info : Check field: Field is valid
+[2020-05-23T23:19:06.729Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:19:06.729Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:19:06.731Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:19:06.731Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:19:06.731Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:19:06.735Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:06.735Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:06.738Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:06.738Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:06.742Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:19:06.748Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:19:06.753Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:19:06.753Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:19:06.753Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:19:06.757Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:06.866Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:06.866Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:19:06.867Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-05-23T23:19:11.316Z] : info : Check field: Field is valid
+[2020-05-23T23:19:11.319Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:19:11.322Z] : info : Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:19:11.322Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:19:11.324Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:19:11.325Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:19:11.325Z] : info : VehicleHandler: not enough cars
+[2020-05-23T23:19:11.325Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-05-23T23:19:24.232Z] : info : Check field: Field is valid
+[2020-05-23T23:19:24.347Z] : info : HaulageController: list was found successfully.
+[2020-05-23T23:19:24.348Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-05-23T23:19:24.353Z] : info : VehicleController: list was returned successfully.
+[2020-05-23T23:19:24.353Z] : error : VehicleHandler:list of free vehciles ready:
+[2020-05-23T23:19:24.353Z] : info : VehicleHandler:enough cars
+[2020-05-23T23:19:24.358Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:24.359Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:24.360Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-05-23T23:19:24.361Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-05-23T23:19:24.370Z] : info : RouteController: Route was created successfully.
+[2020-05-23T23:19:24.376Z] : info : CargoController: Cargo was created successfully.
+[2020-05-23T23:19:24.394Z] : info : HaulageController: Haulage was created successfully.
+[2020-05-23T23:19:24.394Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-05-23T23:19:24.394Z] : info : api.js: haulage, cargo and route created: 
+[2020-05-23T23:19:24.407Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:24.410Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-05-23T23:19:24.411Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-05-23T23:19:24.411Z] : info : api.js: all haulage_driver_vehicles created 

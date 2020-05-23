@@ -23,7 +23,7 @@ async function createHaulageWithRouteCargo(values)
         if(cargo.status==1)
         {
           //cargo created, creating haulage
-          let date = new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute)
+          let date = new Date(values.Date.Year,values.Date.Month-1,values.Date.Day,values.Date.Hour,values.Date.Minute)
           let haulage = await ControllerFactory.getController("Haulage").create({
             Date: date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
           });
