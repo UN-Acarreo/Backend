@@ -227,7 +227,7 @@ router.post('/haulage/create', async function(req, res){
   //this is a set with all vehicles and a set of drivers bussy the day of haulage
   let free_drivers_and_vehicles =
    await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").getListOfBussyDriverVehicle(
-     new Date(values.Date.Year,values.Date.Month-1,values.Date.Day,values.Date.Hour,values.Date.Minute),
+     new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute),
      {hours:parseInt(values.Duration),minutes:0}
      );
 
