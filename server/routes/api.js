@@ -291,7 +291,11 @@ router.post('/haulage/create', async function(req, res){
   if(response.status==1)
   {
     logger.info("api.js: all haulage_driver_vehicles created ");
-    return res.status(201).json({status: 1, data: {haulage_data:haulage.data,vehicles_data:needed_driver_vehicles}});
+    info = await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
+    if(info.status!=1)
+      return res.status(500).json({status: -1, error: "Hubo un problema al enviarle los datos de su acarreo"})
+
+    return res.status(201).json({status: 1, data: info.data});
   }
   else{
     logger.error("api.js: error creating haulage_driver_vehicles: "+response.error);

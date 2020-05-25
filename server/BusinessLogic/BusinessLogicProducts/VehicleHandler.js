@@ -70,7 +70,7 @@ async function getFreeVehicles(bussyVehicles)
     }    
   }
 
-  logger.error("VehicleHandler:list of free vehciles ready:");
+  logger.info("VehicleHandler:list of free vehciles ready:");
   return {status: 1, data:freeVehicles}; 
 
 }

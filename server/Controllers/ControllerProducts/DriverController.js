@@ -82,10 +82,27 @@ async function getRegisterBy(query)
 
     }
 }
+async function getRegisterByPk(Pk,attributes)
+{
+    try {
+        let driver = await ModelFactory.getModel("Driver").findByPk(Pk,
+            { 
+                attributes: attributes,
+                raw: true
+            })
+        logger.info("DriverController: register was returned successfully.");
+        return {status: 1, data:driver}
+        
+    } catch (error) {
+        logger.error("DriverController: " + error);
+        return {status: -1, error: error};
+    }
+}
 
 module.exports = { 
     create: create, 
-    countWhere:countWhere,
-    getRegisterBy:getRegisterBy
+    countWhere: countWhere,
+    getRegisterBy: getRegisterBy,
+    getRegisterByPk: getRegisterByPk
 
  };

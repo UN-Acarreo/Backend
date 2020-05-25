@@ -48,7 +48,6 @@ async function createHaulageWithRouteCargo(values)
         return{status:-2,error:route.error};
       }
 }
-
 module.exports = { 
     createHaulageWithRouteCargo: createHaulageWithRouteCargo
     };

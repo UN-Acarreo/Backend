@@ -52,7 +52,27 @@ async function getAll()
     }
 }
 
+async function getRegisterByPk(Pk,attributes)
+{
+    try {
+        let vehicle = await ModelFactory.getModel("Vehicle").findByPk(Pk,
+            { 
+                attributes: attributes,
+                raw: true
+            })
+        logger.info("VehicleController: list was returned successfully.");
+        console.log("driver: ")
+        console.log(vehicle)
+        return {status: 1, data:vehicle}
+        
+    } catch (error) {
+        logger.error("VehicleController: " + error);
+        return {status: -1, error: error};
+    }
+}
+
 module.exports = { 
     create: create,
-    getAll : getAll 
+    getAll: getAll,
+    getRegisterByPk: getRegisterByPk 
 };

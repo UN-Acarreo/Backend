@@ -102,9 +102,64 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
     return {status: 1, data: {bussyDrivers:bussyDriversSet,bussyVehicles:bussyVehiclesSet}};
 
 }
+async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
+{
+    let driverInfo= await ControllerFactory.getController("Driver").getRegisterByPk(
+        driver_Pk,["Driver_name","Driver_last_name","Driver_phone"]
+    )
+    if(driverInfo.status!=1)
+    {
+        logger.error("Haulage_Driver_VehicleHandler: cant get driver info: "+driverInfo.error);
+        return {status: -1, error: driverInfo.error};
+    }
+    let vehicleInfo= await ControllerFactory.getController("Vehicle").getRegisterByPk(
+        vehicle_Pk,["Plate","Brand","Model"]
+    )
+    if(vehicleInfo.status!=1)
+    {
+        logger.error("Haulage_Driver_VehicleHandler: cant get vehicle info: "+vehicleInfo.error);
+        return {status: -1, error: vehicleInfo.error};
+    }
+    logger.info("Haulage_Driver_VehicleHandler: driver_vehicle info ok ");
+    let driver = driverInfo.data
+    let vehicle = vehicleInfo.data
+    return {
+        status: 1, 
+        data: 
+        {
+            Plate:vehicle.Plate,
+            Brand:vehicle.Brand,
+            Model:vehicle.Model,
+            Driver_name:driver.Driver_name,
+            Driver_last_name:driver.Driver_last_name,
+            Driver_phone:driver.Driver_phone
+        }
+    }
+}
+async function getAll_Driver_VehicleInfo(needed_driver_vehicles)
+{
+    list = []
+    for(element of needed_driver_vehicles)
+    {
+        let driver_vehicle = await getDriver_VehicleInfo(element.Id_driver,element.Id_vehicle)
+        if(driver_vehicle.status!=-1)
+        {
+            list.push(driver_vehicle.data)
+        }
+        else
+        {
+            return {status: -1, error: driver_vehicle.error};
+        }
+    }
+    logger.info("Haulage_Driver_VehicleHandler: all driver_vehicle info ok ");
+    return{status:1, data:list}
+}
+
 
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
-    getListOfBussyDriverVehicle : getListOfBussyDriverVehicle
+    getListOfBussyDriverVehicle : getListOfBussyDriverVehicle,
+    getDriver_VehicleInfo: getDriver_VehicleInfo,
+    getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo
 }
 
