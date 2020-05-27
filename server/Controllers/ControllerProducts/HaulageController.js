@@ -36,6 +36,26 @@ async function create(req) {
     }
 }
 
+async function getRegisterBy(query){
+    try{
+
+        let list = await ModelFactory.getModel("Haulage").findAll(
+            {
+                where:query,
+                raw:true,
+                attributes:["Id_haulage","Date"]
+            }
+        )
+        //console.log(weight.dataValues)
+        logger.info("HaulageController: list was found successfully.");
+        return {status: 1, data: list};
+    }catch(error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error:error};
+    }
+
+} 
+
 /*
 //returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
 async function getWeight(Id_haulage){
@@ -60,7 +80,8 @@ async function getWeight(Id_haulage){
 */
 
 module.exports = { 
-    create: create
+    create: create,
+    getRegisterBy:getRegisterBy
 };
 
 

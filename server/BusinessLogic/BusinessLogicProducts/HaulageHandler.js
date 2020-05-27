@@ -12,7 +12,7 @@ const logger = require('../../utils/logger/logger');
 async function createHaulageWithRouteCargo(values)
 {
     let route = await ControllerFactory.getController("Route").create({
-        Origin_coord: values.Origin_coord, Destination_coord: values.Destination_coord
+        Origin_coord: values.Origin_coord, Destination_coord: values.Destination_coord,Duration: values.Duration
       });
       if(route.status==1)
       {
@@ -23,8 +23,9 @@ async function createHaulageWithRouteCargo(values)
         if(cargo.status==1)
         {
           //cargo created, creating haulage
+          let date = new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute)
           let haulage = await ControllerFactory.getController("Haulage").create({
-            Date: values.Date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
+            Date: date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
           });
           if(haulage.status == 1)
           {
@@ -47,7 +48,6 @@ async function createHaulageWithRouteCargo(values)
         return{status:-2,error:route.error};
       }
 }
-
 module.exports = { 
     createHaulageWithRouteCargo: createHaulageWithRouteCargo
     };

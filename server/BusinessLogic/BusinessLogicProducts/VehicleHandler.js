@@ -52,14 +52,31 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
 }
 
-// Get all vehicles
-function getAllVehicles()
+// Get Free vehicles that are not reserved in date
+async function getFreeVehicles(bussyVehicles)
 {
-  return ControllerFactory.getController("Vehicle").getAll();
+  let freeVehicles = []
+  var allVehicles = await ControllerFactory.getController("Vehicle").getAll();
+
+  if(allVehicles.status!=1)
+  {
+    logger.error("VehicleHandler:error getting all vehicles:"+allVehicles.error);
+    return {status: -1, error:allVehicles.error};
+  }
+  for (const vehicle of allVehicles.data) {
+    if(!bussyVehicles.has(vehicle.Id_vehicle))
+    {
+      freeVehicles.push(vehicle)
+    }    
+  }
+
+  logger.info("VehicleHandler:list of free vehciles ready:");
+  return {status: 1, data:freeVehicles}; 
+
 }
 
 module.exports = {
     getListOfNeededVehicles : getListOfNeededVehicles,
     createVehicle : createVehicle,
-    getAllVehicles: getAllVehicles
+    getFreeVehicles: getFreeVehicles
   };

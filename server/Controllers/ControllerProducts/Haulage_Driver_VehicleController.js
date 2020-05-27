@@ -34,12 +34,11 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 async function getRegisterBy(query) {
     
     try {
-        
-        let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll(
-            { 
-                where: query,
-                attributes: ['Id_driver','Id_vehicle']
-            });
+        let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll({
+            attributes:["Id_driver","Id_vehicle"],
+            where:query,
+            raw:true
+        });
         logger.info("Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.");
         return {status: 1, data: list};
     } catch (error) {
@@ -49,7 +48,23 @@ async function getRegisterBy(query) {
         
 }
 
+
+
+async function getAll(query) {
+    
+    try {
+        
+        let list = await ModelFactory.getModel("Haulage").findAll({});
+        logger.info("Haulage_Driver_VehicleController: list of all registers returned successfully.");
+        return {status: 1, data: list};
+    } catch (error) {
+        logger.error("Haulage_Driver_VehicleController: Error getting list:"+error);
+        return {status: -1, error: error};
+    }
+        
+}
 module.exports = { 
     create: create, 
-    getRegisterBy: getRegisterBy
+    getRegisterBy: getRegisterBy,
+    getAll: getAll
  };
