@@ -3,7 +3,9 @@
 
 // Import logger
 const logger = require('./../../utils/logger/logger');
-const Status = require('../../Models/Status');
+//const Status = require('../../Models/Status'); changed
+const Status = require('../../Models/ModelProducts/Status');
+
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -19,15 +21,15 @@ module.exports = {
     .catch(err => {
       logger.error("Seeders/statusDescription: Can't insert data: " + err);
     });
-   
+
   },
 
   down: (queryInterface, Sequelize) => {
     //deleting
    return Promise.all([
-  
+
     Status.truncate({restartIdentity: true, cascade: true})
-     
+
   ]).then(() => {
     logger.info("Seeders/statusDescription: Deletion complete.");
   })
