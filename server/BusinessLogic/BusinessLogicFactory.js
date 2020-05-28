@@ -21,6 +21,14 @@ class BusinessLogicFactory {
                 return require("./BusinessLogicProducts/UserHandler");
             case "Vehicle":
                 return require("./BusinessLogicProducts/VehicleHandler");
+            case "Cargo":
+                return require("./BusinessLogicProducts/CargoHandler");
+            case "Route":
+                return require("./BusinessLogicProducts/RouteHandler");
+            case "Status":
+                return require("./BusinessLogicProducts/StatusHandler");
+            case "Rating":
+                return require("./BusinessLogicProducts/RatingHandler");
             default:
                 return null;
         }

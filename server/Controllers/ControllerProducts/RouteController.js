@@ -5,6 +5,30 @@ ModelFactory = require('../../Models/ModelFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+//Return route information
+async function getRouteInfo(route_id){
+    try{
+    var RouteModel = await ModelFactory.getModel("Route")
+    let route_info = await RouteModel.findAll(
+        { where: { Id_route: route_id } }
+        )
+    //query returns array of routes that match where clause, in this case only 1
+    if(route_info.length==0)
+    {
+        logger.info("RouteController: No route found with that id")
+        return {status:0, data:" No route information found with that id"}
+    }
+    else{
+        logger.info("RouteController: route info found")
+        return {status: 1, data: route_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("RouteController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 // Create Route
 async function create(req) {
 
@@ -20,12 +44,12 @@ async function create(req) {
             {
                 Origin_coord: Origin_coord,
                 Destination_coord: Destination_coord,
-                Duration: Duration 
+                Duration: Duration
             }
         );
         logger.info("RouteController: Route was created successfully.");
-        return {status: 1, data: new_route.Id_route};  
-        
+        return {status: 1, data: new_route.Id_route};
+
     } catch (error) {
         logger.error("RouteController: " + error);
         return {status: -1, error: error};
@@ -33,7 +57,7 @@ async function create(req) {
 
 }
 
-module.exports = { create: create };
+module.exports = { create: create, getRouteInfo: getRouteInfo };
 
 /*
 async function test(){
@@ -46,4 +70,3 @@ async function test(){
 
 test();
 */
-
