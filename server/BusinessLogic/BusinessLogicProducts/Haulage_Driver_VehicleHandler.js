@@ -14,7 +14,7 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
     for (const element of list_driver_vehicles) {
         let new_h_d_v = await ControllerFactory.getController("Haulage_Driver_Vehicle").create(
             Id_haulage, element.Id_driver, element.Id_vehicle, true
-            )  
+            )
         if(new_h_d_v.status==-1)
         {
                 logger.error("Haulage_Driver_VehicleHandler: " + error);
@@ -29,29 +29,29 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 async function getListOfBussyDriverVehicle(start_date,duration) {
     //start date and end date are dates in wich new haulage needs to take place
     let end_date = new Date(
-        start_date.getFullYear(), 
-        start_date.getMonth(), 
+        start_date.getFullYear(),
+        start_date.getMonth(),
         start_date.getDate(),
         start_date.getHours()+duration.hours,
         start_date.getMinutes()+duration.minutes
         )
     let fake_start_date = new Date(
-        start_date.getFullYear(), 
-        start_date.getMonth(), 
+        start_date.getFullYear(),
+        start_date.getMonth(),
         start_date.getDate(),
         start_date.getHours()-duration.hours,
         start_date.getMinutes()-duration.minutes
         )
     let fake_end_date =start_date
-    
+
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
         ({
-            [Op.or]: 
-                [{ 
+            [Op.or]:
+                [{
                     Id_status: [description.IN_PROGRESS,
                     description.RESERVED,
-                    description.WAITING_FOR_DRIVER] 
+                    description.WAITING_FOR_DRIVER]
                 }],
             [Op.or]:
                 [
@@ -67,12 +67,12 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
                             [Op.between]: [fake_start_date,fake_end_date]
                         }
                     }
-                ]            
+                ]
         })
     if(activeHaulages.status!=1)
     {
         logger.error("Haulage_Driver_VehicleHandler: Error getting list:"+activeHaulages.error);
-        return {status: -1, error: activeHaulages.error};  
+        return {status: -1, error: activeHaulages.error};
     }
     let bussyDrivers = []
     let bussyVehicles = []
@@ -80,7 +80,7 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
     for (const element  of activeHaulages.data) {
         let Id_haulage= element.Id_haulage
         //bussyDriver_Vehicle is a list with all driver vehicles asociated
-        let bussyDriver_Vehicles = await 
+        let bussyDriver_Vehicles = await
         ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy({
             Id_haulage:Id_haulage
             });
@@ -124,8 +124,8 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
     let driver = driverInfo.data
     let vehicle = vehicleInfo.data
     return {
-        status: 1, 
-        data: 
+        status: 1,
+        data:
         {
             Plate:vehicle.Plate,
             Brand:vehicle.Brand,
@@ -155,11 +155,28 @@ async function getAll_Driver_VehicleInfo(needed_driver_vehicles)
     return{status:1, data:list}
 }
 
+//Returns the vehicle information from assigned vehicles
+async function getVehiclesAssigned(haualge_id){
+    let vehicles = await ControllerFactory.getController("Haulage_Driver_Vehicle").getVehiclesAssigned(haualge_id)
+    if(vehicles.status == -1){
+      logger.error("Haulage_Driver_VehicleHandler Handler: " +vehicles.data);
+      return {status: -1, data: vehicles.data};
+    }
+    if(vehicles.status == 0){
+      logger.error("Haulage_Driver_VehicleHandler Handler: " +vehicles.data);
+      return {status: 0, data: vehicles.data};
+    }
+
+    return {status: 1, data: vehicles.data}
+
+
+}
+
 
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
     getListOfBussyDriverVehicle : getListOfBussyDriverVehicle,
     getDriver_VehicleInfo: getDriver_VehicleInfo,
-    getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo
+    getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo,
+    getVehiclesAssigned: getVehiclesAssigned
 }
-

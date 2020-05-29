@@ -38,14 +38,14 @@ async function getAll()
 {
     try {
         let vehicles = await ModelFactory.getModel("Vehicle").findAll(
-            { 
+            {
                 attributes: ['Id_vehicle','Payload_capacity'],
                 raw: true,
                 //include: [{model:VehicleModel, atributes: ["Payload_capacity"]}]
             })
         logger.info("VehicleController: list was returned successfully.");
         return {status: 1, data:vehicles}
-        
+
     } catch (error) {
         logger.error("VehicleController: " + error);
         return {status: -1, error: error};
@@ -56,7 +56,7 @@ async function getRegisterByPk(Pk,attributes)
 {
     try {
         let vehicle = await ModelFactory.getModel("Vehicle").findByPk(Pk,
-            { 
+            {
                 attributes: attributes,
                 raw: true
             })
@@ -64,15 +64,40 @@ async function getRegisterByPk(Pk,attributes)
         console.log("driver: ")
         console.log(vehicle)
         return {status: 1, data:vehicle}
-        
+
     } catch (error) {
         logger.error("VehicleController: " + error);
         return {status: -1, error: error};
     }
 }
 
-module.exports = { 
+//Return vehicle information
+async function getVehicleInfo(vehicle_id){
+    try{
+    var VehicleModel = await ModelFactory.getModel("Vehicle")
+    let vehicle_info = await VehicleModel.findAll(
+        { where: { Id_vehicle: vehicle_id } }
+        )
+    //query returns array of vehicles that match where clause, in this case we expect only 1
+    if(vehicle_info.length==0)
+    {
+        logger.info("VehicleController: No vehicle found with that id")
+        return {status:0, data:" No vehicle information found with that id"}
+    }
+    else{
+        logger.info("VehicleController: vehicle info found")
+        return {status: 1, data: vehicle_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("VehicleController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
+module.exports = {
     create: create,
     getAll: getAll,
-    getRegisterByPk: getRegisterByPk 
+    getRegisterByPk: getRegisterByPk,
+    getVehicleInfo: getVehicleInfo
 };

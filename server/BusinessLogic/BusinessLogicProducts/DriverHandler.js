@@ -65,7 +65,24 @@ async function validateDriver(req) {
       return {status: 0, data: false};  ;
 }
 
+
+async function getDriverInfo(driver_id){
+    let driver = await ControllerFactory.getController("Driver").getDriverInfo(driver_id)
+    if(driver.status == -1){
+      logger.error("Driver Handler: " +driver.data);
+      return {status: -1, data: driver.data};
+    }
+    if(driver.status == 0){
+      logger.error("driver Handler: " +driver.data);
+      return {status: 0, data: driver.data};
+    }
+
+    return {status: 1, data: driver.data}
+
+}
+
 module.exports = {
     validateDriver: validateDriver,
-    createDriver : createDriver
+    createDriver : createDriver,
+    getDriverInfo: getDriverInfo
   };

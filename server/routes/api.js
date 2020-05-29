@@ -224,6 +224,7 @@ router.get('/haulage/list/:Id_user', async function(req, res){
       let haulage_object = {} //A haulage object containing the information will be returned for each haulage
       //Each haulage variable being iterated contains the following info:
       //Id_haulage, Id_user, Id_route, Id_cargo, Id_rating, Id_status, Date
+      haulage_object.vehicles = []
 
       //Get the cargo info (Weight, description)
       const cargo_info = await BusinessLogicFactory.getBusinessLogic("Cargo").getCargoInfo(haulage.Id_cargo);
@@ -237,7 +238,20 @@ router.get('/haulage/list/:Id_user', async function(req, res){
       const rating_info = await BusinessLogicFactory.getBusinessLogic("Rating").getRatingInfo(haulage.Id_rating);
       //console.log(rating_info)
 
-      //add the information to the haulage object and then add the object to the list to  be returned
+      const driver_vehicles_assigned = await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").getVehiclesAssigned(haulage.Id_haulage);
+      //Get the actual information from vehicle and driver
+      for(const driver_vehicle of driver_vehicles_assigned.data){
+         console.log(driver_vehicle.dataValues)
+         var assigned_vehicle_driver_info = {}
+         var vehicle_info = await BusinessLogicFactory.getBusinessLogic("Vehicle").getVehicleInfo(driver_vehicle.Id_vehicle);
+         var driver_info = await BusinessLogicFactory.getBusinessLogic("Driver").getDriverInfo(driver_vehicle.Id_driver);
+         assigned_vehicle_driver_info.vehicle = vehicle_info.data 
+         assigned_vehicle_driver_info.driver = driver_info.data
+         //add the vehicle object to the haulage
+         haulage_object.vehicles.push(assigned_vehicle_driver_info)
+      }
+
+      //add the other information to the haulage object and then add the object to the list to  be returned
       haulage_object.date = haulage.dataValues.Date;
       haulage_object.cargo = cargo_info.data;
       haulage_object.route = route_info.data;
@@ -246,7 +260,7 @@ router.get('/haulage/list/:Id_user', async function(req, res){
       haulage_list.push(haulage_object);
 
   }
-    console.log(haulage_list)
+    //console.log(haulage_list)
     return res.status(200).json({haulages: haulage_list})
   }
   if(haulages.status == 0){

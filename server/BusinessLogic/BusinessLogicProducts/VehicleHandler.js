@@ -6,7 +6,7 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 const logger = require('../../utils/logger/logger');
 
 // Create vehicle
-async function createVehicle(req) 
+async function createVehicle(req)
 {
     // Get atributes
     const { Plate, Brand, Model, Payload_capacity, Photo } = req.body.request;
@@ -17,7 +17,7 @@ async function createVehicle(req)
     if(result.status==1)
     {
       logger.info("VehicleHandler: Vehicle was created successfully.");
-      
+
       return {status: 1, data: result.data}
     }
     logger.error("VehicleHandler: " + result.error);
@@ -30,7 +30,7 @@ function getListOfNeededVehicles(free_vehicles,weight)
 {
   var needed_vehicles =[]
   var acum_capacity = 0;
-  
+
 
   for (const element of free_vehicles) {
     Id_vehicle=element.Id_vehicle;
@@ -67,16 +67,33 @@ async function getFreeVehicles(bussyVehicles)
     if(!bussyVehicles.has(vehicle.Id_vehicle))
     {
       freeVehicles.push(vehicle)
-    }    
+    }
   }
 
   logger.info("VehicleHandler:list of free vehciles ready:");
-  return {status: 1, data:freeVehicles}; 
+  return {status: 1, data:freeVehicles};
 
 }
+
+async function getVehicleInfo(vehicle_id){
+    let vehicle = await ControllerFactory.getController("Vehicle").getVehicleInfo(vehicle_id)
+    if(vehicle.status == -1){
+      logger.error("vehicle Handler: " +vehicle.data);
+      return {status: -1, data: vehicle.data};
+    }
+    if(vehicle.status == 0){
+      logger.error("vehicle Handler: " +vehicle.data);
+      return {status: 0, data: vehicle.data};
+    }
+
+    return {status: 1, data: vehicle.data}
+
+}
+
 
 module.exports = {
     getListOfNeededVehicles : getListOfNeededVehicles,
     createVehicle : createVehicle,
-    getFreeVehicles: getFreeVehicles
+    getFreeVehicles: getFreeVehicles,
+    getVehicleInfo: getVehicleInfo
   };
