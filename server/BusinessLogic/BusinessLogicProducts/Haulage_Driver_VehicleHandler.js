@@ -81,9 +81,10 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
         let Id_haulage= element.Id_haulage
         //bussyDriver_Vehicle is a list with all driver vehicles asociated
         let bussyDriver_Vehicles = await
-        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy({
-            Id_haulage:Id_haulage
-            });
+        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy(
+            {Id_haulage:Id_haulage},
+            ["Id_driver","Id_vehicle"]
+            );
         if(bussyDriver_Vehicles.status==-1)
         {
             logger.error("Haulage_Driver_VehicleHandler: Error getting list second for: "+activeHaulages.error);
@@ -168,8 +169,21 @@ async function getVehiclesAssigned(haualge_id){
     }
 
     return {status: 1, data: vehicles.data}
-
-
+}
+async function get_Haulage_Driver_Vehicles_of_Driver(dirver_id)
+{
+    let vehicles_haulages = await
+        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy(
+            {Id_driver:dirver_id},
+            ["Id_haulage","Id_vehicle"]
+            );
+    if(vehicles_haulages.status!=1)
+    {
+        logger.error("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver: " +vehicles_haulages.error);
+        return {status: -1, error: vehicles_haulages.error};
+    }
+    logger.info("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success")
+    return {status: 1, data: vehicles_haulages.data};
 }
 
 
@@ -178,5 +192,7 @@ module.exports ={
     getListOfBussyDriverVehicle : getListOfBussyDriverVehicle,
     getDriver_VehicleInfo: getDriver_VehicleInfo,
     getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo,
-    getVehiclesAssigned: getVehiclesAssigned
+    getVehiclesAssigned: getVehiclesAssigned,
+    get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver
 }
+

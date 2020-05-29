@@ -12,7 +12,7 @@ async function getRatingInfo(rating_id){
       return {status: -1, data: rating.data};
     }
     if(rating.status == 0){
-      logger.error("Rating Handler: " +rating.data);
+      logger.info("Rating Handler: " +rating.data);
       return {status: 0, data: rating.data};
     }
 
