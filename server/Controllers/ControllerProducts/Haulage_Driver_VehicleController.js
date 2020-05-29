@@ -22,7 +22,7 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
         );
         logger.info("Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.");
         return {status:1};
-        
+
     } catch (error) {
         logger.error("Haulage_Driver_VehicleController: " + error);
         return {status:-1,error:error};
@@ -32,7 +32,7 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 
 // get Register by
 async function getRegisterBy(query) {
-    
+
     try {
         let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll({
             attributes:["Id_driver","Id_vehicle"],
@@ -45,15 +45,14 @@ async function getRegisterBy(query) {
         logger.error("Haulage_Driver_VehicleController: Error getting list:"+error);
         return {status: -1, error: error};
     }
-        
+
 }
 
 
-
 async function getAll(query) {
-    
+
     try {
-        
+
         let list = await ModelFactory.getModel("Haulage").findAll({});
         logger.info("Haulage_Driver_VehicleController: list of all registers returned successfully.");
         return {status: 1, data: list};
@@ -61,10 +60,34 @@ async function getAll(query) {
         logger.error("Haulage_Driver_VehicleController: Error getting list:"+error);
         return {status: -1, error: error};
     }
-        
 }
-module.exports = { 
-    create: create, 
+
+async function getVehiclesAssigned(haulage_id){
+    try{
+    var Model = await ModelFactory.getModel("Haulage_Driver_Vehicle")
+    let driver_vehicle_info = await Model.findAll(
+        { where: { Id_haulage: haulage_id } }
+        )
+    //query returns array of haulage-driver-vehicle
+    if(driver_vehicle_info.length==0)
+    {
+        logger.info("Haulage_Driver_VehicleController: No driver_vehicle_info found with that id")
+        return {status:0, data:" No driver_vehicle_info information found with that id"}
+    }
+    else{
+        logger.info("Haulage_Driver_VehicleController: driver_vehicle_info info found")
+        return {status: 1, data: driver_vehicle_info}
+    }
+
+  } catch (error) {
+    logger.info("Haulage_Driver_VehicleController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
+module.exports = {
+    create: create,
     getRegisterBy: getRegisterBy,
-    getAll: getAll
+    getAll: getAll,
+    getVehiclesAssigned: getVehiclesAssigned
  };

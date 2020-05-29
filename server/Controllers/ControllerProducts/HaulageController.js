@@ -8,6 +8,32 @@ const logger = require('../../utils/logger/logger');
 //importing description values
 const descprition = require('../../constants');
 
+
+//Return existing haulage data from user
+async function getHaulages(user_id){
+    try{
+    var HaulageModel = await ModelFactory.getModel("Haulage")
+    let haulages = await HaulageModel.findAll(
+        { where: { Id_user: user_id } }
+        )
+    //query returns array of users that match were clause
+    if(haulages.length==0)
+    {
+        logger.info("HaulageController: User has zero haulages")
+        return {status:0, data:"no hulages found"}
+    }
+    else{
+        logger.info("HaulageController: User haulages found")
+        //h[0] should be the only user in array, .dataValues is Json containing atributes   return {status: 1,data: haulages.dataValues}
+        return {status: 1, data: haulages}
+    }
+
+  } catch (error) {
+    logger.info("HaulageController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 // Create Haulage
 //returns status 1 if created succesfully, data is new haulage
 //returns status -1 if error
@@ -16,7 +42,7 @@ async function create(req) {
     try {
         // Get atributes
         const { Date, Id_user, Id_route, Id_cargo} = req;
-        
+
         // Create Haulage
         let new_haulage = await ModelFactory.getModel("Haulage").create(
             {
@@ -29,7 +55,7 @@ async function create(req) {
         );
         logger.info("HaulageController: Haulage was created successfully.");
         return {status: 1, data: new_haulage};
-        
+
     } catch (error) {
         logger.error("HaulageController: " + error);
          return {status: -1, error:error};
@@ -54,7 +80,7 @@ async function getRegisterBy(query){
         return {status: -1, error:error};
     }
 
-} 
+}
 
 /*
 //returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
@@ -76,12 +102,11 @@ async function getWeight(Id_haulage){
         return {status: -1, error:error};
     }
 
-} 
+}
 */
 
-module.exports = { 
+module.exports = {
     create: create,
-    getRegisterBy:getRegisterBy
+    getRegisterBy:getRegisterBy,
+    getHaulages: getHaulages
 };
-
-

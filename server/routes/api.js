@@ -29,7 +29,7 @@ router.post('/log-client-errors', async function(req, res){
 router.post('/:type_of_user/login', async function(req, res){
   //TODO login user using Oauth
   let type_of_user = req.params.type_of_user
-  //data validation  
+  //data validation
   const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({status:-2, error: valid_fields})
@@ -63,7 +63,7 @@ router.post('/:type_of_user/login', async function(req, res){
     let new_req ={body:{request:new_request}};
 
     let {status,data} = await BusinessLogicFactory.getBusinessLogic("Driver").validateDriver(new_req);
-   
+
     if(status==1)
     {
       //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
@@ -212,10 +212,71 @@ router.post('/client/signup', async function(req,res){
   }
 });
 
+
+//Returns the a list containing the info from the haulages from user
+router.get('/haulage/list/:Id_user', async function(req, res){
+  //var id_user =  req.body.request.Id_user;
+  var id_user =  req.params.Id_user;
+  const haulages = await BusinessLogicFactory.getBusinessLogic("Haulage").getHaulageList(id_user);
+  if(haulages.status == 1){
+    var haulage_list = []
+    for(const haulage of haulages.data){
+      let haulage_object = {} //A haulage object containing the information will be returned for each haulage
+      //Each haulage variable being iterated contains the following info:
+      //Id_haulage, Id_user, Id_route, Id_cargo, Id_rating, Id_status, Date
+      haulage_object.vehicles = []
+
+      //Get the cargo info (Weight, description)
+      const cargo_info = await BusinessLogicFactory.getBusinessLogic("Cargo").getCargoInfo(haulage.Id_cargo);
+      //console.log(cargo_info)
+      //Get the route info (origin coords, destination coords, duration)
+      const route_info = await BusinessLogicFactory.getBusinessLogic("Route").getRouteInfo(haulage.Id_route);
+      //console.log(route_info)
+      //Get the haulage status information (status_description)
+      const status_info = await BusinessLogicFactory.getBusinessLogic("Status").getStatusInfo(haulage.Id_status);
+      //console.log(status_info)
+      const rating_info = await BusinessLogicFactory.getBusinessLogic("Rating").getRatingInfo(haulage.Id_rating);
+      //console.log(rating_info)
+
+      const driver_vehicles_assigned = await BusinessLogicFactory.getBusinessLogic("Haulage_Driver_Vehicle").getVehiclesAssigned(haulage.Id_haulage);
+      //Get the actual information from vehicle and driver
+      for(const driver_vehicle of driver_vehicles_assigned.data){
+         console.log(driver_vehicle.dataValues)
+         var assigned_vehicle_driver_info = {}
+         var vehicle_info = await BusinessLogicFactory.getBusinessLogic("Vehicle").getVehicleInfo(driver_vehicle.Id_vehicle);
+         var driver_info = await BusinessLogicFactory.getBusinessLogic("Driver").getDriverInfo(driver_vehicle.Id_driver);
+         assigned_vehicle_driver_info.vehicle = vehicle_info.data 
+         assigned_vehicle_driver_info.driver = driver_info.data
+         //add the vehicle object to the haulage
+         haulage_object.vehicles.push(assigned_vehicle_driver_info)
+      }
+
+      //add the other information to the haulage object and then add the object to the list to  be returned
+      haulage_object.date = haulage.dataValues.Date;
+      haulage_object.cargo = cargo_info.data;
+      haulage_object.route = route_info.data;
+      haulage_object.status = status_info.data;
+      haulage_object.rating = rating_info.data;
+      haulage_list.push(haulage_object);
+
+  }
+    //console.log(haulage_list)
+    return res.status(200).json({haulages: haulage_list})
+  }
+  if(haulages.status == 0){
+    res.status(500).json({status: 0, error: "No existen acarreos creados"});
+  }
+  else{
+    res.status(500).json({status: -1, error: "Hubo un problema al traer los acarreos"});
+  }
+
+})
+
+
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
 router.post('/haulage/create', async function(req, res){
-  
+
   const valid_fields = await BusinessLogicFactory.getBusinessLogic("Fields").check_fields(req);
   if(valid_fields !== true){
      return res.status(400).json({error: valid_fields})
@@ -248,7 +309,7 @@ router.post('/haulage/create', async function(req, res){
     logger.error("api.js: Error getting list of free cars:"+freeVehicles.error);
     return res.status(500).json({status: -1, error: freeVehicles.error});
   }
- 
+
   //this are the vehicles that need to be used for the haulage (this function is not async so there is no need for await)
   let needed_vehicles=  BusinessLogicFactory.getBusinessLogic("Vehicle").getListOfNeededVehicles(freeVehicles.data,values.Weight)
   if(needed_vehicles.status!=1)
@@ -266,7 +327,7 @@ router.post('/haulage/create', async function(req, res){
     }
     needed_driver_vehicles.push(driver.data);
   }
-  
+
 
   //creating haualge and other asosiated registers
   let haulage = await BusinessLogicFactory.getBusinessLogic("Haulage").createHaulageWithRouteCargo(values);

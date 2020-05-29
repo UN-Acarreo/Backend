@@ -5,6 +5,25 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+async function getHaulageList(user_id){
+    //count = await ControllerFactory.getController("Haulage").countWhere({Id_user: user_id})
+    //count = await ControllerFactory.getController("Haulage").count({ where: { Id_user: user_id} })
+    //if(count.status!=1)
+    let haulages =await ControllerFactory.getController("Haulage").getHaulages(user_id)
+    if(haulages.status == -1){
+      logger.error("Haulage Handler: " +haulages.data);
+      return {status: -1, data: haulages.data};
+    }
+    if(haulages.status == 0){
+      logger.error("Haulage Handler: " +haulages.data);
+      return {status: 0, data: haulages.data};
+    }
+
+    return {status: 1, data: haulages.data}
+
+
+}
+
 //returns status 1 if created succesfully, data is new haulage
 //returns status -1 if cargo could not be created, error is returns as well
 //returns status -2 if rout could not be created, error is returns as well
@@ -48,7 +67,6 @@ async function createHaulageWithRouteCargo(values)
         return{status:-2,error:route.error};
       }
 }
-module.exports = { 
-    createHaulageWithRouteCargo: createHaulageWithRouteCargo
+module.exports = {
+    createHaulageWithRouteCargo: createHaulageWithRouteCargo, getHaulageList: getHaulageList
     };
-  
