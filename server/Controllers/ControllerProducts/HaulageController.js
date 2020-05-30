@@ -82,31 +82,25 @@ async function getRegisterBy(query){
 
 }
 
-/*
-//returns status 1 and weight of haulage's cargo, -1 and error if not succesfull
-async function getWeight(Id_haulage){
-    try{
-
-        let weight = await ModelFactory.getModel("Haulage").findByPk(Id_haulage,
+async function getRegisterByPk(Pk)
+{
+    try {
+        let haulage = await ModelFactory.getModel("Haulage").findByPk(Pk,
             {
-                attributes: [],
-                //raw:true,
-                include: [{ model: ModelFactory.getModel("Cargo"), attributes: ['Weight']}]
-            }
-        )
-        //console.log(weight.dataValues)
-        logger.info("HaulageController: weight was found successfully.");
-        return {status: 1, data: weight.dataValues.Cargo.dataValues.Weight};
-    }catch(error) {
-        logger.error("HaulageController: " + error);
-        return {status: -1, error:error};
-    }
+                raw: true
+            })
+        logger.info("HaulageController: register was returned successfully.");
+        return {status: 1, data:haulage}
 
+    } catch (error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error: error};
+    }
 }
-*/
 
 module.exports = {
     create: create,
     getRegisterBy:getRegisterBy,
-    getHaulages: getHaulages
+    getHaulages: getHaulages,
+    getRegisterByPk:getRegisterByPk
 };

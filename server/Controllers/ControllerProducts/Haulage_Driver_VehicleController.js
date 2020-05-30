@@ -31,15 +31,15 @@ async function create(Id_haulage, Id_driver, Id_vehicle, Is_active) {
 }
 
 // get Register by
-async function getRegisterBy(query) {
+async function getRegisterBy(query,attributes) {
 
     try {
         let list = await ModelFactory.getModel("Haulage_Driver_Vehicle").findAll({
-            attributes:["Id_driver","Id_vehicle"],
+            attributes:attributes,
             where:query,
             raw:true
         });
-        logger.info("Haulage_Driver_VehicleController: list of bussy drivers and vehicles list returned successfully.");
+        logger.info("Haulage_Driver_VehicleController: registers found.");
         return {status: 1, data: list};
     } catch (error) {
         logger.error("Haulage_Driver_VehicleController: Error getting list:"+error);

@@ -67,6 +67,21 @@ async function createHaulageWithRouteCargo(values)
         return{status:-2,error:route.error};
       }
 }
+async function getHaulageInfo(Id_haulage)
+{
+  let haualge = await ControllerFactory.getController("Haulage").getRegisterByPk(Id_haulage)
+  if(haualge.status!=1)
+  {
+
+    logger.error("HaulageHandler: getHaulageInfo error: "+ haualge.error)
+    return{status:-1,error:haualge.error};
+  }
+  logger.info("HaulageHandler: getHaulageInfo success")
+  return{status:1,data: haualge.data}
+  
+}
 module.exports = {
-    createHaulageWithRouteCargo: createHaulageWithRouteCargo, getHaulageList: getHaulageList
+    createHaulageWithRouteCargo: createHaulageWithRouteCargo, 
+    getHaulageList: getHaulageList,
+    getHaulageInfo:getHaulageInfo
     };
