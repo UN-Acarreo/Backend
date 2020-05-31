@@ -61,8 +61,8 @@ async function getRegisterByPk(Pk,attributes)
                 raw: true
             })
         logger.info("VehicleController: list was returned successfully.");
-        console.log("driver: ")
-        console.log(vehicle)
+        //console.log("driver: ")
+        //console.log(vehicle)
         return {status: 1, data:vehicle}
 
     } catch (error) {

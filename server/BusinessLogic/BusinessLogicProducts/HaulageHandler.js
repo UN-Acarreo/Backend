@@ -5,6 +5,9 @@ ControllerFactory = require('../../Controllers/ControllerFactory');
 // Import logger
 const logger = require('../../utils/logger/logger');
 
+// Import status descriptions
+const description = require("../../constants").status_description
+
 async function getHaulageList(user_id){
     //count = await ControllerFactory.getController("Haulage").countWhere({Id_user: user_id})
     //count = await ControllerFactory.getController("Haulage").count({ where: { Id_user: user_id} })
@@ -43,8 +46,13 @@ async function createHaulageWithRouteCargo(values)
         {
           //cargo created, creating haulage
           let date = new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute)
+
+          let end_date = new Date(date.getTime());
+          //values.Duration has duration in hours
+          end_date.setTime(end_date.getTime() + values.Duration*60*60*1000);  
+
           let haulage = await ControllerFactory.getController("Haulage").create({
-            Date: date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
+            Date: date, End_date: end_date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
           });
           if(haulage.status == 1)
           {
@@ -67,6 +75,7 @@ async function createHaulageWithRouteCargo(values)
         return{status:-2,error:route.error};
       }
 }
+
 async function getHaulageInfo(Id_haulage)
 {
   let haualge = await ControllerFactory.getController("Haulage").getRegisterByPk(Id_haulage)
@@ -80,8 +89,24 @@ async function getHaulageInfo(Id_haulage)
   return{status:1,data: haualge.data}
   
 }
+
+async function finishHaulage(Id_haulage)
+{
+  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.DONE, new Date().getTime())
+  if(haualge.status!=1)
+  {
+    logger.error("HaulageHandler: updateHaulageBy error: "+ haualge.error)
+    return{status:-1, error:haualge.error};
+  }
+  logger.info("HaulageHandler: updateHaulageBy success")
+  return{status:1}
+  
+}
+
+
 module.exports = {
     createHaulageWithRouteCargo: createHaulageWithRouteCargo, 
     getHaulageList: getHaulageList,
-    getHaulageInfo:getHaulageInfo
+    getHaulageInfo: getHaulageInfo,
+    finishHaulage: finishHaulage
     };

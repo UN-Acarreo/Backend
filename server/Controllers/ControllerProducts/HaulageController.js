@@ -8,6 +8,8 @@ const logger = require('../../utils/logger/logger');
 //importing description values
 const descprition = require('../../constants');
 
+// Import status descriptions
+const description = require("../../constants").status_description
 
 //Return existing haulage data from user
 async function getHaulages(user_id){
@@ -41,12 +43,13 @@ async function create(req) {
 
     try {
         // Get atributes
-        const { Date, Id_user, Id_route, Id_cargo} = req;
+        const { Date, End_date, Id_user, Id_route, Id_cargo} = req;
 
         // Create Haulage
         let new_haulage = await ModelFactory.getModel("Haulage").create(
             {
                 Date: Date,
+                End_date: End_date,
                 Id_user: Id_user,
                 Id_route: Id_route,
                 Id_cargo: Id_cargo,
@@ -98,9 +101,29 @@ async function getRegisterByPk(Pk)
     }
 }
 
+async function updateHaulageById(id, state, date)
+{
+    try {
+        let result = await ModelFactory.getModel("Haulage").update(
+            {Id_status: state, End_date: date},
+            {returning: true, where: {Id_haulage: id}}
+          )
+        if (result) {
+            return {status: 1}
+        } else {
+            logger.error("HaulageController: Query error");
+            return {status: -1, error: "HaulageController: Query error"}
+        }
+    } catch (error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error: error};
+    }
+}
+
 module.exports = {
     create: create,
     getRegisterBy:getRegisterBy,
     getHaulages: getHaulages,
-    getRegisterByPk:getRegisterByPk
+    getRegisterByPk:getRegisterByPk,
+    updateHaulageById: updateHaulageById
 };

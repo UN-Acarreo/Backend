@@ -36,8 +36,8 @@ async function create(req) {
 
         // Get atributes
         const { Origin_coord, Destination_coord,Duration } = req;
-        console.log("duracion")
-        console.log(Duration)
+        //console.log("duracion")
+        //console.log(Duration)
 
         // Create Route
         const new_route = await ModelFactory.getModel("Route").create(
