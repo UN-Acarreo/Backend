@@ -329,7 +329,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
 
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
-router.post('/haulage/create', async function (req, res) {
+router.post('/haulage/create', async function (req, res) {  
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {

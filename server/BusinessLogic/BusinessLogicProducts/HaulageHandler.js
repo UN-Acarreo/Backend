@@ -48,7 +48,8 @@ async function createHaulageWithRouteCargo(values)
           let date = new Date(values.Date.Year,values.Date.Month,values.Date.Day,values.Date.Hour,values.Date.Minute)
 
           let end_date = new Date(date.getTime());
-          end_date.setTime(end_date.getTime() + (2*60*60*1000));  
+          //values.Duration has duration in hours
+          end_date.setTime(end_date.getTime() + values.Duration*60*60*1000);  
 
           let haulage = await ControllerFactory.getController("Haulage").create({
             Date: date, End_date: end_date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data

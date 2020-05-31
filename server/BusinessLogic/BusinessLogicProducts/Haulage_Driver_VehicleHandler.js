@@ -26,8 +26,16 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 }
 
 // get list of bussy DriverVehicle
-async function getListOfBussyDriverVehicle(start_date, end_date) {
-
+async function getListOfBussyDriverVehicle(start_date, duration) {
+    
+    //Calculating end date based on start date and duration
+    let end_date = new Date(
+        start_date.getFullYear(),
+        start_date.getMonth(),
+        start_date.getDate(),
+        start_date.getHours()+duration.hours,
+        start_date.getMinutes()+duration.minutes
+        )
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
         ({
