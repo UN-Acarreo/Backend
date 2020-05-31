@@ -38,6 +38,10 @@ const Haulage = DataBase.define('Haulage', {
     Date: {
         type: Sequelize.DATE,
         allowNull: false
+    },
+    End_date: {
+        type: Sequelize.DATE,
+        allowNull: false
     }
     }, {
         freezeTableName: true,

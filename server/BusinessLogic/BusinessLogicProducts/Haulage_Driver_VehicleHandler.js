@@ -26,23 +26,7 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 }
 
 // get list of bussy DriverVehicle
-async function getListOfBussyDriverVehicle(start_date,duration) {
-    //start date and end date are dates in wich new haulage needs to take place
-    let end_date = new Date(
-        start_date.getFullYear(),
-        start_date.getMonth(),
-        start_date.getDate(),
-        start_date.getHours()+duration.hours,
-        start_date.getMinutes()+duration.minutes
-        )
-    let fake_start_date = new Date(
-        start_date.getFullYear(),
-        start_date.getMonth(),
-        start_date.getDate(),
-        start_date.getHours()-duration.hours,
-        start_date.getMinutes()-duration.minutes
-        )
-    let fake_end_date =start_date
+async function getListOfBussyDriverVehicle(start_date, end_date) {
 
     //getting all haulages that are active at time of haulage
     let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
@@ -62,9 +46,9 @@ async function getListOfBussyDriverVehicle(start_date,duration) {
                         }
                     },
                     {
-                        Date:
+                        End_date:
                         {
-                            [Op.between]: [fake_start_date,fake_end_date]
+                            [Op.between]: [start_date, end_date]
                         }
                     }
                 ]

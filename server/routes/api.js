@@ -414,12 +414,27 @@ router.post('/haulage/create', async function (req, res) {
     }
 });
 
+//Route will be used to handle finish haulage
+router.post('/haulage/finish', async function (req, res) {
+    
+    Id_haulage = req.body.request.Id_haulage;
+
+    let result = await getHandler("Haulage").finishHaulage(Id_haulage)
+
+    if (result.status != 1) {
+        logger.error("api: " + result.error)
+        res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
+    } else {
+        res.status(200).json({ status: 1, data: "El acarreo ha finalizado con exito" });
+    }
+
+});
+
 //Route will be used to handle cancel POST service requests
 router.post('/haulage/cancel', function (req, res) {
     //TODO cancel service
     res.status(200).json({ Api: 'Online' })
 });
-
 
 //Route will be used to handle the drivers schedules GET request
 router.get('/driver/schedule', function (req, res) {
