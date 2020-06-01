@@ -27,8 +27,8 @@ app.use(express.json({limit: '10mb'}));
 app.use(cors(corsOptions));
 
 //Use public dirname to serve static files
-//app.get("/", express.static(path.join(__dirname, "./public")));
-app.use('/uploads/drivers',express.static(path.join(__dirname, 'public/uploads/drivers')));
+app.use(express.static(__dirname + '/public'));
+//app.use('/uploads/drivers',express.static(path.join(__dirname, 'public/uploads/drivers')));
 
 //Require route files
 app.use('/',index);
@@ -41,17 +41,17 @@ app.listen(3001, function(){
 });
 
  //creating all models
-User = require("./Models/User");
-Driver = require("./Models/Driver");
-Vehicle = require("./Models/Vehicle");
-Rating = require("./Models/Rating");
-Route = require("./Models/Route");
-Status = require("./Models/Status");
-Cargo = require("./Models/Cargo");
-Haulage = require("./Models/Haulage");
-Bill = require("./Models/Bill");
-Driver_Vehicle = require("./Models/Driver_Vehicle"); 
-Haulage_Driver_Vehicle=require("./Models/Haulage_Driver_Vehicle");
+User = require("./Models/ModelProducts/User");
+Driver = require("./Models/ModelProducts/Driver");
+Vehicle = require("./Models/ModelProducts/Vehicle");
+Rating = require("./Models/ModelProducts/Rating");
+Route = require("./Models/ModelProducts/Route");
+Status = require("./Models/ModelProducts/Status");
+Cargo = require("./Models/ModelProducts/Cargo");
+Haulage = require("./Models/ModelProducts/Haulage");
+Bill = require("./Models/ModelProducts/Bill");
+Driver_Vehicle = require("./Models/ModelProducts/Driver_Vehicle");
+Haulage_Driver_Vehicle=require("./Models/ModelProducts/Haulage_Driver_Vehicle");
 
 async function init_dataBase () {
   try {
