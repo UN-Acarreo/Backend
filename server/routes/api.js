@@ -242,6 +242,7 @@ router.get('/haulage/user/list/:Id_user', async function (req, res) {
             }
 
             //add the other information to the haulage object and then add the object to the list to  be returned
+            haulage_object.Id_haulage = haulage.Id_haulage;
             haulage_object.date = haulage.dataValues.Date;
             haulage_object.cargo = cargo_info.data;
             haulage_object.route = route_info.data;
@@ -305,7 +306,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
             errorDescription = "Hubo un problema obteniendo la descripción del estatus"
         }
         if (errorDescription != "") {
-            
+
             logger.error("api:"+ errorDescription)
             res.status(500).json({ status: -1, error: errorDescription });
         }
@@ -329,7 +330,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
 
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
-router.post('/haulage/create', async function (req, res) {  
+router.post('/haulage/create', async function (req, res) {
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -416,7 +417,7 @@ router.post('/haulage/create', async function (req, res) {
 
 //Route will be used to handle finish haulage
 router.post('/haulage/finish', async function (req, res) {
-    
+
     Id_haulage = req.body.request.Id_haulage;
 
     let result = await getHandler("Haulage").finishHaulage(Id_haulage)
