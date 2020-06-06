@@ -27,7 +27,7 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 // get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle(start_date, duration) {
-    
+
     //Calculating end date based on start date and duration
     let end_date = new Date(
         start_date.getFullYear(),
@@ -98,7 +98,7 @@ async function getListOfBussyDriverVehicle(start_date, duration) {
 async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
 {
     let driverInfo= await ControllerFactory.getController("Driver").getRegisterByPk(
-        driver_Pk,["Driver_name","Driver_last_name","Driver_phone"]
+        driver_Pk,["Driver_name","Driver_last_name","Driver_phone", "Driver_photo", "Identity_card"]
     )
     if(driverInfo.status!=1)
     {
@@ -106,7 +106,7 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
         return {status: -1, error: driverInfo.error};
     }
     let vehicleInfo= await ControllerFactory.getController("Vehicle").getRegisterByPk(
-        vehicle_Pk,["Plate","Brand","Model"]
+        vehicle_Pk,["Plate","Brand","Model","Photo"]
     )
     if(vehicleInfo.status!=1)
     {
@@ -123,9 +123,12 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
             Plate:vehicle.Plate,
             Brand:vehicle.Brand,
             Model:vehicle.Model,
+            vehicle_photo: vehicle.Photo,
             Driver_name:driver.Driver_name,
             Driver_last_name:driver.Driver_last_name,
-            Driver_phone:driver.Driver_phone
+            Driver_phone:driver.Driver_phone,
+            Driver_photo: driver.Driver_photo,
+            Identity_card: driver.Identity_card
         }
     }
 }
@@ -187,4 +190,3 @@ module.exports ={
     getVehiclesAssigned: getVehiclesAssigned,
     get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver
 }
-
