@@ -379,6 +379,8 @@ router.post('/haulage/create', async function (req, res) {
         }
         needed_driver_vehicles.push(driver.data);
     }
+    console.log("needed_driver_vehicles")
+    console.log(needed_driver_vehicles)
 
 
     //creating haualge and other asosiated registers
@@ -406,7 +408,9 @@ router.post('/haulage/create', async function (req, res) {
         info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
         if (info.status != 1)
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
-
+        
+        //create notification for drivers
+        let status = await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
         return res.status(201).json({ status: 1, data: info.data });
     }
     else {

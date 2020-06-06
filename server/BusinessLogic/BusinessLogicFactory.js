@@ -29,6 +29,8 @@ class BusinessLogicFactory {
                 return require("./BusinessLogicProducts/StatusHandler");
             case "Rating":
                 return require("./BusinessLogicProducts/RatingHandler");
+            case "Notification":
+                return require("./BusinessLogicProducts/NotificationHandler")
             default:
                 return null;
         }
