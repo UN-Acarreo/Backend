@@ -133,6 +133,39 @@ router.post('/driver/signup', async function (req, res) {
 
 });
 
+router.get('/driver/notification/check/:Id_driver',async function (req, res) {
+    
+    var Id_driver = req.params.Id_driver;
+    let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
+    if(notifications.status==-1)
+    {
+        return res.status(500).json({ error: notifications.status})
+    }
+    else if(notifications.status==1 || notifications.status==0)
+    {
+        return res.status(200).json({data:notifications.data})
+    }
+    
+
+
+})
+
+router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async function (req, res){
+
+    var Id_driver = req.params.Id_driver;
+    var Id_haulage = req.params.Id_haulage;
+    let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
+    if(notifications.status==-1)
+    {
+        return res.status(500).json({ error: notifications.status})
+    }
+    else if(notifications.status==1)
+    {
+        return res.status(200).json({data:"Notificacion eliminada"})
+    }
+
+})
+
 router.post('/vehicle/signup', async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -379,9 +412,6 @@ router.post('/haulage/create', async function (req, res) {
         }
         needed_driver_vehicles.push(driver.data);
     }
-    console.log("needed_driver_vehicles")
-    console.log(needed_driver_vehicles)
-
 
     //creating haualge and other asosiated registers
     let haulage = await getHandler("Haulage").createHaulageWithRouteCargo(values);

@@ -11,7 +11,7 @@ class Observer {
     {
         if(this.typeObserver=="Driver")
         {
-            console.log("notifyObserver " + this.observer_Id)
+            //console.log("notifyObserver " + this.observer_Id)
             //get all register in DriverNotification table for this driver
         }else if(this.typeObserver=="User")
         {

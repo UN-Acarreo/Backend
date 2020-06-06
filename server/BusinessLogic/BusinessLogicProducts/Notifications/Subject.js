@@ -39,7 +39,7 @@ class Subject {
         //notify all observers
         //console.log("notifyObserver")
         
-        observer.update()
+        await observer.update()
         
         
     }

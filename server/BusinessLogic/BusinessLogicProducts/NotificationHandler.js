@@ -9,11 +9,11 @@ async function createDriversNoficiations(drivers,Id_haulage)
     try {
         const subject = new Subject()
         for (const driver of drivers) {
-            console.log(driver)
+            //console.log(driver)
 
             let Id_driver = driver.Id_driver
             let observer = new Observer(Id_driver,"Driver")
-            subject.registerObserver(observer,Id_haulage)
+            await subject.registerObserver(observer,Id_haulage)
         }
         return {status:1} 
     } catch (error) {
@@ -28,9 +28,13 @@ async function getDriverNotifications(Id_driver)
 {
     try {
         const subject = new Subject()
-        subject.notifyObserver(new Observer(Id_driver,"Driver"))
+        await subject.notifyObserver(new Observer(Id_driver,"Driver"))
+
+        return {status:1,data:"this should be a list of notifications"}
         
     } catch (error) {
+        logger.error("NotificationHandler: "+ error)
+        return {status:-1,error:"Hubo un error recuperando sus notificaciones"}
         
         
     }
@@ -41,10 +45,12 @@ async function removeDriverNotification(Id_driver,Id_haulage)
 {
     try {
         const subject = new Subject()
-        subject.removeObserver(new Observer(Id_driver,"Driver"),Id_haulage)
+        await subject.removeObserver(new Observer(Id_driver,"Driver"),Id_haulage)
+        return {status:1}
         
     } catch (error) {
-        
+        logger.error("NotificationHandler: "+ error)
+        return {status:-1,error: "Hubo un error eliminando la notificacion"}
         
     }
     

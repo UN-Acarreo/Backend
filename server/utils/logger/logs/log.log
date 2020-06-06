@@ -8773,3 +8773,214 @@
 [2020-06-06T00:26:22.879Z] : info : Server: Server is running
 [2020-06-06T00:26:23.068Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-06-06T00:26:23.126Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:45:19.250Z] : info : Server: Server is running
+[2020-06-06T00:45:19.394Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:45:19.458Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:46:36.769Z] : info : Server: Server is running
+[2020-06-06T00:46:36.923Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:46:36.978Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:47:17.801Z] : info : Server: Server is running
+[2020-06-06T00:47:17.949Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:47:18.018Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:48:24.217Z] : info : Server: Server is running
+[2020-06-06T00:48:24.369Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:48:24.427Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:56:29.037Z] : info : Server: Server is running
+[2020-06-06T00:56:29.191Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:56:29.256Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:57:29.535Z] : info : Server: Server is running
+[2020-06-06T00:57:29.721Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:57:29.791Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:59:00.488Z] : info : Server: Server is running
+[2020-06-06T00:59:00.641Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:59:00.699Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:59:06.980Z] : info : Server: Server is running
+[2020-06-06T00:59:07.131Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:59:07.193Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:59:24.598Z] : info : Server: Server is running
+[2020-06-06T00:59:24.756Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:59:24.814Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:59:37.475Z] : info : Server: Server is running
+[2020-06-06T00:59:37.731Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:59:37.830Z] : info : Server: database tables created if the dont exist
+[2020-06-06T00:59:47.020Z] : info : Server: Server is running
+[2020-06-06T00:59:47.153Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T00:59:47.209Z] : info : Server: database tables created if the dont exist
+[2020-06-06T01:00:21.829Z] : info : Server: Server is running
+[2020-06-06T01:00:21.976Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T01:00:22.045Z] : info : Server: database tables created if the dont exist
+[2020-06-06T01:02:43.646Z] : info : Server: Server is running
+[2020-06-06T01:02:43.797Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T01:02:43.859Z] : info : Server: database tables created if the dont exist
+[2020-06-06T01:03:25.919Z] : info : Server: Server is running
+[2020-06-06T01:03:26.142Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T01:03:26.262Z] : info : Server: database tables created if the dont exist
+[2020-06-06T01:03:35.042Z] : info : Check field: Field is valid
+[2020-06-06T01:03:35.059Z] : info : HaulageController: list was found successfully.
+[2020-06-06T01:03:35.060Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-06T01:03:35.068Z] : info : VehicleController: list was returned successfully.
+[2020-06-06T01:03:35.068Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-06T01:03:35.069Z] : info : VehicleHandler:enough cars
+[2020-06-06T01:03:35.075Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-06T01:03:35.076Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-06T01:03:35.079Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-06T01:03:35.079Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-06T01:03:35.095Z] : info : RouteController: Route was created successfully.
+[2020-06-06T01:03:35.103Z] : info : CargoController: Cargo was created successfully.
+[2020-06-06T01:03:35.144Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-06T01:03:35.145Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-06T01:03:35.145Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-06T01:03:35.157Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-06T01:03:35.163Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-06T01:03:35.164Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-06T01:03:35.165Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-06T01:03:35.170Z] : info : DriverController: register was returned successfully.
+[2020-06-06T01:03:35.173Z] : info : VehicleController: list was returned successfully.
+[2020-06-06T01:03:35.174Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-06T01:03:35.178Z] : info : DriverController: register was returned successfully.
+[2020-06-06T01:03:35.182Z] : info : VehicleController: list was returned successfully.
+[2020-06-06T01:03:35.183Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-06T01:03:35.183Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-06T01:03:42.974Z] : info : HaulageController: User haulages found
+[2020-06-06T01:03:42.979Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:42.985Z] : info : RouteController: route info found
+[2020-06-06T01:03:42.992Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.052Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.054Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.062Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.065Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.078Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.082Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.086Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.089Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.094Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.094Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.098Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.101Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.105Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.109Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.113Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.116Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.118Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.121Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.123Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.125Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.127Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.129Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.132Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.135Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.138Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.143Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.146Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.147Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.150Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.154Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.158Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.162Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.165Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.168Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.170Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.171Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.173Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.178Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.180Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.183Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.185Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.190Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.193Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.194Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.196Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.199Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.202Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.206Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.209Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.211Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.213Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.214Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.217Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.220Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.222Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.227Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.229Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.231Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.233Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.233Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.235Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.238Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.244Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.247Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.252Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.256Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.262Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.263Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.265Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.269Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.275Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.279Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.283Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.285Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.288Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.289Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.293Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.298Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.301Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.306Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.310Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.317Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.319Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.321Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.324Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.330Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.334Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.338Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.343Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.347Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.351Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.351Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.355Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.359Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.363Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.366Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.369Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.373Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.376Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.377Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.380Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.383Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.386Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.390Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.393Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.397Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.399Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.400Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.402Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.404Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.406Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.410Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.415Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.417Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.419Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.420Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.424Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.428Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.433Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.435Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.437Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.439Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.441Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.442Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.445Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.450Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.453Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.456Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.460Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.464Z] : info : CargoController: Cargo info found
+[2020-06-06T01:03:43.466Z] : info : RouteController: route info found
+[2020-06-06T01:03:43.469Z] : info : StatusController: status info found
+[2020-06-06T01:03:43.471Z] : info : RatingController: No rating information found with that id
+[2020-06-06T01:03:43.471Z] : info : Rating Handler:  El servicio no ha sido calificado
+[2020-06-06T01:03:43.473Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-06T01:03:43.478Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.481Z] : info : DriverController: driver info found
+[2020-06-06T01:03:43.483Z] : info : VehicleController: vehicle info found
+[2020-06-06T01:03:43.487Z] : info : DriverController: driver info found
