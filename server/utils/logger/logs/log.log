@@ -9067,3 +9067,151 @@
 [2020-06-06T20:12:01.931Z] : info : Server: Server is running
 [2020-06-06T20:12:02.042Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-06-06T20:12:02.091Z] : info : Server: database tables created if the dont exist
+[2020-06-06T20:23:45.639Z] : info : Server: Server is running
+[2020-06-06T20:23:45.774Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T20:23:45.829Z] : info : Server: database tables created if the dont exist
+[2020-06-06T20:24:32.048Z] : info : Check field: Field is valid
+[2020-06-06T20:24:32.098Z] : info : HaulageController: list was found successfully.
+[2020-06-06T20:24:32.103Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-06T20:24:32.103Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-06T20:24:32.110Z] : info : VehicleController: list was returned successfully.
+[2020-06-06T20:24:32.110Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-06T20:24:32.111Z] : info : VehicleHandler:enough cars
+[2020-06-06T20:24:32.116Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-06T20:24:32.116Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-06T20:24:32.126Z] : info : RouteController: Route was created successfully.
+[2020-06-06T20:24:32.132Z] : info : CargoController: Cargo was created successfully.
+[2020-06-06T20:24:32.138Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-06T20:24:32.138Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-06T20:24:32.138Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-06T20:24:32.143Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-06T20:24:32.143Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-06T20:24:32.143Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-06T20:24:32.148Z] : info : DriverController: register was returned successfully.
+[2020-06-06T20:24:32.150Z] : info : VehicleController: list was returned successfully.
+[2020-06-06T20:24:32.150Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-06T20:24:32.150Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-06T20:25:02.361Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T20:25:02.363Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T20:25:02.367Z] : info : CargoController: Cargo info found
+[2020-06-06T20:25:02.386Z] : error : BillController: TypeError: Cannot read property 'request' of undefined
+[2020-06-06T20:25:02.386Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T20:25:02.386Z] : error : api: undefined
+[2020-06-06T20:32:24.878Z] : info : Server: Server is running
+[2020-06-06T20:32:25.027Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T20:32:25.085Z] : info : Server: database tables created if the dont exist
+[2020-06-06T20:32:39.665Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T20:32:39.670Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T20:32:39.675Z] : info : CargoController: Cargo info found
+[2020-06-06T20:32:39.864Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T20:32:39.864Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T20:32:39.865Z] : error : api: undefined
+[2020-06-06T21:08:35.716Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:08:35.718Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:08:35.755Z] : info : CargoController: Cargo info found
+[2020-06-06T21:08:36.020Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T21:08:36.020Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:08:36.020Z] : error : api: undefined
+[2020-06-06T21:09:33.155Z] : info : Server: Server is running
+[2020-06-06T21:09:33.373Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:09:33.531Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:09:38.267Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:09:38.274Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:09:38.316Z] : info : CargoController: Cargo info found
+[2020-06-06T21:09:38.328Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T21:09:38.328Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:09:38.328Z] : error : api: undefined
+[2020-06-06T21:12:00.931Z] : info : Server: Server is running
+[2020-06-06T21:12:01.050Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:12:01.096Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:12:09.107Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:12:09.112Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:12:09.117Z] : info : CargoController: Cargo info found
+[2020-06-06T21:12:09.125Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T21:12:09.126Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:12:09.126Z] : error : api: undefined
+[2020-06-06T21:13:44.674Z] : info : Server: Server is running
+[2020-06-06T21:13:44.844Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:13:44.886Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:13:52.060Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:13:52.065Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:13:52.069Z] : info : CargoController: Cargo info found
+[2020-06-06T21:13:52.123Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T21:13:52.123Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:13:52.124Z] : error : api: undefined
+[2020-06-06T21:14:53.455Z] : info : Server: Server is running
+[2020-06-06T21:14:53.590Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:14:53.641Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:15:00.061Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:15:00.066Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:15:00.070Z] : info : CargoController: Cargo info found
+[2020-06-06T21:15:00.080Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «NaN»
+[2020-06-06T21:15:00.080Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:15:00.081Z] : error : api: undefined
+[2020-06-06T21:18:37.218Z] : info : Server: Server is running
+[2020-06-06T21:18:37.365Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:18:37.407Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:18:43.884Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:18:43.889Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:18:43.915Z] : info : CargoController: Cargo info found
+[2020-06-06T21:18:43.924Z] : error : BillController: SequelizeDatabaseError: el valor «111667614800» está fuera de rango para el tipo integer
+[2020-06-06T21:18:43.924Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:18:43.924Z] : error : api: undefined
+[2020-06-06T21:22:10.463Z] : info : Server: Server is running
+[2020-06-06T21:22:10.598Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:22:10.642Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:22:18.192Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:22:18.198Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:22:18.203Z] : info : CargoController: Cargo info found
+[2020-06-06T21:22:18.214Z] : error : BillController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «1860769.7066666668»
+[2020-06-06T21:22:18.214Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:22:18.215Z] : error : api: undefined
+[2020-06-06T21:23:27.337Z] : info : Server: Server is running
+[2020-06-06T21:23:27.484Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:23:27.533Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:23:33.196Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:23:33.202Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:23:33.206Z] : info : CargoController: Cargo info found
+[2020-06-06T21:23:33.250Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:23:33.250Z] : error : HaulageHandler: finishHaulage error: undefined
+[2020-06-06T21:23:33.250Z] : error : api: undefined
+[2020-06-06T21:30:20.517Z] : info : Server: Server is running
+[2020-06-06T21:30:20.635Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:30:20.678Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:30:24.735Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:30:24.740Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:30:24.744Z] : info : CargoController: Cargo info found
+[2020-06-06T21:30:24.752Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:30:24.752Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:31:41.109Z] : info : Server: Server is running
+[2020-06-06T21:31:41.241Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:31:41.284Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:31:51.336Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:31:51.342Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:31:51.346Z] : info : CargoController: Cargo info found
+[2020-06-06T21:31:51.354Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:31:51.354Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:32:25.379Z] : info : Server: Server is running
+[2020-06-06T21:32:25.513Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:32:25.557Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:32:27.946Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:32:27.951Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:32:27.955Z] : info : CargoController: Cargo info found
+[2020-06-06T21:32:27.963Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:32:27.963Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:32:46.097Z] : info : Server: Server is running
+[2020-06-06T21:32:46.212Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:32:46.258Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:32:49.882Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:32:49.887Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:32:49.892Z] : info : CargoController: Cargo info found
+[2020-06-06T21:32:49.899Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:32:49.900Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:34:36.460Z] : info : Server: Server is running
+[2020-06-06T21:34:36.577Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-06T21:34:36.630Z] : info : Server: database tables created if the dont exist
+[2020-06-06T21:34:46.842Z] : info : HaulageHandler: finishHaulage success
+[2020-06-06T21:34:46.848Z] : info : HaulageController: register was returned successfully.
+[2020-06-06T21:34:46.852Z] : info : CargoController: Cargo info found
+[2020-06-06T21:34:46.859Z] : info : BillController: Bill was created successfully.
+[2020-06-06T21:34:46.860Z] : info : HaulageHandler: finishHaulage success

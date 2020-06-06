@@ -108,7 +108,8 @@ async function finishHaulage(Id_haulage)
     logger.error("HaulageHandler: finishHaulage error: "+ haualge.error)
     return{status:-1,error:haualge.error};
   }
-  let duration = haualge.data.Date - haualge.data.End_date
+  // In minutes
+  let duration = Math.ceil((haualge.data.Date - haualge.data.End_date) / 60000)
 
   // Get haulage weight
   let cargo = await ControllerFactory.getController("Cargo").getCargoInfo(haualge.data.Id_cargo)
@@ -117,11 +118,14 @@ async function finishHaulage(Id_haulage)
     logger.error("HaulageHandler: finishHaulage error: "+ cargo.error)
     return{status:-1,error:cargo.error};
   } 
-  let weight = cargo.Weight
+  let weight = cargo.data.Weight
 
   // Cost factor
-  let factor = 50
+  let factor = 1
   let cost = duration * weight * factor
+  console.log(duration)
+  console.log(weight)
+  console.log(factor)
 
   // Create bill of haulage
   haualge = await ControllerFactory.getController("Bill").create({Amount: cost, Id_haulage: Id_haulage})
