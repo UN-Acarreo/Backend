@@ -81,7 +81,6 @@ async function getHaulageInfo(Id_haulage)
   let haualge = await ControllerFactory.getController("Haulage").getRegisterByPk(Id_haulage)
   if(haualge.status!=1)
   {
-
     logger.error("HaulageHandler: getHaulageInfo error: "+ haualge.error)
     return{status:-1,error:haualge.error};
   }
@@ -92,14 +91,52 @@ async function getHaulageInfo(Id_haulage)
 
 async function finishHaulage(Id_haulage)
 {
+
+  // Finish haulage and set finish time
   let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.DONE, new Date().getTime())
   if(haualge.status!=1)
   {
-    logger.error("HaulageHandler: updateHaulageBy error: "+ haualge.error)
+    logger.error("HaulageHandler: finishHaulage error: "+ haualge.error)
     return{status:-1, error:haualge.error};
   }
-  logger.info("HaulageHandler: updateHaulageBy success")
-  return{status:1}
+  logger.info("HaulageHandler: finishHaulage success")
+
+  // Get haulage duration
+  haualge = await ControllerFactory.getController("Haulage").getRegisterByPk(Id_haulage)
+  if(haualge.status!=1)
+  {
+    logger.error("HaulageHandler: finishHaulage error: "+ haualge.error)
+    return{status:-1,error:haualge.error};
+  }
+  // In minutes
+  let duration = Math.ceil((haualge.data.Date - haualge.data.End_date) / 60000)
+
+  // Get haulage weight
+  let cargo = await ControllerFactory.getController("Cargo").getCargoInfo(haualge.data.Id_cargo)
+  if(cargo.status!=1)
+  {
+    logger.error("HaulageHandler: finishHaulage error: "+ cargo.error)
+    return{status:-1,error:cargo.error};
+  } 
+  let weight = cargo.data.Weight
+
+  // Cost factor
+  let factor = 1
+  let cost = duration * weight * factor
+  console.log(duration)
+  console.log(weight)
+  console.log(factor)
+
+  // Create bill of haulage
+  haualge = await ControllerFactory.getController("Bill").create({Amount: cost, Id_haulage: Id_haulage})
+  if(haualge.status!=1)
+  {
+    logger.error("HaulageHandler: finishHaulage error: " + haualge.error)
+    return{status:-1, error:haualge.error};
+  }
+
+  logger.info("HaulageHandler: finishHaulage success")
+  return{status:1, data: {Cost: cost, Duration : duration}}
   
 }
 

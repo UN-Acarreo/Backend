@@ -460,7 +460,7 @@ router.post('/haulage/finish', async function (req, res) {
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
     } else {
-        res.status(200).json({ status: 1, data: "El acarreo ha finalizado con exito" });
+        res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     }
 
 });
