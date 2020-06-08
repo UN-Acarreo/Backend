@@ -3,11 +3,14 @@ const logger = require('../../utils/logger/logger');
 //import classes that implement observer pattern
 const Observer = require("./Notifications/Observer").Observer;
 const Subject = require("./Notifications/Subject").Subject;
+//import types of notification ids
+const constants = require("../../constants").notif_description
 
 async function createDriversNoficiations(drivers,Id_haulage)
 {
     try {
         const subject = new Subject()
+        subject.notifications.add(constants.NEW_HAULAGE_ASSIGNED)
         for (const driver of drivers) {
             //console.log(driver)
 

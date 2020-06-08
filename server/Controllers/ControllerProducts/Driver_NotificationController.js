@@ -3,7 +3,7 @@ async function create(Id_haulage, Id_Notification_Type, Id_driver) {
 
     try {
         // Create Driver
-        var result = await ModelFactory.getModel("Driver").create(
+        var result = await ModelFactory.getModel("Driver_Notification").create(
             {
                 Id_haulage: Id_haulage,
                 Id_Notification_Type: Id_Notification_Type,
@@ -19,4 +19,9 @@ async function create(Id_haulage, Id_Notification_Type, Id_driver) {
         return {status: -1, error: error};
     }
 
+}
+
+module.exports = 
+{
+    create:create
 }
