@@ -9,6 +9,8 @@ class ModelFactory {
                 return require("./ModelProducts/Bill");
             case "Cargo":
                 return require("./ModelProducts/Cargo");
+            case "Driver_Notification":
+                return require("./ModelProducts/Driver_Notification");
             case "Driver_Vehicle":
                 return require("./ModelProducts/Driver_Vehicle");
             case "Driver":
@@ -17,12 +19,16 @@ class ModelFactory {
                 return require("./ModelProducts/Haulage_Driver_Vehicle");
             case "Haulage":
                 return require("./ModelProducts/Haulage");
+            case "Notification_Type":
+                return require("./ModelProducts/Notification_Type");
             case "Rating":
                 return require("./ModelProducts/Rating");
             case "Route":
                 return require("./ModelProducts/Route");
             case "Status":
                 return require("./ModelProducts/Status");
+            case "User_Notification":
+                return require("./ModelProducts/User_Notification");
             case "User":
                 return require("./ModelProducts/User");
             case "Vehicle":

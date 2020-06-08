@@ -40,6 +40,9 @@ app.listen(3001, function(){
   logger.info('Server: Server is running');
 });
 
+// Import ModelFactory
+ModelFactory = require('./Models/ModelFactory');
+
  //creating all models
 User = require("./Models/ModelProducts/User");
 Driver = require("./Models/ModelProducts/Driver");
@@ -55,20 +58,25 @@ Haulage_Driver_Vehicle=require("./Models/ModelProducts/Haulage_Driver_Vehicle");
 
 async function init_dataBase () {
   try {
-  //creating all tables if they dont exist allready
-   await User.sync()
-   await Driver.sync()
-   await Vehicle.sync()
-   await Rating.sync()
-   await Route.sync()
-   await Status.sync()
-   await Cargo.sync()
-   await Haulage.sync()
-   await Bill.sync()
-   await Driver_Vehicle.sync()
-   await Haulage_Driver_Vehicle.sync()
-   //await db.sync()
-   logger.info("Server: database tables created if the dont exist");
+
+    //creating all tables if they dont exist allready
+    await ModelFactory.getModel("User").sync()
+    await ModelFactory.getModel("Driver").sync()
+    await ModelFactory.getModel("Vehicle").sync()
+    await ModelFactory.getModel("Rating").sync()
+    await ModelFactory.getModel("Route").sync()
+    await ModelFactory.getModel("Status").sync()
+    await ModelFactory.getModel("Cargo").sync()
+    await ModelFactory.getModel("Haulage").sync()
+    await ModelFactory.getModel("Bill").sync()
+    await ModelFactory.getModel("Driver_Vehicle").sync()
+    await ModelFactory.getModel("Haulage_Driver_Vehicle").sync()
+    await ModelFactory.getModel("Notification_Type").sync()
+    await ModelFactory.getModel("User_Notification").sync()
+    await ModelFactory.getModel("Driver_Notification").sync()
+
+    logger.info("Server: database tables created if the dont exist");
+    
   } catch (err) {
     logger.error("Server: unable to create database tables: "+err)
   }

@@ -8984,3 +8984,15 @@
 [2020-06-06T01:03:43.481Z] : info : DriverController: driver info found
 [2020-06-06T01:03:43.483Z] : info : VehicleController: vehicle info found
 [2020-06-06T01:03:43.487Z] : info : DriverController: driver info found
+[2020-06-08T17:33:38.294Z] : info : Server: Server is running
+[2020-06-08T17:33:38.821Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T17:33:39.512Z] : error : Server: unable to create database tables: TypeError: Cannot read property 'field' of undefined
+[2020-06-08T17:43:25.936Z] : info : Server: Server is running
+[2020-06-08T17:43:26.042Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T17:43:26.399Z] : info : Server: database tables created if the dont exist
+[2020-06-08T17:45:12.848Z] : info : Server: Server is running
+[2020-06-08T17:45:12.959Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T17:45:13.020Z] : info : Server: database tables created if the dont exist
+[2020-06-08T17:47:56.298Z] : info : Server: Server is running
+[2020-06-08T17:47:56.411Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T17:47:56.701Z] : info : Server: database tables created if the dont exist
