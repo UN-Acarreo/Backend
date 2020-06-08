@@ -139,11 +139,13 @@ router.get('/driver/notification/check/:Id_driver',async function (req, res) {
     let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
     if(notifications.status==-1)
     {
-        return res.status(500).json({ error: notifications.status})
+        logger.info("api: driver notifications: "+notifications.error)
+        return res.status(500).json({ error: "Hubo un problema recuperando sus notificaciones"})
     }
     else if(notifications.status==1 || notifications.status==0)
     {
-        return res.status(200).json({data:notifications.data})
+        logger.info("api:driver notifications found succesfully")
+        return res.status(200).json({status:notifications.status ,data:notifications.data})
     }
     
 

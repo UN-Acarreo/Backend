@@ -9246,3 +9246,289 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-08T20:52:41.118Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
 [2020-06-08T20:52:41.125Z] : info : Driver_NotificationController: notification was created successfully.
 [2020-06-08T20:52:41.128Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T20:59:01.559Z] : info : Server: Server is running
+[2020-06-08T20:59:01.719Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T20:59:01.835Z] : info : Server: database tables created if the dont exist
+[2020-06-08T20:59:03.754Z] : info : Check field: Field is valid
+[2020-06-08T20:59:03.779Z] : info : HaulageController: list was found successfully.
+[2020-06-08T20:59:03.779Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T20:59:03.788Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T20:59:03.788Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T20:59:03.789Z] : info : VehicleHandler:enough cars
+[2020-06-08T20:59:03.796Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T20:59:03.796Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T20:59:03.798Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T20:59:03.798Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T20:59:03.816Z] : info : RouteController: Route was created successfully.
+[2020-06-08T20:59:03.823Z] : info : CargoController: Cargo was created successfully.
+[2020-06-08T20:59:03.834Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-08T20:59:03.835Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-08T20:59:03.835Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-08T20:59:03.843Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T20:59:03.850Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T20:59:03.850Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-08T20:59:03.850Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-08T20:59:03.857Z] : info : DriverController: register was returned successfully.
+[2020-06-08T20:59:03.860Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T20:59:03.860Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T20:59:03.862Z] : info : DriverController: register was returned successfully.
+[2020-06-08T20:59:03.864Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T20:59:03.865Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T20:59:03.865Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-08T20:59:03.876Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T20:59:03.876Z] : error : Subject: in register observer: success
+[2020-06-08T20:59:03.878Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T20:59:03.879Z] : error : Subject: in register observer: success
+[2020-06-08T20:59:23.279Z] : info : Server: Server is running
+[2020-06-08T20:59:23.439Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T20:59:23.564Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:02:33.192Z] : info : Server: Server is running
+[2020-06-08T21:02:33.347Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:02:33.452Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:03:21.789Z] : info : Server: Server is running
+[2020-06-08T21:03:21.939Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:03:22.054Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:03:59.777Z] : info : Server: Server is running
+[2020-06-08T21:03:59.946Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:04:00.087Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:05:07.316Z] : info : Server: Server is running
+[2020-06-08T21:05:07.477Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:05:07.585Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:07:15.520Z] : info : Server: Server is running
+[2020-06-08T21:07:15.671Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:07:15.787Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:07:22.043Z] : info : Server: Server is running
+[2020-06-08T21:07:22.192Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:07:22.313Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:08:32.591Z] : info : Server: Server is running
+[2020-06-08T21:08:33.880Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:08:33.996Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:08:46.997Z] : info : Server: Server is running
+[2020-06-08T21:08:47.162Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:08:47.278Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:09:37.227Z] : info : Server: Server is running
+[2020-06-08T21:09:37.443Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:09:37.616Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:09:42.521Z] : info : Server: Server is running
+[2020-06-08T21:09:42.677Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:09:42.783Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:11:08.273Z] : info : Server: Server is running
+[2020-06-08T21:11:08.467Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:11:08.570Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:13:09.625Z] : info : Server: Server is running
+[2020-06-08T21:13:09.848Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:13:10.025Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:13:32.953Z] : info : Server: Server is running
+[2020-06-08T21:13:33.100Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:13:33.226Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:14:29.127Z] : info : Server: Server is running
+[2020-06-08T21:14:29.304Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:14:29.411Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:15:34.640Z] : info : Server: Server is running
+[2020-06-08T21:15:34.805Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:15:34.911Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:15:52.565Z] : info : Server: Server is running
+[2020-06-08T21:15:52.743Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:15:52.850Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:17:13.509Z] : info : Server: Server is running
+[2020-06-08T21:17:13.681Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:17:13.804Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:17:21.267Z] : info : Server: Server is running
+[2020-06-08T21:17:21.426Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:17:21.537Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:18:36.849Z] : info : Server: Server is running
+[2020-06-08T21:18:36.997Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:18:37.108Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:19:11.484Z] : info : Server: Server is running
+[2020-06-08T21:19:11.629Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:19:11.749Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:19:51.720Z] : info : Server: Server is running
+[2020-06-08T21:19:51.881Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:19:51.997Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:20:42.764Z] : info : Server: Server is running
+[2020-06-08T21:20:42.913Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:20:43.030Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:21:52.633Z] : info : Server: Server is running
+[2020-06-08T21:21:52.825Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:21:52.949Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:22:14.113Z] : error : Driver_NotificationController: ReferenceError: ModelFactory is not defined
+[2020-06-08T21:22:51.326Z] : info : Server: Server is running
+[2020-06-08T21:22:51.471Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:22:51.621Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:23:01.717Z] : error : Driver_NotificationController: ReferenceError: ModelFactory is not defined
+[2020-06-08T21:23:01.717Z] : error : NotificationHandler: ReferenceError: ModelFactory is not defined
+[2020-06-08T21:27:46.116Z] : info : Server: Server is running
+[2020-06-08T21:27:46.262Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:27:46.396Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:28:08.886Z] : info : Driver_NotificationController:notifications found
+[2020-06-08T21:28:34.602Z] : info : Check field: Field is valid
+[2020-06-08T21:28:34.663Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:28:34.664Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:28:34.670Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:28:34.670Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:28:34.671Z] : info : VehicleHandler:enough cars
+[2020-06-08T21:28:34.679Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T21:28:34.679Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T21:28:34.681Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T21:28:34.681Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T21:28:34.700Z] : info : RouteController: Route was created successfully.
+[2020-06-08T21:28:34.707Z] : info : CargoController: Cargo was created successfully.
+[2020-06-08T21:28:34.722Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-08T21:28:34.722Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-08T21:28:34.722Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-08T21:28:34.735Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T21:28:34.739Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T21:28:34.739Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-08T21:28:34.739Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-08T21:28:34.746Z] : info : DriverController: register was returned successfully.
+[2020-06-08T21:28:34.750Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:28:34.750Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T21:28:34.753Z] : info : DriverController: register was returned successfully.
+[2020-06-08T21:28:34.755Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:28:34.755Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T21:28:34.755Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-08T21:28:34.764Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T21:28:34.764Z] : info : Subject: in register observer: success
+[2020-06-08T21:28:34.768Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T21:28:34.769Z] : info : Subject: in register observer: success
+[2020-06-08T21:28:42.531Z] : info : Driver_NotificationController:notifications found
+[2020-06-08T21:29:59.124Z] : info : Server: Server is running
+[2020-06-08T21:29:59.279Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:29:59.393Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:31:25.859Z] : info : Server: Server is running
+[2020-06-08T21:31:26.010Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:31:26.124Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:31:30.759Z] : info : Check field: Field is valid
+[2020-06-08T21:31:30.779Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:31:30.784Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:31:30.785Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:31:30.791Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:31:30.791Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:31:30.792Z] : info : VehicleHandler:enough cars
+[2020-06-08T21:31:30.798Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T21:31:30.798Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T21:31:30.818Z] : info : RouteController: Route was created successfully.
+[2020-06-08T21:31:30.826Z] : info : CargoController: Cargo was created successfully.
+[2020-06-08T21:31:30.838Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-08T21:31:30.839Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-08T21:31:30.839Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-08T21:31:30.848Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T21:31:30.849Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-08T21:31:30.849Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-08T21:31:30.855Z] : info : DriverController: register was returned successfully.
+[2020-06-08T21:31:30.858Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:31:30.858Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T21:31:30.858Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-08T21:31:30.872Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T21:31:30.873Z] : info : Subject: in register observer: success
+[2020-06-08T21:32:20.717Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:32:20.717Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:35:25.976Z] : info : Server: Server is running
+[2020-06-08T21:35:26.138Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:35:26.267Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:35:30.786Z] : info : Server: Server is running
+[2020-06-08T21:35:30.949Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:35:31.060Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:35:59.464Z] : info : Server: Server is running
+[2020-06-08T21:35:59.639Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:35:59.766Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:36:05.810Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:36:05.811Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:36:49.139Z] : info : Server: Server is running
+[2020-06-08T21:36:49.303Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:36:49.418Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:36:53.574Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:36:53.576Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:37:16.660Z] : info : Server: Server is running
+[2020-06-08T21:37:16.988Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:37:17.172Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:37:35.495Z] : info : Server: Server is running
+[2020-06-08T21:37:35.655Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:37:35.776Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:37:37.997Z] : info : Server: Server is running
+[2020-06-08T21:37:38.239Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:37:38.356Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:37:40.627Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:37:40.628Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:38:46.052Z] : info : Server: Server is running
+[2020-06-08T21:38:46.211Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:38:46.381Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:39:24.675Z] : info : Server: Server is running
+[2020-06-08T21:39:24.835Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T21:39:24.967Z] : info : Server: database tables created if the dont exist
+[2020-06-08T21:39:30.232Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:39:30.233Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:39:37.308Z] : info : Check field: Field is valid
+[2020-06-08T21:39:37.321Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:39:37.326Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:39:37.329Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:39:37.329Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:39:37.337Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:39:37.337Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:39:37.337Z] : info : VehicleHandler: not enough cars
+[2020-06-08T21:39:37.337Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-06-08T21:39:49.434Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:39:49.434Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:39:56.550Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:39:56.551Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:40:08.808Z] : info : Check field: Field is valid
+[2020-06-08T21:40:08.868Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:40:08.873Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:40:08.875Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:40:08.875Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:40:08.879Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:40:08.879Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:40:08.879Z] : info : VehicleHandler: not enough cars
+[2020-06-08T21:40:08.879Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-06-08T21:40:57.161Z] : info : Check field: Field is valid
+[2020-06-08T21:40:57.219Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:40:57.225Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:40:57.227Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:40:57.227Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:40:57.231Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:40:57.231Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:40:57.232Z] : info : VehicleHandler: not enough cars
+[2020-06-08T21:40:57.232Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-06-08T21:50:46.342Z] : info : Check field: Field is valid
+[2020-06-08T21:50:46.402Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:50:46.407Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:50:46.409Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-08T21:50:46.410Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:50:46.415Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:50:46.415Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:50:46.416Z] : info : VehicleHandler: not enough cars
+[2020-06-08T21:50:46.416Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-06-08T21:52:11.980Z] : info : Check field: Field is valid
+[2020-06-08T21:52:12.043Z] : info : HaulageController: list was found successfully.
+[2020-06-08T21:52:12.043Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-08T21:52:12.048Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:52:12.048Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-08T21:52:12.048Z] : info : VehicleHandler:enough cars
+[2020-06-08T21:52:12.059Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-08T21:52:12.060Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-08T21:52:12.075Z] : info : RouteController: Route was created successfully.
+[2020-06-08T21:52:12.082Z] : info : CargoController: Cargo was created successfully.
+[2020-06-08T21:52:12.093Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-08T21:52:12.093Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-08T21:52:12.093Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-08T21:52:12.122Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-08T21:52:12.122Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-08T21:52:12.122Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-08T21:52:12.127Z] : info : DriverController: register was returned successfully.
+[2020-06-08T21:52:12.129Z] : info : VehicleController: list was returned successfully.
+[2020-06-08T21:52:12.129Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-08T21:52:12.129Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-08T21:52:12.137Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-08T21:52:12.137Z] : info : Subject: in register observer: success
+[2020-06-08T21:52:35.201Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:52:35.201Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:52:39.675Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:52:39.675Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:52:44.935Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:52:44.935Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:53:34.930Z] : info : Driver_NotificationController:notifications found
+[2020-06-08T21:53:34.931Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:53:44.419Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:53:44.419Z] : info : api:driver notifications found succesfully
+[2020-06-08T21:53:48.191Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-08T21:53:48.191Z] : info : api:driver notifications found succesfully

@@ -2,7 +2,7 @@
 const logger = require('../../../utils/logger/logger');
 //import observer class
 const Observer = require("./Observer").Observer
-
+//import controller factory
 const getController = require('../../../Controllers/ControllerFactory').getController;
 
 class Subject {
@@ -21,6 +21,10 @@ class Subject {
             for (const notification of this.notifications) {
                 //create register in DriverNotification table
                 let new_notif = await getController("Driver_Notification").create(Id_haulage,notification,observer.observer_Id)
+                if(new_notif.status==-1)
+                    logger.error("Subject: in register observer: "+ new_notif.error)
+                else
+                logger.info("Subject: in register observer: success")
             }
         }else if(observer.typeObserver=="User")
         {
@@ -46,7 +50,14 @@ class Subject {
         //notify all observers
         //console.log("notifyObserver")
         
-        await observer.update()
+        let update = await observer.update()
+        if(update.status==-1)
+        {
+            return {status:-1, error: update.error}
+        }
+        else{
+            return {status:update.status, data: update.data}
+        }
         
         
     }

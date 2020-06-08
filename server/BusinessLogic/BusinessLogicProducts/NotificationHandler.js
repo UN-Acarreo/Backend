@@ -29,18 +29,20 @@ async function createDriversNoficiations(drivers,Id_haulage)
 
 async function getDriverNotifications(Id_driver)
 {
-    try {
-        const subject = new Subject()
-        await subject.notifyObserver(new Observer(Id_driver,"Driver"))
-
-        return {status:1,data:"this should be a list of notifications"}
-        
-    } catch (error) {
-        logger.error("NotificationHandler: "+ error)
-        return {status:-1,error:"Hubo un error recuperando sus notificaciones"}
-        
-        
+  
+    const subject = new Subject()
+    let notifications = await subject.notifyObserver(new Observer(Id_driver,"Driver"))
+    if(notifications.status==-1)
+    {
+        logger.error("NotificationHandler: "+ notifications.error)
+        return {status: -1, error:"Hubo un error recuperando sus notificaciones"}
+    } else if(notifications.status==0)
+    {
+        return {status:0,data:"No tiene nuevas notificaciones"}
     }
+
+    return {status:notifications.status,data:notifications.data}
+        
     
 }
 
