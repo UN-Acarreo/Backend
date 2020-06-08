@@ -9008,3 +9008,12 @@
 [2020-06-08T19:30:58.858Z] : info : Server: Server is running
 [2020-06-08T19:30:58.983Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-06-08T19:30:59.231Z] : info : Server: database tables created if the dont exist
+[2020-06-08T20:08:02.267Z] : info : Server: Server is running
+[2020-06-08T20:08:02.429Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T20:08:02.802Z] : info : Server: database tables created if the dont exist
+[2020-06-08T20:09:21.197Z] : error : Seeders/statusDescription: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
+[2020-06-08T20:09:21.209Z] : error : Seeders/newStatus: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
+[2020-06-08T20:09:21.224Z] : info : Seeders/newNotifType: Insertion complete.
+[2020-06-08T20:09:32.326Z] : error : Seeders/statusDescription: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
+[2020-06-08T20:09:32.343Z] : error : Seeders/newStatus: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Status_description_unique»
+[2020-06-08T20:09:32.350Z] : error : Seeders/newNotifType: Can't insert data: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Notification_Type_Description_key»

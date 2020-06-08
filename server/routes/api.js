@@ -440,7 +440,7 @@ router.post('/haulage/create', async function (req, res) {
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
         
         //create notification for drivers
-        let status = await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
+        await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
         return res.status(201).json({ status: 1, data: info.data });
     }
     else {

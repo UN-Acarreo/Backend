@@ -15,6 +15,7 @@ class Subject {
         {
             //console.log("registerObserver"+observer.observer_Id + "haulage "+Id_haulage)
             //create register in DriverNotification table
+            //-------------------------------------
         }else if(observer.typeObserver=="User")
         {
             //create register in UserNotification table
