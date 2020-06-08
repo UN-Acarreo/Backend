@@ -24,7 +24,7 @@ class Subject {
                 if(new_notif.status==-1)
                     logger.error("Subject: in register observer: "+ new_notif.error)
                 else
-                logger.info("Subject: in register observer: success")
+                    logger.info("Subject: in register observer: success")
             }
         }else if(observer.typeObserver=="User")
         {

@@ -1,5 +1,5 @@
 //importing model factory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 // Create notification
 async function create(Id_haulage, Id_Notification_Type, Id_driver) {
 
