@@ -37,8 +37,18 @@ class Subject {
         
         if(observer.typeObserver=="Driver")
         {
-            //delete register in DriverNotification table
-            //console.log("removeObserver "+observer.observer_Id + "haulage "+Id_haulage)
+            let result = await getController("Driver_Notification").remove({
+                Id_driver:observer.observer_Id,
+                Id_haulage:Id_haulage
+            })
+            if(result.status==-1)
+            {
+                logger.error("Subject:removeObserver "+result.error)
+                return {status:-1,error:result.error}
+            }
+            logger.info("Subject:removeObserver ")
+            return {status:result.status,data:""}
+            
         }else if(observer.typeObserver=="User")
         {
             //delete register in UserNotification table

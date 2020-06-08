@@ -140,7 +140,7 @@ router.get('/driver/notification/check/:Id_driver',async function (req, res) {
     if(notifications.status==-1)
     {
         logger.info("api: driver notifications: "+notifications.error)
-        return res.status(500).json({ error: "Hubo un problema recuperando sus notificaciones"})
+        return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
     }
     else if(notifications.status==1 || notifications.status==0)
     {
@@ -159,11 +159,15 @@ router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async functio
     let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
     if(notifications.status==-1)
     {
-        return res.status(500).json({ error: notifications.status})
+        return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})
     }
     else if(notifications.status==1)
     {
-        return res.status(200).json({data:"Notificacion eliminada"})
+        return res.status(200).json({status:1,data:"Notificacion eliminada"})
+    }
+    else if(notifications.status==0)
+    {
+        return res.status(200).json({status:0,data:"No existen notificaciones para eliminar"})
     }
 
 })

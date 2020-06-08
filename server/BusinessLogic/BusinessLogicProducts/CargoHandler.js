@@ -1,6 +1,9 @@
 // Import ModelFactory
 ModelFactory = require('../../Models/ModelFactory');
 
+// Import ControllerFactory
+ControllerFactory = require('../../Controllers/ControllerFactory');
+
 // Import logger
 const logger = require('../../utils/logger/logger');
 

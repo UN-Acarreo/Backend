@@ -48,18 +48,20 @@ async function getDriverNotifications(Id_driver)
 
 async function removeDriverNotification(Id_driver,Id_haulage)
 {
-    try {
-        const subject = new Subject()
-        await subject.removeObserver(new Observer(Id_driver,"Driver"),Id_haulage)
-        return {status:1}
-        
-    } catch (error) {
-        logger.error("NotificationHandler: "+ error)
-        return {status:-1,error: "Hubo un error eliminando la notificacion"}
-        
-    }
     
+        const subject = new Subject()
+        let result = await subject.removeObserver(new Observer(Id_driver,"Driver"),Id_haulage)
+        if(result.status!=-1)
+            return {status:result.status,data:""}
+        else
+        {
+            logger.error("NotificationHandler: "+ result.error)
+            return {status:-1,error: result.error}
+        }
+        
 }
+    
+
 
 async function createUserNoficiations(Id_user,Id_haulage)
 {

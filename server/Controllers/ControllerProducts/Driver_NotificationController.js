@@ -22,6 +22,30 @@ async function create(Id_haulage, Id_Notification_Type, Id_driver) {
     }
 
 }
+async function remove(query) {
+
+    try {
+        // Create Driver
+        let result = await ModelFactory.getModel("Driver_Notification").destroy({
+            where: query
+          });
+        
+        if(result==0)
+        {
+            //driver had no notifications
+            logger.info("Driver_NotificationController: driver had no notifications.");
+            return {status: 0, data: ""}
+        }
+
+        logger.info("Driver_NotificationController: notification was deleted successfully.");
+        return {status: 1, data: ""}
+
+    } catch (error) {
+        logger.error("DriverController: " + error);
+        return {status: -1, error: error};
+    }
+
+}
 
 async function getRegisterBy(query) {
 
@@ -53,5 +77,6 @@ async function getRegisterBy(query) {
 module.exports = 
 {
     create:create,
-    getRegisterBy:getRegisterBy
+    getRegisterBy:getRegisterBy,
+    remove:remove
 }
