@@ -46,11 +46,11 @@ let ModelFactory = require('./Models/ModelFactory');
 async function init_dataBase () {
   try {
 
-    models = ["User", "Driver", "Vehicle", "Rating", "Route", "Status", "Cargo", "Haulage", "Bill", "Driver_Vehicle", 
+    let models = ["User", "Driver", "Vehicle", "Rating", "Route", "Status", "Cargo", "Haulage", "Bill", "Driver_Vehicle", 
               "Haulage_Driver_Vehicle", "Notification_Type", "User_Notification", "Driver_Notification"]
 
     //creating all tables if they dont exist allready
-    for (model of models) {
+    for (let model of models) {
       await ModelFactory.getModel(model).sync()
     }
     
