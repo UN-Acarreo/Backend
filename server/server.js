@@ -46,22 +46,14 @@ let ModelFactory = require('./Models/ModelFactory');
 async function init_dataBase () {
   try {
 
-    //creating all tables if they dont exist allready
-    await ModelFactory.getModel("User").sync()
-    await ModelFactory.getModel("Driver").sync()
-    await ModelFactory.getModel("Vehicle").sync()
-    await ModelFactory.getModel("Rating").sync()
-    await ModelFactory.getModel("Route").sync()
-    await ModelFactory.getModel("Status").sync()
-    await ModelFactory.getModel("Cargo").sync()
-    await ModelFactory.getModel("Haulage").sync()
-    await ModelFactory.getModel("Bill").sync()
-    await ModelFactory.getModel("Driver_Vehicle").sync()
-    await ModelFactory.getModel("Haulage_Driver_Vehicle").sync()
-    await ModelFactory.getModel("Notification_Type").sync()
-    await ModelFactory.getModel("User_Notification").sync()
-    await ModelFactory.getModel("Driver_Notification").sync()
+    models = ["User", "Driver", "Vehicle", "Rating", "Route", "Status", "Cargo", "Haulage", "Bill", "Driver_Vehicle", 
+              "Haulage_Driver_Vehicle", "Notification_Type", "User_Notification", "Driver_Notification"]
 
+    //creating all tables if they dont exist allready
+    for (model of models) {
+      await ModelFactory.getModel(model).sync()
+    }
+    
     logger.info("Server: database tables created if the dont exist");
     
   } catch (err) {

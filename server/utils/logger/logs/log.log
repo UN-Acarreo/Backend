@@ -8996,3 +8996,9 @@
 [2020-06-08T17:47:56.298Z] : info : Server: Server is running
 [2020-06-08T17:47:56.411Z] : info : DataBase: Connection to data base has been established successfully.
 [2020-06-08T17:47:56.701Z] : info : Server: database tables created if the dont exist
+[2020-06-08T17:54:55.787Z] : info : Server: Server is running
+[2020-06-08T17:54:55.928Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T17:54:57.404Z] : info : Server: database tables created if the dont exist
+[2020-06-08T18:11:35.195Z] : info : Server: Server is running
+[2020-06-08T18:11:35.311Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-08T18:11:35.647Z] : info : Server: database tables created if the dont exist
