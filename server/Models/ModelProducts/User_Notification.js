@@ -16,6 +16,10 @@ const User_Notification = DataBase.define('User_Notification', {
     Id_Notification_Type: {
         type: Sequelize.INTEGER,
         primaryKey: true
+    },
+    Id_user: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
     }
     }, {
         freezeTableName: true,
