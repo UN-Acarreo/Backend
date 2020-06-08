@@ -41,20 +41,7 @@ app.listen(3001, function(){
 });
 
 // Import ModelFactory
-ModelFactory = require('./Models/ModelFactory');
-
- //creating all models
-User = require("./Models/ModelProducts/User");
-Driver = require("./Models/ModelProducts/Driver");
-Vehicle = require("./Models/ModelProducts/Vehicle");
-Rating = require("./Models/ModelProducts/Rating");
-Route = require("./Models/ModelProducts/Route");
-Status = require("./Models/ModelProducts/Status");
-Cargo = require("./Models/ModelProducts/Cargo");
-Haulage = require("./Models/ModelProducts/Haulage");
-Bill = require("./Models/ModelProducts/Bill");
-Driver_Vehicle = require("./Models/ModelProducts/Driver_Vehicle");
-Haulage_Driver_Vehicle=require("./Models/ModelProducts/Haulage_Driver_Vehicle");
+let ModelFactory = require('./Models/ModelFactory');
 
 async function init_dataBase () {
   try {
