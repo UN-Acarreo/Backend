@@ -120,10 +120,32 @@ async function updateHaulageById(id, state, date)
     }
 }
 
+
+
+async function setHaulageRating(haulage_id, rating_id)
+{
+    try {
+        let result = await ModelFactory.getModel("Haulage").update(
+            {Id_rating: rating_id}, //values
+            {where: {Id_haulage: haulage_id}} //conditions
+          )
+        if (result) {
+            return {status: 1}
+        } else {
+            logger.error("HaulageController: Query error");
+            return {status: -1, error: "HaulageController: Query error"}
+        }
+    } catch (error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error: error};
+    }
+}
+
 module.exports = {
     create: create,
     getRegisterBy:getRegisterBy,
     getHaulages: getHaulages,
     getRegisterByPk:getRegisterByPk,
-    updateHaulageById: updateHaulageById
+    updateHaulageById: updateHaulageById,
+    setHaulageRating: setHaulageRating
 };

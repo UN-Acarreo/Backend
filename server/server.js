@@ -40,35 +40,22 @@ app.listen(3001, function(){
   logger.info('Server: Server is running');
 });
 
- //creating all models
-User = require("./Models/ModelProducts/User");
-Driver = require("./Models/ModelProducts/Driver");
-Vehicle = require("./Models/ModelProducts/Vehicle");
-Rating = require("./Models/ModelProducts/Rating");
-Route = require("./Models/ModelProducts/Route");
-Status = require("./Models/ModelProducts/Status");
-Cargo = require("./Models/ModelProducts/Cargo");
-Haulage = require("./Models/ModelProducts/Haulage");
-Bill = require("./Models/ModelProducts/Bill");
-Driver_Vehicle = require("./Models/ModelProducts/Driver_Vehicle");
-Haulage_Driver_Vehicle=require("./Models/ModelProducts/Haulage_Driver_Vehicle");
+// Import ModelFactory
+let ModelFactory = require('./Models/ModelFactory');
 
 async function init_dataBase () {
   try {
-  //creating all tables if they dont exist allready
-   await User.sync()
-   await Driver.sync()
-   await Vehicle.sync()
-   await Rating.sync()
-   await Route.sync()
-   await Status.sync()
-   await Cargo.sync()
-   await Haulage.sync()
-   await Bill.sync()
-   await Driver_Vehicle.sync()
-   await Haulage_Driver_Vehicle.sync()
-   //await db.sync()
-   logger.info("Server: database tables created if the dont exist");
+
+    let models = ["User", "Driver", "Vehicle", "Rating", "Route", "Status", "Cargo", "Haulage", "Bill", "Driver_Vehicle", 
+              "Haulage_Driver_Vehicle", "Notification_Type", "User_Notification", "Driver_Notification"]
+
+    //creating all tables if they dont exist allready
+    for (let model of models) {
+      await ModelFactory.getModel(model).sync()
+    }
+    
+    logger.info("Server: database tables created if the dont exist");
+    
   } catch (err) {
     logger.error("Server: unable to create database tables: "+err)
   }

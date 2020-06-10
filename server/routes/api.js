@@ -133,6 +133,45 @@ router.post('/driver/signup', async function (req, res) {
 
 });
 
+router.get('/driver/notification/check/:Id_driver',async function (req, res) {
+
+    var Id_driver = req.params.Id_driver;
+    let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
+    if(notifications.status==-1)
+    {
+        logger.info("api: driver notifications: "+notifications.error)
+        return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
+    }
+    else if(notifications.status==1 || notifications.status==0)
+    {
+        logger.info("api:driver notifications found succesfully")
+        return res.status(200).json({status:notifications.status ,data:notifications.data})
+    }
+
+
+
+})
+
+router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async function (req, res){
+
+    var Id_driver = req.params.Id_driver;
+    var Id_haulage = req.params.Id_haulage;
+    let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
+    if(notifications.status==-1)
+    {
+        return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})
+    }
+    else if(notifications.status==1)
+    {
+        return res.status(200).json({status:1,data:"Notificacion eliminada"})
+    }
+    else if(notifications.status==0)
+    {
+        return res.status(200).json({status:0,data:"No existen notificaciones para eliminar"})
+    }
+
+})
+
 router.post('/vehicle/signup', async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -242,6 +281,7 @@ router.get('/haulage/user/list/:Id_user', async function (req, res) {
             }
 
             //add the other information to the haulage object and then add the object to the list to  be returned
+            haulage_object.Id_haulage = haulage.Id_haulage;
             haulage_object.date = haulage.dataValues.Date;
             haulage_object.cargo = cargo_info.data;
             haulage_object.route = route_info.data;
@@ -305,7 +345,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
             errorDescription = "Hubo un problema obteniendo la descripción del estatus"
         }
         if (errorDescription != "") {
-            
+
             logger.error("api:"+ errorDescription)
             res.status(500).json({ status: -1, error: errorDescription });
         }
@@ -329,7 +369,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
 
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
-router.post('/haulage/create', async function (req, res) {  
+router.post('/haulage/create', async function (req, res) {
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -379,7 +419,6 @@ router.post('/haulage/create', async function (req, res) {
         needed_driver_vehicles.push(driver.data);
     }
 
-
     //creating haualge and other asosiated registers
     let haulage = await getHandler("Haulage").createHaulageWithRouteCargo(values);
 
@@ -406,6 +445,8 @@ router.post('/haulage/create', async function (req, res) {
         if (info.status != 1)
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
 
+        //create notification for drivers
+        await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
         return res.status(201).json({ status: 1, data: info.data });
     }
     else {
@@ -415,8 +456,28 @@ router.post('/haulage/create', async function (req, res) {
 });
 
 //Route will be used to handle finish haulage
+router.post('/haulage/rate', async function (req, res) {
+    //console.log(req.body)
+    let info = req.body;
+    Id_haulage = req.body.Id_haulage;
+    let result = await getHandler("Rating").createRating(info);
+    //console.log(result)
+    if(result.status != 1){
+      return  res.status(500).json({ status: -1, error: "Hubo un problema al asignar la calificación del servicio" });
+    }
+    var rating_id = result.data; //the created rating id to be associated with the haulage
+    let result_haulage = await getHandler("Haulage").setHaulageRating(Id_haulage, rating_id);
+    if(result_haulage.status != 1){
+      return  res.status(500).json({ status: -1, error: "Hubo un problema al asignar la calificación del servicio" });
+    }
+
+    return  res.status(200).json({ status: 1, info: info, message: "Se ha asignado correctamente la calificación del servicio" });
+
+});
+
+//Route will be used to handle finish haulage
 router.post('/haulage/finish', async function (req, res) {
-    
+
     Id_haulage = req.body.request.Id_haulage;
 
     let result = await getHandler("Haulage").finishHaulage(Id_haulage)
@@ -425,7 +486,7 @@ router.post('/haulage/finish', async function (req, res) {
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
     } else {
-        res.status(200).json({ status: 1, data: "El acarreo ha finalizado con exito" });
+        res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     }
 
 });
