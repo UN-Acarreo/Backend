@@ -134,7 +134,7 @@ router.post('/driver/signup', async function (req, res) {
 });
 
 router.get('/driver/notification/check/:Id_driver',async function (req, res) {
-    
+
     var Id_driver = req.params.Id_driver;
     let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
     if(notifications.status==-1)
@@ -147,7 +147,7 @@ router.get('/driver/notification/check/:Id_driver',async function (req, res) {
         logger.info("api:driver notifications found succesfully")
         return res.status(200).json({status:notifications.status ,data:notifications.data})
     }
-    
+
 
 
 })
@@ -444,7 +444,7 @@ router.post('/haulage/create', async function (req, res) {
         info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
         if (info.status != 1)
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
-        
+
         //create notification for drivers
         await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
         return res.status(201).json({ status: 1, data: info.data });
@@ -453,6 +453,26 @@ router.post('/haulage/create', async function (req, res) {
         logger.error("api.js: error creating haulage_driver_vehicles: " + response.error);
         return res.status(500).json({ status: -1, error: "Hubo un problema al almacenar los datos de su acarreo" })
     }
+});
+
+//Route will be used to handle finish haulage
+router.post('/haulage/rate', async function (req, res) {
+    //console.log(req.body)
+    let info = req.body;
+    Id_haulage = req.body.Id_haulage;
+    let result = await getHandler("Rating").createRating(info);
+    //console.log(result)
+    if(result.status != 1){
+      return  res.status(500).json({ status: -1, error: "Hubo un problema al asignar la calificación del servicio" });
+    }
+    var rating_id = result.data; //the created rating id to be associated with the haulage
+    let result_haulage = await getHandler("Haulage").setHaulageRating(Id_haulage, rating_id);
+    if(result_haulage.status != 1){
+      return  res.status(500).json({ status: -1, error: "Hubo un problema al asignar la calificación del servicio" });
+    }
+
+    return  res.status(200).json({ status: 1, info: info, message: "Se ha asignado correctamente la calificación del servicio" });
+
 });
 
 //Route will be used to handle finish haulage
