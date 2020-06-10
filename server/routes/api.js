@@ -139,11 +139,13 @@ router.get('/driver/notification/check/:Id_driver',async function (req, res) {
     let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
     if(notifications.status==-1)
     {
-        return res.status(500).json({ error: notifications.status})
+        logger.info("api: driver notifications: "+notifications.error)
+        return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
     }
     else if(notifications.status==1 || notifications.status==0)
     {
-        return res.status(200).json({data:notifications.data})
+        logger.info("api:driver notifications found succesfully")
+        return res.status(200).json({status:notifications.status ,data:notifications.data})
     }
     
 
@@ -157,11 +159,15 @@ router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async functio
     let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
     if(notifications.status==-1)
     {
-        return res.status(500).json({ error: notifications.status})
+        return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})
     }
     else if(notifications.status==1)
     {
-        return res.status(200).json({data:"Notificacion eliminada"})
+        return res.status(200).json({status:1,data:"Notificacion eliminada"})
+    }
+    else if(notifications.status==0)
+    {
+        return res.status(200).json({status:0,data:"No existen notificaciones para eliminar"})
     }
 
 })
@@ -440,7 +446,7 @@ router.post('/haulage/create', async function (req, res) {
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
         
         //create notification for drivers
-        let status = await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
+        await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
         return res.status(201).json({ status: 1, data: info.data });
     }
     else {

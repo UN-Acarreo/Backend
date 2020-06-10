@@ -12,6 +12,7 @@ const Notification_Type = DataBase.define('Notification_Type', {
     },
     Description: {
         type: Sequelize.STRING,
+        unique: true,
         allowNull: false
     }
     }, {

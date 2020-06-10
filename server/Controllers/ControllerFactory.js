@@ -27,6 +27,11 @@ class ControllerFactory {
                 return require("./ControllerProducts/UserController");
             case "Vehicle":
                 return require("./ControllerProducts/VehicleController");
+            case "Driver_Notification":
+                return require("./ControllerProducts/Driver_NotificationController");
+            case "User_Notification":
+                return require("./ControllerProducts/User_NotificationController");
+
             default:
                 return null;
         }
