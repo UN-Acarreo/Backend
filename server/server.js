@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/public'));
 
 //Require route files
 app.use('/',index);
-app.use('/api', api);
+app.use('/api', api.router);
 
 // Start server in specific port
 app.listen(3001, function(){

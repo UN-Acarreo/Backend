@@ -9896,3 +9896,14 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-11T18:22:42.864Z] : info : UserController:User found
 [2020-06-11T18:22:42.943Z] : info : UserHandler: succesfull call to getUserByEmail
 [2020-06-11T18:22:42.943Z] : info : api.js: returned user id succesfully
+[2020-06-11T18:27:12.989Z] : info : Server: Server is running
+[2020-06-11T18:27:13.117Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:27:13.334Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:27:22.409Z] : info : Check field: Field is valid
+[2020-06-11T18:27:22.430Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T18:27:22.430Z] : info : DriverHandler: email match
+[2020-06-11T18:27:22.435Z] : info : DriverController:Driver found
+[2020-06-11T18:27:22.548Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T18:27:22.559Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-11T18:27:22.559Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-11T18:27:22.559Z] : info : api.js: returned Driver id succesfully
