@@ -10,12 +10,12 @@ const getHandler = require('../BusinessLogic/BusinessLogicFactory').getBusinessL
 const logger = require('./../utils/logger/logger');
 
 //Route will be used to handle login POST requests
-router.post('/log-client-errors', async function (req, res) {
+router.post('/log-client-errors', exports.logClientErrors = async function (req, res) {
 
-    let error = req.body.error.message;
+    let error = req.body.error/*.message;
     let errorInfo = req.body.error.stack;
     //console.log(req.body.message);
-    logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " " + JSON.stringify(errorInfo))
+    logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " " + JSON.stringify(errorInfo))*/
     return res.status(200).send("ok");
 
 });
@@ -26,7 +26,8 @@ router.post('/log-client-errors', async function (req, res) {
 //status -1 = error, error message returned
 //status -2 = filed checks failed, error message returned
 //status -3 = wrong path
-router.post('/:type_of_user/login', async function (req, res) {
+router.post('/:type_of_user/login', exports.login = async function (req, res) {
+    console.log(req)
     //TODO login user using Oauth
     let type_of_user = req.params.type_of_user
     //data validation
@@ -90,7 +91,7 @@ router.post('/:type_of_user/login', async function (req, res) {
 })
 
 //Route will be used to handle driver sign up POST requests
-router.post('/driver/signup', async function (req, res) {
+router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -133,7 +134,7 @@ router.post('/driver/signup', async function (req, res) {
 
 });
 
-router.get('/driver/notification/check/:Id_driver',async function (req, res) {
+router.get('/driver/notification/check/:Id_driver', exports.driverNotificationCheck = async function (req, res) {
     
     var Id_driver = req.params.Id_driver;
     let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
@@ -152,7 +153,7 @@ router.get('/driver/notification/check/:Id_driver',async function (req, res) {
 
 })
 
-router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async function (req, res){
+router.delete('/driver/notification/delete/:Id_driver/:Id_haulage', exports.driverNotificationDelete = async function (req, res){
 
     var Id_driver = req.params.Id_driver;
     var Id_haulage = req.params.Id_haulage;
@@ -172,7 +173,7 @@ router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async functio
 
 })
 
-router.post('/vehicle/signup', async function (req, res) {
+router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
         return res.status(400).json({ error: valid_fields })
@@ -220,7 +221,7 @@ router.post('/vehicle/signup', async function (req, res) {
 });
 
 //Route will be used to handle client sign up POST requests
-router.post('/client/signup', async function (req, res) {
+router.post('/client/signup', exports.clientSignup = async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
         return res.status(400).json({ error: valid_fields })
@@ -243,7 +244,7 @@ router.post('/client/signup', async function (req, res) {
 
 
 //Returns the a list containing the info from the haulages from user
-router.get('/haulage/user/list/:Id_user', async function (req, res) {
+router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async function (req, res) {
     //var id_user =  req.body.request.Id_user;
     var id_user = req.params.Id_user;
     const haulages = await getHandler("Haulage").getHaulageList(id_user);
@@ -303,7 +304,7 @@ router.get('/haulage/user/list/:Id_user', async function (req, res) {
 })
 
 
-router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
+router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async function (req, res) {
     let errorDescription = ""
     var Id_driver = req.params.Id_driver;
     let vehicles_haulages = await getHandler("Haulage_Driver_Vehicle").get_Haulage_Driver_Vehicles_of_Driver(Id_driver)
@@ -369,7 +370,7 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
 
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
-router.post('/haulage/create', async function (req, res) {
+router.post('/haulage/create', exports.haulageCreate = async function (req, res) {
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
@@ -456,7 +457,7 @@ router.post('/haulage/create', async function (req, res) {
 });
 
 //Route will be used to handle finish haulage
-router.post('/haulage/finish', async function (req, res) {
+router.post('/haulage/finish', exports.haulageFinish = async function (req, res) {
 
     Id_haulage = req.body.request.Id_haulage;
 
@@ -472,18 +473,18 @@ router.post('/haulage/finish', async function (req, res) {
 });
 
 //Route will be used to handle cancel POST service requests
-router.post('/haulage/cancel', function (req, res) {
+router.post('/haulage/cancel', exports.haulageCancel = async function (req, res) {
     //TODO cancel service
     res.status(200).json({ Api: 'Online' })
 });
 
 //Route will be used to handle the drivers schedules GET request
-router.get('/driver/schedule', function (req, res) {
+router.get('/driver/schedule', exports.driverSchedule = async function (req, res) {
     res.status(200).json({ Api: 'Send driver schedule' })
 });
 
 //Route will be used to send the drivers location GET request
-router.get('/driver/location', function (req, res) {
+router.get('/driver/location', exports.driverLocation = async function (req, res) {
     res.status(200).json({ Api: 'Send driver coordinates' })
 });
 
@@ -494,4 +495,4 @@ router.all('*', function (req, res) {
 });
 
 
-module.exports = router;
+//module.exports = router;
