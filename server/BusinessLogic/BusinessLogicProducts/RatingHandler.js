@@ -1,5 +1,5 @@
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+var ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
