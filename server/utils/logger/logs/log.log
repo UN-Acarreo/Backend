@@ -9854,3 +9854,45 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-11T15:42:20.727Z] : info : Driver_VehicleController: Driver vehicle found
 [2020-06-11T15:42:20.728Z] : info : Driver_VehicleHandler: Driver vehicle found
 [2020-06-11T15:42:20.728Z] : info : api.js: returned Driver id succesfully
+[2020-06-11T18:00:32.260Z] : info : Server: Server is running
+[2020-06-11T18:00:32.792Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:00:33.053Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:15:49.140Z] : info : Server: Server is running
+[2020-06-11T18:15:49.259Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:15:49.343Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:17:17.243Z] : info : Check field: Field is valid
+[2020-06-11T18:17:17.481Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T18:17:17.481Z] : info : DriverHandler: email match
+[2020-06-11T18:17:17.487Z] : info : DriverController:Driver found
+[2020-06-11T18:17:17.583Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T18:17:17.654Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-11T18:17:17.655Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-11T18:17:17.655Z] : info : api.js: returned Driver id succesfully
+[2020-06-11T18:18:25.301Z] : info : Server: Server is running
+[2020-06-11T18:18:25.402Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:18:25.483Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:18:41.481Z] : info : Check field: Field is valid
+[2020-06-11T18:18:41.539Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T18:18:41.539Z] : info : DriverHandler: email match
+[2020-06-11T18:18:41.543Z] : info : DriverController:Driver found
+[2020-06-11T18:18:41.643Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T18:18:41.653Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-11T18:18:41.653Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-11T18:18:41.654Z] : info : api.js: returned Driver id succesfully
+[2020-06-11T18:22:07.592Z] : info : Server: Server is running
+[2020-06-11T18:22:07.711Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:22:07.795Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:22:17.346Z] : info : Check field: Field is valid
+[2020-06-11T18:22:17.363Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T18:22:17.363Z] : info : DriverHandler: email match
+[2020-06-11T18:22:17.367Z] : info : DriverController:Driver found
+[2020-06-11T18:22:17.471Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T18:22:17.481Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-11T18:22:17.481Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-11T18:22:17.481Z] : info : api.js: returned Driver id succesfully
+[2020-06-11T18:22:42.756Z] : info : Check field: Field is valid
+[2020-06-11T18:22:42.861Z] : info : UserController:Number of users returned
+[2020-06-11T18:22:42.861Z] : info : UserHandler: email match
+[2020-06-11T18:22:42.864Z] : info : UserController:User found
+[2020-06-11T18:22:42.943Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-11T18:22:42.943Z] : info : api.js: returned user id succesfully

@@ -27,7 +27,7 @@ router.post('/log-client-errors', exports.logClientErrors = async function (req,
 //status -2 = filed checks failed, error message returned
 //status -3 = wrong path
 router.post('/:type_of_user/login', exports.login = async function (req, res) {
-    console.log(req)
+    
     //TODO login user using Oauth
     let type_of_user = req.params.type_of_user
     //data validation
@@ -494,5 +494,4 @@ router.all('*', function (req, res) {
 
 });
 
-
-//module.exports = router;
+module.exports = router;

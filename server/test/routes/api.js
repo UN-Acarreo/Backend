@@ -14,14 +14,8 @@ describe("Log client errors:", async function(){
     req = httpMocks.createRequest({method: 'POST', url: '/log-client-errors'});
     res = httpMocks.createResponse();
 
-    emmitter = await api.logClientErrors(req, res)
-
-    emitter.on("sayHello", function(e) {
-        e.message += " World";              // Modifying the state
-    });
-
-    console.log(await api.logClientErrors(req, res).statusMessage)
-    assert.equal(200, await api.logClientErrors(req, res).statusCode);
+    console.log((await api.logClientErrors(req, res)).statusCode)
+    assert.equal(200, (await api.logClientErrors(req, res)).statusCode);
 
   })
 
