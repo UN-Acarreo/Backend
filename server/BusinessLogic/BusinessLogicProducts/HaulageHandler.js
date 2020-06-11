@@ -49,7 +49,7 @@ async function createHaulageWithRouteCargo(values)
 
           let end_date = new Date(date.getTime());
           //values.Duration has duration in hours
-          end_date.setTime(end_date.getTime() + values.Duration*60*60*1000);  
+          end_date.setTime(end_date.getTime() + values.Duration*60*60*1000);
 
           let haulage = await ControllerFactory.getController("Haulage").create({
             Date: date, End_date: end_date, Id_user: values.Id_user, Id_route: route.data, Id_cargo: cargo.data
@@ -86,7 +86,19 @@ async function getHaulageInfo(Id_haulage)
   }
   logger.info("HaulageHandler: getHaulageInfo success")
   return{status:1,data: haualge.data}
-  
+
+}
+
+async function setHaulageRating(haulage_id, rating_id)
+{
+  let haualge = await ControllerFactory.getController("Haulage").setHaulageRating(haulage_id, rating_id)
+  if(haualge.status != 1)
+  {
+    logger.error("HaulageHandler: Haulage rating assignment error: "+ haualge.error)
+    return {status: -1, error: haualge.error}
+  }
+  logger.info("HaulageHandler: Haulage rating assignment success")
+  return  {status: 1}
 }
 
 async function finishHaulage(Id_haulage)
@@ -117,7 +129,7 @@ async function finishHaulage(Id_haulage)
   {
     logger.error("HaulageHandler: finishHaulage error: "+ cargo.error)
     return{status:-1,error:cargo.error};
-  } 
+  }
   let weight = cargo.data.Weight
 
   // Cost factor
@@ -137,13 +149,14 @@ async function finishHaulage(Id_haulage)
 
   logger.info("HaulageHandler: finishHaulage success")
   return{status:1, data: {Cost: cost, Duration : duration}}
-  
+
 }
 
 
 module.exports = {
-    createHaulageWithRouteCargo: createHaulageWithRouteCargo, 
+    createHaulageWithRouteCargo: createHaulageWithRouteCargo,
     getHaulageList: getHaulageList,
     getHaulageInfo: getHaulageInfo,
-    finishHaulage: finishHaulage
+    finishHaulage: finishHaulage,
+    setHaulageRating: setHaulageRating
     };
