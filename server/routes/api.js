@@ -459,7 +459,7 @@ router.post('/haulage/create', async function (req, res) {
 router.post('/haulage/rate', async function (req, res) {
     //console.log(req.body)
     let info = req.body;
-    Id_haulage = req.body.Id_haulage;
+    var Id_haulage = req.body.Id_haulage;
     let result = await getHandler("Rating").createRating(info);
     //console.log(result)
     if(result.status != 1){
