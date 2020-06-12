@@ -1,3 +1,6 @@
+//importing model factory
+const ModelFactory = require('../../Models/ModelFactory');
+
 async function create(Id_haulage, Id_Notification_Type, Id_user) {
 
     try {

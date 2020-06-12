@@ -21674,3 +21674,34 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-12T02:41:04.203Z] : info : HaulageController: register was returned successfully.
 [2020-06-12T02:41:04.380Z] : error : User_NotificationController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_Notification_pkey»
 [2020-06-12T02:41:04.382Z] : error : Subject: in register observer: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_Notification_pkey»
+[2020-06-12T02:54:56.460Z] : info : Server: Server is running
+[2020-06-12T02:54:56.718Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:54:56.892Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:55:12.178Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T02:55:12.179Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T02:55:30.204Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T02:55:30.204Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T02:56:30.346Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T02:56:30.347Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T02:58:27.042Z] : info : Server: Server is running
+[2020-06-12T02:58:27.576Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:58:27.997Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:58:32.692Z] : info : Server: Server is running
+[2020-06-12T02:58:33.313Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:58:33.330Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T02:58:33.331Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T02:58:33.657Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:58:51.265Z] : error : User_NotificationController: ReferenceError: ModelFactory is not defined
+[2020-06-12T02:58:51.266Z] : error : NotificationHandler: ReferenceError: ModelFactory is not defined
+[2020-06-12T02:58:51.267Z] : info : api: driver/user notifications: Hubo un error recuperando sus notificaciones
+[2020-06-12T02:59:03.181Z] : info : Server: Server is running
+[2020-06-12T02:59:03.414Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:59:03.574Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:59:30.035Z] : info : Server: Server is running
+[2020-06-12T02:59:33.489Z] : info : Server: Server is running
+[2020-06-12T02:59:33.715Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:59:33.912Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:59:34.810Z] : info : User_NotificationController:notifications found
+[2020-06-12T02:59:34.811Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T02:59:43.683Z] : info : User_NotificationController:User has 0 notifications
+[2020-06-12T02:59:43.684Z] : info : api:driver/user notifications found succesfully
