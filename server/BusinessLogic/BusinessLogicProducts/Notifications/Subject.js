@@ -37,25 +37,31 @@ class Subject {
 
     async removeObserver(observer,Id_haulage)
     {
-        
+        let query
+        let controller
         if(observer.typeObserver=="Driver")
         {
-            let result = await getController("Driver_Notification").remove({
+            query = {
                 Id_driver:observer.observer_Id,
                 Id_haulage:Id_haulage
-            })
-            if(result.status==-1)
-            {
-                logger.error("Subject:removeObserver "+result.error)
-                return {status:-1,error:result.error}
             }
-            logger.info("Subject:removeObserver ")
-            return {status:result.status,data:""}
-            
+            controller="Driver_Notification"
         }else if(observer.typeObserver=="User")
         {
-            //delete register in UserNotification table
+            query = {
+                Id_user:observer.observer_Id,
+                Id_haulage:Id_haulage
+            }
+            controller="User_Notification"
         }
+        let result = await getController(controller).remove(query)
+        if(result.status==-1)
+        {
+            logger.error("Subject:removeObserver "+result.error)
+            return {status:-1,error:result.error}
+        }
+        logger.info("Subject:removeObserver ")
+        return {status:result.status,data:""}
     }
 
     async notifyObserver(observer)

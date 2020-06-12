@@ -41,7 +41,7 @@ async function remove(query) {
         return {status: 1, data: ""}
 
     } catch (error) {
-        logger.error("DriverController: " + error);
+        logger.error("Driver_NotificationController: " + error);
         return {status: -1, error: error};
     }
 

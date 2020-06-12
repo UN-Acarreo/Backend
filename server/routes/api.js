@@ -159,11 +159,21 @@ router.get('/:type_of_user/notification/check/:Id',async function (req, res) {
     }
 })
 
-router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async function (req, res){
+router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',async function (req, res){
 
-    var Id_driver = req.params.Id_driver;
+    let type_of_user = req.params.type_of_user
+    if(type_of_user == "driver")
+        type_of_user = "Driver"
+    else if(type_of_user == "client")
+        type_of_user = "User"
+    else
+    {
+        logger.info("api: user/driver remove notifications: Validation fail")
+        return res.status(400).json({ status:-1, error: "URL incorrecto"})
+    }
+    var Id = req.params.Id;
     var Id_haulage = req.params.Id_haulage;
-    let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
+    let notifications = await getHandler("Notification").removeNotification(type_of_user,Id,Id_haulage)
     if(notifications.status==-1)
     {
         return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})

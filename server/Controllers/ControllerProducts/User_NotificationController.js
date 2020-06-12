@@ -23,6 +23,30 @@ async function create(Id_haulage, Id_Notification_Type, Id_user) {
 
 }
 
+async function remove(query) {
+
+    try {
+        // Create Driver
+        let result = await ModelFactory.getModel("User_Notification").destroy({
+            where: query
+          });
+        
+        if(result==0)
+        {
+            //driver had no notifications
+            logger.info("User_NotificationController: user had no notifications.");
+            return {status: 0, data: ""}
+        }
+
+        logger.info("User_NotificationController: notification was deleted successfully.");
+        return {status: 1, data: ""}
+
+    } catch (error) {
+        logger.error("User_NotificationController: " + error);
+        return {status: -1, error: error};
+    }
+
+}
 async function getRegisterBy(query) {
     //query to find Driver by given email (which is unique)
     try {
@@ -53,5 +77,5 @@ module.exports =
 {
     create:create,
     getRegisterBy:getRegisterBy,
-    //remove:remove
+    remove:remove
 }

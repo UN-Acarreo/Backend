@@ -21705,3 +21705,59 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-12T02:59:34.811Z] : info : api:driver/user notifications found succesfully
 [2020-06-12T02:59:43.683Z] : info : User_NotificationController:User has 0 notifications
 [2020-06-12T02:59:43.684Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:12:03.975Z] : info : Server: Server is running
+[2020-06-12T03:12:04.125Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:12:04.232Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:12:09.963Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T03:12:09.963Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:12:28.237Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-12T03:12:28.238Z] : info : Subject:removeObserver 
+[2020-06-12T03:12:33.231Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T03:12:33.251Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:14:17.926Z] : info : Server: Server is running
+[2020-06-12T03:14:18.082Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:14:18.187Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:14:55.291Z] : info : User_NotificationController:notifications found
+[2020-06-12T03:14:55.292Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:16:13.555Z] : info : Driver_NotificationController: driver had no notifications.
+[2020-06-12T03:16:13.556Z] : info : Subject:removeObserver 
+[2020-06-12T03:16:46.448Z] : info : Server: Server is running
+[2020-06-12T03:16:46.605Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:16:46.717Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:17:00.655Z] : info : Server: Server is running
+[2020-06-12T03:17:00.807Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:17:00.920Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:17:13.680Z] : info : Server: Server is running
+[2020-06-12T03:17:13.846Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:17:13.972Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:18:43.162Z] : info : Server: Server is running
+[2020-06-12T03:18:43.321Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T03:18:43.474Z] : info : Server: database tables created if the dont exist
+[2020-06-12T03:19:00.430Z] : info : User_NotificationController: notification was deleted successfully.
+[2020-06-12T03:19:00.431Z] : info : Subject:removeObserver 
+[2020-06-12T03:19:27.907Z] : info : User_NotificationController:User has 0 notifications
+[2020-06-12T03:19:27.908Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:19:32.225Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T03:19:32.229Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T03:19:32.234Z] : info : CargoController: Cargo info found
+[2020-06-12T03:19:32.242Z] : info : BillController: Bill was created successfully.
+[2020-06-12T03:19:32.242Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T03:19:32.246Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T03:19:32.303Z] : info : User_NotificationController: notification was created successfully.
+[2020-06-12T03:19:32.303Z] : info : Subject: in register observer: success
+[2020-06-12T03:19:38.261Z] : info : User_NotificationController:notifications found
+[2020-06-12T03:19:38.261Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:19:42.675Z] : info : User_NotificationController: user had no notifications.
+[2020-06-12T03:19:42.676Z] : info : Subject:removeObserver 
+[2020-06-12T03:19:50.919Z] : info : User_NotificationController: notification was deleted successfully.
+[2020-06-12T03:19:50.920Z] : info : Subject:removeObserver 
+[2020-06-12T03:19:54.461Z] : info : User_NotificationController:User has 0 notifications
+[2020-06-12T03:19:54.461Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:19:57.646Z] : info : User_NotificationController: user had no notifications.
+[2020-06-12T03:19:57.646Z] : info : Subject:removeObserver 
+[2020-06-12T03:20:10.003Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T03:20:10.003Z] : info : api:driver/user notifications found succesfully
+[2020-06-12T03:20:25.096Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-12T03:20:25.096Z] : info : Subject:removeObserver 
+[2020-06-12T03:20:29.318Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T03:20:29.318Z] : info : api:driver/user notifications found succesfully
