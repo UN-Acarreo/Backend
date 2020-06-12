@@ -21399,3 +21399,278 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-10T21:43:17.044Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
 [2020-06-10T21:43:17.046Z] : info : VehicleController: vehicle info found
 [2020-06-10T21:43:17.048Z] : info : DriverController: driver info found
+[2020-06-12T01:26:52.877Z] : info : Server: Server is running
+[2020-06-12T01:26:53.069Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:26:53.220Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:28:25.452Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T01:28:25.453Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:28:42.104Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T01:28:42.105Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:29:36.033Z] : info : Server: Server is running
+[2020-06-12T01:29:36.208Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:29:36.323Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:29:43.113Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T01:29:43.114Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:29:47.398Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T01:29:47.399Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:34:21.924Z] : info : Server: Server is running
+[2020-06-12T01:34:22.123Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:34:22.285Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:34:31.043Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T01:35:15.760Z] : info : Server: Server is running
+[2020-06-12T01:35:15.953Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:35:16.096Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:35:23.937Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T01:35:23.938Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:35:30.845Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T01:35:30.845Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:37:16.643Z] : info : Server: Server is running
+[2020-06-12T01:37:16.824Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:37:16.967Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:37:24.141Z] : info : Server: Server is running
+[2020-06-12T01:37:24.385Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:37:24.557Z] : info : Server: database tables created if the dont exist
+[2020-06-12T01:40:20.254Z] : info : Driver_NotificationController:Driver has 0 notifications
+[2020-06-12T01:40:20.254Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:40:24.530Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T01:40:24.531Z] : info : api:driver notifications found succesfully
+[2020-06-12T01:59:32.183Z] : info : Server: Server is running
+[2020-06-12T01:59:32.361Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:59:32.518Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:01:08.880Z] : info : Server: Server is running
+[2020-06-12T02:01:09.070Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:01:09.224Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:05:54.022Z] : info : Server: Server is running
+[2020-06-12T02:05:54.248Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:05:54.395Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:06:46.436Z] : info : Server: Server is running
+[2020-06-12T02:06:46.637Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:06:46.802Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:07:12.212Z] : info : Server: Server is running
+[2020-06-12T02:07:12.401Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:07:12.561Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:07:38.230Z] : info : Server: Server is running
+[2020-06-12T02:07:38.636Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:07:38.813Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:08:16.527Z] : info : Server: Server is running
+[2020-06-12T02:08:16.797Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:08:17.004Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:08:31.516Z] : info : Server: Server is running
+[2020-06-12T02:08:31.757Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:08:32.003Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:08:48.846Z] : info : Server: Server is running
+[2020-06-12T02:08:49.071Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:08:49.267Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:09:54.392Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:09:54.402Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:09:54.408Z] : info : CargoController: Cargo info found
+[2020-06-12T02:09:54.540Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:09:54.541Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:11:55.280Z] : info : Server: Server is running
+[2020-06-12T02:11:55.446Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:11:55.606Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:12:38.949Z] : info : Server: Server is running
+[2020-06-12T02:12:39.133Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:12:39.297Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:12:45.225Z] : info : Server: Server is running
+[2020-06-12T02:12:45.419Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:12:45.589Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:12:48.122Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:12:48.130Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:12:48.137Z] : info : CargoController: Cargo info found
+[2020-06-12T02:12:48.149Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:12:48.150Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:12:48.161Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:13:43.280Z] : info : Server: Server is running
+[2020-06-12T02:13:43.525Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:13:43.743Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:14:16.928Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:14:16.940Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:14:16.948Z] : info : CargoController: Cargo info found
+[2020-06-12T02:14:16.981Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:14:16.982Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:14:16.998Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:14:38.481Z] : info : Server: Server is running
+[2020-06-12T02:14:38.664Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:14:38.770Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:14:41.701Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:14:41.710Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:14:41.716Z] : info : CargoController: Cargo info found
+[2020-06-12T02:14:41.728Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:14:41.728Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:14:41.738Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:16:40.745Z] : info : Server: Server is running
+[2020-06-12T02:16:40.972Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:16:41.142Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:16:50.689Z] : info : Server: Server is running
+[2020-06-12T02:16:50.901Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:16:51.137Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:17:06.886Z] : info : Server: Server is running
+[2020-06-12T02:17:07.120Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:17:07.345Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:17:09.222Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:17:09.230Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:17:09.237Z] : info : CargoController: Cargo info found
+[2020-06-12T02:17:09.247Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:17:09.248Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:17:09.255Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:19:18.285Z] : info : Server: Server is running
+[2020-06-12T02:19:18.635Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:19:18.827Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:19:50.055Z] : info : Server: Server is running
+[2020-06-12T02:19:50.583Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:19:50.860Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:20:48.450Z] : info : Server: Server is running
+[2020-06-12T02:20:48.673Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:20:48.882Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:20:58.002Z] : info : Server: Server is running
+[2020-06-12T02:20:58.404Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:20:58.710Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:22:26.933Z] : info : Server: Server is running
+[2020-06-12T02:22:27.119Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:22:27.284Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:22:45.584Z] : info : Server: Server is running
+[2020-06-12T02:22:45.768Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:22:45.914Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:24:07.946Z] : info : Server: Server is running
+[2020-06-12T02:24:08.183Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:24:08.445Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:24:43.665Z] : info : Server: Server is running
+[2020-06-12T02:24:43.880Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:24:44.085Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:25:25.927Z] : info : Server: Server is running
+[2020-06-12T02:25:26.247Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:25:26.549Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:26:08.636Z] : info : Server: Server is running
+[2020-06-12T02:26:08.846Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:26:09.058Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:26:57.325Z] : info : Server: Server is running
+[2020-06-12T02:26:57.536Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:26:57.748Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:32:20.454Z] : info : Server: Server is running
+[2020-06-12T02:32:20.747Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:32:21.012Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:32:38.874Z] : info : Server: Server is running
+[2020-06-12T02:32:39.188Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:32:39.403Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:33:00.236Z] : info : Server: Server is running
+[2020-06-12T02:33:00.591Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:33:00.818Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:33:14.805Z] : info : Server: Server is running
+[2020-06-12T02:33:15.054Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:33:15.259Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:33:22.401Z] : info : Server: Server is running
+[2020-06-12T02:33:22.661Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:33:22.998Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:34:16.379Z] : info : Server: Server is running
+[2020-06-12T02:34:16.726Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:34:16.945Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:36:24.323Z] : info : Check field: Field is valid
+[2020-06-12T02:36:24.504Z] : info : UserController:Number of users returned
+[2020-06-12T02:36:24.506Z] : info : UserHandler: email match
+[2020-06-12T02:36:24.528Z] : info : UserController:User found
+[2020-06-12T02:36:24.826Z] : info : api.js: could not find user
+[2020-06-12T02:36:31.947Z] : info : Check field: Field is valid
+[2020-06-12T02:36:31.952Z] : info : UserController:Number of users returned
+[2020-06-12T02:36:31.953Z] : info : UserHandler: email match
+[2020-06-12T02:36:31.956Z] : info : UserController:User found
+[2020-06-12T02:36:32.122Z] : info : api.js: could not find user
+[2020-06-12T02:36:39.735Z] : info : Check field: Field is valid
+[2020-06-12T02:36:39.737Z] : info : UserController:Number of users returned
+[2020-06-12T02:36:39.738Z] : info : UserHandler: email match
+[2020-06-12T02:36:39.740Z] : info : UserController:User found
+[2020-06-12T02:36:39.900Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T02:36:39.901Z] : info : api.js: returned user id succesfully
+[2020-06-12T02:37:09.320Z] : info : Check field: Field is valid
+[2020-06-12T02:37:09.415Z] : info : HaulageController: list was found successfully.
+[2020-06-12T02:37:09.415Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-12T02:37:09.423Z] : info : VehicleController: list was returned successfully.
+[2020-06-12T02:37:09.424Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-12T02:37:09.424Z] : info : VehicleHandler:enough cars
+[2020-06-12T02:37:09.464Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-12T02:37:09.465Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-12T02:37:09.499Z] : info : RouteController: Route was created successfully.
+[2020-06-12T02:37:09.522Z] : info : CargoController: Cargo was created successfully.
+[2020-06-12T02:37:09.584Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-12T02:37:09.584Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-12T02:37:09.584Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-12T02:37:09.636Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-12T02:37:09.637Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-12T02:37:09.637Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-12T02:37:09.646Z] : info : DriverController: register was returned successfully.
+[2020-06-12T02:37:09.652Z] : info : VehicleController: list was returned successfully.
+[2020-06-12T02:37:09.653Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-12T02:37:09.653Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-12T02:37:09.722Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-12T02:37:09.722Z] : info : Subject: in register observer: success
+[2020-06-12T02:37:31.152Z] : info : HaulageController: User haulages found
+[2020-06-12T02:37:31.168Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.176Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.182Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.191Z] : info : RatingController: rating info found
+[2020-06-12T02:37:31.196Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.201Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.219Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.227Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.230Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.232Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.235Z] : info : RatingController: rating info found
+[2020-06-12T02:37:31.238Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.242Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.245Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.247Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.249Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.251Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.253Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.256Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.259Z] : info : RatingController: rating info found
+[2020-06-12T02:37:31.261Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.263Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.267Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.270Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.284Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.287Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.292Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.295Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.297Z] : info : RatingController: rating info found
+[2020-06-12T02:37:31.300Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.319Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.325Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.328Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.331Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.333Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.336Z] : info : RatingController: rating info found
+[2020-06-12T02:37:31.338Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.342Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.344Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.346Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.348Z] : info : DriverController: driver info found
+[2020-06-12T02:37:31.350Z] : info : CargoController: Cargo info found
+[2020-06-12T02:37:31.352Z] : info : RouteController: route info found
+[2020-06-12T02:37:31.354Z] : info : StatusController: status info found
+[2020-06-12T02:37:31.363Z] : info : RatingController: No rating information found with that id
+[2020-06-12T02:37:31.365Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-12T02:37:31.369Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-12T02:37:31.374Z] : info : VehicleController: vehicle info found
+[2020-06-12T02:37:31.378Z] : info : DriverController: driver info found
+[2020-06-12T02:39:40.668Z] : info : Driver_NotificationController:notifications found
+[2020-06-12T02:39:40.668Z] : info : api:driver notifications found succesfully
+[2020-06-12T02:40:02.558Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:40:02.562Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:40:02.568Z] : info : CargoController: Cargo info found
+[2020-06-12T02:40:02.580Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:40:02.580Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:40:02.583Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:40:02.700Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-12T02:40:02.700Z] : info : Subject: in register observer: success
+[2020-06-12T02:40:31.403Z] : info : Server: Server is running
+[2020-06-12T02:40:31.715Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T02:40:31.927Z] : info : Server: database tables created if the dont exist
+[2020-06-12T02:41:04.164Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:41:04.175Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:41:04.181Z] : info : CargoController: Cargo info found
+[2020-06-12T02:41:04.192Z] : info : BillController: Bill was created successfully.
+[2020-06-12T02:41:04.192Z] : info : HaulageHandler: finishHaulage success
+[2020-06-12T02:41:04.203Z] : info : HaulageController: register was returned successfully.
+[2020-06-12T02:41:04.380Z] : error : User_NotificationController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_Notification_pkey»
+[2020-06-12T02:41:04.382Z] : error : Subject: in register observer: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_Notification_pkey»

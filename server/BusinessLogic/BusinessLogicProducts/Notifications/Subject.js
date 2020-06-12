@@ -13,23 +13,26 @@ class Subject {
 
     async registerObserver(observer,Id_haulage)
     {
-        
-        if(observer.typeObserver=="Driver")
-        {
-            //console.log("registerObserver"+observer.observer_Id + "haulage "+Id_haulage)
-            //create register in DriverNotification table
-            for (const notification of this.notifications) {
+        //console.log("registerObserver"+observer.observer_Id + "haulage "+Id_haulage)
+        //create register in DriverNotification table or UserNotification table
+        for (const notification of this.notifications) {
+            let controller;
+            if(observer.typeObserver=="Driver")
+            {
                 //create register in DriverNotification table
-                let new_notif = await getController("Driver_Notification").create(Id_haulage,notification,observer.observer_Id)
-                if(new_notif.status==-1)
-                    logger.error("Subject: in register observer: "+ new_notif.error)
-                else
-                    logger.info("Subject: in register observer: success")
+                controller = "Driver_Notification"
+            }else if(observer.typeObserver=="User")
+            {
+                //create register in UserNotification table
+                controller = "User_Notification"
             }
-        }else if(observer.typeObserver=="User")
-        {
-            //create register in UserNotification table
+            let new_notif = await getController(controller).create(Id_haulage,notification,observer.observer_Id)
+            if(new_notif.status==-1)
+                logger.error("Subject: in register observer: "+ new_notif.error)
+            else
+                logger.info("Subject: in register observer: success")
         }
+        
     }
 
     async removeObserver(observer,Id_haulage)

@@ -17,7 +17,7 @@ async function create(Id_haulage, Id_Notification_Type, Id_driver) {
         return {status: 1, data: result}
 
     } catch (error) {
-        logger.error("DriverController: " + error);
+        logger.error("Driver_NotificationController: " + error);
         return {status: -1, error: error};
     }
 

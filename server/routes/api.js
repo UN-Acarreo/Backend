@@ -136,7 +136,7 @@ router.post('/driver/signup', async function (req, res) {
 router.get('/driver/notification/check/:Id_driver',async function (req, res) {
 
     var Id_driver = req.params.Id_driver;
-    let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
+    let notifications = await getHandler("Notification").getNotifications(Id_driver,"Driver")
     if(notifications.status==-1)
     {
         logger.info("api: driver notifications: "+notifications.error)
@@ -485,9 +485,11 @@ router.post('/haulage/finish', async function (req, res) {
     if (result.status != 1) {
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
-    } else {
-        res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     }
+
+    let notificacion = await getHandler("Notification").createUserNoficiations(Id_haulage)
+    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
+    
 
 });
 
