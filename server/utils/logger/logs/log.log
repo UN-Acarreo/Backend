@@ -9907,3 +9907,1093 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-11T18:27:22.559Z] : info : Driver_VehicleController: Driver vehicle found
 [2020-06-11T18:27:22.559Z] : info : Driver_VehicleHandler: Driver vehicle found
 [2020-06-11T18:27:22.559Z] : info : api.js: returned Driver id succesfully
+[2020-06-11T18:32:08.869Z] : info : Server: Server is running
+[2020-06-11T18:32:08.996Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T18:32:09.095Z] : info : Server: database tables created if the dont exist
+[2020-06-11T18:47:43.202Z] : error : Api:Server recieved error from client:: undefined undefined
+[2020-06-11T18:48:00.833Z] : error : Api:Server recieved error from client:: undefined undefined
+[2020-06-11T18:53:21.801Z] : error : Api: Server recieved error from client:: "" undefined
+[2020-06-11T19:35:28.524Z] : error : Api: Server recieved error from client:: undefined ""
+[2020-06-11T19:52:43.004Z] : error : Api: Server recieved error from client:: "" ""
+[2020-06-11T19:54:06.196Z] : error : Api: Server recieved error from client:: "" ""
+[2020-06-11T19:54:45.378Z] : error : Api: Server recieved error from client:: "test message" "strack message"
+[2020-06-11T20:09:16.440Z] : info : Server: Server is running
+[2020-06-11T20:09:17.002Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T20:09:17.332Z] : info : Server: database tables created if the dont exist
+[2020-06-11T22:39:04.840Z] : info : Check field: Field is valid
+[2020-06-11T22:39:05.820Z] : info : UserController: User was created successfully.
+[2020-06-11T22:39:05.821Z] : info : UserHandler: User was created successfully.
+[2020-06-11T22:39:05.821Z] : info : Signup client: added succesfully
+[2020-06-11T22:40:22.344Z] : info : Check field: Field is valid
+[2020-06-11T22:40:22.398Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-11T22:40:22.774Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:40:22.774Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:40:22.774Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:41:17.025Z] : info : Check field: Field is valid
+[2020-06-11T22:41:17.054Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-11T22:41:17.189Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:41:17.189Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:41:17.189Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»
+[2020-06-11T22:41:39.048Z] : info : Check field: Field is valid
+[2020-06-11T22:41:39.049Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-11T22:41:39.192Z] : info : DriverController: Driver was created successfully.
+[2020-06-11T22:41:39.193Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-11T22:41:39.193Z] : info : Signup driver: added succesfully
+[2020-06-11T22:45:42.506Z] : info : Check field: Field is valid
+[2020-06-11T22:45:42.523Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-11T22:45:42.678Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-11T22:45:42.678Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-11T22:45:42.897Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-11T22:45:42.897Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-11T22:45:42.897Z] : info : Signup vehicle: added succesfully
+[2020-06-11T22:55:14.606Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T22:56:40.902Z] : info : Check field: Field is valid
+[2020-06-11T22:56:41.203Z] : info : UserController:Number of users returned
+[2020-06-11T22:56:41.203Z] : info : UserHandler: email match
+[2020-06-11T22:56:41.206Z] : info : UserController:User found
+[2020-06-11T22:56:41.285Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-11T22:56:41.285Z] : info : api.js: returned user id succesfully
+[2020-06-11T22:58:09.166Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T22:58:10.206Z] : info : Check field: Field is valid
+[2020-06-11T22:58:15.072Z] : info : Check field: Field is valid
+[2020-06-11T22:58:15.361Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T22:58:15.368Z] : info : UserController:Number of users returned
+[2020-06-11T22:58:15.370Z] : info : UserHandler: email match
+[2020-06-11T22:58:15.376Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T22:58:15.377Z] : info : DriverHandler: email match
+[2020-06-11T22:58:15.381Z] : info : UserController:User found
+[2020-06-11T22:58:15.513Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-11T22:58:15.514Z] : info : api.js: returned user id succesfully
+[2020-06-11T22:58:15.516Z] : info : DriverController:Driver found
+[2020-06-11T22:58:15.604Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T22:58:15.648Z] : error : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:58:15.649Z] : error : Driver_VehicleHandler: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:58:15.649Z] : error : api.js: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:58:15.662Z] : info : Check field: Field is valid
+[2020-06-11T22:58:15.663Z] : error : UserController: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:58:15.664Z] : error : UserHandler: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:58:15.664Z] : error : api.js: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:58:15.666Z] : info : Check field: Field is valid
+[2020-06-11T22:58:15.670Z] : info : UserController:Number of users returned
+[2020-06-11T22:58:15.670Z] : info : UserHandler: email match
+[2020-06-11T22:58:15.672Z] : info : UserController:User found
+[2020-06-11T22:59:30.500Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T22:59:30.658Z] : info : Check field: Field is valid
+[2020-06-11T22:59:31.417Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T22:59:31.420Z] : info : UserController:Number of users returned
+[2020-06-11T22:59:31.421Z] : info : UserHandler: email match
+[2020-06-11T22:59:31.427Z] : info : UserController:User found
+[2020-06-11T22:59:31.546Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-11T22:59:31.546Z] : info : api.js: returned user id succesfully
+[2020-06-11T22:59:31.551Z] : info : Check field: Field is valid
+[2020-06-11T22:59:31.559Z] : info : DriverController:Number of Drivers returned
+[2020-06-11T22:59:31.559Z] : info : DriverHandler: email match
+[2020-06-11T22:59:31.561Z] : info : DriverController:Driver found
+[2020-06-11T22:59:31.654Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-11T22:59:31.661Z] : error : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:59:31.661Z] : error : Driver_VehicleHandler: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:59:31.661Z] : error : api.js: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-11T22:59:31.665Z] : info : Check field: Field is valid
+[2020-06-11T22:59:31.667Z] : error : UserController: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:59:31.667Z] : error : UserHandler: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:59:31.667Z] : error : api.js: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T22:59:31.668Z] : info : Check field: Field is valid
+[2020-06-11T22:59:31.671Z] : info : UserController:Number of users returned
+[2020-06-11T22:59:31.671Z] : info : UserHandler: email match
+[2020-06-11T22:59:31.674Z] : info : UserController:User found
+[2020-06-11T23:07:03.825Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T23:07:03.935Z] : info : Check field: Field is valid
+[2020-06-11T23:07:04.398Z] : error : UserController: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T23:07:04.399Z] : error : UserHandler: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T23:07:04.399Z] : error : api.js: Error: WHERE parameter "User_Email" has invalid "undefined" value
+[2020-06-11T23:07:04.409Z] : info : Check field: Field is valid
+[2020-06-11T23:07:04.532Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T23:07:04.536Z] : info : UserController:Number of users returned
+[2020-06-11T23:07:04.536Z] : info : UserHandler: email match
+[2020-06-11T23:07:04.541Z] : info : UserController:User found
+[2020-06-11T23:09:42.340Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T23:09:42.462Z] : info : Check field: Field is valid
+[2020-06-11T23:09:43.038Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-11T23:09:43.041Z] : info : UserController:Number of users returned
+[2020-06-11T23:09:43.042Z] : info : UserHandler: email match
+[2020-06-11T23:09:43.046Z] : info : UserController:User found
+[2020-06-11T23:13:24.632Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-11T23:18:36.841Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T00:24:20.121Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T00:37:13.785Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T00:37:13.897Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.909Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.910Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.916Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.916Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.917Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.918Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.918Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.918Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.920Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.920Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.920Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.922Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.922Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.922Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.924Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.924Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.924Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.926Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.927Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.929Z] : info : Signup driver: Error in save image
+[2020-06-12T00:37:13.933Z] : info : Check field: Field is valid
+[2020-06-12T00:37:13.933Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:37:13.934Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.775Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T00:38:52.952Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.954Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.954Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.959Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.960Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.960Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.962Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.962Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.963Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.964Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.964Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.964Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.965Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.966Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.966Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.967Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.967Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.967Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.968Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.969Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.969Z] : info : Signup driver: Error in save image
+[2020-06-12T00:38:52.970Z] : info : Check field: Field is valid
+[2020-06-12T00:38:52.970Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:38:52.970Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.606Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T00:42:31.734Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.736Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.737Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.742Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.743Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.743Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.745Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.745Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.745Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.746Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.747Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.747Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.748Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.748Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.749Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.750Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.750Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.751Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.752Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.752Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.752Z] : info : Signup driver: Error in save image
+[2020-06-12T00:42:31.753Z] : info : Check field: Field is valid
+[2020-06-12T00:42:31.754Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T00:42:31.754Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.194Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:05:03.309Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:05:03.316Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.318Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.318Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.324Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.325Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.325Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.327Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.327Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.328Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.329Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.330Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.330Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.332Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.332Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.333Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.334Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.335Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.336Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.337Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.338Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.338Z] : info : Signup driver: Error in save image
+[2020-06-12T01:05:03.340Z] : info : Check field: Field is valid
+[2020-06-12T01:05:03.340Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:05:03.341Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.586Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:14:00.703Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.703Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:14:00.707Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:14:00.709Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:14:00.712Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:14:00.720Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.725Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.726Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.732Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.734Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.735Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.736Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.737Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.737Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.739Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.739Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.740Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.741Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.743Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.744Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.746Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.747Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.747Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.749Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.749Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.750Z] : info : Signup driver: Error in save image
+[2020-06-12T01:14:00.752Z] : info : Check field: Field is valid
+[2020-06-12T01:14:00.752Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:14:00.753Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.561Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:23:41.679Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.680Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:23:41.683Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:23:41.688Z] : info : Check field: Field can't be empty
+[2020-06-12T01:23:41.689Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:23:41.695Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.697Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.698Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.703Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.703Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.704Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.705Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.706Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.706Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.707Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.708Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.709Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.711Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.716Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.718Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.721Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.722Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.723Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.725Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.726Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.726Z] : info : Signup driver: Error in save image
+[2020-06-12T01:23:41.727Z] : info : Check field: Field is valid
+[2020-06-12T01:23:41.728Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:23:41.728Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.478Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:24:58.642Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.642Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:24:58.645Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:24:58.648Z] : info : Check field: Field can't be empty
+[2020-06-12T01:24:58.649Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:24:58.652Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.654Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.655Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.656Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.657Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.657Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.658Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.659Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.659Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.660Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.660Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.661Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.662Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.662Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.662Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.663Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.664Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.664Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.665Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.666Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.666Z] : info : Signup driver: Error in save image
+[2020-06-12T01:24:58.667Z] : info : Check field: Field is valid
+[2020-06-12T01:24:58.667Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:24:58.668Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.545Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:32:32.664Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.664Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:32:32.667Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:32:32.671Z] : info : Check field: Field can't be empty
+[2020-06-12T01:32:32.672Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:32:32.675Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.677Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.677Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.679Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.680Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.680Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.682Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.682Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.682Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.683Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.684Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.684Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.685Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.686Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.686Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.688Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.688Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.689Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.692Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.692Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.693Z] : info : Signup driver: Error in save image
+[2020-06-12T01:32:32.695Z] : info : Check field: Field is valid
+[2020-06-12T01:32:32.695Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:32:32.697Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:20.240Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:45:20.354Z] : info : Check field: Field is valid
+[2020-06-12T01:45:20.354Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:45:20.361Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.647Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:45:23.650Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:45:23.652Z] : info : Check field: Field can't be empty
+[2020-06-12T01:45:23.656Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:45:23.667Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.670Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.672Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.676Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.678Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.689Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.705Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.706Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.707Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.710Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.712Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.714Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.719Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.720Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.721Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.731Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.732Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.732Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.734Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.735Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.735Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.737Z] : info : Check field: Field is valid
+[2020-06-12T01:45:23.739Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:45:23.741Z] : info : Signup driver: Error in save image
+[2020-06-12T01:45:23.919Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:45:23.956Z] : info : UserController:Number of users returned
+[2020-06-12T01:45:23.956Z] : info : UserHandler: email match
+[2020-06-12T01:45:23.962Z] : info : UserController:User found
+[2020-06-12T01:46:26.921Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:46:27.046Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.047Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:46:27.052Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.575Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:46:27.578Z] : info : UserController:Number of users returned
+[2020-06-12T01:46:27.579Z] : info : UserHandler: email match
+[2020-06-12T01:46:27.583Z] : info : UserController:User found
+[2020-06-12T01:46:27.584Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:46:27.586Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:46:27.587Z] : info : Check field: Field can't be empty
+[2020-06-12T01:46:27.588Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:46:27.590Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.593Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.593Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.596Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.597Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.597Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.599Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.599Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.599Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.601Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.601Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.602Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.603Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.605Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.605Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.607Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.607Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.608Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.609Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.610Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.610Z] : info : Signup driver: Error in save image
+[2020-06-12T01:46:27.611Z] : info : Check field: Field is valid
+[2020-06-12T01:46:27.612Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:46:27.612Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:35.957Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:52:36.070Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.070Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T01:52:36.072Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.609Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T01:52:36.856Z] : error : UserController: SequelizeDatabaseError: el operador no existe: character varying = integer
+[2020-06-12T01:52:36.856Z] : error : UserHandler: SequelizeDatabaseError: el operador no existe: character varying = integer
+[2020-06-12T01:52:36.857Z] : error : api.js: SequelizeDatabaseError: el operador no existe: character varying = integer
+[2020-06-12T01:52:36.860Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.863Z] : info : UserController:Number of users returned
+[2020-06-12T01:52:36.864Z] : info : UserHandler: email match
+[2020-06-12T01:52:36.868Z] : info : UserController:User found
+[2020-06-12T01:52:36.869Z] : info : Check field: Field can't be empty
+[2020-06-12T01:52:36.870Z] : info : Check field: Field can't be empty
+[2020-06-12T01:52:36.871Z] : info : Check field: Field can't be empty
+[2020-06-12T01:52:36.872Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.874Z] : info : UserController:Number of users returned
+[2020-06-12T01:52:36.874Z] : info : UserHandler: User is not valid
+[2020-06-12T01:52:36.874Z] : info : api.js: could not find user
+[2020-06-12T01:52:36.878Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.879Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.880Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.881Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.882Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.882Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.883Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.884Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.884Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.885Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.886Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.886Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.887Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.888Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.888Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.889Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.889Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.890Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.943Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.943Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.944Z] : info : Signup driver: Error in save image
+[2020-06-12T01:52:36.945Z] : info : Check field: Field is valid
+[2020-06-12T01:52:36.945Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:52:36.946Z] : info : Signup driver: Error in save image
+[2020-06-12T01:59:35.016Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T01:59:35.129Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T01:59:35.130Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T01:59:35.132Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T01:59:35.133Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:59:35.134Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T01:59:35.135Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T01:59:35.136Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T01:59:35.138Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.142Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.144Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.146Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.148Z] : info : Check field: Field is valid
+[2020-06-12T01:59:35.151Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T01:59:35.151Z] : info : Signup driver: Error in save image
+[2020-06-12T01:59:35.154Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.156Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T01:59:35.158Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:11:20.025Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T02:11:20.134Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:11:20.136Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T02:11:20.137Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:11:20.137Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:11:20.139Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:11:20.140Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:11:20.142Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T02:33:22.612Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T02:33:22.721Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:33:22.722Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T02:33:22.723Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:33:22.724Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:33:22.726Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:33:22.727Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:33:22.728Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T02:38:31.054Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T02:38:31.166Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:38:31.167Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T02:38:31.168Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:38:31.169Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:38:31.170Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:38:31.171Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:38:31.172Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T02:38:31.174Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:38:31.175Z] : info : Check field: Identity card "123456" invalid
+[2020-06-12T02:38:31.177Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:38:31.178Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:38:31.182Z] : info : Check field: Field is valid
+[2020-06-12T02:38:31.184Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T02:38:31.185Z] : info : Signup driver: Error in save image
+[2020-06-12T02:38:31.187Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:38:31.189Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:38:31.190Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.813Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T02:50:21.934Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:50:21.936Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T02:50:21.937Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:50:21.939Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:50:21.940Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:50:21.941Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:50:21.941Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T02:50:21.944Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.949Z] : info : Check field: Identity card "123456" invalid
+[2020-06-12T02:50:21.950Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.951Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.953Z] : info : Check field: Field is valid
+[2020-06-12T02:50:21.955Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T02:50:21.955Z] : info : Signup driver: Error in save image
+[2020-06-12T02:50:21.957Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.958Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.960Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.965Z] : info : Check field: Identity card "123456" invalid
+[2020-06-12T02:50:21.967Z] : info : Check field: Phone "567890" invalid
+[2020-06-12T02:50:21.967Z] : info : Check field: E-Mail "123456" invalid
+[2020-06-12T02:50:21.968Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.970Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:50:21.974Z] : info : Check field: E-Mail "testdrivername@hotmail.com" invalid
+[2020-06-12T02:58:46.263Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T02:58:46.376Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:58:46.378Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T02:58:46.379Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:58:46.380Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:58:46.381Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T02:58:46.382Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T02:58:46.383Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T02:58:46.386Z] : info : Check field: Lastname "TestDriverLastName" invalid
+[2020-06-12T02:58:46.387Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.389Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.394Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.396Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.397Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.398Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.400Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.402Z] : info : Check field: Name "123456" invalid
+[2020-06-12T02:58:46.404Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.405Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.407Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.408Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.409Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.410Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T02:58:46.412Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.720Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:15:21.829Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:15:21.830Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T03:15:21.831Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:15:21.833Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:15:21.834Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:15:21.835Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:15:21.836Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T03:15:21.838Z] : info : Check field: Lastname "TestDriverLastName" invalid
+[2020-06-12T03:15:21.839Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.840Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.841Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.842Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.843Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.844Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.845Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.846Z] : info : Check field: Name "123456" invalid
+[2020-06-12T03:15:21.846Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.847Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.848Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.850Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.851Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.852Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.853Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:15:21.854Z] : info : Check field: Name "Test5Driver5Name" invalid
+[2020-06-12T03:15:21.856Z] : info : Check field: Name "Test Driver Name" invalid
+[2020-06-12T03:15:21.864Z] : info : Check field: Name "Test_Driver_Name" invalid
+[2020-06-12T03:16:49.259Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:16:49.370Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:16:49.372Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T03:16:49.376Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:16:49.377Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:16:49.378Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:16:49.382Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:16:49.383Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T03:16:49.385Z] : info : Check field: Lastname "TestDriverLastName" invalid
+[2020-06-12T03:16:49.386Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.387Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.388Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.389Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.391Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.392Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.393Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.393Z] : info : Check field: Name "123456" invalid
+[2020-06-12T03:16:49.394Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.395Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.396Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.397Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.399Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.400Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.401Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.403Z] : info : Check field: Name "Test5Driver5Name" invalid
+[2020-06-12T03:16:49.407Z] : info : Check field: Name "Test Driver Name" invalid
+[2020-06-12T03:16:49.409Z] : info : Check field: Name "Test_Driver_Name" invalid
+[2020-06-12T03:16:49.410Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.411Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:16:49.412Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.186Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:17:04.290Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:17:04.292Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T03:17:04.293Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:17:04.294Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:17:04.295Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:17:04.296Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:17:04.296Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T03:17:04.299Z] : info : Check field: Lastname "TestDriverLastName" invalid
+[2020-06-12T03:17:04.299Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.300Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.301Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.302Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.303Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.304Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.305Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.306Z] : info : Check field: Name "123456" invalid
+[2020-06-12T03:17:04.307Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.308Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.314Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.314Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.316Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.317Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.319Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.320Z] : info : Check field: Name "Test5Driver5Name" invalid
+[2020-06-12T03:17:04.321Z] : info : Check field: Name "Test Driver Name" invalid
+[2020-06-12T03:17:04.322Z] : info : Check field: Name "Test_Driver_Name" invalid
+[2020-06-12T03:17:04.324Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.325Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:17:04.326Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.396Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:27:28.498Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:27:28.503Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:27:28.504Z] : info : Check field: E-Mail "345432345" invalid
+[2020-06-12T03:27:28.504Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:27:28.505Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:27:28.506Z] : info : Check field: E-Mail "" invalid
+[2020-06-12T03:27:28.507Z] : info : Check field: E-Mail "testclientname@hotmail.com" invalid
+[2020-06-12T03:27:28.508Z] : info : Check field: E-Mail "234ewrw3" invalid
+[2020-06-12T03:27:28.511Z] : info : Check field: Lastname "TestDriverLastName" invalid
+[2020-06-12T03:27:28.512Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.513Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.514Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.515Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.516Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.516Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.517Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.518Z] : info : Check field: Name "123456" invalid
+[2020-06-12T03:27:28.519Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.520Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.521Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.531Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.532Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.533Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.534Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.535Z] : info : Check field: Name "Test5Driver5Name" invalid
+[2020-06-12T03:27:28.537Z] : info : Check field: Name "Test Driver Name" invalid
+[2020-06-12T03:27:28.538Z] : info : Check field: Name "Test_Driver_Name" invalid
+[2020-06-12T03:27:28.540Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.542Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:27:28.543Z] : info : Check field: Name "TestDriverName" invalid
+[2020-06-12T03:42:03.349Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:45:41.325Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:48:23.248Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T03:52:26.182Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:11:06.198Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:13:26.571Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:15:09.741Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:15:47.940Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:16:42.123Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:17:40.351Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:17:44.949Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:17:45.008Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.009Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.014Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.014Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.016Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.016Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.018Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.018Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.020Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.021Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.022Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.023Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.025Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.026Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.033Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.034Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.036Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.036Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.045Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.050Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.053Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:17:45.053Z] : info : Signup driver: Error in save image
+[2020-06-12T04:17:45.342Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:17:45.482Z] : info : UserController:Number of users returned
+[2020-06-12T04:17:45.483Z] : info : UserHandler: email match
+[2020-06-12T04:17:45.487Z] : info : UserController:User found
+[2020-06-12T04:17:45.590Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:17:45.591Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:18:17.748Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:18:18.375Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:18:18.379Z] : info : UserController:Number of users returned
+[2020-06-12T04:18:18.379Z] : info : UserHandler: email match
+[2020-06-12T04:18:18.384Z] : info : UserController:User found
+[2020-06-12T04:18:18.489Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:18:18.490Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:18:18.499Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:18:18.510Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.511Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.513Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.514Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.516Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.517Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.519Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.519Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.524Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.524Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.525Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.526Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.528Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.528Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.537Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.538Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.541Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.541Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.544Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.545Z] : info : Signup driver: Error in save image
+[2020-06-12T04:18:18.548Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:18:18.549Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.190Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:19:51.805Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:19:51.808Z] : info : UserController:Number of users returned
+[2020-06-12T04:19:51.809Z] : info : UserHandler: email match
+[2020-06-12T04:19:51.813Z] : info : UserController:User found
+[2020-06-12T04:19:51.911Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:19:51.911Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:19:51.919Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:19:51.927Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.927Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.936Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.936Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.937Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.938Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.939Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.939Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.941Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.941Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.944Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.944Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.946Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.946Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.955Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.955Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.957Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.957Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.967Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.968Z] : info : Signup driver: Error in save image
+[2020-06-12T04:19:51.971Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:19:51.971Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:39.953Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:20:40.591Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:20:40.593Z] : info : UserController:Number of users returned
+[2020-06-12T04:20:40.594Z] : info : UserHandler: email match
+[2020-06-12T04:20:40.597Z] : info : UserController:User found
+[2020-06-12T04:20:40.700Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:20:40.700Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:20:40.708Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:20:40.716Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.716Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.718Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.718Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.719Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.720Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.721Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.721Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.722Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.722Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.724Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.724Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.726Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.726Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.737Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.737Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.739Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.740Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.743Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.743Z] : info : Signup driver: Error in save image
+[2020-06-12T04:20:40.745Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:20:40.746Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:53.651Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:22:54.364Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:22:54.365Z] : info : UserController:Number of users returned
+[2020-06-12T04:22:54.366Z] : info : UserHandler: email match
+[2020-06-12T04:22:54.370Z] : info : UserController:User found
+[2020-06-12T04:22:54.477Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:22:54.477Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:22:54.485Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:22:54.492Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.493Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.494Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.495Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.496Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.496Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.497Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.498Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.500Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.500Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.501Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.502Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.503Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.505Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.518Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.519Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.522Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.522Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.530Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.530Z] : info : Signup driver: Error in save image
+[2020-06-12T04:22:54.532Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:22:54.532Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.037Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:25:06.660Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:25:06.664Z] : info : UserController:Number of users returned
+[2020-06-12T04:25:06.665Z] : info : UserHandler: email match
+[2020-06-12T04:25:06.669Z] : info : UserController:User found
+[2020-06-12T04:25:06.769Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:25:06.769Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:25:06.778Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:25:06.790Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.790Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.792Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.793Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.795Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.796Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.798Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.798Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.799Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.799Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.800Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.800Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.802Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.802Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.807Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.807Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.810Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.811Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.817Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.817Z] : info : Signup driver: Error in save image
+[2020-06-12T04:25:06.819Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:25:06.819Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:50.929Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:32:51.525Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:32:51.529Z] : info : UserController:Number of users returned
+[2020-06-12T04:32:51.529Z] : info : UserHandler: email match
+[2020-06-12T04:32:51.533Z] : info : UserController:User found
+[2020-06-12T04:32:51.635Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:32:51.635Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:32:51.643Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:32:51.650Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.651Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.653Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.653Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.654Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.654Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.656Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.656Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.657Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.657Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.659Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.659Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.661Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.661Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.669Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.670Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.673Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.674Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.676Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.677Z] : info : Signup driver: Error in save image
+[2020-06-12T04:32:51.678Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:32:51.679Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.156Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:33:49.742Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:33:49.745Z] : info : UserController:Number of users returned
+[2020-06-12T04:33:49.745Z] : info : UserHandler: email match
+[2020-06-12T04:33:49.749Z] : info : UserController:User found
+[2020-06-12T04:33:49.849Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:33:49.850Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:33:49.856Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:33:49.863Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.863Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.865Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.866Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.867Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.867Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.868Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.869Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.870Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.870Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.872Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.872Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.873Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.873Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.879Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.879Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.881Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.881Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.884Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.884Z] : info : Signup driver: Error in save image
+[2020-06-12T04:33:49.885Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:33:49.886Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:01.996Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:35:02.697Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:35:02.701Z] : info : UserController:Number of users returned
+[2020-06-12T04:35:02.701Z] : info : UserHandler: email match
+[2020-06-12T04:35:02.705Z] : info : UserController:User found
+[2020-06-12T04:35:02.811Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:35:02.811Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:35:02.817Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:35:02.825Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.826Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.828Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.828Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.829Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.829Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.831Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.831Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.833Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.833Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.835Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.835Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.837Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.837Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.845Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.845Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.848Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.849Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.852Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.852Z] : info : Signup driver: Error in save image
+[2020-06-12T04:35:02.854Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:35:02.854Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:08.612Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:37:09.213Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:37:09.216Z] : info : UserController:Number of users returned
+[2020-06-12T04:37:09.217Z] : info : UserHandler: email match
+[2020-06-12T04:37:09.221Z] : info : UserController:User found
+[2020-06-12T04:37:09.319Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:37:09.319Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:37:09.325Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:37:09.334Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.335Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.337Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.337Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.339Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.339Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.341Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.342Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.344Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.345Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.348Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.348Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.350Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.350Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.357Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.358Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.360Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.361Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.368Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.368Z] : info : Signup driver: Error in save image
+[2020-06-12T04:37:09.370Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:37:09.370Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:19.497Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:46:20.125Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:46:20.127Z] : info : UserController:Number of users returned
+[2020-06-12T04:46:20.127Z] : info : UserHandler: email match
+[2020-06-12T04:46:20.131Z] : info : UserController:User found
+[2020-06-12T04:46:20.237Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:46:20.237Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:46:20.276Z] : info : DriverController:Number of Drivers returned
+[2020-06-12T04:46:20.276Z] : info : DriverHandler: email match
+[2020-06-12T04:46:20.278Z] : info : DriverController:Driver found
+[2020-06-12T04:46:20.360Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-12T04:46:20.401Z] : error : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:46:20.401Z] : error : Driver_VehicleHandler: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:46:20.401Z] : error : api.js: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:46:20.408Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:46:20.421Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.421Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.423Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.424Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.425Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.425Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.427Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.427Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.429Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.429Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.431Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.431Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.433Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.433Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.445Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.447Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.452Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.452Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.463Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.463Z] : info : Signup driver: Error in save image
+[2020-06-12T04:46:20.465Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:46:20.465Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:08.516Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T04:48:09.106Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T04:48:09.109Z] : info : UserController:Number of users returned
+[2020-06-12T04:48:09.110Z] : info : UserHandler: email match
+[2020-06-12T04:48:09.114Z] : info : UserController:User found
+[2020-06-12T04:48:09.218Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T04:48:09.219Z] : info : api.js: returned user id succesfully
+[2020-06-12T04:48:09.231Z] : info : DriverController:Number of Drivers returned
+[2020-06-12T04:48:09.231Z] : info : DriverHandler: email match
+[2020-06-12T04:48:09.234Z] : info : DriverController:Driver found
+[2020-06-12T04:48:09.316Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-12T04:48:09.323Z] : error : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:48:09.324Z] : error : Driver_VehicleHandler: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:48:09.324Z] : error : api.js: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T04:48:09.333Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T04:48:09.348Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.349Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.351Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.351Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.352Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.353Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.354Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.354Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.355Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.355Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.357Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.358Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.360Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.363Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.369Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.369Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.371Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.372Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.375Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.375Z] : info : Signup driver: Error in save image
+[2020-06-12T04:48:09.377Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T04:48:09.377Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:05.235Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-12T05:06:05.841Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T05:06:05.845Z] : info : UserController:Number of users returned
+[2020-06-12T05:06:05.845Z] : info : UserHandler: email match
+[2020-06-12T05:06:05.850Z] : info : UserController:User found
+[2020-06-12T05:06:05.953Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-12T05:06:05.954Z] : info : api.js: returned user id succesfully
+[2020-06-12T05:06:05.964Z] : info : DriverController:Number of Drivers returned
+[2020-06-12T05:06:05.964Z] : info : DriverHandler: email match
+[2020-06-12T05:06:05.967Z] : info : DriverController:Driver found
+[2020-06-12T05:06:06.050Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-12T05:06:06.056Z] : error : Driver_VehicleController: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T05:06:06.056Z] : error : Driver_VehicleHandler: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T05:06:06.057Z] : error : api.js: SequelizeEagerLoadingError: Vehicle is not associated to Driver!
+[2020-06-12T05:06:06.065Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-12T05:06:06.081Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.081Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.084Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.084Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.085Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.086Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.087Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.087Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.088Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.089Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.090Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.090Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.091Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.110Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.118Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.119Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.121Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.121Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.124Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.124Z] : info : Signup driver: Error in save image
+[2020-06-12T05:06:06.126Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-12T05:06:06.126Z] : info : Signup driver: Error in save image
+[2020-06-12T05:07:30.280Z] : info : Server: Server is running
+[2020-06-12T05:07:30.394Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-12T05:07:31.169Z] : info : Server: database tables created if the dont exist
