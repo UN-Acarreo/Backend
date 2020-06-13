@@ -24,8 +24,8 @@ const controllerFactory = require('../../Controllers/ControllerFactory');
 // Client {nombre: TestClientName, Apellido: TestClientLastName, E-Mail: testclientname@hotmail.com, Direccion: TestClientDirection, Contraseña: 123456}
 
 // Test images
-userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
-carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
+let userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
+let carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
 
 // Check Status Request in functions
 async function checkStatusRequest (status, fun, params){
