@@ -21399,3 +21399,83 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-10T21:43:17.044Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
 [2020-06-10T21:43:17.046Z] : info : VehicleController: vehicle info found
 [2020-06-10T21:43:17.048Z] : info : DriverController: driver info found
+[2020-06-13T02:55:22.329Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-13T02:55:26.083Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-13T02:55:26.329Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:55:26.391Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:55:27.291Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.291Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.296Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.296Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.297Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.298Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.299Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.299Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.300Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.301Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.302Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.303Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.305Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.305Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.313Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.314Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.316Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.316Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.321Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.322Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:27.323Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:27.324Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.069Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-13T02:55:42.662Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-13T02:55:42.770Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:55:42.886Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-13T02:55:42.962Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:55:42.966Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.966Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.968Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.969Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.971Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.972Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.973Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.974Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.975Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.976Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.978Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.978Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.979Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.979Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.988Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.988Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.993Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:42.996Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:42.999Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:43.000Z] : info : Signup driver: Error in save image
+[2020-06-13T02:55:43.001Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:55:43.002Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:01.815Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-13T02:56:02.423Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-13T02:56:02.524Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:56:02.658Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-13T02:56:02.724Z] : info : Server: database tables created if the dont exist
+[2020-06-13T02:56:02.728Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.728Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.731Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.732Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.733Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.733Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.735Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.736Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.737Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.737Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.738Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.739Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.740Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.740Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.750Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.752Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.756Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.756Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.761Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.762Z] : info : Signup driver: Error in save image
+[2020-06-13T02:56:02.763Z] : error : ImageHandler:Save image: TypeError: Cannot read property 'substring' of undefined
+[2020-06-13T02:56:02.763Z] : info : Signup driver: Error in save image
