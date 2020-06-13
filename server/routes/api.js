@@ -102,7 +102,7 @@ router.post('/:type_of_user/login', exports.login = async function (req, res) {
 //Route will be used to handle driver sign up POST requests
 router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 
-    if ("request" in req.body) {
+    if ("request" in req.body && "Driver_name" in  req.body.request && "Driver_last_name" in req.body.request && "Identity_card" in req.body.request && "Driver_phone" in req.body.request && "Driver_Email" in req.body.request && "Driver_address" in req.body.request && "Driver_password" in req.body.request && "Driver_photo" in req.body.request && "foto_data" in req.body.request) {
 
         const valid_fields = await getHandler("Fields").check_fields(req);
         if (valid_fields !== true) {

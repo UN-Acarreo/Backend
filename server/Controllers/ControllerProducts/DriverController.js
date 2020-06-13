@@ -125,11 +125,33 @@ async function getDriverInfo(driver_id){
     }
 }
 
+async function deleteByIdentityCard(Identity_card){
+    try{
+    var DriverModel = await ModelFactory.getModel("Driver")
+    let driver_info = await DriverModel.destroy({ where: { Identity_card: Identity_card }})
+
+    //query returns array of drivers that match where clause, in this case we expect only 1
+    if(driver_info.length==0)
+    {
+        logger.info("DriverController: No driver found with that Identity_card")
+        return {status:0, data:" No driver information found with that Identity_card"}
+    }
+    else{
+        logger.info("DriverController: drivers was deleted")
+        return {status: 1, data: driver_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("DriverController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     countWhere: countWhere,
     getRegisterBy: getRegisterBy,
     getRegisterByPk: getRegisterByPk,
-    getDriverInfo: getDriverInfo
-
+    getDriverInfo: getDriverInfo,
+    deleteByIdentityCard: deleteByIdentityCard
  };

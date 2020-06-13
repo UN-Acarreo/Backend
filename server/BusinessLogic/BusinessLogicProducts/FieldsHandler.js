@@ -26,28 +26,28 @@ async function check_fields(req){
         }
       }
       if(key == 'Driver_password' || key == 'User_password') {
-        if (typeof field != "string") {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
           return "La contraseña no es válida"
         } else {
           fieldName = "Contraseña"
         }
       }
       if(key == 'Driver_address' || key == 'User_address'){
-        if (typeof field != "string") {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
           return "La dirección no es válida"
         } else {
           fieldName = "Dirección"
         }   
       }
       if(key == 'Identity_card'){
-        if (typeof field != "number") {
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
           return "La Cédula no es válida"
         } else {
           fieldName = "Cédula"
         }
       }
       if(key == 'Driver_phone'){
-        if (typeof field != "number") {
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
           return "El Teléfono no es válido"
         } else {
           fieldName = "Teléfono"
@@ -59,6 +59,20 @@ async function check_fields(req){
         } else {
           fieldName = "E-Mail"
         }
+      }
+      if(key == 'Driver_photo'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "El nombre de la Foto no es válido"
+        } else {
+          fieldName = "Nombre de la Foto"
+        }   
+      }
+      if(key == 'foto_data'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La Foto no es válida"
+        } else {
+          fieldName = "Foto"
+        }   
       }
       if(key == 'Plate'){
         if (typeof field != "string") {
@@ -82,7 +96,7 @@ async function check_fields(req){
         }   
       }
       if((key == 'Payload_capacity')){
-        if (typeof field != "number") {
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
           return "La capacidad de carga no es válida"
         } else {
           fieldName = "La capacidad de carga"
