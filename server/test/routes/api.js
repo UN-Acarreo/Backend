@@ -4,10 +4,10 @@ var assert = require("assert");
 var httpMocks  = require('node-mocks-http');
 
 // Import sync database
-syncDB = require("../../DataBase/syncDB.js");
+var syncDB = require("../../DataBase/syncDB.js");
 
 // Import api.js for test
-api = require("../../routes/api");
+var api = require("../../routes/api");
 
 
 // User test
@@ -19,8 +19,8 @@ api = require("../../routes/api");
 async function checkStatusRequest (status, fun, params){
 
   // Simulate Request and Response
-  req = httpMocks.createRequest(params);
-  res = httpMocks.createResponse();
+  var req = httpMocks.createRequest(params);
+  var res = httpMocks.createResponse();
 
   // Make equal test
   assert.equal((await fun(req, res)).statusCode, status);

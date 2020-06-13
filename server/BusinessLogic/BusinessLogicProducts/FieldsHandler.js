@@ -12,77 +12,77 @@ async function check_fields(req){
       var field = data[key]
       var fieldName = ""
       if(key == 'User_name' || key == 'Driver_name') {
-        if (!(typeof field == "string") || !validator.isAlpha(validator.blacklist(field, ' '))) {
+        if (typeof field != "string" || !validator.isAlpha(validator.blacklist(field, ' '))) {
           return "El Nombre no es válido"
         } else {
           fieldName = "Nombre"
         }
       }
       if(key == 'User_last_name' || key == 'Driver_last_name') {
-        if (!(typeof field == "string") || !validator.isAlpha(validator.blacklist(field, ' '))) {
+        if (typeof field != "string" || !validator.isAlpha(validator.blacklist(field, ' '))) {
           return "El Apellido no es válido"
         } else {
           fieldName = "Apellido"
         }
       }
       if(key == 'Driver_password' || key == 'User_password') {
-        if (!(typeof field == "string")) {
+        if (typeof field != "string") {
           return "La contraseña no es válida"
         } else {
           fieldName = "Contraseña"
         }
       }
       if(key == 'Driver_address' || key == 'User_address'){
-        if (!(typeof field == "string")) {
+        if (typeof field != "string") {
           return "La dirección no es válida"
         } else {
           fieldName = "Dirección"
         }   
       }
       if(key == 'Identity_card'){
-        if (!(typeof field == "number")) {
+        if (typeof field != "number") {
           return "La Cédula no es válida"
         } else {
           fieldName = "Cédula"
         }
       }
       if(key == 'Driver_phone'){
-        if (!(typeof field == "number")) {
+        if (typeof field != "number") {
           return "El Teléfono no es válido"
         } else {
           fieldName = "Teléfono"
         }
       }
       if(key == 'User_Email' || key == 'Driver_Email'){
-        if (!(typeof field == "string") || !validator.isEmail(field)) {
+        if (typeof field != "string" || !validator.isEmail(field)) {
           return "El E-Mail no es válido"
         } else {
           fieldName = "E-Mail"
         }
       }
       if(key == 'Plate'){
-        if (!(typeof field == "string")) {
+        if (typeof field != "string") {
           return "La Placa no es válida"
         } else {
           fieldName = "Placa"
         }   
       }
       if(key == 'Brand'){
-        if (!(typeof field == "string")) {
+        if (typeof field != "string") {
           return "La Marca no es válida"
         } else {
           fieldName = "Marca"
         }   
       }
       if(key == 'Model'){
-        if (!(typeof field == "string")) {
+        if (typeof field != "string") {
           return "El Modelo no es válido"
         } else {
           fieldName = "Modelo"
         }   
       }
       if((key == 'Payload_capacity')){
-        if (!(typeof field == "number")) {
+        if (typeof field != "number") {
           return "La capacidad de carga no es válida"
         } else {
           fieldName = "La capacidad de carga"
