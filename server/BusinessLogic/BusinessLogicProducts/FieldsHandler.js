@@ -9,8 +9,8 @@ const logger = require('../../utils/logger/logger');
 async function check_fields(req){
     data = req.body.request
     for (const key of Object.keys(data)) {
-      field = data[key]
-      fieldName = ""
+      var field = data[key]
+      var fieldName = ""
       if(key == 'User_name' || key == 'Driver_name') {
         if (!(typeof field == "string") || !validator.isAlpha(validator.blacklist(field, ' '))) {
           return "El Nombre no es válido"
@@ -61,17 +61,32 @@ async function check_fields(req){
         }
       }
       if(key == 'Plate'){
-        fieldName = "Placa"
+        if (!(typeof field == "string")) {
+          return "La Placa no es válida"
+        } else {
+          fieldName = "Placa"
+        }   
       }
       if(key == 'Brand'){
-        fieldName = "Marca"
+        if (!(typeof field == "string")) {
+          return "La Marca no es válida"
+        } else {
+          fieldName = "Marca"
+        }   
       }
       if(key == 'Model'){
-        fieldName = "Modelo"
+        if (!(typeof field == "string")) {
+          return "El Modelo no es válido"
+        } else {
+          fieldName = "Modelo"
+        }   
       }
-      if((key == 'Payload_capacity') && !validator.isNumeric(field)){
-        fieldName = "La capacidad de carga"
-        return "La capacidad de carga no es válida"
+      if((key == 'Payload_capacity')){
+        if (!(typeof field == "number")) {
+          return "La capacidad de carga no es válida"
+        } else {
+          fieldName = "La capacidad de carga"
+        }
       }
       if((key=="Origin_coord")){
   

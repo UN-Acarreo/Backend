@@ -11,8 +11,9 @@ const api = require('./routes/api.js');
 const index = require('./routes/index.js');
 // Import logger
 const logger = require('./utils/logger/logger');
-//importr db
-const db = require("./DataBase/database");
+//importr db sync
+const syncDB = require("./DataBase/syncDB");
+
 app.use(function(req,res,next){
   res.header('Access-Control-Allow-Origin: *');
   next();
@@ -40,28 +41,8 @@ app.listen(3001, function(){
   logger.info('Server: Server is running');
 });
 
-// Import ModelFactory
-let ModelFactory = require('./Models/ModelFactory');
-
-async function init_dataBase () {
-  try {
-
-    let models = ["User", "Driver", "Vehicle", "Rating", "Route", "Status", "Cargo", "Haulage", "Bill", "Driver_Vehicle", 
-              "Haulage_Driver_Vehicle", "Notification_Type", "User_Notification", "Driver_Notification"]
-
-    //creating all tables if they dont exist allready
-    for (let model of models) {
-      await ModelFactory.getModel(model).sync()
-    }
-    
-    logger.info("Server: database tables created if the dont exist");
-    
-  } catch (err) {
-    logger.error("Server: unable to create database tables: "+err)
-  }
- }
-
-init_dataBase ()
+// Sync Data Base
+syncDB()
 
 /*
 	- You are able to access to local server by http://localhost:3000/

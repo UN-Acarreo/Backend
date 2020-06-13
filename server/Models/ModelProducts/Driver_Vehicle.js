@@ -26,8 +26,7 @@ const Driver_Vehicle = DataBase.define('Driver_Vehicle', {
     });
 
 // Establish relations
-Vehicle.belongsToMany(Driver, { through: Driver_Vehicle,foreignKey: "Id_vehicle" , otherKey: "Id_driver"});
+Vehicle.belongsToMany(Driver, { through: Driver_Vehicle, foreignKey: "Id_vehicle" , otherKey: "Id_driver"});
 Driver.belongsToMany(Vehicle, { through: Driver_Vehicle ,foreignKey:  "Id_driver", otherKey: "Id_vehicle"});
 
 module.exports = Driver_Vehicle;
-

@@ -33,7 +33,7 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
 //status 0 = Driver not found
 //status 1 = Driver found, Driver returned
 //status -1 = error, error message returned
-async function getRegisterBy(query,registerToGet)
+async function getRegisterBy(query, registerToGet)
 {
     //query to find Driver by given email (which is unique)
     try {

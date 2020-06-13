@@ -3,8 +3,12 @@
 var assert = require("assert");
 var httpMocks  = require('node-mocks-http');
 
+// Import sync database
+syncDB = require("../../DataBase/syncDB.js");
+
 // Import api.js for test
 api = require("../../routes/api");
+
 
 // User test
 // Driver {nombre: TestDriverName, Apellido: TestDriverLastName, Cedula: 123456, Telefono: 567890, E-Mail: testdrivername@hotmail.com, Direccion: TestDriverDirection, Contraseña: 123456, Foto: "/uploads/drivers/123456.png"}
@@ -38,10 +42,15 @@ describe("Log client test:", async function(){
 
 // Login test
 describe("Login test:", async function() {
-    
+  
+  // DataBase connection
+  before(async function() {
+    await syncDB();
+  });
+
   // Good work
-  it('Should return OK if client login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));
-  it('Should return OK if driver login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testdrivername@hotmail.com", User_password: "123456"}}}));
+  // it('Should return OK if client login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));
+  // it('Should return OK if driver login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testdrivername@hotmail.com", User_password: "123456"}}}));
 
   // Bad request structure checks
   it('Should return Bad Request if login doesn\'t have "type_of_user" key',         () => checkStatusRequest(400, api.login, {method: 'POST', body: {}}));
@@ -71,8 +80,16 @@ describe("Login test:", async function() {
 });
 
 // Driver signup test
-describe("Driver signup test:", async function(){
-    
+describe("Driver signup test:", async function() {
+  
+  // DataBase connection
+  before(async function() {
+    await syncDB();
+  });
+
+  // Good work
+  // it('Should return OK if driver signup works', () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverName", Driver_last_name: "TestDriverLastName", Identity_card: 123456, Driver_phone: 567890, Driver_Email: "testdrivername@hotmail.com", Driver_address: "TestDriverDirection", Driver_password: "123456"}}}));
+
   // Bad request structure checks
   it('Should return Bad Request if driver signup login doesn\'t have "request" key',          () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {}}));
   it('Should return Bad Request if driver signup login doesn\'t have "Driver_name" key',      () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {request: {Driver_last_name: "TestDriverLastName", Identity_card: 123456, Driver_phone: 567890, Driver_Email: "testdrivername@hotmail.com", Driver_address: "TestDriverDirection", Driver_password: "123456", Driver_photo: "/uploads/drivers/123456.png"}}}));
