@@ -133,30 +133,47 @@ router.post('/driver/signup', async function (req, res) {
 
 });
 
-router.get('/driver/notification/check/:Id_driver',async function (req, res) {
+router.get('/:type_of_user/notification/check/:Id',async function (req, res) {
 
-    var Id_driver = req.params.Id_driver;
-    let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
+    let type_of_user = req.params.type_of_user
+    if(type_of_user == "driver")
+        type_of_user = "Driver"
+    else if(type_of_user == "client")
+        type_of_user = "User"
+    else
+    {
+        logger.info("api: user/driver notifications: Validation fail")
+        return res.status(400).json({ status:-1, error: "URL incorrecto"})
+    }
+    var Id = req.params.Id;
+    let notifications = await getHandler("Notification").getNotifications(Id,type_of_user)
     if(notifications.status==-1)
     {
-        logger.info("api: driver notifications: "+notifications.error)
+        logger.info("api: driver/user notifications: "+notifications.error)
         return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
     }
     else if(notifications.status==1 || notifications.status==0)
     {
-        logger.info("api:driver notifications found succesfully")
+        logger.info("api:driver/user notifications found succesfully")
         return res.status(200).json({status:notifications.status ,data:notifications.data})
     }
-
-
-
 })
 
-router.delete('/driver/notification/delete/:Id_driver/:Id_haulage',async function (req, res){
+router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',async function (req, res){
 
-    var Id_driver = req.params.Id_driver;
+    let type_of_user = req.params.type_of_user
+    if(type_of_user == "driver")
+        type_of_user = "Driver"
+    else if(type_of_user == "client")
+        type_of_user = "User"
+    else
+    {
+        logger.info("api: user/driver remove notifications: Validation fail")
+        return res.status(400).json({ status:-1, error: "URL incorrecto"})
+    }
+    var Id = req.params.Id;
     var Id_haulage = req.params.Id_haulage;
-    let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
+    let notifications = await getHandler("Notification").removeNotification(type_of_user,Id,Id_haulage)
     if(notifications.status==-1)
     {
         return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})
@@ -240,6 +257,7 @@ router.post('/client/signup', async function (req, res) {
         return res.status(500).json({ error: message });
     }
 });
+
 
 
 //Returns the a list containing the info from the haulages from user
@@ -485,9 +503,11 @@ router.post('/haulage/finish', async function (req, res) {
     if (result.status != 1) {
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
-    } else {
-        res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     }
+
+    await getHandler("Notification").createUserNoficiations(Id_haulage)
+    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
+    
 
 });
 

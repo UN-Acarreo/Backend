@@ -135,9 +135,9 @@ async function finishHaulage(Id_haulage)
   // Cost factor
   let factor = 1
   let cost = duration * weight * factor
-  console.log(duration)
-  console.log(weight)
-  console.log(factor)
+  //console.log(duration)
+  //console.log(weight)
+  //console.log(factor)
 
   // Create bill of haulage
   haualge = await ControllerFactory.getController("Bill").create({Amount: cost, Id_haulage: Id_haulage})
