@@ -3,4 +3,7 @@ node_js: 12.13.0
 
 script:
  — npm run cover
- 
+
+ branches:
+  only:
+    - feautre/#78-testing
