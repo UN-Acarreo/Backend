@@ -23957,3 +23957,240 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-13T23:54:09.623Z] : info : DriverController: Driver was created successfully.
 [2020-06-13T23:54:09.623Z] : info : DriverHandler: Driver was created successfully.
 [2020-06-13T23:54:09.624Z] : info : Signup driver: added succesfully
+[2020-06-14T03:28:04.486Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:28:05.254Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:28:05.400Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:28:05.579Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:28:05.580Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:28:05.712Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:28:05.713Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:28:05.856Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-14T03:28:05.881Z] : info : UserController:Number of users returned
+[2020-06-14T03:28:05.881Z] : info : UserHandler: email match
+[2020-06-14T03:28:05.885Z] : info : UserController:User found
+[2020-06-14T03:28:06.007Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-14T03:28:06.007Z] : info : api.js: returned user id succesfully
+[2020-06-14T03:28:06.011Z] : info : DriverController:Number of Drivers returned
+[2020-06-14T03:28:06.012Z] : info : DriverHandler: email match
+[2020-06-14T03:28:06.014Z] : info : DriverController:Driver found
+[2020-06-14T03:28:06.125Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-14T03:28:06.146Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-14T03:28:06.152Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-14T03:28:06.153Z] : info : api.js: returned Driver id succesfully
+[2020-06-14T03:28:06.216Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:28:06.222Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:28:06.223Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:28:06.277Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:28:06.280Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:28:06.285Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:28:06.411Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:28:06.411Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:28:06.411Z] : info : Signup driver: added succesfully
+[2020-06-14T03:28:06.414Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:28:06.414Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:28:06.416Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:28:06.544Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:28:06.544Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:28:06.545Z] : info : Signup driver: added succesfully
+[2020-06-14T03:28:06.606Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:28:06.611Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:28:06.611Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:28:06.654Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:28:06.654Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:28:06.662Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:28:06.672Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:28:06.673Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:28:06.679Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:28:06.698Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:28:06.699Z] : info : Signup vehicle: added succesfully
+[2020-06-14T03:40:30.451Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:40:32.066Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:40:32.184Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:40:32.354Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:40:32.355Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:40:32.501Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:40:32.502Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:40:32.589Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:40:32.597Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:40:32.598Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:40:32.813Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:40:32.814Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:40:32.853Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:40:32.980Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:40:32.980Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:40:32.981Z] : info : Signup driver: added succesfully
+[2020-06-14T03:40:32.984Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:40:32.985Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:40:32.987Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:40:33.130Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:40:33.130Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:40:33.130Z] : info : Signup driver: added succesfully
+[2020-06-14T03:40:33.195Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:40:33.202Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:40:33.202Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:40:33.220Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:40:33.221Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:40:33.228Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:40:33.395Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:40:33.395Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:40:33.403Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:40:33.403Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:40:33.405Z] : info : Signup vehicle: added succesfully
+[2020-06-14T03:54:23.769Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:54:27.724Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:54:28.918Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:29.511Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:29.732Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:54:29.733Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:54:30.001Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:30.002Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:30.012Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:54:30.013Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:54:32.187Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:32.188Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:32.296Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:32.426Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:54:32.426Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:54:32.427Z] : info : Signup driver: added succesfully
+[2020-06-14T03:54:32.430Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:32.430Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:32.432Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:32.566Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:54:32.567Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:54:32.567Z] : info : Signup driver: added succesfully
+[2020-06-14T03:54:32.632Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:32.807Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:54:32.807Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:32.849Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:54:32.850Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:32.856Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:33.109Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:54:33.109Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:54:33.433Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:54:33.433Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:54:33.434Z] : info : Signup vehicle: added succesfully
+[2020-06-14T03:54:54.877Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:54:58.140Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:54:58.294Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:58.479Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:54:58.479Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:54:58.610Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:54:58.610Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:54:58.673Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:58.680Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:58.681Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:59.081Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:59.082Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:59.091Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:59.226Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:54:59.226Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:54:59.226Z] : info : Signup driver: added succesfully
+[2020-06-14T03:54:59.259Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:54:59.260Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:59.262Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:59.383Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:54:59.384Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:54:59.384Z] : info : Signup driver: added succesfully
+[2020-06-14T03:54:59.461Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:54:59.472Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:54:59.472Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:59.524Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:54:59.525Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:54:59.530Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:54:59.543Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:54:59.543Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:54:59.559Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:54:59.561Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:54:59.562Z] : info : Signup vehicle: added succesfully
+[2020-06-14T03:57:07.463Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:57:08.543Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:57:08.685Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:08.890Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:57:08.891Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:57:09.025Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:57:09.026Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:57:09.234Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-14T03:57:09.257Z] : info : UserController:Number of users returned
+[2020-06-14T03:57:09.258Z] : info : UserHandler: email match
+[2020-06-14T03:57:09.262Z] : info : UserController:User found
+[2020-06-14T03:57:09.396Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-14T03:57:09.396Z] : info : api.js: returned user id succesfully
+[2020-06-14T03:57:09.401Z] : info : DriverController:Number of Drivers returned
+[2020-06-14T03:57:09.401Z] : info : DriverHandler: email match
+[2020-06-14T03:57:09.405Z] : info : DriverController:Driver found
+[2020-06-14T03:57:09.549Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-14T03:57:09.572Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-14T03:57:09.573Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-14T03:57:09.574Z] : info : api.js: returned Driver id succesfully
+[2020-06-14T03:57:09.651Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:09.656Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:09.657Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:09.753Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:09.753Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:09.759Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:09.914Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:57:09.915Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:57:09.915Z] : info : Signup driver: added succesfully
+[2020-06-14T03:57:09.918Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:09.919Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:09.922Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:11.315Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:57:11.316Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:57:11.316Z] : info : Signup driver: added succesfully
+[2020-06-14T03:57:11.406Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:11.415Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:57:11.416Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:11.526Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:57:11.527Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:11.540Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:11.557Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:57:11.558Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:57:11.591Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:57:11.592Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:57:11.592Z] : info : Signup vehicle: added succesfully
+[2020-06-14T03:57:32.666Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-14T03:57:33.967Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T03:57:34.142Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:34.350Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:57:34.350Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-14T03:57:34.504Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:57:34.504Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-14T03:57:34.808Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-14T03:57:34.842Z] : info : UserController:Number of users returned
+[2020-06-14T03:57:34.843Z] : info : UserHandler: email match
+[2020-06-14T03:57:34.850Z] : info : UserController:User found
+[2020-06-14T03:57:34.998Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-14T03:57:34.999Z] : info : api.js: returned user id succesfully
+[2020-06-14T03:57:35.006Z] : info : DriverController:Number of Drivers returned
+[2020-06-14T03:57:35.006Z] : info : DriverHandler: email match
+[2020-06-14T03:57:35.009Z] : info : DriverController:Driver found
+[2020-06-14T03:57:35.137Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-14T03:57:35.166Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-14T03:57:35.166Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-14T03:57:35.167Z] : info : api.js: returned Driver id succesfully
+[2020-06-14T03:57:35.245Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:35.251Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:35.274Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:35.350Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:35.351Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:35.360Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:35.507Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:57:35.508Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:57:35.508Z] : info : Signup driver: added succesfully
+[2020-06-14T03:57:35.512Z] : info : DriverController: drivers was deleted
+[2020-06-14T03:57:35.513Z] : info : DriverController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:35.516Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:35.676Z] : info : DriverController: Driver was created successfully.
+[2020-06-14T03:57:35.676Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-14T03:57:35.677Z] : info : Signup driver: added succesfully
+[2020-06-14T03:57:35.751Z] : info : Server: database tables created if the dont exist
+[2020-06-14T03:57:35.761Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:57:35.761Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:35.827Z] : info : VehicleController: vehicle was deleted
+[2020-06-14T03:57:35.828Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-14T03:57:35.834Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-14T03:57:35.848Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-14T03:57:35.878Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-14T03:57:35.882Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:57:35.883Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-14T03:57:35.883Z] : info : Signup vehicle: added succesfully
