@@ -7,7 +7,7 @@ const logger = require('../../utils/logger/logger');
 
 // Check fields
 async function check_fields(req){
-    data = req.body.request
+    let data = req.body.request
     for (const key of Object.keys(data)) {
       var field = data[key]
       var fieldName = ""
@@ -114,41 +114,6 @@ async function check_fields(req){
           return "La capacidad de carga no es válida"
         } else {
           fieldName = "La capacidad de carga"
-        }
-      }
-      if((key == 'db_driver_id')){
-        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
-          return "El ID del conductor no es válido"
-        } else {
-          fieldName = "ID del conductor"
-        }
-      }
-      if((key == 'db_driver_id')){
-        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
-          return "El ID del conductor no es válido"
-        } else {
-          fieldName = "ID del conductor"
-        }
-      }
-      if((key == 'db_driver_id')){
-        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
-          return "El ID del conductor no es válido"
-        } else {
-          fieldName = "ID del conductor"
-        }
-      }
-      if((key == 'db_driver_id')){
-        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
-          return "El ID del conductor no es válido"
-        } else {
-          fieldName = "ID del conductor"
-        }
-      }
-      if((key == 'db_driver_id')){
-        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
-          return "El ID del conductor no es válido"
-        } else {
-          fieldName = "ID del conductor"
         }
       }
       if((key == 'db_driver_id')){

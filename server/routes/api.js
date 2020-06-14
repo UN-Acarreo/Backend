@@ -369,28 +369,32 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         if (vehicle.status != 1) {
             errorDescription = "Hubo un problema obteniendo la descripción de los vehículos"
         }
-        let haualge = await getHandler("Haulage").getHaulageInfo(vehicle_haulage.Id_haulage)
-        if (haualge.status != 1) {
+        let haulage = await getHandler("Haulage").getHaulageInfo(vehicle_haulage.Id_haulage)
+        if (haulage.status != 1) {
             errorDescription = "Hubo un problema obteniendo la descripción del acarreo"
         }
-        const cargo_info = await getHandler("Cargo").getCargoInfo(haualge.data.Id_cargo);
+        const cargo_info = await getHandler("Cargo").getCargoInfo(haulage.data.Id_cargo);
         if (cargo_info.status != 1) {
             errorDescription = "Hubo un problema obteniendo la descripción de la carga"
         }
         //Get the route info (origin coords, destination coords, duration)
-        const route_info = await getHandler("Route").getRouteInfo(haualge.data.Id_route);
+        const route_info = await getHandler("Route").getRouteInfo(haulage.data.Id_route);
         if (route_info.status != 1) {
             errorDescription = "Hubo un problema obteniendo la descripción de la ruta"
         }
         //console.log(route_info)
-        const status_info = await getHandler("Status").getStatusInfo(haualge.data.Id_status);
+        const status_info = await getHandler("Status").getStatusInfo(haulage.data.Id_status);
         if (status_info.status != 1) {
             errorDescription = "Hubo un problema obteniendo la descripción de la ruta"
         }
         //console.log(status_info)
-        const rating_info = await getHandler("Rating").getRatingInfo(haualge.data.Id_rating);
+        const rating_info = await getHandler("Rating").getRatingInfo(haulage.data.Id_rating);
         if (rating_info.status == -1) {
             errorDescription = "Hubo un problema obteniendo la descripción del estatus"
+        }
+        let user_info = await getHandler("User").getUserInfo(haulage.data.Id_user);
+        if (user_info.status == -1) {
+            errorDescription = "Hubo un problema obteniendo la informacion del usuario"
         }
         if (errorDescription != "") {
 
@@ -399,7 +403,8 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         }
         haulage_list.push({
             vehicle: vehicle.data,
-            haualge: haualge.data,
+            haulage: haulage.data,
+            user: user_info.data,
             cargo: cargo_info.data,
             route: route_info.data,
             status: status_info.data,

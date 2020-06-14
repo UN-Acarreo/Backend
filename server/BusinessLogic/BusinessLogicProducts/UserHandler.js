@@ -1,6 +1,6 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+const ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -38,7 +38,7 @@ async function validateUser(req) {
 
     // Validate user
     //count = await UserModel.count({ where: { User_Email: User_Email, User_password: User_password } })
-    count = await ControllerFactory.getController("User").countWhere({User_Email:User_Email})
+    let count = await ControllerFactory.getController("User").countWhere({User_Email:User_Email})
     if(count.status!=1)
     {
         logger.error("UserHandler: " + count.error);
@@ -61,7 +61,18 @@ async function validateUser(req) {
         }
     }
         logger.info("UserHandler: User is not valid");
-        return {status: 0, data: false};  ;
+        return {status: 0, data: false};  
 }
-
-module.exports = { createUser: createUser, validateUser: validateUser };
+async function getUserInfo(Id_user)
+{
+    let user =await ControllerFactory.getController("User").getUserBy({Id_user:Id_user})
+    if(user.status==1)
+    {
+        logger.info("UserHandler: succesfull call to getUserInfo")
+        return {status: 1, data: user.data};
+    }else if(status==-1)
+    {    logger.error("UserHandler: error from getUserInfo"+ error)
+        return {status: -1, data: user.error};
+    }
+}
+module.exports = { createUser: createUser, validateUser: validateUser,getUserInfo:getUserInfo }
