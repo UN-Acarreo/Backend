@@ -174,7 +174,7 @@ router.get('/:type_of_user/notification/check/:Id', exports.driverNotificationCh
     }
 })
 
-router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',exports.driverNotificationDelete = async function (req, res){
+router.delete('/:type_of_user/notification/delete/:type_notif/:Id/:Id_haulage',exports.driverNotificationDelete = async function (req, res){
 
     let type_of_user = req.params.type_of_user
     if(type_of_user == "driver")
@@ -188,7 +188,8 @@ router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',exports.drive
     }
     var Id = req.params.Id;
     var Id_haulage = req.params.Id_haulage;
-    let notifications = await getHandler("Notification").removeNotification(type_of_user,Id,Id_haulage)
+    var type_notif = req.params.type_notif;
+    let notifications = await getHandler("Notification").removeNotification(type_notif,type_of_user,Id,Id_haulage)
     if(notifications.status==-1)
     {
         return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})

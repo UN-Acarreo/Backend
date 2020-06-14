@@ -29,20 +29,23 @@ class Subject {
         
     }
 
-    async removeObserver(observer,Id_haulage)
+    async removeObserver(observer,Id_haulage, type_notif)
     {
         let query
         if(observer.typeObserver=="Driver")
         {
             query = {
                 Id_driver:observer.observer_Id,
-                Id_haulage:Id_haulage
+                Id_haulage:Id_haulage,
+                Id_Notification_Type:type_notif
+
             }
         }else if(observer.typeObserver=="User")
         {
             query = {
                 Id_user:observer.observer_Id,
-                Id_haulage:Id_haulage
+                Id_haulage:Id_haulage,
+                Id_Notification_Type:type_notif
             }
         }
         let result = await getController("Notification").remove(observer.typeObserver, query)
