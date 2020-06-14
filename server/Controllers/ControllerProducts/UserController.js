@@ -65,7 +65,7 @@ async function getRegisterBy(query)
         //query returns array of users that match were clause
         if(users.length==0)
         {
-            logger.info("UserController:email doesnt match known user")
+            logger.info("UserController:query doesnt match known user")
             return {status:0, data:"not found"}
         }
         else{

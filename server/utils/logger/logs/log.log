@@ -23957,3 +23957,226 @@ notNull Violation: Driver.Identity_card cannot be null
 [2020-06-13T23:54:09.623Z] : info : DriverController: Driver was created successfully.
 [2020-06-13T23:54:09.623Z] : info : DriverHandler: Driver was created successfully.
 [2020-06-13T23:54:09.624Z] : info : Signup driver: added succesfully
+[2020-06-14T02:51:10.518Z] : info : Server: Server is running
+[2020-06-14T02:51:10.691Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:51:10.802Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:51:13.282Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «:177»
+[2020-06-14T02:51:13.283Z] : error : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «:177»
+[2020-06-14T02:51:13.283Z] : error : api: SequelizeDatabaseError: la sintaxis de entrada no es válida para tipo integer: «:177»
+[2020-06-14T02:51:37.301Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:51:37.301Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:51:37.308Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:51:37.317Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:51:37.317Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:51:37.323Z] : info : CargoController: Cargo info found
+[2020-06-14T02:51:37.329Z] : info : RouteController: route info found
+[2020-06-14T02:51:37.335Z] : info : StatusController: status info found
+[2020-06-14T02:51:37.341Z] : info : RatingController: rating info found
+[2020-06-14T02:51:37.403Z] : info : UserController:email doesnt match known user
+[2020-06-14T02:51:48.092Z] : info : Server: Server is running
+[2020-06-14T02:51:48.252Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:51:48.260Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:51:48.260Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:51:48.283Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:51:48.335Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:51:48.335Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:51:48.344Z] : info : CargoController: Cargo info found
+[2020-06-14T02:51:48.353Z] : info : RouteController: route info found
+[2020-06-14T02:51:48.361Z] : info : StatusController: status info found
+[2020-06-14T02:51:48.368Z] : info : RatingController: rating info found
+[2020-06-14T02:51:48.377Z] : info : UserController:email doesnt match known user
+[2020-06-14T02:51:48.436Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:51:55.004Z] : info : Server: Server is running
+[2020-06-14T02:51:55.190Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:51:55.197Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:51:55.197Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:51:55.210Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:51:55.234Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:51:55.234Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:51:55.245Z] : info : CargoController: Cargo info found
+[2020-06-14T02:51:55.254Z] : info : RouteController: route info found
+[2020-06-14T02:51:55.261Z] : info : StatusController: status info found
+[2020-06-14T02:51:55.268Z] : info : RatingController: rating info found
+[2020-06-14T02:51:55.278Z] : info : UserController:email doesnt match known user
+[2020-06-14T02:51:55.335Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:51:59.744Z] : info : Server: Server is running
+[2020-06-14T02:51:59.891Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:51:59.994Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:52:02.886Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:52:02.886Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:52:02.895Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:52:02.905Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:52:02.905Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:52:02.912Z] : info : CargoController: Cargo info found
+[2020-06-14T02:52:02.920Z] : info : RouteController: route info found
+[2020-06-14T02:52:02.928Z] : info : StatusController: status info found
+[2020-06-14T02:52:02.936Z] : info : RatingController: rating info found
+[2020-06-14T02:52:02.950Z] : info : UserController:email doesnt match known user
+[2020-06-14T02:52:04.116Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:52:04.117Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:52:04.119Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:52:04.122Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:52:04.122Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:52:04.124Z] : info : CargoController: Cargo info found
+[2020-06-14T02:52:04.126Z] : info : RouteController: route info found
+[2020-06-14T02:52:04.128Z] : info : StatusController: status info found
+[2020-06-14T02:52:04.131Z] : info : RatingController: rating info found
+[2020-06-14T02:52:04.133Z] : info : UserController:email doesnt match known user
+[2020-06-14T02:52:43.146Z] : info : Server: Server is running
+[2020-06-14T02:52:43.320Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:52:43.325Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:52:43.325Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:52:43.339Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:52:43.375Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:52:43.375Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:52:43.383Z] : info : CargoController: Cargo info found
+[2020-06-14T02:52:43.389Z] : info : RouteController: route info found
+[2020-06-14T02:52:43.397Z] : info : StatusController: status info found
+[2020-06-14T02:52:43.404Z] : info : RatingController: rating info found
+[2020-06-14T02:52:43.417Z] : info : UserController:query doesnt match known user
+[2020-06-14T02:52:43.474Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:54:10.772Z] : info : Server: Server is running
+[2020-06-14T02:54:10.905Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:54:11.011Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:54:34.999Z] : info : Server: Server is running
+[2020-06-14T02:54:35.162Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:54:35.274Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:54:40.043Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:54:40.043Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:54:40.050Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:54:40.059Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:54:40.059Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:54:40.066Z] : info : CargoController: Cargo info found
+[2020-06-14T02:54:40.075Z] : info : RouteController: route info found
+[2020-06-14T02:54:40.083Z] : info : StatusController: status info found
+[2020-06-14T02:54:40.091Z] : info : RatingController: rating info found
+[2020-06-14T02:54:40.105Z] : info : UserController:User found
+[2020-06-14T02:54:46.749Z] : info : Server: Server is running
+[2020-06-14T02:54:46.921Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:54:46.928Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:54:46.928Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:54:46.943Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:54:46.974Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:54:46.977Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:54:46.983Z] : info : CargoController: Cargo info found
+[2020-06-14T02:54:46.994Z] : info : RouteController: route info found
+[2020-06-14T02:54:47.002Z] : info : StatusController: status info found
+[2020-06-14T02:54:47.011Z] : info : RatingController: rating info found
+[2020-06-14T02:54:47.024Z] : info : UserController:User found
+[2020-06-14T02:54:47.082Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:54:50.433Z] : info : Server: Server is running
+[2020-06-14T02:54:50.574Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:54:50.685Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:54:53.970Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:54:53.971Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:54:53.981Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:54:53.991Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:54:53.992Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:54:53.999Z] : info : CargoController: Cargo info found
+[2020-06-14T02:54:54.006Z] : info : RouteController: route info found
+[2020-06-14T02:54:54.013Z] : info : StatusController: status info found
+[2020-06-14T02:54:54.021Z] : info : RatingController: rating info found
+[2020-06-14T02:54:54.033Z] : info : UserController:User found
+[2020-06-14T02:55:43.038Z] : info : Server: Server is running
+[2020-06-14T02:55:43.215Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-14T02:55:43.230Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-14T02:55:43.230Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-14T02:55:43.247Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.294Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.294Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.302Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.309Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.319Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.328Z] : info : RatingController: rating info found
+[2020-06-14T02:55:43.339Z] : info : UserController:User found
+[2020-06-14T02:55:43.340Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.344Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.350Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.350Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.356Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.360Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.367Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.369Z] : info : RatingController: rating info found
+[2020-06-14T02:55:43.374Z] : info : UserController:User found
+[2020-06-14T02:55:43.374Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.376Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.383Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.384Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.386Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.393Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.397Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.403Z] : info : RatingController: rating info found
+[2020-06-14T02:55:43.407Z] : info : UserController:User found
+[2020-06-14T02:55:43.407Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.415Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.419Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.419Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.431Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.435Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.447Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.450Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.451Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.454Z] : info : Server: database tables created if the dont exist
+[2020-06-14T02:55:43.454Z] : info : UserController:User found
+[2020-06-14T02:55:43.454Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.457Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.460Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.460Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.464Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.465Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.467Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.469Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.469Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.471Z] : info : UserController:User found
+[2020-06-14T02:55:43.472Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.473Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.477Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.477Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.480Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.482Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.484Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.486Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.486Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.489Z] : info : UserController:User found
+[2020-06-14T02:55:43.490Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.492Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.497Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.497Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.499Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.501Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.503Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.505Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.505Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.507Z] : info : UserController:User found
+[2020-06-14T02:55:43.507Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.516Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.518Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.519Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.521Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.524Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.527Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.530Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.531Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.534Z] : info : UserController:User found
+[2020-06-14T02:55:43.534Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.537Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.540Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.540Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.543Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.546Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.549Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.552Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.552Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.555Z] : info : UserController:User found
+[2020-06-14T02:55:43.555Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.558Z] : info : VehicleController: vehicle info found
+[2020-06-14T02:55:43.561Z] : info : HaulageController: register was returned successfully.
+[2020-06-14T02:55:43.562Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-14T02:55:43.565Z] : info : CargoController: Cargo info found
+[2020-06-14T02:55:43.567Z] : info : RouteController: route info found
+[2020-06-14T02:55:43.572Z] : info : StatusController: status info found
+[2020-06-14T02:55:43.575Z] : info : RatingController: No rating information found with that id
+[2020-06-14T02:55:43.575Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-14T02:55:43.578Z] : info : UserController:User found
+[2020-06-14T02:55:43.579Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-14T02:55:43.579Z] : info : api: haulage list returned

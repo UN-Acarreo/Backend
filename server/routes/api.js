@@ -378,7 +378,10 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         if (rating_info.status == -1) {
             errorDescription = "Hubo un problema obteniendo la descripción del estatus"
         }
-        
+        let user_info = await getHandler("User").getUserInfo(haualge.data.Id_user);
+        if (user_info.status == -1) {
+            errorDescription = "Hubo un problema obteniendo la informacion del usuario"
+        }
         if (errorDescription != "") {
 
             logger.error("api:"+ errorDescription)
@@ -387,6 +390,7 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         haulage_list.push({
             vehicle: vehicle.data,
             haualge: haualge.data,
+            user: user_info.data,
             cargo: cargo_info.data,
             route: route_info.data,
             status: status_info.data,
