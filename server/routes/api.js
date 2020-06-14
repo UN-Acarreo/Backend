@@ -230,7 +230,7 @@ router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res)
         let saved_vehicle = await getHandler("Vehicle").createVehicle(req);
         //error saving the vehicle
         if (saved_vehicle.status != 1 && saved_vehicle.message) {
-            message = saved_vehicle.message.toString()
+            let message = saved_vehicle.message.toString()
             logger.error("Signup vehicle: " + message);
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»") {
                 return res.status(400).json({ error: "La Placa ya existe" });
