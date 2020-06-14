@@ -95,9 +95,32 @@ async function getVehicleInfo(vehicle_id){
     }
 }
 
+async function deleteByPlate(Plate){
+    try{
+
+        let driver_info = await ModelFactory.getModel("Vehicle").destroy({ where: { Plate: Plate }})
+
+        //query returns array of drivers that match where clause, in this case we expect only 1
+        if(driver_info.length==0)
+        {
+            logger.info("VehicleController: No vehicle found with that Plate")
+            return {status:0, data:" No vehicle information found with that Plate"}
+        }
+        else{
+            logger.info("VehicleController: vehicle was deleted")
+            return {status: 1, data: driver_info[0].dataValues}
+        }
+
+    } catch (error) {
+        logger.info("VehicleController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     getAll: getAll,
     getRegisterByPk: getRegisterByPk,
-    getVehicleInfo: getVehicleInfo
+    getVehicleInfo: getVehicleInfo,
+    deleteByPlate: deleteByPlate
 };
