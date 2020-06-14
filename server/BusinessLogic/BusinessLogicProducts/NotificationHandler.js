@@ -70,11 +70,11 @@ async function getNotifications(Id,type)
     
 }
 
-async function removeNotification(type_of_user,Id,Id_haulage)
+async function removeNotification(type_notif, type_of_user,Id,Id_haulage)
 {
     
         const subject = new Subject()
-        let result = await subject.removeObserver(new Observer(Id,type_of_user),Id_haulage)
+        let result = await subject.removeObserver(new Observer(Id,type_of_user),Id_haulage,type_notif)
         if(result.status!=-1)
             return {status:result.status,data:""}
         else
