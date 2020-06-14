@@ -74,22 +74,36 @@ async function check_fields(req){
           fieldName = "Foto"
         }   
       }
+      if(key == 'Is_owner'){
+        if (typeof field != "boolean") {
+          return "El valor de si es dueño no es válido"
+        } else {
+          fieldName = "valor de si es dueño"
+        }   
+      }
+      if(key == 'Photo'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "El nombre de la Foto no es válido"
+        } else {
+          fieldName = "Nombre de la Foto"
+        }   
+      }
       if(key == 'Plate'){
-        if (typeof field != "string") {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
           return "La Placa no es válida"
         } else {
           fieldName = "Placa"
         }   
       }
       if(key == 'Brand'){
-        if (typeof field != "string") {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
           return "La Marca no es válida"
         } else {
           fieldName = "Marca"
         }   
       }
       if(key == 'Model'){
-        if (typeof field != "string") {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
           return "El Modelo no es válido"
         } else {
           fieldName = "Modelo"
@@ -100,6 +114,13 @@ async function check_fields(req){
           return "La capacidad de carga no es válida"
         } else {
           fieldName = "La capacidad de carga"
+        }
+      }
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
         }
       }
       if((key=="Origin_coord")){

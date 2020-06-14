@@ -27,6 +27,9 @@ const controllerFactory = require('../../Controllers/ControllerFactory');
 userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
 carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
 
+// Test data
+lastResult = undefined;
+
 // Check Status Request in functions
 async function checkStatusRequest (status, fun, params){
 
@@ -35,7 +38,8 @@ async function checkStatusRequest (status, fun, params){
   var res = httpMocks.createResponse();
 
   // Make equal test
-  assert.equal((await fun(req, res)).statusCode, status);
+  lastResult = (await fun(req, res));
+  assert.equal(lastResult.statusCode, status);
 
 }
 
@@ -110,7 +114,7 @@ describe("Login test:", async function() {
 
 // Driver signup test
 describe("Driver signup test:", async function() {
-  
+
   // Before actions
   before(async function() {
     // DataBase connection
@@ -183,3 +187,70 @@ describe("Driver signup test:", async function() {
 
 });
 
+// Vehicle signup test
+describe("Vehicle signup test:", async function() {
+  
+  // Driver id
+  var db_driver_id = undefined;
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB();  
+    // Get regiter test driver
+    db_driver_id = (await lastResult)._getJSONData().db_driver_id;
+    // Delete test vehicle if exist
+    await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
+  });
+
+  // Bad request structure checks
+  describe("Bad request in structure checks: ", async function() {
+    it('If vehicle signup doesn\'t have "request" key',           () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {}}));
+    it('If vehicle signup doesn\'t have "Identity_card" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Plate: "TestPlate", db_driver_id: db_driver_id, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Plate" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Brand" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Model" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Payload_capacity" key',  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Photo" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "foto_data" key',         () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Is_owner" key',          () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto}}}));
+  });
+
+  // Data type checks
+  describe("Bad request in data type checks: ", async function() {
+    it('If vehicle signup doesn\'t have Number data type in "Identity_card" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: "123456", db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have String data type in "Plate" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: 123456, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have String data type in "Brand" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: 123456, Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have String data type in "Model" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: 123456, Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have Number data type in "Payload_capacity" key',  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: "5", Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have String data type in "Photo" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: 123456, foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have String data type in "foto_data" key',         () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: 123456, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have Boolean data type in "Is_owner" key',         () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: "sdfsd"}}}));
+  });
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    it('If vehicle signup have numbers <= 0 in "Identity_card" key',    () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: -123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have decimal number in "Identity_card" key',  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456.234, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have empty "Plate" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: " ", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have empty "Brand" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: " ", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have empty "Model" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: " ", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have number <= 0 in "Payload_capacity" key',  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: -5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have empty "Photo" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: " ", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have empty "foto_data" key',                  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: " ", Is_owner: true}}}));
+  });
+
+  // Good work
+  describe("OK in good work checks: ", async function() {
+    
+    // Before actions
+    beforeEach(async function() {
+      // Delete test vehicle if exist
+      await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
+    });
+    
+    it('Should return Created if driver vehicle works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+
+  });
+
+});
