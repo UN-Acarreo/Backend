@@ -20,6 +20,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec --recursive",
+    "cover": "nyc --reporter=text --reporter=lcov npm test",
     "start": "node server.js"
   },
   "author": "",
