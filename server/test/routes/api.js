@@ -28,7 +28,7 @@ let userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
 let carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
 
 // Test data
-lastResult = undefined;
+let lastResult = undefined;
 
 // Check Status Request in functions
 async function checkStatusRequest (status, fun, params){
