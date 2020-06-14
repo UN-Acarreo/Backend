@@ -206,48 +206,54 @@ router.delete('/:type_of_user/notification/delete/:type_notif/:Id/:Id_haulage',e
 })
 
 router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res) {
-    const valid_fields = await getHandler("Fields").check_fields(req);
-    if (valid_fields !== true) {
-        return res.status(400).json({ error: valid_fields })
-    }
-    //Save vehicle image
-    const filePath = path.join(__dirname, "../public/uploads/vehicles/");
-    const imageSaved = await getHandler("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
-    if (imageSaved == false) {
-        logger.info('Signup driver: Error in save image')
-        return res.status(400).json({ error: 'No se puede guardar la imagen seleccionada' })
-    }
 
-    //Set the path of the saved image on the db field
-    var baseImage = req.body.request.foto_data
-    const extension = baseImage.substring(baseImage.indexOf("/") + 1, baseImage.indexOf(";base64"));
-    req.body.request.Photo = '/uploads/vehicles/' + req.body.request.Identity_card + "." + extension
+    if ("request" in req.body && "Identity_card" in req.body.request && "Plate" in req.body.request && "Brand" in req.body.request && "Model" in req.body.request && "Payload_capacity" in req.body.request && "Photo" in req.body.request && "foto_data" in req.body.request && "Is_owner" in req.body.request) {
 
-    //Save vehicle on db
-    let saved_vehicle = await getHandler("Vehicle").createVehicle(req);
-    //error saving the vehicle
-    if (saved_vehicle.status != 1 && saved_vehicle.message) {
-        let message = saved_vehicle.message.toString()
-        logger.error("Signup vehicle: " + message);
-        if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»") {
-            return res.status(400).json({ error: "La Placa ya existe" });
+        const valid_fields = await getHandler("Fields").check_fields(req);
+        if (valid_fields !== true) {
+            return res.status(400).json({ error: valid_fields })
         }
-        return res.status(500).json({ error: message });
-    }
+        //Save vehicle image
+        const filePath = path.join(__dirname, "../public/uploads/vehicles/");
+        const imageSaved = await getHandler("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+        if (imageSaved == false) {
+            logger.info('Signup driver: Error in save image')
+            return res.status(400).json({ error: 'No se puede guardar la imagen seleccionada' })
+        }
 
-    //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
-    let success_driver_vehicle = await getHandler("Driver_Vehicle").createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
+        //Set the path of the saved image on the db field
+        var baseImage = req.body.request.foto_data
+        const extension = baseImage.substring(baseImage.indexOf("/") + 1, baseImage.indexOf(";base64"));
+        req.body.request.Photo = '/uploads/vehicles/' + req.body.request.Identity_card + "." + extension
+
+        //Save vehicle on db
+        let saved_vehicle = await getHandler("Vehicle").createVehicle(req);
+        //error saving the vehicle
+        if (saved_vehicle.status != 1 && saved_vehicle.message) {
+            let message = saved_vehicle.message.toString()
+            logger.error("Signup vehicle: " + message);
+            if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»") {
+                return res.status(400).json({ error: "La Placa ya existe" });
+            }
+            return res.status(500).json({ error: message });
+        }
+
+        //Create driver-vehicle on db using the function: createDriver_Vehicle( Id_driver, Id_vehicle, Is_owner )
+        let success_driver_vehicle = await getHandler("Driver_Vehicle").createDriver_Vehicle(req.body.request.db_driver_id, saved_vehicle.data, req.body.request.Is_owner)
 
 
-    if (success_driver_vehicle == 1) {
-        logger.info("Signup vehicle: added succesfully");
-        //res.status(201).send("added succesfully");
-        return res.status(201).json({ status: 1 });
+        if (success_driver_vehicle == 1) {
+            logger.info("Signup vehicle: added succesfully");
+            //res.status(201).send("added succesfully");
+            return res.status(201).json({ status: 1 });
 
-    }
-    else {
-        logger.error("Signup vehicle: " + 'Error registrando el vehículo');
-        return res.status(500).json({ error: success_driver_vehicle.message });
+        }
+        else {
+            logger.error("Signup vehicle: " + 'Error registrando el vehículo');
+            return res.status(500).json({ error: success_driver_vehicle.message });
+        }
+    } else {
+        return res.status(400).send("Bad Request");
     }
 
 });
