@@ -23,7 +23,7 @@ async function getVehicleByDriverId(id)
 {
     //query to find Vehicles by given drivers Id
     let vehicle = await ControllerFactory.getController("Driver_Vehicle").getRegisterBy({Id_driver: id},"Vehicle")  
-    
+
     if(vehicle.status==1)
     {
         //query returns array of Drivers that match were clause
