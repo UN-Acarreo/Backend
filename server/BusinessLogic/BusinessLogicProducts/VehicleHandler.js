@@ -34,13 +34,24 @@ function getListOfNeededVehicles(free_vehicles,weight)
   free_vehicles.sort((a,b)=>{
     let a_cap = a.Payload_capacity
     let b_cap = b.Payload_capacity
+    console.log("a:"+a_cap+" : "+typeof(a_cap))
+    console.log("b"+b_cap+" : "+typeof(b_cap))
 
     if(a_cap>=weight && b_cap>=weight)
     {
-      return 1;
+      console.log("a_cap>=weight && b_cap>=weight")
+      if (a_cap > b_cap) {    
+        console.log("a_cap > b_cap")
+        return 1;    
+      } else if (a_cap < b_cap) { 
+          console.log("a_cap < b_cap")   
+          return -1;    
+      } 
     }else if (a_cap > b_cap) {    
+      console.log("a_cap > b_cap")
       return -1;    
-    } else if (a_cap < b_cap) {    
+    } else if (a_cap < b_cap) { 
+        console.log("a_cap < b_cap")   
         return 1;    
     }    
     return 0;    
