@@ -1,6 +1,6 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+const ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -33,8 +33,8 @@ function getListOfNeededVehicles(free_vehicles,weight)
 
 
   for (const element of free_vehicles) {
-    Id_vehicle=element.Id_vehicle;
-    Payload_capacity=element.Payload_capacity;
+    let Id_vehicle=element.Id_vehicle;
+    let Payload_capacity=element.Payload_capacity;
     if(weight>acum_capacity)
     {
       needed_vehicles.push(element)
@@ -48,7 +48,7 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
   else{
     logger.info("VehicleHandler:enough cars");
-    return {status: 1, data:needed_vehicles};;
+    return {status: 1, data:needed_vehicles};
   }
 }
 

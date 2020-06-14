@@ -1,6 +1,6 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+const ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');

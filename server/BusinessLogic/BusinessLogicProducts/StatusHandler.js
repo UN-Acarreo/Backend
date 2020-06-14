@@ -1,5 +1,5 @@
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
