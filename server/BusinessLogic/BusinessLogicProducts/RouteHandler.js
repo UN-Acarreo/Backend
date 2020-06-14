@@ -1,3 +1,5 @@
+//Import controller factory
+const ControllerFactory = require("../../Controllers/ControllerFactory")
 // Import ModelFactory
 const ModelFactory = require('../../Models/ModelFactory');
 
