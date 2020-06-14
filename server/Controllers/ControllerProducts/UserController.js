@@ -81,9 +81,32 @@ async function getRegisterBy(query)
     }
 }
 
+async function deleteByUserEmail(User_Email){
+    try{
+
+        let info = await ModelFactory.getModel("User").destroy({ where: { User_Email: User_Email }})
+
+        //query returns array of clients that match where clause, in this case we expect only 1
+        if(info.length==0)
+        {
+            logger.info("UserController: No client found with that Identity_card")
+            return {status:0, data:" No client information found with that User_Email"}
+        }
+        else{
+            logger.info("UserController: clients was deleted")
+            return {status: 1, data: info[0].dataValues}
+        }
+
+    } catch (error) {
+        logger.info("UserController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
 module.exports = { 
     create: create, 
     countWhere:countWhere,
-    getUserBy:getRegisterBy
+    getUserBy:getRegisterBy,
+    deleteByUserEmail: deleteByUserEmail
 
  };

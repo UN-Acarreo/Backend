@@ -28,7 +28,10 @@ let userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
 let carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
 
 // Test data
-let lastResult = undefined;
+let lastResult = undefined;     // Last result
+var db_driver_id = undefined;   // Driver id
+var db_user_id = undefined;     // User id
+
 
 // Check Status Request in functions
 async function checkStatusRequest (status, fun, params){
@@ -119,6 +122,8 @@ describe("Driver signup test:", async function() {
   before(async function() {
     // DataBase connection
     await syncDB();  
+    // Delete driver notification if exist
+    await businessLogicFactory.getBusinessLogic("Notification").deleteByDriverIdentityCard(123456);
     // Delete test driver if exist
     await controllerFactory.getController("Driver").deleteByIdentityCard(123456);
   });
@@ -189,9 +194,6 @@ describe("Driver signup test:", async function() {
 
 // Vehicle signup test
 describe("Vehicle signup test:", async function() {
-  
-  // Driver id
-  var db_driver_id = undefined;
 
   // Before actions
   before(async function() {
@@ -206,7 +208,8 @@ describe("Vehicle signup test:", async function() {
   // Bad request structure checks
   describe("Bad request in structure checks: ", async function() {
     it('If vehicle signup doesn\'t have "request" key',           () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {}}));
-    it('If vehicle signup doesn\'t have "Identity_card" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Plate: "TestPlate", db_driver_id: db_driver_id, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "Identity_card" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have "db_driver_id" key',      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have "Plate" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have "Brand" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have "Model" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
@@ -219,6 +222,7 @@ describe("Vehicle signup test:", async function() {
   // Data type checks
   describe("Bad request in data type checks: ", async function() {
     it('If vehicle signup doesn\'t have Number data type in "Identity_card" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: "123456", db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup doesn\'t have Number data type in "db_driver_id" key',      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: "123", Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have String data type in "Plate" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: 123456, Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have String data type in "Brand" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: 123456, Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup doesn\'t have String data type in "Model" key',             () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: 123456, Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
@@ -232,6 +236,8 @@ describe("Vehicle signup test:", async function() {
   describe("Bad request in data format checks: ", async function() {
     it('If vehicle signup have numbers <= 0 in "Identity_card" key',    () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: -123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup have decimal number in "Identity_card" key',  () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456.234, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have numbers <= 0 in "db_driver_id" key',     () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: -234, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('If vehicle signup have decimal number in "db_driver_id" key',   () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: 2344.3243, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup have empty "Plate" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: " ", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup have empty "Brand" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: " ", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('If vehicle signup have empty "Model" key',                      () => checkStatusRequest(400, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: " ", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
@@ -249,8 +255,157 @@ describe("Vehicle signup test:", async function() {
       await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
     });
     
-    it('Should return Created if driver vehicle works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 5, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('Should return Created if driver vehicle works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 100, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
 
   });
 
 });
+
+// Client signup test
+describe("Client signup test:", async function() {
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB();  
+    // Delete driver notification if exist
+    await businessLogicFactory.getBusinessLogic("Haulage").deleteByUserEmail("testclientname@hotmail.com");
+    // Delete test client if exist
+    await controllerFactory.getController("User").deleteByUserEmail("testclientname@hotmail.com");
+  });
+
+  // Bad request structure checks
+  describe("Bad request in structure checks: ", async function() {
+    it('If client signup doesn\'t have "request" key',        () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {}}));
+    it('If client signup doesn\'t have "User_name" key',      () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_last_name: "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have "User_last_name" key', () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have "User_password" key',  () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have "User_address" key',   () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have "User_Email" key',     () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection" }}}));
+  });
+
+  // Data type checks
+  describe("Bad request in data type checks: ", async function() {
+    it('If client signup doesn\'t have String data type in "User_name" key',      () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: 123, User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have String data type in "User_last_name" key', () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  123, User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have String data type in "User_password" key',  () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: 123, User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have String data type in "User_address" key',   () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: 123, User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup doesn\'t have String data type in "User_Email" key',     () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: 123 }}}));
+  });
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    it('If client signup have digits in "User_name" key',                   () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "Test2Client2Name", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have special characters in "User_name" key',       () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "Test_Client_Name", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have empty "User_name" key',                       () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: " ", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have digits in "User_last_name" key',              () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "Test2Client2Last2Name", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have special characters in "User_last_name" key',  () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "Test_Client_Last_Name", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have empty "User_last_name" key',                  () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  " ", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have empty "User_password" key',                   () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: " ", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have empty "User_address" key',                    () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: " ", User_Email: "testclientname@hotmail.com" }}}));
+    it('If client signup have empty "User_Email" key',                      () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: " " }}}));
+  });
+
+  // Good work
+  describe("OK in good work checks: ", async function() {
+    
+    // Before actions
+    beforeEach(async function() {
+      // Delete test client if exist
+      await controllerFactory.getController("User").deleteByUserEmail("testclientname@hotmail.com");
+    });
+    
+    it('Should return Created if client signup works',                                    () => checkStatusRequest(201, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('Should return Created if client signup works with blanks in name and last name',  () => checkStatusRequest(201, api.clientSignup, {method: 'POST', body: {request: { User_name: "Test Client Name", User_last_name:  "Test Client Last Name", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+  });
+
+});
+
+// Haulage create test
+describe("Haulage create test:", async function() {
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB();  
+    // Get regiter test user
+    db_user_id =  (await controllerFactory.getController("User").getUserBy({User_Email: "testclientname@hotmail.com"})).data.Id_user;
+    // Delete test haulage if exist
+    await controllerFactory.getController("Haulage").deleteByIdUser(db_user_id);
+    // Delete test caego if exist
+    //await controllerFactory.getController("Cargo").deleteByDescription("DescriptionTest");
+  });
+
+  // Bad request structure checks
+  describe("Bad request in structure checks: ", async function() {
+    it('If haulage create doesn\'t have "request" key',           () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {}}));
+    it('If haulage create doesn\'t have "Date" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Year" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Month" key',             () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Day" key',               () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Hour" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Minute" key',            () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Origin_coord" key',      () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30} , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Destination_coord" key', () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Description" key',       () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Comments" key',          () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Weight" key',            () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Duration" key',          () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have "Id_user" key',           () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30}}}));
+  });
+
+  // Data type checks
+  describe("Bad request in data type checks: ", async function() {
+    it('If haulage create doesn\'t have Number data type in "Year" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: "2020", Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Month" key',             () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: "7", Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Day" key',               () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: "24", Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Hour" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: "4", Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Minute" key',            () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: "30"}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have String data type in "Origin_coord" key',      () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: 123 , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have String data type in "Destination_coord" key', () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: 123, Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have String data type in "Description" key',       () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: 123, Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have String data type in "Comments" key',          () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: 123, Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Weight" key',            () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: "30", Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Duration" key',          () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: "1000*60*30", Id_user: db_user_id}}}));
+    it('If haulage create doesn\'t have Number data type in "Id_user" key',           () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: "123"}}}));
+  });
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If haulage create have numbers <= 0 in "Year" key',       () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: -2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Year" key',     () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020.234, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Month" key',      () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: -7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Month" key',    () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7.34, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Day" key',        () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: -24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Day" key',      () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24.34, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Hour" key',       () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: -4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Hour" key',     () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4.345, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Minute" key',     () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: -30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Minute" key',   () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30.34}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have empty "Origin_coord" key',         () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: " " , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have empty "Destination_coord" key',    () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: " ", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have empty "Description" key',          () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: " ", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Weight" key',     () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: -30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Duration" key',   () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: -1000*60*30, Id_user: db_user_id}}}));
+    it('If haulage create have decimal number in "Duration" key', () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000.2343, Id_user: db_user_id}}}));
+    it('If haulage create have numbers <= 0 in "Id_user" key',    () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: -123}}}));
+    it('If haulage create have decimal number in "Id_user" key',  () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: 123.234}}}));
+    
+  });
+
+  // Good work
+  describe("OK in good work checks: ", async function() {
+    
+    // Before actions
+    beforeEach(async function() {
+      // Delete test haulage if exist
+      await controllerFactory.getController("Haulage").deleteByIdUser(db_user_id);
+    });
+    
+    it('Should return Created if haulage create works',  () => checkStatusRequest(201, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "DescriptionTest", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id}}}));
+  
+  });
+
+});
+

@@ -123,25 +123,116 @@ async function check_fields(req){
           fieldName = "ID del conductor"
         }
       }
-      if((key=="Origin_coord")){
-  
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
+        }
       }
-      if((key=="Destination_coord")){
-  
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
+        }
       }
-      if((key == 'Weight') && !validator.isNumeric(field)){
-        fieldName = "Peso"
-        return "El Peso no es válido"
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
+        }
       }
-      if((key=="Description")){
-        fieldName = "Descripcion"
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
+        }
       }
-      if((key=="Date")){
-        fieldName = "Date"
+      if((key == 'db_driver_id')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El ID del conductor no es válido"
+        } else {
+          fieldName = "ID del conductor"
+        }
       }
-      if((key=="Id_user") && !validator.isNumeric(field)){
-        fieldName = "Id_user"
-        return "El id de usuario no es válido"
+      if(key=="Date"){
+        if (typeof field.Year != "number" || !Number.isInteger(field.Year) || field.Year <= 0) {
+          return "El año de la Fecha no es válido"
+        } else {
+          fieldName = "Año de la Fecha"
+        }
+        if (typeof field.Month != "number" || !Number.isInteger(field.Month) || field.Month <= 0) {
+          return "El mes la Fecha no es válido"
+        } else {
+          fieldName = "Mes de la Fecha"
+        }
+        if (typeof field.Day != "number" || !Number.isInteger(field.Day) || field.Day <= 0) {
+          return "El dia de la Fecha no es válido"
+        } else {
+          fieldName = "Dia de la Fecha"
+        }
+        if (typeof field.Hour != "number" || !Number.isInteger(field.Hour) || field.Hour <= 0) {
+          return "La hora de la Fecha no es válido"
+        } else {
+          fieldName = "Hora de la Fecha"
+        }
+        if (typeof field.Minute != "number" || !Number.isInteger(field.Minute) || field.Minute <= 0) {
+          return "El minuto de la Fecha no es válido"
+        } else {
+          fieldName = "Minuto de la Fecha"
+        }
+      }
+      if(key == 'Origin_coord'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La coordenada de origen no es válida"
+        } else {
+          fieldName = "Coordenada de origen"
+        }   
+      }
+      if(key == 'Destination_coord'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La coordenada de destino no es válida"
+        } else {
+          fieldName = "Coordenada de destino"
+        }   
+      }
+      if(key == 'Description'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La descripción no es válida"
+        } else {
+          fieldName = "Descripción"
+        }   
+      }
+      if(key == 'Comments'){
+        if (typeof field != "string") {
+          return "Los comentarios no son válidos"
+        } else {
+          fieldName = "Comentarios"
+        }   
+      }
+      if((key == 'Weight')){
+        if (typeof field != "number" || field <= 0) {
+          return "El peso no es válido"
+        } else {
+          fieldName = "Peso"
+        }
+      }
+      if((key == 'Duration')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "La duración no es válida"
+        } else {
+          fieldName = "Duración"
+        }
+      }
+      if((key == 'Id_user')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El id de usuario no es válido"
+        } else {
+          fieldName = "Id de usuario"
+        }
       }
       //length validation
       if(field.length == 0 && key!="Comments"){

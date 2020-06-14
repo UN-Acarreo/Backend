@@ -152,11 +152,25 @@ async function finishHaulage(Id_haulage)
 
 }
 
+async function deleteByUserEmail(Email) {
+    
+  // Select drivers by Identity_Card
+  let result = await ControllerFactory.getController("User").getUserBy({User_Email: Email})
+  
+  // Delete notifcations with driver id
+  if (result.status != 0) {
+
+      result = await ControllerFactory.getController("Haulage").deleteByIdUser(result.data.Id_user)
+
+  }
+  
+}
 
 module.exports = {
     createHaulageWithRouteCargo: createHaulageWithRouteCargo,
     getHaulageList: getHaulageList,
     getHaulageInfo: getHaulageInfo,
     finishHaulage: finishHaulage,
-    setHaulageRating: setHaulageRating
-    };
+    setHaulageRating: setHaulageRating,
+    deleteByUserEmail: deleteByUserEmail
+};

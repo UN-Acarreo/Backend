@@ -125,6 +125,30 @@ async function getDriverInfo(driver_id){
     }
 }
 
+//Return driver information
+async function getDriverInfoByIdentityCard(Identity_card){
+    try{
+    var DriverModel = await ModelFactory.getModel("Driver")
+    let driver_info = await DriverModel.findAll(
+        { where: { Identity_card: Identity_card }}
+        )
+    //query returns array of drivers that match where clause, in this case we expect only 1
+    if(driver_info.length==0)
+    {
+        logger.info("DriverController: No driver found with that id")
+        return {status:0, data:" No driver information found with that id"}
+    }
+    else{
+        logger.info("DriverController: driver info found")
+        return {status: 1, data: driver_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("DriverController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 async function deleteByIdentityCard(Identity_card){
     try{
     var DriverModel = await ModelFactory.getModel("Driver")
@@ -153,5 +177,6 @@ module.exports = {
     getRegisterBy: getRegisterBy,
     getRegisterByPk: getRegisterByPk,
     getDriverInfo: getDriverInfo,
-    deleteByIdentityCard: deleteByIdentityCard
+    deleteByIdentityCard: deleteByIdentityCard,
+    getDriverInfoByIdentityCard: getDriverInfoByIdentityCard
  };
