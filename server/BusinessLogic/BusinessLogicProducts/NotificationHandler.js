@@ -5,6 +5,8 @@ const Observer = require("./Notifications/Observer").Observer;
 const Subject = require("./Notifications/Subject").Subject;
 //import types of notification ids
 const constants = require("../../constants").notif_description
+//import controller factory
+const getController = require('../../Controllers/ControllerFactory').getController;
 
 async function createDriversNoficiations(drivers,Id_haulage)
 {
@@ -27,11 +29,33 @@ async function createDriversNoficiations(drivers,Id_haulage)
     
 }
 
-async function getDriverNotifications(Id_driver)
+async function createUserNoficiations(Id_haulage)
+{
+    const subject = new Subject()
+    subject.notifications.add(constants.HAULAGE_DONE)
+    let user_info = await getController("Haulage").getRegisterByPk(Id_haulage)
+    if(user_info.status==-1)
+    {
+        logger.error("NotificationHandler:createUserNotifications: "+user_info.error)
+        return {user_info}
+    }
+    let Id_user = user_info.data.Id_user
+    let observer = new Observer(Id_user,"User")
+    try {
+        await subject.registerObserver(observer, Id_haulage)
+        return {status:1}    
+    } catch (error) {
+        return {status:-1, error: error}   
+    }
+    
+    
+}
+
+async function getNotifications(Id,type)
 {
   
     const subject = new Subject()
-    let notifications = await subject.notifyObserver(new Observer(Id_driver,"Driver"))
+    let notifications = await subject.notifyObserver(new Observer(Id,type))
     if(notifications.status==-1)
     {
         logger.error("NotificationHandler: "+ notifications.error)
@@ -46,11 +70,11 @@ async function getDriverNotifications(Id_driver)
     
 }
 
-async function removeDriverNotification(Id_driver,Id_haulage)
+async function removeNotification(type_of_user,Id,Id_haulage)
 {
     
         const subject = new Subject()
-        let result = await subject.removeObserver(new Observer(Id_driver,"Driver"),Id_haulage)
+        let result = await subject.removeObserver(new Observer(Id,type_of_user),Id_haulage)
         if(result.status!=-1)
             return {status:result.status,data:""}
         else
@@ -63,21 +87,13 @@ async function removeDriverNotification(Id_driver,Id_haulage)
     
 
 
-async function createUserNoficiations(Id_user,Id_haulage)
-{
-    try {
-        
-    } catch (error) {
-        
-        
-    }
-    
-}
+
 
 module.exports =
 {
     createDriversNoficiations: createDriversNoficiations,
-    getDriverNotifications: getDriverNotifications,
-    removeDriverNotification: removeDriverNotification
+    getNotifications: getNotifications,
+    removeNotification: removeNotification,
+    createUserNoficiations: createUserNoficiations
 }
     

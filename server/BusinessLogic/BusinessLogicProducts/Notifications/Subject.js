@@ -13,46 +13,46 @@ class Subject {
 
     async registerObserver(observer,Id_haulage)
     {
-        
-        if(observer.typeObserver=="Driver")
-        {
-            //console.log("registerObserver"+observer.observer_Id + "haulage "+Id_haulage)
-            //create register in DriverNotification table
-            for (const notification of this.notifications) {
-                //create register in DriverNotification table
-                let new_notif = await getController("Driver_Notification").create(Id_haulage,notification,observer.observer_Id)
-                if(new_notif.status==-1)
-                    logger.error("Subject: in register observer: "+ new_notif.error)
-                else
-                    logger.info("Subject: in register observer: success")
+        //console.log("registerObserver"+observer.observer_Id + "haulage "+Id_haulage)
+        //create register in DriverNotification table or UserNotification table
+        for (const notification of this.notifications) {
+            
+            let new_notif = await getController("Notification").create(observer.typeObserver,Id_haulage,notification,observer.observer_Id)
+            if(new_notif.status==-1)
+            {
+                logger.error("Subject: in register observer: "+ new_notif.error)
+                return {status:-1}
             }
-        }else if(observer.typeObserver=="User")
-        {
-            //create register in UserNotification table
+            else
+                logger.info("Subject: in register observer: success")
         }
+        
     }
 
     async removeObserver(observer,Id_haulage)
     {
-        
+        let query
         if(observer.typeObserver=="Driver")
         {
-            let result = await getController("Driver_Notification").remove({
+            query = {
                 Id_driver:observer.observer_Id,
                 Id_haulage:Id_haulage
-            })
-            if(result.status==-1)
-            {
-                logger.error("Subject:removeObserver "+result.error)
-                return {status:-1,error:result.error}
             }
-            logger.info("Subject:removeObserver ")
-            return {status:result.status,data:""}
-            
         }else if(observer.typeObserver=="User")
         {
-            //delete register in UserNotification table
+            query = {
+                Id_user:observer.observer_Id,
+                Id_haulage:Id_haulage
+            }
         }
+        let result = await getController("Notification").remove(observer.typeObserver, query)
+        if(result.status==-1)
+        {
+            logger.error("Subject:removeObserver "+result.error)
+            return {status:-1,error:result.error}
+        }
+        logger.info("Subject:removeObserver ")
+        return {status:result.status,data:""}
     }
 
     async notifyObserver(observer)

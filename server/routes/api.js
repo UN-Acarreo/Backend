@@ -129,7 +129,7 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
             return res.status(201).json({ status: 1, db_driver_id: saved.data });
         }
         else {
-            message = saved.message.toString()
+            let message = saved.message.toString()
             logger.error("Signup driver: " + message);
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»") {
                 return res.status(400).json({ error: "El E-Mail ya existe" });
@@ -148,30 +148,47 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
     
 });
 
-router.get('/driver/notification/check/:Id_driver', exports.driverNotificationCheck = async function (req, res) {
-    
-    var Id_driver = req.params.Id_driver;
-    let notifications = await getHandler("Notification").getDriverNotifications(Id_driver)
+router.get('/:type_of_user/notification/check/:Id', exports.driverNotificationCheck = async function (req, res) {
+
+    let type_of_user = req.params.type_of_user
+    if(type_of_user == "driver")
+        type_of_user = "Driver"
+    else if(type_of_user == "client")
+        type_of_user = "User"
+    else
+    {
+        logger.info("api: user/driver notifications: Validation fail")
+        return res.status(400).json({ status:-1, error: "URL incorrecto"})
+    }
+    var Id = req.params.Id;
+    let notifications = await getHandler("Notification").getNotifications(Id,type_of_user)
     if(notifications.status==-1)
     {
-        logger.info("api: driver notifications: "+notifications.error)
+        logger.info("api: driver/user notifications: "+notifications.error)
         return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
     }
     else if(notifications.status==1 || notifications.status==0)
     {
-        logger.info("api:driver notifications found succesfully")
+        logger.info("api:driver/user notifications found succesfully")
         return res.status(200).json({status:notifications.status ,data:notifications.data})
     }
-
-
-
 })
 
-router.delete('/driver/notification/delete/:Id_driver/:Id_haulage', exports.driverNotificationDelete = async function (req, res){
+router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',exports.driverNotificationDelete = async function (req, res){
 
-    var Id_driver = req.params.Id_driver;
+    let type_of_user = req.params.type_of_user
+    if(type_of_user == "driver")
+        type_of_user = "Driver"
+    else if(type_of_user == "client")
+        type_of_user = "User"
+    else
+    {
+        logger.info("api: user/driver remove notifications: Validation fail")
+        return res.status(400).json({ status:-1, error: "URL incorrecto"})
+    }
+    var Id = req.params.Id;
     var Id_haulage = req.params.Id_haulage;
-    let notifications = await getHandler("Notification").removeDriverNotification(Id_driver,Id_haulage)
+    let notifications = await getHandler("Notification").removeNotification(type_of_user,Id,Id_haulage)
     if(notifications.status==-1)
     {
         return res.status(500).json({ status: notifications.status, error:"Hubo un error eliminando la notificacion"})
@@ -253,7 +270,7 @@ router.post('/client/signup', exports.clientSignup = async function (req, res) {
         return res.status(201).json({ status: 1 });
     }
     else {
-        message = success.toString()
+        let message = success.toString()
         logger.error("Signup user: " + message);
         if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»") {
             return res.status(400).json({ error: "El E-Mail ya existe" });
@@ -261,6 +278,7 @@ router.post('/client/signup', exports.clientSignup = async function (req, res) {
         return res.status(500).json({ error: message });
     }
 });
+
 
 
 //Returns the a list containing the info from the haulages from user
@@ -397,7 +415,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         return res.status(400).json({ error: valid_fields })
     }
 
-    values = req.body.request;
+    let values = req.body.request;
     //check for vehicle
 
     //this is a set with all vehicles and a set of drivers bussy the day of haulage
@@ -456,13 +474,13 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
 
     logger.info("api.js: haulage, cargo and route created: ");
     //creating records for haulage driver vehicles
-    response =
+    let response =
         await getHandler("Haulage_Driver_Vehicle").createAllHaulage_Driver_VehicleFromList(
             needed_driver_vehicles, haulage.data.Id_haulage
         )
     if (response.status == 1) {
         logger.info("api.js: all haulage_driver_vehicles created ");
-        info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
+        let info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
         if (info.status != 1)
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
 
@@ -499,16 +517,18 @@ router.post('/haulage/rate', exports.haulageRate = async function (req, res) {
 //Route will be used to handle finish haulage
 router.post('/haulage/finish', exports.haulageFinish = async function (req, res) {
 
-    Id_haulage = req.body.request.Id_haulage;
+    let Id_haulage = req.body.request.Id_haulage;
 
     let result = await getHandler("Haulage").finishHaulage(Id_haulage)
 
     if (result.status != 1) {
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
-    } else {
-        res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     }
+
+    await getHandler("Notification").createUserNoficiations(Id_haulage)
+    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
+    
 
 });
 
