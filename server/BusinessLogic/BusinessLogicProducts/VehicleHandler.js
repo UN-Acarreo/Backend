@@ -1,6 +1,6 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+const ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -31,10 +31,34 @@ function getListOfNeededVehicles(free_vehicles,weight)
   var needed_vehicles =[]
   var acum_capacity = 0;
 
+  free_vehicles.sort((a,b)=>{
+    let a_cap = a.Payload_capacity
+    let b_cap = b.Payload_capacity
+    console.log("a:"+a_cap+" : "+typeof(a_cap))
+    console.log("b"+b_cap+" : "+typeof(b_cap))
 
+    if(a_cap>=weight && b_cap>=weight)
+    {
+      console.log("a_cap>=weight && b_cap>=weight")
+      if (a_cap > b_cap) {    
+        console.log("a_cap > b_cap")
+        return 1;    
+      } else if (a_cap < b_cap) { 
+          console.log("a_cap < b_cap")   
+          return -1;    
+      } 
+    }else if (a_cap > b_cap) {    
+      console.log("a_cap > b_cap")
+      return -1;    
+    } else if (a_cap < b_cap) { 
+        console.log("a_cap < b_cap")   
+        return 1;    
+    }    
+    return 0;    
+  })
+  console.log(free_vehicles)
   for (const element of free_vehicles) {
-    Id_vehicle=element.Id_vehicle;
-    Payload_capacity=element.Payload_capacity;
+    let Payload_capacity=element.Payload_capacity;
     if(weight>acum_capacity)
     {
       needed_vehicles.push(element)
@@ -48,7 +72,7 @@ function getListOfNeededVehicles(free_vehicles,weight)
   }
   else{
     logger.info("VehicleHandler:enough cars");
-    return {status: 1, data:needed_vehicles};;
+    return {status: 1, data:needed_vehicles};
   }
 }
 

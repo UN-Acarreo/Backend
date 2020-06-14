@@ -1,7 +1,7 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
-description = require("../../constants").status_description
+const ControllerFactory = require('../../Controllers/ControllerFactory');
+let description = require("../../constants").status_description
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -134,7 +134,7 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
 }
 async function getAll_Driver_VehicleInfo(needed_driver_vehicles)
 {
-    list = []
+    let list = []
     for(element of needed_driver_vehicles)
     {
         let driver_vehicle = await getDriver_VehicleInfo(element.Id_driver,element.Id_vehicle)

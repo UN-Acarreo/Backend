@@ -7,7 +7,7 @@ const logger = require('../../utils/logger/logger');
 
 // Check fields
 async function check_fields(req){
-    data = req.body.request
+    let data = req.body.request
     for (const key of Object.keys(data)) {
       var field = data[key]
       var fieldName = ""
@@ -123,8 +123,9 @@ async function check_fields(req){
           fieldName = "ID del conductor"
         }
       }
+      //needs to be validation for this
       if((key=="Origin_coord")){
-  
+        
       }
       if((key=="Destination_coord")){
   

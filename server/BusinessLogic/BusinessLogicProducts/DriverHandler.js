@@ -1,6 +1,6 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
+const ControllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -39,7 +39,7 @@ async function validateDriver(req) {
 
   // Validate Driver
   //count = await DriverModel.count({ where: { Driver_Email: Driver_Email, Driver_password: Driver_password } })
-  count = await ControllerFactory.getController("Driver").countWhere({Driver_Email:Driver_Email})
+  let count = await ControllerFactory.getController("Driver").countWhere({Driver_Email:Driver_Email})
   if(count.status!=1)
   {
       logger.error("DriverHandler: " + error);
@@ -62,7 +62,7 @@ async function validateDriver(req) {
       }
   }
       logger.info("DriverHandler: Driver is not valid");
-      return {status: 0, data: false};  ;
+      return {status: 0, data: false};
 }
 
 

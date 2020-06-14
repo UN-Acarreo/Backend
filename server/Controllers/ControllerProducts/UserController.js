@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -39,7 +39,7 @@ async function create(User_name, User_last_name, User_password_hashed, User_addr
 async function countWhere(query) {
 
     try {
-        count = await ModelFactory.getModel("User").count({ where: query })
+        let count = await ModelFactory.getModel("User").count({ where: query })
         logger.info("UserController:Number of users returned")
         return{status:1, data:count}
 
@@ -65,7 +65,7 @@ async function getRegisterBy(query)
         //query returns array of users that match were clause
         if(users.length==0)
         {
-            logger.info("UserController:email doesnt match known user")
+            logger.info("UserController:query doesnt match known user")
             return {status:0, data:"not found"}
         }
         else{
