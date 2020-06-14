@@ -15,10 +15,11 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "node-mocks-http": "^1.8.1",
     "sequelize-cli": "^5.5.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --reporter spec --recursive",
     "start": "node server.js"
   },
   "author": "",

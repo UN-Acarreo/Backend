@@ -10,13 +10,17 @@ const getHandler = require('../BusinessLogic/BusinessLogicFactory').getBusinessL
 const logger = require('./../utils/logger/logger');
 
 //Route will be used to handle login POST requests
-router.post('/log-client-errors', async function (req, res) {
+router.post('/log-client-errors', exports.logClientErrors = async function (req, res) {
 
-    let error = req.body.error.message;
-    let errorInfo = req.body.error.stack;
-    //console.log(req.body.message);
-    logger.error("Api:Server recieved error from client:: " + JSON.stringify(error) + " " + JSON.stringify(errorInfo))
-    return res.status(200).send("ok");
+    if ("error" in req.body && "message" in  req.body.error && "stack" in req.body.error ) {
+        let error = req.body.error.message;
+        let errorInfo = req.body.error.stack;
+
+        logger.error("Api: Server recieved error from client:: " + JSON.stringify(error) + " " + JSON.stringify(errorInfo))
+        return res.status(200).send("ok");
+    } else {
+        return res.status(400).send("Bad Request");
+    }
 
 });
 
@@ -26,114 +30,125 @@ router.post('/log-client-errors', async function (req, res) {
 //status -1 = error, error message returned
 //status -2 = filed checks failed, error message returned
 //status -3 = wrong path
-router.post('/:type_of_user/login', async function (req, res) {
-    //TODO login user using Oauth
-    let type_of_user = req.params.type_of_user
-    //data validation
-    const valid_fields = await getHandler("Fields").check_fields(req);
-    if (valid_fields !== true) {
-        return res.status(400).json({ status: -2, error: valid_fields })
-    }
-    if (type_of_user == "client") {
-        //Client login
-        let { status, data } = await getHandler("User").validateUser(req);
-        if (status == 1) {
-            logger.info("api.js: returned user id succesfully")
-            return res.status(200).json({ status: 1, db_user_id: data });
+router.post('/:type_of_user/login', exports.login = async function (req, res) {
+    
+    if ("request" in req.body && "User_Email" in  req.body.request && "User_password" in req.body.request ) {
 
-        } else if (status == 0) {
-            logger.info("api.js: could not find user")
-            return res.status(400).json({ status: 0, error: "Correo o contraseña incorrectos" });
+        //TODO login user using Oauth
+        let type_of_user = req.params.type_of_user
+        //data validation
+        const valid_fields = await getHandler("Fields").check_fields(req);
+        if (valid_fields !== true) {
+            return res.status(400).json({ status: -2, error: valid_fields })
         }
-        else if (status == -1 || status == -2) {
-            logger.error("api.js: " + data)
-            return res.status(500).json({ status: -1, error: "Error del servidor" });
-        }
-    } else if (type_of_user == "driver") {
-        //driver login
-        //the following lines were coded because original req conteined fields related to user
-        //new_req changes names of this fields to match the ones of the driver
-        let new_request = {
-            Driver_Email: req.body.request.User_Email,
-            Driver_password: req.body.request.User_password
-        };
-        let new_req = { body: { request: new_request } };
+        if (type_of_user == "client") {
+            //Client login
+            let { status, data } = await getHandler("User").validateUser(req);
+            if (status == 1) {
+                logger.info("api.js: returned user id succesfully")
+                return res.status(200).json({ status: 1, db_user_id: data });
 
-        let { status, data } = await getHandler("Driver").validateDriver(new_req);
-
-        if (status == 1) {
-            //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
-            let vehicle = await getHandler("Driver_Vehicle").getVehicleByDriverId(data.Id_driver);
-            if (vehicle.status != 1) {
-                logger.error("api.js: " + vehicle.error)
+            } else if (status == 0) {
+                logger.info("api.js: could not find user")
+                return res.status(400).json({ status: 0, error: "Correo o contraseña incorrectos" });
+            }
+            else if (status == -1 || status == -2) {
+                logger.error("api.js: " + data)
                 return res.status(500).json({ status: -1, error: "Error del servidor" });
             }
-            logger.info("api.js: returned Driver id succesfully")
-            return res.status(200).json({ status: 1, db_driver_id: data, vehicle_data: vehicle.data });
+        } else if (type_of_user == "driver") {
+            //driver login
+            //the following lines were coded because original req conteined fields related to user
+            //new_req changes names of this fields to match the ones of the driver
+            let new_request = {
+                Driver_Email: req.body.request.User_Email,
+                Driver_password: req.body.request.User_password
+            };
+            let new_req = { body: { request: new_request } };
 
-        } else if (status == 0) {
-            logger.info("api.js: could not find Driver")
-            return res.status(400).json({ status: 0, error: "Correo o contraseña incorrectos" });
+            let { status, data } = await getHandler("Driver").validateDriver(new_req);
+
+            if (status == 1) {
+                //let vehicle_status, vehicle_data = await (await Driver_Vehicle_Handler.getVehicleByDriverId(data.Id_driver)).data;
+                let vehicle = await getHandler("Driver_Vehicle").getVehicleByDriverId(data.Id_driver);
+                if (vehicle.status != 1) {
+                    logger.error("api.js: " + vehicle.error)
+                    return res.status(500).json({ status: -1, error: "Error del servidor" });
+                }
+                logger.info("api.js: returned Driver id succesfully")
+                return res.status(200).json({ status: 1, db_driver_id: data, vehicle_data: vehicle.data });
+
+            } else if (status == 0) {
+                logger.info("api.js: could not find Driver")
+                return res.status(400).json({ status: 0, error: "Correo o contraseña incorrectos" });
+            }
+            else if (status == -1 || status == -2) {
+                logger.error("api.js: " + data)
+                return res.status(500).json({ status: -1, error: "Error del servidor" });
+            }
+
         }
-        else if (status == -1 || status == -2) {
-            logger.error("api.js: " + data)
-            return res.status(500).json({ status: -1, error: "Error del servidor" });
+        else {
+            logger.info("api.js: request parameters doesnt mactch driver nor user")
+            return res.status(400).json({ status: -3, error: "ruta incorrecta" });
+
         }
-
-    }
-    else {
-        logger.info("api.js: request parameters doesnt mactch driver nor user")
-        return res.status(404).json({ status: -3, error: "ruta incorrecta" });
-
+    } else {
+        return res.status(400).send("Bad Request");
     }
 
 })
 
 //Route will be used to handle driver sign up POST requests
-router.post('/driver/signup', async function (req, res) {
+router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 
-    const valid_fields = await getHandler("Fields").check_fields(req);
-    if (valid_fields !== true) {
-        return res.status(400).json({ error: valid_fields })
-    }
-    //Save drivers image
-    const filePath = path.join(__dirname, "../public/uploads/drivers/");
-    const imageSaved = await getHandler("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
-    if (imageSaved == false) {
-        logger.info('Signup driver: Error in save image')
-        return res.status(400).json({ error: 'No se puede guardar la imagen seleccionada' })
-    }
+    if ("request" in req.body && "Driver_name" in  req.body.request && "Driver_last_name" in req.body.request && "Identity_card" in req.body.request && "Driver_phone" in req.body.request && "Driver_Email" in req.body.request && "Driver_address" in req.body.request && "Driver_password" in req.body.request && "Driver_photo" in req.body.request && "foto_data" in req.body.request) {
 
-    //Set the path of the saved image on the db field
-    var baseImage = req.body.request.foto_data
-    const extension = baseImage.substring(baseImage.indexOf("/") + 1, baseImage.indexOf(";base64"));
-    req.body.request.Driver_photo = '/uploads/drivers/' + req.body.request.Identity_card + "." + extension
-
-    //Save driver on db
-    let saved = await getHandler("Driver").createDriver(req);
-    //console.log('variabe: '+saved)
-    if (saved.status == 1) {
-        logger.info("Signup driver: added succesfully");
-        return res.status(201).json({ status: 1, db_driver_id: saved.data });
-    }
-    else {
-        message = saved.message.toString()
-        logger.error("Signup driver: " + message);
-        if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»") {
-            return res.status(400).json({ error: "El E-Mail ya existe" });
+        const valid_fields = await getHandler("Fields").check_fields(req);
+        if (valid_fields !== true) {
+            return res.status(400).json({ error: valid_fields })
         }
-        if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»") {
-            return res.status(400).json({ error: "El Teléfono ya existe" });
+        //Save drivers image
+        const filePath = path.join(__dirname, "../public/uploads/drivers/");
+        const imageSaved = await getHandler("Image").saveImage(req.body.request.foto_data, filePath, req.body.request.Identity_card)
+        if (imageSaved == false) {
+            logger.info('Signup driver: Error in save image')
+            return res.status(400).json({ error: 'No se puede guardar la imagen seleccionada' })
         }
-        if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»") {
-            return res.status(400).json({ error: "La Cédula ya existe" });
-        }
-        return res.status(500).json({ error: message });
-    }
 
+        //Set the path of the saved image on the db field
+        var baseImage = req.body.request.foto_data
+        const extension = baseImage.substring(baseImage.indexOf("/") + 1, baseImage.indexOf(";base64"));
+        req.body.request.Driver_photo = '/uploads/drivers/' + req.body.request.Identity_card + "." + extension
+
+        //Save driver on db
+        let saved = await getHandler("Driver").createDriver(req);
+        //console.log('variabe: '+saved)
+        if (saved.status == 1) {
+            logger.info("Signup driver: added succesfully");
+            return res.status(201).json({ status: 1, db_driver_id: saved.data });
+        }
+        else {
+            let message = saved.message.toString()
+            logger.error("Signup driver: " + message);
+            if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»") {
+                return res.status(400).json({ error: "El E-Mail ya existe" });
+            }
+            if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_phone_key»") {
+                return res.status(400).json({ error: "El Teléfono ya existe" });
+            }
+            if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»") {
+                return res.status(400).json({ error: "La Cédula ya existe" });
+            }
+            return res.status(500).json({ error: message });
+        }
+    } else {
+        return res.status(400).send("Bad Request");
+    }
+    
 });
 
-router.get('/:type_of_user/notification/check/:Id',async function (req, res) {
+router.get('/:type_of_user/notification/check/:Id', exports.driverNotificationCheck = async function (req, res) {
 
     let type_of_user = req.params.type_of_user
     if(type_of_user == "driver")
@@ -159,7 +174,7 @@ router.get('/:type_of_user/notification/check/:Id',async function (req, res) {
     }
 })
 
-router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',async function (req, res){
+router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',exports.driverNotificationDelete = async function (req, res){
 
     let type_of_user = req.params.type_of_user
     if(type_of_user == "driver")
@@ -189,7 +204,7 @@ router.delete('/:type_of_user/notification/delete/:Id/:Id_haulage',async functio
 
 })
 
-router.post('/vehicle/signup', async function (req, res) {
+router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
         return res.status(400).json({ error: valid_fields })
@@ -211,7 +226,7 @@ router.post('/vehicle/signup', async function (req, res) {
     let saved_vehicle = await getHandler("Vehicle").createVehicle(req);
     //error saving the vehicle
     if (saved_vehicle.status != 1 && saved_vehicle.message) {
-        message = saved_vehicle.message.toString()
+        let message = saved_vehicle.message.toString()
         logger.error("Signup vehicle: " + message);
         if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Vehicle_Plate_key»") {
             return res.status(400).json({ error: "La Placa ya existe" });
@@ -237,7 +252,7 @@ router.post('/vehicle/signup', async function (req, res) {
 });
 
 //Route will be used to handle client sign up POST requests
-router.post('/client/signup', async function (req, res) {
+router.post('/client/signup', exports.clientSignup = async function (req, res) {
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
         return res.status(400).json({ error: valid_fields })
@@ -249,7 +264,7 @@ router.post('/client/signup', async function (req, res) {
         return res.status(201).json({ status: 1 });
     }
     else {
-        message = success.toString()
+        let message = success.toString()
         logger.error("Signup user: " + message);
         if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»") {
             return res.status(400).json({ error: "El E-Mail ya existe" });
@@ -261,7 +276,7 @@ router.post('/client/signup', async function (req, res) {
 
 
 //Returns the a list containing the info from the haulages from user
-router.get('/haulage/user/list/:Id_user', async function (req, res) {
+router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async function (req, res) {
     //var id_user =  req.body.request.Id_user;
     var id_user = req.params.Id_user;
     const haulages = await getHandler("Haulage").getHaulageList(id_user);
@@ -321,7 +336,7 @@ router.get('/haulage/user/list/:Id_user', async function (req, res) {
 })
 
 
-router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
+router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async function (req, res) {
     let errorDescription = ""
     var Id_driver = req.params.Id_driver;
     let vehicles_haulages = await getHandler("Haulage_Driver_Vehicle").get_Haulage_Driver_Vehicles_of_Driver(Id_driver)
@@ -387,14 +402,14 @@ router.get('/haulage/driver/list/:Id_driver', async function (req, res) {
 
 //Route will be used to handle POST requests of service creation
 //returns -1 if error creating route, cargo or haulage
-router.post('/haulage/create', async function (req, res) {
+router.post('/haulage/create', exports.haulageCreate = async function (req, res) {
 
     const valid_fields = await getHandler("Fields").check_fields(req);
     if (valid_fields !== true) {
         return res.status(400).json({ error: valid_fields })
     }
 
-    values = req.body.request;
+    let values = req.body.request;
     //check for vehicle
 
     //this is a set with all vehicles and a set of drivers bussy the day of haulage
@@ -453,13 +468,13 @@ router.post('/haulage/create', async function (req, res) {
 
     logger.info("api.js: haulage, cargo and route created: ");
     //creating records for haulage driver vehicles
-    response =
+    let response =
         await getHandler("Haulage_Driver_Vehicle").createAllHaulage_Driver_VehicleFromList(
             needed_driver_vehicles, haulage.data.Id_haulage
         )
     if (response.status == 1) {
         logger.info("api.js: all haulage_driver_vehicles created ");
-        info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
+        let info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
         if (info.status != 1)
             return res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" })
 
@@ -473,8 +488,8 @@ router.post('/haulage/create', async function (req, res) {
     }
 });
 
-//Route will be used to handle finish haulage
-router.post('/haulage/rate', async function (req, res) {
+//Route will be used to haulage Rate
+router.post('/haulage/rate', exports.haulageRate = async function (req, res) {
     //console.log(req.body)
     let info = req.body;
     var Id_haulage = req.body.Id_haulage;
@@ -494,9 +509,9 @@ router.post('/haulage/rate', async function (req, res) {
 });
 
 //Route will be used to handle finish haulage
-router.post('/haulage/finish', async function (req, res) {
+router.post('/haulage/finish', exports.haulageFinish = async function (req, res) {
 
-    Id_haulage = req.body.request.Id_haulage;
+    let Id_haulage = req.body.request.Id_haulage;
 
     let result = await getHandler("Haulage").finishHaulage(Id_haulage)
 
@@ -512,18 +527,18 @@ router.post('/haulage/finish', async function (req, res) {
 });
 
 //Route will be used to handle cancel POST service requests
-router.post('/haulage/cancel', function (req, res) {
+router.post('/haulage/cancel', exports.haulageCancel = async function (req, res) {
     //TODO cancel service
     res.status(200).json({ Api: 'Online' })
 });
 
 //Route will be used to handle the drivers schedules GET request
-router.get('/driver/schedule', function (req, res) {
+router.get('/driver/schedule', exports.driverSchedule = async function (req, res) {
     res.status(200).json({ Api: 'Send driver schedule' })
 });
 
 //Route will be used to send the drivers location GET request
-router.get('/driver/location', function (req, res) {
+router.get('/driver/location', exports.driverLocation = async function (req, res) {
     res.status(200).json({ Api: 'Send driver coordinates' })
 });
 
@@ -533,5 +548,4 @@ router.all('*', function (req, res) {
 
 });
 
-
-module.exports = router;
+exports.router = router;

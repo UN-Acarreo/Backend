@@ -9,54 +9,98 @@ const logger = require('../../utils/logger/logger');
 async function check_fields(req){
     data = req.body.request
     for (const key of Object.keys(data)) {
-      field = data[key]
-      fieldName = ""
-      if((key == 'User_name' || key == 'Driver_name')
-          && !validator.isAlpha(validator.blacklist(field, ' '))){
-          logger.info('Check field: Name "' + field + '" invalid')
-          fieldName = "Nombre"
+      var field = data[key]
+      var fieldName = ""
+      if(key == 'User_name' || key == 'Driver_name') {
+        if (typeof field != "string" || !validator.isAlpha(validator.blacklist(field, ' '))) {
           return "El Nombre no es válido"
+        } else {
+          fieldName = "Nombre"
+        }
       }
-      if((key == 'User_last_name' || key == 'Driver_last_name')
-          && !validator.isAlpha(validator.blacklist(field, ' '))){
-          logger.info('Check field: Lastname "' + field + '" invalid')
-          fieldName = "Apellido"
+      if(key == 'User_last_name' || key == 'Driver_last_name') {
+        if (typeof field != "string" || !validator.isAlpha(validator.blacklist(field, ' '))) {
           return "El Apellido no es válido"
+        } else {
+          fieldName = "Apellido"
+        }
       }
-      if((key == 'Driver_password' || key == 'User_password')){
+      if(key == 'Driver_password' || key == 'User_password') {
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La contraseña no es válida"
+        } else {
           fieldName = "Contraseña"
+        }
       }
-      if((key == 'Driver_address' || key == 'User_address')){
+      if(key == 'Driver_address' || key == 'User_address'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La dirección no es válida"
+        } else {
           fieldName = "Dirección"
+        }   
       }
-      if((key == 'Identity_card') && !validator.isNumeric(field)){
-         logger.info('Check field: Identity card "' + field + '" invalid')
-         fieldName = "Cédula"
-         return "La Cédula no es válida"
+      if(key == 'Identity_card'){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "La Cédula no es válida"
+        } else {
+          fieldName = "Cédula"
+        }
       }
-      if((key == 'Driver_phone') && !validator.isNumeric(field)){
-        logger.info('Check field: Phone "' + field + '" invalid')
-        fieldName = "Teléfono"
-        return "El Teléfono no es válido"
+      if(key == 'Driver_phone'){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "El Teléfono no es válido"
+        } else {
+          fieldName = "Teléfono"
+        }
       }
-      if((key == 'User_Email' || key == 'Driver_Email') && !validator.isEmail(field)){
-         logger.info('Check field: E-Mail "' + field + '" invalid')
-         fieldName = "E-Mail"
-         return "El E-Mail no es válido"
+      if(key == 'User_Email' || key == 'Driver_Email'){
+        if (typeof field != "string" || !validator.isEmail(field)) {
+          return "El E-Mail no es válido"
+        } else {
+          fieldName = "E-Mail"
+        }
       }
-      if((key == 'Plate')){
-        fieldName = "Placa"
+      if(key == 'Driver_photo'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "El nombre de la Foto no es válido"
+        } else {
+          fieldName = "Nombre de la Foto"
+        }   
       }
-      if((key == 'Brand')){
-        fieldName = "Marca"
+      if(key == 'foto_data'){
+        if (typeof field != "string" || validator.blacklist(field, ' ') == "") {
+          return "La Foto no es válida"
+        } else {
+          fieldName = "Foto"
+        }   
       }
-      if((key == 'Model')){
-        fieldName = "Modelo"
+      if(key == 'Plate'){
+        if (typeof field != "string") {
+          return "La Placa no es válida"
+        } else {
+          fieldName = "Placa"
+        }   
       }
-      if((key == 'Payload_capacity') && !validator.isNumeric(field)){
-        logger.info('Check field: Payload capacity "' + field + '" invalid')
-        fieldName = "La capacidad de carga"
-        return "La capacidad de carga no es válida"
+      if(key == 'Brand'){
+        if (typeof field != "string") {
+          return "La Marca no es válida"
+        } else {
+          fieldName = "Marca"
+        }   
+      }
+      if(key == 'Model'){
+        if (typeof field != "string") {
+          return "El Modelo no es válido"
+        } else {
+          fieldName = "Modelo"
+        }   
+      }
+      if((key == 'Payload_capacity')){
+        if (typeof field != "number" || !Number.isInteger(field) || field <= 0) {
+          return "La capacidad de carga no es válida"
+        } else {
+          fieldName = "La capacidad de carga"
+        }
       }
       if((key=="Origin_coord")){
   
@@ -65,7 +109,6 @@ async function check_fields(req){
   
       }
       if((key == 'Weight') && !validator.isNumeric(field)){
-        logger.info('Check field: Phone "' + field + '" invalid')
         fieldName = "Peso"
         return "El Peso no es válido"
       }
@@ -76,17 +119,14 @@ async function check_fields(req){
         fieldName = "Date"
       }
       if((key=="Id_user") && !validator.isNumeric(field)){
-        logger.info('Check field: Phone "' + field + '" invalid')
         fieldName = "Id_user"
         return "El id de usuario no es válido"
       }
       //length validation
       if(field.length == 0 && key!="Comments"){
-        logger.info("Check field: Field can't be empty")
         return "El campo '" + fieldName + "' no puede estar vacio"
       }
     }
-    logger.info("Check field: Field is valid")
     return true;
   }
   module.exports = {
