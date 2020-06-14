@@ -378,6 +378,7 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         if (rating_info.status == -1) {
             errorDescription = "Hubo un problema obteniendo la descripción del estatus"
         }
+        
         if (errorDescription != "") {
 
             logger.error("api:"+ errorDescription)
