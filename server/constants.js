@@ -10,6 +10,7 @@ module.exports = {
     notif_description:{
         NEW_HAULAGE_ASSIGNED:1,
         HAULAGE_DONE:2,
-        HAULAGE_CANCELED:3
+        HAULAGE_CANCELED:3,
+        HAULAGE_BEGUN:4
     }
 };
