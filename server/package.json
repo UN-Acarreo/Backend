@@ -19,7 +19,7 @@
     "sequelize-cli": "^5.5.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec --recursive",
+    "test": "./node_modules/.bin/mocha --reporter spec --recursive --timeout 10000",
     "cover": "nyc --reporter=text --reporter=lcov npm test",
     "start": "node server.js"
   },
