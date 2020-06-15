@@ -268,7 +268,7 @@ describe("Client signup test:", async function() {
   before(async function() {
     // DataBase connection
     await syncDB();  
-    // Delete driver notification if exist
+    // Delete haulage if exist
     await businessLogicFactory.getBusinessLogic("Haulage").deleteByUserEmail("testclientname@hotmail.com");
     // Delete test client if exist
     await controllerFactory.getController("User").deleteByUserEmail("testclientname@hotmail.com");

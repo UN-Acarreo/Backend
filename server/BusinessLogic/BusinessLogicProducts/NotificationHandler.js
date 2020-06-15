@@ -88,12 +88,12 @@ async function removeNotification(type_notif, type_of_user,Id,Id_haulage)
 async function deleteByDriverIdentityCard(Identity_Card) {
     
     // Select drivers by Identity_Card
-    let result = await ControllerFactory.getController("Driver").getDriverInfoByIdentityCard(Identity_Card)
+    let result = await getController("Driver").getDriverInfoByIdentityCard(Identity_Card)
     
     // Delete notifcations with driver id
     if (result.status != 0) {
 
-        result = await ControllerFactory.getController("Notification").remove("Driver", {Id_driver: result.data.Id_driver})
+        result = await getController("Notification").remove("Driver", {Id_driver: result.data.Id_driver})
 
     }
     
