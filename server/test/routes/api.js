@@ -306,6 +306,13 @@ describe("Client signup test:", async function() {
     it('If client signup have empty "User_Email" key',                      () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: " " }}}));
   });
 
+  // Duplicate user
+  describe("OK in good work checks: ", async function() {
+    
+    it('Should return Created if client signup works', () => checkStatusRequest(201, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+    it('Should return Bad request in duplicate User',  () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "Test Client Name", User_last_name:  "Test Client Last Name", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+  });
+
   // Good work
   describe("OK in good work checks: ", async function() {
     
