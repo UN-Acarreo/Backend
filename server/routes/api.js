@@ -431,6 +431,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
     
         const valid_fields = await getHandler("Fields").check_fields(req);
         if (valid_fields !== true) {
+            logger.info("api.js: /haulage/create: " + valid_fields);
             return res.status(400).json({ error: valid_fields })
         }
 
