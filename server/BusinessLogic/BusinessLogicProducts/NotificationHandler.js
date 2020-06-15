@@ -29,10 +29,12 @@ async function createDriversNoficiations(drivers,Id_haulage)
     
 }
 
-async function createUserNoficiations(Id_haulage)
+async function createUserNoficiations(Id_haulage,notifications)
 {
     const subject = new Subject()
-    subject.notifications.add(constants.HAULAGE_DONE)
+    for (const notification of notifications) {
+        subject.notifications.add(notification)    
+    }
     let user_info = await getController("Haulage").getRegisterByPk(Id_haulage)
     if(user_info.status==-1)
     {

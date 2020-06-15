@@ -9,6 +9,9 @@ const getHandler = require('../BusinessLogic/BusinessLogicFactory').getBusinessL
 // Import logger
 const logger = require('./../utils/logger/logger');
 
+//Import constants
+const constants = require("../constants").notif_description
+
 //Route will be used to handle login POST requests
 router.post('/log-client-errors', exports.logClientErrors = async function (req, res) {
 
@@ -551,11 +554,30 @@ router.post('/haulage/finish', exports.haulageFinish = async function (req, res)
         logger.error("api: " + result.error)
         res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
     }
-
-    await getHandler("Notification").createUserNoficiations(Id_haulage)
+    let notifications = []
+    notifications.push(constants.HAULAGE_DONE)
+    await getHandler("Notification").createUserNoficiations(Id_haulage,notifications)
     res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
     
 
+});
+
+
+//Route will be used to handle finish haulage
+router.post('/haulage/begin', exports.haulageBegin = async function (req, res) {
+
+    let Id_haulage = req.body.request.Id_haulage;
+
+    let result = await getHandler("Haulage").beginHaulage(Id_haulage)
+
+    if (result.status != 1) {
+        logger.error("api: " + result.error)
+        res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
+    }
+    let notifications = []
+    notifications.push(constants.HAULAGE_BEGUN)
+    await getHandler("Notification").createUserNoficiations(Id_haulage,notifications)
+    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha comenzado con exito" });
 });
 
 //Route will be used to handle cancel POST service requests

@@ -152,6 +152,19 @@ async function finishHaulage(Id_haulage)
 
 }
 
+async function beginHaulage(Id_haulage)
+{
+  // Finish haulage and set finish time
+  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.IN_PROGRESS, new Date().getTime())
+  if(haualge.status!=1)
+  {
+    logger.error("HaulageHandler: beginHaulage error: "+ haualge.error)
+    return{status:-1, error:haualge.error};
+  }
+  logger.info("HaulageHandler: beginHaulage success")
+  return{status:1, data:"success"};
+}
+
 async function deleteByUserEmail(Email) {
     
   // Select drivers by Identity_Card
@@ -172,5 +185,6 @@ module.exports = {
     getHaulageInfo: getHaulageInfo,
     finishHaulage: finishHaulage,
     setHaulageRating: setHaulageRating,
-    deleteByUserEmail: deleteByUserEmail
+    deleteByUserEmail: deleteByUserEmail,
+    beginHaulage: beginHaulage
 };
