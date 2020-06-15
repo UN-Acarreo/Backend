@@ -160,7 +160,7 @@ async function deleteByUserEmail(Email) {
   // Delete notifcations with driver id
   if (result.status != 0) {
 
-      result = await ControllerFactory.getController("Haulage").deleteByIdUser(result.data.Id_user)
+      await ControllerFactory.getController("Haulage").deleteByIdUser(result.data.Id_user)
 
   }
   

@@ -93,7 +93,7 @@ async function deleteByDriverIdentityCard(Identity_Card) {
     // Delete notifcations with driver id
     if (result.status != 0) {
 
-        result = await getController("Notification").remove("Driver", {Id_driver: result.data.Id_driver})
+        await getController("Notification").remove("Driver", {Id_driver: result.data.Id_driver})
 
     }
     
