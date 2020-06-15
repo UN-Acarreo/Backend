@@ -19,6 +19,7 @@ router.post('/log-client-errors', exports.logClientErrors = async function (req,
         logger.error("Api: Server recieved error from client:: " + JSON.stringify(error) + " " + JSON.stringify(errorInfo))
         return res.status(200).send("ok");
     } else {
+        logger.error("api.js: /log-client-errors: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
 
@@ -94,6 +95,7 @@ router.post('/:type_of_user/login', exports.login = async function (req, res) {
 
         }
     } else {
+        logger.error("api.js: /:type_of_user/login: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
 
@@ -143,6 +145,7 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
             return res.status(500).json({ error: message });
         }
     } else {
+        logger.error("api.js: /driver/signup: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
     
@@ -253,6 +256,7 @@ router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res)
             return res.status(500).json({ error: success_driver_vehicle.message });
         }
     } else {
+        logger.error("api.js: /vehicle/signup: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
 
@@ -283,12 +287,11 @@ router.post('/client/signup', exports.clientSignup = async function (req, res) {
         }
 
     } else {
+        logger.error("api.js: /client/signup: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
 
 });
-
-
 
 //Returns the a list containing the info from the haulages from user
 router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async function (req, res) {
@@ -510,6 +513,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         }
     
     } else {
+        logger.error("api.js: /haulage/create: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
 
