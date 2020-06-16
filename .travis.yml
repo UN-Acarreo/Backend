@@ -23,6 +23,7 @@ script:
   - npm install --save-dev jsdom
   - npm install -g sequelize 
   - npm i -g sequelize-cli
+  - npm install -g pg
   - cd DataBase
   - node testSyncDB.js
   - sequelize db:migrate
