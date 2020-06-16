@@ -8,5 +8,6 @@ addons:
   sonarcloud: true
 
 script:
+  - cd server
   - npm run cover
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./serve' -X
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
