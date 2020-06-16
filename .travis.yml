@@ -21,10 +21,10 @@ script:
   - npm install --save-dev mocha
   - npm i -D chai
   - npm install --save-dev jsdom
-  - cd Database
+  - cd server/Database
   - node testSyncDB.js
   - sequelize db:migrate
   - sequelize db:seed:all
-  - cd ..
+  - cd server
   - npm run cover
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='' -X
