@@ -18,6 +18,7 @@ git:
   depth: false
 
 script:
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
   - cd server
   - npm i
   - npm install nyc --save-dev
@@ -34,4 +35,4 @@ script:
   - cd ..
   - npm run cover
   - cd ..
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
+  
