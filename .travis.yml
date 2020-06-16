@@ -9,7 +9,19 @@ addons:
 
 script:
   - sudo apt-get update
-  - sudo apt-get install postgresql postgresql-contrib
+
+  - sudo apt-get remove postgresql
+  - sudo apt-get purge postgresql
+  - apt-get --purge remove postgresql\*
+  - sudo apt-get --purge remove postgresql\*
+  - sudo rm -r /etc/postgresql/
+  - sudo rm -r /etc/postgresql-common/
+  - sudo rm -r /var/lib/postgresql/
+  - sudo rm -r /var/run/postgres
+  - userdel -r postgres
+  - sudo userdel -r postgres
+  - sudo apt-get install postgresql
+
   - sudo -u postgres psql
   - createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
