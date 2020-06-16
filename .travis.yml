@@ -10,7 +10,6 @@ addons:
 script:
   - sudo apt-get update
   - sudo apt-get install postgresql postgresql-contrib
-  - postgres -D /usr/local/pgsql/data
   - sudo -u postgres psql
   - createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
