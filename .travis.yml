@@ -9,8 +9,8 @@ addons:
 
 script:
   - sudo apt update
-  - chmod +x gradlew
-  - sudo apt install postgresql postgresql-contrib
+  - sudo su - apt install postgresql postgresql-contrib
+  - sudo nano /var/log/postgresql/postgresql-12-main.log
   - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
