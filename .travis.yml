@@ -8,30 +8,20 @@ addons:
   sonarcloud: true
 
 script:
-  - sudo apt-get update
-
-  - sudo apt-get remove postgresql
-  - sudo apt-get purge postgresql
-  - apt-get --purge remove postgresql\*
-  - sudo apt-get --purge remove postgresql\*
-  - sudo rm -r /etc/postgresql/
-  - sudo rm -r /etc/postgresql-common/
-  - sudo rm -r /var/lib/postgresql/
-  - sudo rm -r /var/run/postgres
-  - userdel -r postgres
-  - sudo userdel -r postgres
-  - sudo apt-get install postgresql
-
-  - sudo -u postgres psql
-  - createdb UN-Acarreo
+  - cd "/home/travis/build/UN-Acarreo/Backend"
+  #- sudo apt-get update
+  #- sudo -u postgres psql
+  #- createdb UN-Acarreo
+  
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
   # - \q
-  - cd server
-  - npm i
-  - npm install nyc --save-dev
-  - npm install --save-dev mocha
-  - npm i -D chai
-  - npm install --save-dev jsdom
-  - npm run cover
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='' -X
+  
+  #- cd server
+  #- npm i
+  #- npm install nyc --save-dev
+  #- npm install --save-dev mocha
+  #- npm i -D chai
+  #- npm install --save-dev jsdom
+  #- npm run cover
+  #- sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='' -X
