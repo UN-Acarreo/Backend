@@ -8,8 +8,9 @@ addons:
   sonarcloud: true
 
 script:
+  - sudo apt update
   - sudo apt install postgresql postgresql-contrib
-  - ps -ef | grep postgres
+  - sudo find /tmp/ -name .s.PGSQL.5432
   - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
