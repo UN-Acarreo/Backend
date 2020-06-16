@@ -9,8 +9,9 @@ addons:
 
 script:
   - sudo apt update
-  - apt install --yes postgresql-12
-  - sudo -u postgres psql createdb UN-Acarreo
+  - sudo apt install --yes postgresql-12
+  - sudo -u postgres 
+  - sudo psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
   # - \q
