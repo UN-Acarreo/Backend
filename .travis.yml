@@ -11,6 +11,7 @@ script:
   
   - sudo apt-get update
   - sudo apt-get install postgresql postgresql-contrib
+  - find /tmp/ -name .s.PGSQL.5432
   - sudo /usr/lib/postgresql/12/bin/pg_ctl -D /var/lib/postgresql/12/main -l logfile start
   - sudo -i -u postgres psql
   - createdb UN-Acarreo
