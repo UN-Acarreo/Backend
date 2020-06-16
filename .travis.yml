@@ -9,5 +9,6 @@ addons:
 
 script:
   - cd server
+  - npm i
   - npm run cover
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
