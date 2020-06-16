@@ -1,3 +1,4 @@
+//constant values, very useful
 module.exports = {
     status_description:{
         
