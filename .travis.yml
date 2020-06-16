@@ -1,11 +1,7 @@
 language: node_js
-node_js: 12.13.0
-
+node_js:
+  - "6"
 addons:
-  sonarcloud:
-    organization: "un-acarreo" 
-    token:
-      secure: "4274d9a231709619679af934aa8532d8ae9b396b" 
+  sonarcloud: true
 script:
-  - sonar-scanner
-  
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
