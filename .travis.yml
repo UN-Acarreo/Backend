@@ -1,12 +1,12 @@
 language: node_js
-node_js:
-  - "6"
+node_js: 12.13.0
 
 jdk:
   - oraclejdk8
 
 addons:
   sonarcloud: true
-  
+
 script:
+  - npm run cover
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
