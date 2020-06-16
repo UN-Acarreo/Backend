@@ -10,10 +10,10 @@ addons:
 script:
   - sudo apt update
   - sudo apt install postgresql postgresql-contrib
-  - sudo -u postgres psql
+  - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
-  #- psql createdb UN-Acarreo
-  - \q
+  #- psql 
+  # - \q
   - cd server
   - npm i
   - npm install nyc --save-dev
