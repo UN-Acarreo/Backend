@@ -8,7 +8,7 @@ addons:
   sonarcloud: true
 
 script:
-  - cd
+  - cd /home/travis
   - sudo apt update
   - sudo apt install postgresql postgresql-contrib
   - sudo -u postgres psql createdb UN-Acarreo
