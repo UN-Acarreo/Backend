@@ -152,7 +152,7 @@ async function getDriverInfoByIdentityCard(Identity_card){
 async function deleteByIdentityCard(Identity_card){
     try{
     var DriverModel = await ModelFactory.getModel("Driver")
-    let x = await DriverModel.destroy({ where: { Identity_card: Identity_card }})
+    await DriverModel.destroy({ where: { Identity_card: Identity_card }})
 
     //query returns array of drivers that match where clause, in this case we expect only 1
     if(driver_info.length==0)
