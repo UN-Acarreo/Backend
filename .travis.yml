@@ -11,9 +11,7 @@ script:
   - sudo apt update
   - sudo apt install postgresql postgresql-contrib
   - sudo -u postgres psql
-  - createuser -P -s -e postgres
-  - admin
-  - admin
+  - CREATE USER postgres WITH PASSWORD 'admin';
   - createdb UN-Acarreo
   - \q 
   - cd server
