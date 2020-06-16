@@ -91,19 +91,19 @@ async function check_fields(req){
         } 
       }
       if(key=="Date"){
-        if (typeof field.Year != "number" || !Number.isInteger(field.Year) || field.Year <= 0) {
+        if (typeof field.Year != "number" || !Number.isInteger(field.Year) || field.Year < 0) {
           return "El año de la Fecha no es válido"
         } 
-        if (typeof field.Month != "number" || !Number.isInteger(field.Month) || field.Month <= 0) {
+        if (typeof field.Month != "number" || !Number.isInteger(field.Month) || field.Month < 0) {
           return "El mes la Fecha no es válido"
         } 
-        if (typeof field.Day != "number" || !Number.isInteger(field.Day) || field.Day <= 0) {
+        if (typeof field.Day != "number" || !Number.isInteger(field.Day) || field.Day < 0) {
           return "El dia de la Fecha no es válido"
         } 
-        if (typeof field.Hour != "number" || !Number.isInteger(field.Hour) || field.Hour <= 0) {
+        if (typeof field.Hour != "number" || !Number.isInteger(field.Hour) || field.Hour < 0) {
           return "La hora de la Fecha no es válido"
         } 
-        if (typeof field.Minute != "number" || !Number.isInteger(field.Minute) || field.Minute <= 0) {
+        if (typeof field.Minute != "number" || !Number.isInteger(field.Minute) || field.Minute < 0) {
           return "El minuto de la Fecha no es válido"
         } 
       }
