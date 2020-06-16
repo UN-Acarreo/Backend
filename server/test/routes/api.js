@@ -25,7 +25,7 @@ const controllerFactory = require('../../Controllers/ControllerFactory');
 // Client {nombre: TestClientName, Apellido: TestClientLastName, E-Mail: testclientname@hotmail.com, Direccion: TestClientDirection, Contraseña: 123456}
 
 // Test images
-let userPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname, './userPhotoTest.png'), 'base64');
+userPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname, './userPhotoTest.png'), 'base64');
 let carPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname, './carPhotoTest.png'), 'base64');
 
 // Test data
