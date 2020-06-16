@@ -11,7 +11,6 @@ addons:
   sonarcloud: true
 
 before_script:
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='./server' -X
   - psql -c 'create database "UN-Acarreo";' -U postgres
 
 git:
