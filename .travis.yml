@@ -10,7 +10,7 @@ addons:
 script:
   - sudo apt update
   - sudo apt install --yes postgresql-12
-  - sudo /usr/lib/postgresql/12/bin/pg_ctl -D /var/lib/postgresql/12/main -l logfile start
+  - /usr/lib/postgresql/12/bin/pg_ctl -D /var/lib/postgresql/12/main -l logfile start
   - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
