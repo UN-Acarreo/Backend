@@ -4,26 +4,22 @@ node_js: 12.13.0
 jdk:
   - oraclejdk8
 
+services:
+  - postgresql
+
 addons:
   sonarcloud: true
 
+before_script:
+  - psql "CREATE USER postgres WITH PASSWORD 'admin';"
+  - psql -c 'create database UN-Acarreo;' -U postgres
+
 script:
-  
-  - sudo apt-get update
-  - sudo apt-get install postgresql postgresql-contrib
-  - su /usr/lib/postgresql/12/bin/pg_ctl -D /var/lib/postgresql/12/main -l logfile start
-  - sudo -i -u postgres psql
-  - createdb UN-Acarreo
-  
-  #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
-  #- psql 
-  # - \q
-  
-  #- cd server
-  #- npm i
-  #- npm install nyc --save-dev
-  #- npm install --save-dev mocha
-  #- npm i -D chai
-  #- npm install --save-dev jsdom
-  #- npm run cover
-  #- sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='' -X
+  - cd server
+  - npm i
+  - npm install nyc --save-dev
+  - npm install --save-dev mocha
+  - npm i -D chai
+  - npm install --save-dev jsdom
+  - npm run cover
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN_4 -Dsonar.organization=un-acarreo -Dsonar.projectKey=UN-Acarreo_Backend -Dsonar.sources='' -X
