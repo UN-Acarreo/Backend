@@ -10,7 +10,7 @@ addons:
 script:
   - sudo apt update
   - sudo apt install postgresql postgresql-contrib
-  - sudo find /tmp/ -name .s.PGSQL.5432
+  - sudo pg_ctlcluster 9.6 main start
   - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
