@@ -21,6 +21,8 @@ script:
   - npm install --save-dev mocha
   - npm i -D chai
   - npm install --save-dev jsdom
+  - npm install -g sequelize 
+  - npm i -g sequelize-cli
   - cd DataBase
   - node testSyncDB.js
   - sequelize db:migrate
