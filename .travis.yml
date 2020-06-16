@@ -8,9 +8,8 @@ addons:
   sonarcloud: true
 
 script:
-  - sudo apt update
   - sudo apt install postgresql postgresql-contrib
-  - chmod og+rX /home/travis/build/UN-Acarreo/Backend
+  - ps -ef | grep postgres
   - sudo -u postgres psql createdb UN-Acarreo
   #- psql "CREATE USER postgres WITH PASSWORD 'admin';"
   #- psql 
