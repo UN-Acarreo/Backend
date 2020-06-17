@@ -443,7 +443,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         let newValues = req.body.request;
 
         // Modify
-        let modify = values.Id_haulage != -1
+        let modify = newValues.Id_haulage != -1
         let haulage_reg = undefined;
         let route_reg = undefined;
         let cargo_reg = undefined;
@@ -452,17 +452,17 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         if (modify) {
             
             // Get haulage
-            haulage_reg = await getHandler("Haulage").getHaulageInfo(values.Id_haulage)
+            haulage_reg = await getHandler("Haulage").getHaulageInfo(newValues.Id_haulage)
             // Get route
             route_reg = await getHandler("Route").getRouteInfo(haulage_reg.data.Id_route)
             // Get cargo
             cargo_reg = await getHandler("Cargo").getCargoInfo(haulage_reg.data.Id_cargo)
             // Delete driver notifications
-            await getHandler("Notification").deleteByHaulage("Driver", values.Id_haulage)
+            await getHandler("Notification").deleteByHaulage("Driver", newValues.Id_haulage)
             // Delete user notifications
-            await getHandler("Notification").deleteByHaulage("User", values.Id_haulage)
+            await getHandler("Notification").deleteByHaulage("User", newValues.Id_haulage)
             // Delete haulage
-            await getHandler("Haulage").deleteByUserByPk(values.Id_haulage)
+            await getHandler("Haulage").deleteByUserByPk(newValues.Id_haulage)
         
         }
 
