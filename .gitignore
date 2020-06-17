@@ -1,6 +1,4 @@
 server/node_modules
 server/public/uploads/drivers
 server/public/uploads/vehicles
-server/.nyc_output
-server/coverage
 server/utils/logger/logs/log.log

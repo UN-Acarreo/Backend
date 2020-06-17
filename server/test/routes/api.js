@@ -5,6 +5,7 @@ var httpMocks  = require('node-mocks-http');
 
 // Import file system
 var fs = require('fs');
+const path = require("path");
 
 // Import sync database
 var syncDB = require("../../DataBase/syncDB.js");
@@ -24,8 +25,8 @@ const controllerFactory = require('../../Controllers/ControllerFactory');
 // Client {nombre: TestClientName, Apellido: TestClientLastName, E-Mail: testclientname@hotmail.com, Direccion: TestClientDirection, Contraseña: 123456}
 
 // Test images
-let userPhoto = fs.readFileSync(__dirname + '/userPhotoTest.png', 'base64');
-let carPhoto = fs.readFileSync(__dirname + '/carPhotoTest.png', 'base64');
+let userPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname, './userPhotoTest.png'), 'base64');
+let carPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname, './carPhotoTest.png'), 'base64');
 
 // Test data
 let lastResult = undefined;     // Last result
