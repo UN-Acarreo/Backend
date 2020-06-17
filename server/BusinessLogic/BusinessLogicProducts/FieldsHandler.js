@@ -142,6 +142,11 @@ async function check_fields(req){
           return "El id de usuario no es válido"
         } 
       }
+      if((key == 'Id_haulage')){
+        if (typeof field != "number" || !Number.isInteger(field)) {
+          return "El id del accarreo no es válido"
+        } 
+      }
     }
     return true;
   }

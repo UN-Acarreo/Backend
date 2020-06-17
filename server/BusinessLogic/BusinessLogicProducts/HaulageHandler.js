@@ -179,6 +179,21 @@ async function deleteByUserEmail(Email) {
   
 }
 
+async function deleteByUserByPk(Id_haulage) {
+    
+  console.log(Id_haulage)
+  let result = await ControllerFactory.getController("Haulage").deleteByPk(Id_haulage)
+  
+  if(result.status!=1)
+  {
+    logger.error("HaulageHandler: deleteByUserByPk error: "+ result.error)
+    return{status:-1, error:result.error};
+  }
+  logger.info("HaulageHandler: deleteByUserByPk success")
+  return{status:1};
+  
+}
+
 module.exports = {
     createHaulageWithRouteCargo: createHaulageWithRouteCargo,
     getHaulageList: getHaulageList,
@@ -186,5 +201,6 @@ module.exports = {
     finishHaulage: finishHaulage,
     setHaulageRating: setHaulageRating,
     deleteByUserEmail: deleteByUserEmail,
-    beginHaulage: beginHaulage
+    beginHaulage: beginHaulage,
+    deleteByUserByPk: deleteByUserByPk
 };

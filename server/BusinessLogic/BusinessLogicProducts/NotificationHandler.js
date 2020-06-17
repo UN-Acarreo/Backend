@@ -101,12 +101,28 @@ async function deleteByDriverIdentityCard(Identity_Card) {
     
 }
 
+async function deleteByHaulage(type_of_user, Id_haulage) {
+    
+    let result = await getController("Notification").remove(type_of_user, {Id_haulage: Id_haulage})
+    
+    if(result.status==-1) {
+        logger.info("NotificationHandler: Notification was deleted successfully")
+        return {status:result.status,data:""}
+    } else
+    {
+        logger.error("NotificationHandler: "+ result.error)
+        return {status:-1,error: result.error}
+    }
+
+}
+
 module.exports =
 {
     createDriversNoficiations: createDriversNoficiations,
     getNotifications: getNotifications,
     removeNotification: removeNotification,
     createUserNoficiations: createUserNoficiations,
-    deleteByDriverIdentityCard: deleteByDriverIdentityCard
+    deleteByDriverIdentityCard: deleteByDriverIdentityCard,
+    deleteByHaulage: deleteByHaulage
 }
     
