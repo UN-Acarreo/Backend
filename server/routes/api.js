@@ -440,14 +440,13 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         }
 
         // Get values
-        let values = req.body.request;
+        let newValues = req.body.request;
 
         // Modify
         let modify = values.Id_haulage != -1
         let haulage_reg = undefined;
         let route_reg = undefined;
         let cargo_reg = undefined;
-        let Haulage_driver_vehicles_reg = undefined;
     
         // If request is for modify
         if (modify) {
@@ -458,8 +457,6 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
             route_reg = await getHandler("Route").getRouteInfo(haulage_reg.data.Id_route)
             // Get cargo
             cargo_reg = await getHandler("Cargo").getCargoInfo(haulage_reg.data.Id_cargo)
-            // Get Haulage_driver_vehicles
-            Haulage_driver_vehicles_reg = await getHandler("Haulage_Driver_Vehicle").get_Haulage_Driver_Vehicles_by_Haulgage(values.Id_haulage)
             // Delete driver notifications
             await getHandler("Notification").deleteByHaulage("Driver", values.Id_haulage)
             // Delete user notifications
@@ -549,9 +546,9 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         }
 
         // create new or old
-        let result = await create (values);
+        let result = await create (newValues);
         if (!result[1]) {
-            oldValues = { Date:{Year: haulage_reg.data.Date.getFullYear(), Month: haulage_reg.data.Date.getMonth(), Day: haulage_reg.data.Date.getDate(), Hour: haulage_reg.data.Date.getHours(), Minute: haulage_reg.data.Date.getMinutes()}, Origin_coord: route_reg.data.Origin_coord , Destination_coord: route_reg.data.Destination_coord, Description: cargo_reg.data.Description, Comments: cargo_reg.data.Comments, Weight: cargo_reg.data.Weight, Duration: route_reg.data.Duration, Id_user: haulage_reg.data.Id_user}
+            let oldValues = { Date:{Year: haulage_reg.data.Date.getFullYear(), Month: haulage_reg.data.Date.getMonth(), Day: haulage_reg.data.Date.getDate(), Hour: haulage_reg.data.Date.getHours(), Minute: haulage_reg.data.Date.getMinutes()}, Origin_coord: route_reg.data.Origin_coord , Destination_coord: route_reg.data.Destination_coord, Description: cargo_reg.data.Description, Comments: cargo_reg.data.Comments, Weight: cargo_reg.data.Weight, Duration: route_reg.data.Duration, Id_user: haulage_reg.data.Id_user}
             create (oldValues);
         } 
         return result[0];
