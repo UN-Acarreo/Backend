@@ -1,4 +1,4 @@
-//constant values, very useful
+//constant values, very useful, works for a two tables
 module.exports = {
     status_description:{
         
