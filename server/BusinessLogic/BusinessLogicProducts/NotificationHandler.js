@@ -105,7 +105,7 @@ async function deleteByHaulage(type_of_user, Id_haulage) {
     
     let result = await getController("Notification").remove(type_of_user, {Id_haulage: Id_haulage})
     
-    if(result.status==-1) {
+    if(result.status==1) {
         logger.info("NotificationHandler: Notification was deleted successfully")
         return {status:result.status,data:""}
     } else

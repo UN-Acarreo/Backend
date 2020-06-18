@@ -453,6 +453,12 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
             
             // Get haulage
             haulage_reg = await getHandler("Haulage").getHaulageInfo(newValues.Id_haulage)
+
+            if (!haulage_reg.data) {
+                logger.info("api.js: /haulage/create: haulage id incorrect");
+                return res.status(400).json({ error: "Haulage id incorrect" })
+            }
+
             // Get route
             route_reg = await getHandler("Route").getRouteInfo(haulage_reg.data.Id_route)
             // Get cargo
@@ -478,7 +484,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
 
             if (free_drivers_and_vehicles.status != 1) {
                 logger.error("api.js: list of bussy cars not found " + free_drivers_and_vehicles.error);
-                return [res.status(500).json({ status: -1, error: free_drivers_and_vehicles.error }), false];
+                return {status: 500, json: { status: -1, error: free_drivers_and_vehicles.error }};
             }
 
             let bussyVehicles = free_drivers_and_vehicles.data.bussyVehicles
@@ -488,14 +494,14 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
             let freeVehicles = await getHandler("Vehicle").getFreeVehicles(bussyVehicles)
             if (freeVehicles.status != 1) {
                 logger.error("api.js: Error getting list of free cars:" + freeVehicles.error);
-                return [res.status(500).json({ status: -1, error: freeVehicles.error }), false];
+                return {status: 500, json: { status: -1, error: freeVehicles.error }};
             }
 
             //this are the vehicles that need to be used for the haulage (this function is not async so there is no need for await)
             let needed_vehicles = getHandler("Vehicle").getListOfNeededVehicles(freeVehicles.data, values.Weight)
             if (needed_vehicles.status != 1) {
                 logger.info("api.js: Cant create haulage, no vehicles available");
-                return [res.status(200).json({ status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo" }), false];
+                return {status: 200, json: { status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo" }};
             }
             let needed_driver_vehicles = [];
 
@@ -503,7 +509,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
                 let driver = await getHandler("Driver_Vehicle").chooseFreeDriver(element.Id_vehicle, bussyDrivers)
                 if (driver.status != 1) {
                     logger.error("api.js: Cant get list of drivers");
-                    return [res.status(500).json({ status: -1, error: "Hubo un problema asignando los conductores" }), false];
+                    return {status: 500, json: { status: -1, error: "Hubo un problema asignando los conductores" }};
                 }
                 needed_driver_vehicles.push(driver.data);
             }
@@ -513,13 +519,13 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
 
             if (haulage.status == -3) {
                 logger.error("api.js: error creating haulage: " + haulage.error);
-                return [res.status(500).json({ status: -1, error: "Hubo un problema registrado la reserva de su acarreo" }), false];
+                return {status: 500, json: { status: -1, error: "Hubo un problema registrado la reserva de su acarreo" }};
             } else if (haulage.status == -2) {
                 logger.error("api.js: error creating haulage: " + haulage.error);
-                return [res.status(500).json({ status: -1, error: "Hubo un problema creando la ruta de su acarreo" }), false];
+                return {status: 500, json: { status: -1, error: "Hubo un problema creando la ruta de su acarreo" }};
             } else if (haulage.status == -1) {
                 logger.error("api.js: error creating haulage: " + haulage.error);
-                return [res.status(500).json({ status: -1, error: "Hubo un problema registrado la carga de su acarreo" }), false];
+                return {status: 500, json: { status: -1, error: "Hubo un problema registrado la carga de su acarreo" }};
             }
 
             logger.info("api.js: haulage, cargo and route created: ");
@@ -532,26 +538,26 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
                 logger.info("api.js: all haulage_driver_vehicles created ");
                 let info = await getHandler("Haulage_Driver_Vehicle").getAll_Driver_VehicleInfo(needed_driver_vehicles)
                 if (info.status != 1)
-                    return [res.status(500).json({ status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" }), false];
+                    return {status: 500, json: { status: -1, error: "Hubo un problema al enviarle los datos de su acarreo" }};
 
                 //create notification for drivers
                 await getHandler("Notification").createDriversNoficiations(needed_driver_vehicles, haulage.data.Id_haulage)
-                return [res.status(201).json({ status: 1, data: info.data, Id_haulage: haulage.data.Id_haulage}), true];
+                return {status: 201, json: { status: 1, data: info.data, Id_haulage: haulage.data.Id_haulage}};
             }
             else {
                 logger.error("api.js: error creating haulage_driver_vehicles: " + response.error);
-                return [res.status(500).json({ status: -1, error: "Hubo un problema al almacenar los datos de su acarreo" }), false]
+                return {status: 500, json: { status: -1, error: "Hubo un problema al almacenar los datos de su acarreo" }};
             }
 
         }
 
         // create new or old
         let result = await create (newValues);
-        if (modify && !result[1]) {
+        if (modify && !result.status === 201) {
             let oldValues = { Date:{Year: haulage_reg.data.Date.getFullYear(), Month: haulage_reg.data.Date.getMonth(), Day: haulage_reg.data.Date.getDate(), Hour: haulage_reg.data.Date.getHours(), Minute: haulage_reg.data.Date.getMinutes()}, Origin_coord: route_reg.data.Origin_coord , Destination_coord: route_reg.data.Destination_coord, Description: cargo_reg.data.Description, Comments: cargo_reg.data.Comments, Weight: cargo_reg.data.Weight, Duration: route_reg.data.Duration, Id_user: haulage_reg.data.Id_user}
             await create (oldValues);
         } 
-        return result[0];
+        return res.status(result.status).json(result.json);
 
     } else {
         logger.error("api.js: /haulage/create: Bad Requests: " + req.body);
