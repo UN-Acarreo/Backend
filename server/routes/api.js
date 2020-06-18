@@ -549,7 +549,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         let result = await create (newValues);
         if (modify && !result[1]) {
             let oldValues = { Date:{Year: haulage_reg.data.Date.getFullYear(), Month: haulage_reg.data.Date.getMonth(), Day: haulage_reg.data.Date.getDate(), Hour: haulage_reg.data.Date.getHours(), Minute: haulage_reg.data.Date.getMinutes()}, Origin_coord: route_reg.data.Origin_coord , Destination_coord: route_reg.data.Destination_coord, Description: cargo_reg.data.Description, Comments: cargo_reg.data.Comments, Weight: cargo_reg.data.Weight, Duration: route_reg.data.Duration, Id_user: haulage_reg.data.Id_user}
-            create (oldValues);
+            await create (oldValues);
         } 
         return result[0];
 
