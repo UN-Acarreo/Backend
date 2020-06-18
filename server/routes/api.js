@@ -495,7 +495,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
             let needed_vehicles = getHandler("Vehicle").getListOfNeededVehicles(freeVehicles.data, values.Weight)
             if (needed_vehicles.status != 1) {
                 logger.info("api.js: Cant create haulage, no vehicles available");
-                return [res.status(500).json({ status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo" }), false];
+                return [res.status(200).json({ status: 0, error: "No hay suficientes vehiculos para cumplir su acarreo" }), false];
             }
             let needed_driver_vehicles = [];
 
