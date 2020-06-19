@@ -161,6 +161,28 @@ async function deleteByIdUser(Id_user){
     }
 }
 
+async function deleteByPk(Id_haulage){
+    try{
+
+        let info = await ModelFactory.getModel("Haulage").destroy({ where: { Id_haulage: Id_haulage }})
+
+        //query returns array of clients that match where clause, in this case we expect only 1
+        if(info.length==0)
+        {
+            logger.info("HaulageController: No Haulage found with that Id_haulage")
+            return {status:0, data:" No Haulage information found with that Id_haulage"}
+        }
+        else{
+            logger.info("HaulageController: Haulage was deleted")
+            return {status: 1}
+        }
+
+    } catch (error) {
+        logger.info("HaulageController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     getRegisterBy:getRegisterBy,
@@ -168,5 +190,6 @@ module.exports = {
     getRegisterByPk:getRegisterByPk,
     updateHaulageById: updateHaulageById,
     setHaulageRating: setHaulageRating,
-    deleteByIdUser: deleteByIdUser
+    deleteByIdUser: deleteByIdUser,
+    deleteByPk: deleteByPk
 };

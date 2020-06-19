@@ -165,6 +165,7 @@ async function getVehiclesAssigned(haualge_id){
 
     return {status: 1, data: vehicles.data}
 }
+
 async function get_Haulage_Driver_Vehicles_of_Driver(dirver_id)
 {
     let vehicles_haulages = await
@@ -181,6 +182,21 @@ async function get_Haulage_Driver_Vehicles_of_Driver(dirver_id)
     return {status: 1, data: vehicles_haulages.data};
 }
 
+async function get_Haulage_Driver_Vehicles_by_Haulgage(Id_haulage)
+{
+    let Haulage_Driver_Vehicles = await
+        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy(
+            {Id_haulage : Id_haulage}, []
+            );
+    if(Haulage_Driver_Vehicles.status!=1)
+    {
+        logger.error("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_by_Haulgage: " +Haulage_Driver_Vehicles.error);
+        return {status: -1, error: Haulage_Driver_Vehicles.error};
+    }
+    logger.info("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_by_Haulgage success")
+    return {status: 1, data: Haulage_Driver_Vehicles.data};
+}
+
 
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
@@ -188,5 +204,6 @@ module.exports ={
     getDriver_VehicleInfo: getDriver_VehicleInfo,
     getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo,
     getVehiclesAssigned: getVehiclesAssigned,
-    get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver
+    get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver,
+    get_Haulage_Driver_Vehicles_by_Haulgage: get_Haulage_Driver_Vehicles_by_Haulgage
 }
