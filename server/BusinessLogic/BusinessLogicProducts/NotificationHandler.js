@@ -13,23 +13,24 @@ const getController = require('../../Controllers/ControllerFactory').getControll
 async function DriversCancelNotification(drivers,notifications,Id_haulage)
 {
 
-  console.log(Id_haulage)
-  console.log(drivers)
+  //console.log(Id_haulage)
+  //console.log(drivers)
+  for(const driver of drivers){
+    console.log("###"+driver)
       const subject = new Subject()
       for (const notification of notifications) {
           subject.notifications.add(notification)
       }
 
-      let observer = new Observer(drivers,"Driver")
+      let observer = new Observer(driver,"Driver")
       try {
           await subject.registerObserver(observer, Id_haulage)
           return {status:1}
       } catch (error) {
-
           //console.log("###"+error)
           return {status:-1, error: error}
       }
-
+ }
 /*
     try {
         const subject = new Subject()

@@ -636,17 +636,16 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
 
 
     let drivers = []
-    /*
+
     vehicles.forEach((vehicle, i) => {
-        drivers.push(vehicle.driver)
+        drivers.push(vehicle.driver.Id_driver)
     });
-    drivers.push(vehicles[0].driver)
-    console.log(drivers)
-    */
+    //drivers.push(vehicles[0].driver.Id_driver)
+    //console.log(drivers)
 
     let notifications = []
     notifications.push(constants.HAULAGE_CANCELED)
-    await getHandler("Notification").DriversCancelNotification(vehicles[0].driver.Id_driver,notifications,Id_haulage)
+    await getHandler("Notification").DriversCancelNotification(drivers,notifications,Id_haulage)
     res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha sido cancelado con exito" });
 });
 
