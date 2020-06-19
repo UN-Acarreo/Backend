@@ -26,7 +26,7 @@ async function DriversCancelNotification(drivers,notifications,Id_haulage)
           return {status:1}
       } catch (error) {
 
-          console.log("###"+error)
+          //console.log("###"+error)
           return {status:-1, error: error}
       }
 
