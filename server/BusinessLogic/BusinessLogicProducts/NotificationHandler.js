@@ -16,7 +16,7 @@ async function DriversCancelNotification(drivers,notifications,Id_haulage)
   //console.log(Id_haulage)
   //console.log(drivers)
   for(const driver of drivers){
-    console.log("###"+driver)
+      //console.log("###"+driver)
       const subject = new Subject()
       for (const notification of notifications) {
           subject.notifications.add(notification)
