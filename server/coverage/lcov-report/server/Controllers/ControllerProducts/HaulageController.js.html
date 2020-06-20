@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.88% </span>
+                <span class="strong">70.59% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>38/68</span>
+                <span class='fraction'>48/68</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/10</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.88% </span>
+                <span class="strong">70.59% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/68</span>
+                <span class='fraction'>48/68</span>
             </div>
         
             
@@ -341,48 +341,48 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -550,34 +550,34 @@ async function getRegisterByPk(Pk)
     }
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >updateHaulageById(</span>id, state, date)
+async function updateHaulageById(id, state, date)
 {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        let result = <span class="cstat-no" title="statement not covered" >await ModelFactory.getModel("Haulage").update(</span>
+    try {
+        let result = await ModelFactory.getModel("Haulage").update(
             {Id_status: state, End_date: date},
             {returning: true, where: {Id_haulage: id}}
           )
-<span class="cstat-no" title="statement not covered" >        if (result) {</span>
-<span class="cstat-no" title="statement not covered" >            return {status: 1}</span>
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (result) {
+            return {status: 1}
         } else {
 <span class="cstat-no" title="statement not covered" >            logger.error("HaulageController: Query error");</span>
 <span class="cstat-no" title="statement not covered" >            return {status: -1, error: "HaulageController: Query error"}</span>
         }
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >        logger.error("HaulageController: " + error);</span>
-<span class="cstat-no" title="statement not covered" >        return {status: -1, error: error};</span>
+        logger.error("HaulageController: " + error);
+        return {status: -1, error: error};
     }
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >setHaulageRating(</span>haulage_id, rating_id)
+async function setHaulageRating(haulage_id, rating_id)
 {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        let result = <span class="cstat-no" title="statement not covered" >await ModelFactory.getModel("Haulage").update(</span>
+    try {
+        let result = await ModelFactory.getModel("Haulage").update(
             {Id_rating: rating_id}, //values
             {where: {Id_haulage: haulage_id}} //conditions
           )
-<span class="cstat-no" title="statement not covered" >        if (result) {</span>
-<span class="cstat-no" title="statement not covered" >            return {status: 1}</span>
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (result) {
+            return {status: 1}
         } else {
 <span class="cstat-no" title="statement not covered" >            logger.error("HaulageController: Query error");</span>
 <span class="cstat-no" title="statement not covered" >            return {status: -1, error: "HaulageController: Query error"}</span>
@@ -649,7 +649,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 10:46:08 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 16:05:17 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
