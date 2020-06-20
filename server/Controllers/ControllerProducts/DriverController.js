@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -43,7 +43,7 @@ async function create(Driver_name, Driver_last_name, Driver_password_hashed, Dri
 async function countWhere(query) {
 
     try {
-        count = await ModelFactory.getModel("Driver").count({ where: query })
+        let count = await ModelFactory.getModel("Driver").count({ where: query })
         logger.info("DriverController:Number of Drivers returned")
         return{status:1, data:count}
     } catch (error) {
