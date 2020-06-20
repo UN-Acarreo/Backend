@@ -32,7 +32,7 @@ class ControllerFactory {
             default:
                 return null;
         }
-    };
+    }
 }
 
 module.exports = ControllerFactory;
