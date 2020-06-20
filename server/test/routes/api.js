@@ -479,7 +479,7 @@ describe("User notification test:", async function() {
   describe("Bad request in data format checks: ", async function() {
     
     it('If User notification have numbers <= 0 in "Id" key',                                  () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: "-2343", type_of_user: "driver"}}));
-    //it('If User notification have decimal number in in "Id" key',                             () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: "234.3423", type_of_user: "driver"}}));
+    it('If User notification have decimal number in in "Id" key',                             () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: "234.3423", type_of_user: "driver"}}));
     it('If User notification doesn\'t have "driver" o "client" values in "type_of_user" key', () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id.toString(), type_of_user: "sdfd"}}));
     
   });
@@ -487,8 +487,8 @@ describe("User notification test:", async function() {
   // Good work create
   describe("OK in good create checks: ", async function() {
     
-    //it('Should return Created if Driver notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id.toString(), type_of_user: "driver"}}));
-    //it('Should return Created if Client notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_user_id.toString(), type_of_user: "client"}}));
+    it('Should return Created if Driver notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id.toString(), type_of_user: "driver"}}));
+    it('Should return Created if Client notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_user_id.toString(), type_of_user: "client"}}));
 
   });
 

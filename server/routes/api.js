@@ -160,7 +160,7 @@ router.get('/:type_of_user/notification/check/:Id', exports.userNotificationChec
 
     params = await req.params;
     console.log(params)
-    if ("type_of_user" in params && "Id" in params && typeof params.type_of_user == "string" && typeof params.Id == "string" && !isNaN(params.Id) && Number(params.Id)  >= 0) {
+    if ("type_of_user" in params && "Id" in params && typeof params.type_of_user == "string" && typeof params.Id == "string" && !isNaN(params.Id) && Number.isInteger(Number(params.Id)) && Number(params.Id)  >= 0) {
         
         let type_of_user = req.params.type_of_user
         if(type_of_user == "driver")

@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.05% </span>
+                <span class="strong">69.34% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>234/349</span>
+                <span class='fraction'>242/349</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.04% </span>
+                <span class="strong">67.16% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>130/203</span>
+                <span class='fraction'>137/204</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.05% </span>
+                <span class="strong">69.34% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>234/349</span>
+                <span class='fraction'>242/349</span>
             </div>
         
             
@@ -881,37 +881,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1547,29 +1547,29 @@ router.get('/:type_of_user/notification/check/:Id', exports.userNotificationChec
 &nbsp;
     params = await req.params;
     console.log(params)
-    if ("type_of_user" in params &amp;&amp; "Id" in params &amp;&amp; typeof params.type_of_user == "string" &amp;&amp; typeof params.Id == "string" &amp;&amp; !isNaN(params.Id) &amp;&amp; Number(params.Id)  &gt;= 0) {
+    if ("type_of_user" in params &amp;&amp; "Id" in params &amp;&amp; typeof params.type_of_user == "string" &amp;&amp; typeof params.Id == "string" &amp;&amp; !isNaN(params.Id) &amp;&amp; Number.isInteger(Number(params.Id)) &amp;&amp; Number(params.Id)  &gt;= 0) {
         
         let type_of_user = req.params.type_of_user
-        <span class="missing-if-branch" title="if path not taken" >I</span>if(type_of_user == "driver")
-<span class="cstat-no" title="statement not covered" >            type_of_user = "Driver"</span>
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(type_of_user == "client")
-<span class="cstat-no" title="statement not covered" >            type_of_user = "User"</span>
+        if(type_of_user == "driver")
+            type_of_user = "Driver"
+        else if(type_of_user == "client")
+            type_of_user = "User"
         else
         {
             logger.info("api: user/driver notifications: Validation fail")
             return res.status(400).json({ status:-1, error: "URL incorrecto"})
         }
-        var Id = <span class="cstat-no" title="statement not covered" >req.params.Id;</span>
-        let notifications = <span class="cstat-no" title="statement not covered" >await getHandler("Notification").getNotifications(Id,type_of_user)</span>
-<span class="cstat-no" title="statement not covered" >        if(notifications.status==-1)</span>
+        var Id = req.params.Id;
+        let notifications = await getHandler("Notification").getNotifications(Id,type_of_user)
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(notifications.status==-1)
         {
 <span class="cstat-no" title="statement not covered" >            logger.info("api: driver/user notifications: "+notifications.error)</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})</span>
         }
-        else <span class="cstat-no" title="statement not covered" >if(notifications.status==1 || notifications.status==0)</span>
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if(notifications.status==1 || notifications.status==0)
         {
-<span class="cstat-no" title="statement not covered" >            logger.info("api:driver/user notifications found succesfully")</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).json({status:notifications.status ,data:notifications.data})</span>
+            logger.info("api:driver/user notifications found succesfully")
+            return res.status(200).json({status:notifications.status ,data:notifications.data})
         }
 &nbsp;
     } else {
@@ -2056,7 +2056,7 @@ exports.router = router;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 10:10:19 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 10:36:24 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../prettify.js"></script>

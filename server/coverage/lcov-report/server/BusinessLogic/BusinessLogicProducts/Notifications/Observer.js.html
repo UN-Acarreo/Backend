@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">92.31% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/13</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">92.31% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/13</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,31 +102,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,27 +144,27 @@ class Observer {
       this.typeObserver = typeObserver;
     }
     
-<span class="fstat-no" title="function not covered" >    as</span>ync update()
+    async update()
     {
         let query   
-<span class="cstat-no" title="statement not covered" >        if(this.typeObserver=="Driver")</span>
+        if(this.typeObserver=="Driver")
         {
             //console.log("notifyObserver " + this.observer_Id)
             //get all register in DriverNotification table for this driver
-<span class="cstat-no" title="statement not covered" >            query = {Id_driver:this.observer_Id}</span>
+            query = {Id_driver:this.observer_Id}
            
-        }else <span class="cstat-no" title="statement not covered" >if(this.typeObserver=="User")</span>
+        }else <span class="missing-if-branch" title="else path not taken" >E</span>if(this.typeObserver=="User")
         {
             //get all register in UserNotification table for this user
-<span class="cstat-no" title="statement not covered" >            query = {Id_user:this.observer_Id}</span>
+            query = {Id_user:this.observer_Id}
         }
-        let notifications = <span class="cstat-no" title="statement not covered" >await getController("Notification").getRegisterBy(this.typeObserver,query)</span>
-<span class="cstat-no" title="statement not covered" >        if(notifications.status==-1)</span>
+        let notifications = await getController("Notification").getRegisterBy(this.typeObserver,query)
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(notifications.status==-1)
         {
 <span class="cstat-no" title="statement not covered" >            return {status:-1,error:notifications.error}</span>
         }
         else{
-<span class="cstat-no" title="statement not covered" >            return {status:notifications.status, data:notifications.data}</span>
+            return {status:notifications.status, data:notifications.data}
         }
         
     }
@@ -178,7 +178,7 @@ class Observer {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 10:10:19 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 10:36:24 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>
