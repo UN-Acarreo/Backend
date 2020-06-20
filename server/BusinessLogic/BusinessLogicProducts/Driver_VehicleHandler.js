@@ -24,20 +24,17 @@ async function getVehicleByDriverId(id)
     //query to find Vehicles by given drivers Id
     let vehicle = await ControllerFactory.getController("Driver_Vehicle").getRegisterBy({Id_driver: id},"Vehicle")  
     
-    if(vehicle.status==1)
-    {
-        //query returns array of Drivers that match were clause
-        if(vehicle.data.length==0)
-        {
-            logger.info("Driver_VehicleHandler: id doesnt match known Driver with Vehicle")
-            return {status:0, data:"not found"}
-        }
-        else{
-            logger.info("Driver_VehicleHandler: Driver vehicle found")
-            return {status: 1, data: vehicle.data} 
-        }
-    }      
-    else{
+    if(vehicle.status==1) {
+        
+        logger.info("Driver_VehicleHandler: Driver vehicle found")
+        return {status: 1, data: vehicle.data} 
+        
+    } else if (vehicle.status==0) {
+        
+        logger.info("Driver_VehicleHandler: id doesnt match known Driver with Vehicle")
+        return {status:0, data:"not found"}
+
+    } else {
         
         logger.error("Driver_VehicleHandler: "+ vehicle.error)
         return {status:-1, error:vehicle.error}
@@ -51,29 +48,29 @@ async function getDriversByVehicleId(Id_vehicle){
 
     let drivers = await ControllerFactory.getController("Driver_Vehicle").getRegisterBy({Id_vehicle : Id_vehicle},"Driver")  
     
-    if(drivers.status==1)
-    {
-        //query returns array of Drivers that match were clause
-        if(drivers.data.length==0)
-        {
-            logger.info("Driver_VehicleHandler: id doesnt match known Driver with Vehicle")
-            return {status:0, data:"not found"}
-        }
-        else{
-            logger.info("Driver_VehicleHandler: Driver vehicle found")
-            return {status: 1, data: drivers.data} 
-        }
-    }      
-    else{
+    if(drivers.status==1) {
+        
+        logger.info("Driver_VehicleHandler: Driver vehicle found")
+        return {status: 1, data: drivers.data} 
+
+    } else if(drivers.status==0) {
+        
+        logger.info("Driver_VehicleHandler: id doesnt match known Driver with Vehicle")
+        return {status:0, data:"not found"}
+
+    } else {
+
         logger.error("Driver_VehicleHandler: "+ drivers.error)
         return {status:-1, error:drivers.error}
+
     }
 
 }
 
 // Choose free driver
-async function chooseFreeDriver(Id_vehicle,bussy_drivers)
+async function chooseFreeDriver(Id_vehicle, bussy_drivers)
 {
+    console.log(bussy_drivers)
   let drivers = await getDriversByVehicleId(Id_vehicle);
   if(drivers.status!=1){
     logger.error("DriverHandler: Cant get list of drivers");

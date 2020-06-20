@@ -116,6 +116,24 @@ async function deleteByHaulage(type_of_user, Id_haulage) {
 
 }
 
+async function getNotificationBy(query)
+{
+  
+    const subject = new Subject()
+    let notifications = await subject.notifyObserver(new Observer(Id,type))
+    if(notifications.status==-1)
+    {
+        logger.error("NotificationHandler: "+ notifications.error)
+        return {status: -1, error:"Hubo un error recuperando sus notificaciones"}
+    } else if(notifications.status==0)
+    {
+        return {status:0,data:"No tiene nuevas notificaciones"}
+    }
+
+    return {status:notifications.status,data:notifications.data}
+            
+}
+
 module.exports =
 {
     createDriversNoficiations: createDriversNoficiations,

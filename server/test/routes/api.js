@@ -31,6 +31,7 @@ let carPhoto = "data:image/png;base64," + fs.readFileSync(path.resolve(__dirname
 // Test data
 let lastResult = undefined;     // Last result
 var db_driver_id = undefined;   // Driver id
+var db_driver_id2 = undefined;   // Driver id
 var db_user_id = undefined;     // User id
 var Id_haulage = undefined;     // Id acarreo
 
@@ -65,58 +66,6 @@ describe("Log client test:", async function(){
 
 });
 
-// Login test
-describe("Login test:", async function() {
-
-  // Before actions
-  before(async function() {
-    // DataBase connection
-    await syncDB(); 
-    // Insert client user test if doesn't exist
-    await businessLogicFactory.getBusinessLogic("User").createUser({body:{request:{User_name: "TestClientName", User_last_name: "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com"}}}); 
-     // Insert driver user test if doesn't exist
-    await businessLogicFactory.getBusinessLogic("Driver").createDriver({body:{request:{Driver_name: "TestDriverName", Driver_last_name: "TestDriverLastName", Driver_password: "123456", Driver_address: "TestDriverDirection", Driver_Email: "testdrivername@hotmail.com", Driver_phone: 567890, Identity_card: 123456, Driver_photo: "/uploads/drivers/123456.png"}}});
-  });
-
-  // Bad request structure checks
-  describe("Bad request in structure checks: ", async function() {
-    it('If login doesn\'t have "type_of_user" key',         () => checkStatusRequest(400, api.login, {method: 'POST', body: {}}));
-    it('If client login doesn\'t have "request" key',       () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {}}));
-    it('If client login doesn\'t have "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_password: "123456"}}}));
-    it('If client login doesn\'t have "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com"}}}));
-    it('If driver login doesn\'t have "request" key',       () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {}}));
-    it('If driver login doesn\'t have "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_password: "123456"}}}));
-    it('If driver login doesn\'t have "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com"}}}));  
-  });
-
-  // Data type checks
-  describe("Bad request in data type checks: ", async function() {
-    it('If login doesn\'t have String data type in "type_of_user" key',         () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: 345545}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));  
-    it('If client login doesn\'t have String data type in "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: 345432345, User_password: "123456"}}}));  
-    it('If client login doesn\'t have String data type in "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: 123456}}}));  
-    it('If driver login doesn\'t have String data type in "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: 345432345, User_password: "123456"}}}));  
-    it('If driver login doesn\'t have String data type in "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: 123456}}}));  
-  });
-
-   // Data format checks
-   describe("Bad request in data format checks: ", async function() {
-    it('If login doesn\'t have "client" or "driver" values in "type_of_user" key',  () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "asdas"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
-    it('If client login have empty "User_Email" key',                               () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
-    it('If client login have empty "User_password" key',                            () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: " "}}}));
-    it('If client login doesn\'t have correct e-mail format in "User_Email" key',   () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "234ewrw3", User_password: "123456"}}}));
-    it('If driver login have empty "User_Email" key',                               () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
-    it('If driver login have empty "User_password" key',                            () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: " "}}}));
-    it('If driver login doesn\'t have correct e-mail format in "User_Email" key',   () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "234ewrw3", User_password: "123456"}}}));
-  });
-
-  // Good work
-  describe("OK in good work checks: ", async function() {
-    it('If client login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));
-    it('If driver login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testdrivername@hotmail.com", User_password: "123456"}}}));
-  });
-
-});
-
 // Driver signup test
 describe("Driver signup test:", async function() {
 
@@ -126,8 +75,10 @@ describe("Driver signup test:", async function() {
     await syncDB();  
     // Delete driver notification if exist
     await businessLogicFactory.getBusinessLogic("Notification").deleteByDriverIdentityCard(123456);
+    await businessLogicFactory.getBusinessLogic("Notification").deleteByDriverIdentityCard(1234562);
     // Delete test driver if exist
     await controllerFactory.getController("Driver").deleteByIdentityCard(123456);
+    await controllerFactory.getController("Driver").deleteByIdentityCard(1234562);
   });
 
   // Bad request structure checks
@@ -192,6 +143,21 @@ describe("Driver signup test:", async function() {
 
   });
 
+  // Good work
+  describe("OK in good work checks: ", async function() {
+    
+    // Before actions
+    before(async function() {
+      // Get regiter test driver
+    db_driver_id = (await lastResult)._getJSONData().db_driver_id;
+      // Delete test driver if exist
+      await controllerFactory.getController("Driver").deleteByIdentityCard(1234562);
+    });
+    
+    it('Should return Created if another driver signup works', () => checkStatusRequest(201, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverNameTwo", Driver_last_name: "TestDriverLastNameTwo", Identity_card: 1234562, Driver_phone: 5678902, Driver_Email: "testdrivername2@hotmail.com", Driver_address: "TestDriverDirection2", Driver_password: "1234562", Driver_photo: "1234562", foto_data: userPhoto}}}));
+    
+  });
+
 });
 
 // Vehicle signup test
@@ -199,12 +165,11 @@ describe("Vehicle signup test:", async function() {
 
   // Before actions
   before(async function() {
-    // DataBase connection
-    await syncDB();  
     // Get regiter test driver
-    db_driver_id = (await lastResult)._getJSONData().db_driver_id;
+    db_driver_id2 = (await lastResult)._getJSONData().db_driver_id;
     // Delete test vehicle if exist
     await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
+    await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate2");
   });
 
   // Bad request structure checks
@@ -252,12 +217,14 @@ describe("Vehicle signup test:", async function() {
   describe("OK in good work checks: ", async function() {
     
     // Before actions
-    beforeEach(async function() {
+    before(async function() {
       // Delete test vehicle if exist
       await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
+      await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate2");
     });
     
-    it('Should return Created if driver vehicle works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 100, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('Should return Created if vehicle signup works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 100, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
+    it('Should return Created if vehicle signup works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 1234562, db_driver_id: db_driver_id2, Plate: "TestPlate2", Brand: "TestBrand2", Model: "TestModel2", Payload_capacity: 100, Photo: "1234562", foto_data: carPhoto, Is_owner: true}}}));
 
   });
 
@@ -323,6 +290,58 @@ describe("Client signup test:", async function() {
 
 });
 
+// Login test
+describe("Login test:", async function() {
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB(); 
+    // Insert client user test if doesn't exist
+    await businessLogicFactory.getBusinessLogic("User").createUser({body:{request:{User_name: "TestClientName", User_last_name: "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com"}}}); 
+     // Insert driver user test if doesn't exist
+    await businessLogicFactory.getBusinessLogic("Driver").createDriver({body:{request:{Driver_name: "TestDriverName", Driver_last_name: "TestDriverLastName", Driver_password: "123456", Driver_address: "TestDriverDirection", Driver_Email: "testdrivername@hotmail.com", Driver_phone: 567890, Identity_card: 123456, Driver_photo: "/uploads/drivers/123456.png"}}});
+  });
+
+  // Bad request structure checks
+  describe("Bad request in structure checks: ", async function() {
+    it('If login doesn\'t have "type_of_user" key',         () => checkStatusRequest(400, api.login, {method: 'POST', body: {}}));
+    it('If client login doesn\'t have "request" key',       () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {}}));
+    it('If client login doesn\'t have "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_password: "123456"}}}));
+    it('If client login doesn\'t have "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com"}}}));
+    it('If driver login doesn\'t have "request" key',       () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {}}));
+    it('If driver login doesn\'t have "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_password: "123456"}}}));
+    it('If driver login doesn\'t have "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com"}}}));  
+  });
+
+  // Data type checks
+  describe("Bad request in data type checks: ", async function() {
+    it('If login doesn\'t have String data type in "type_of_user" key',         () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: 345545}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));  
+    it('If client login doesn\'t have String data type in "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: 345432345, User_password: "123456"}}}));  
+    it('If client login doesn\'t have String data type in "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: 123456}}}));  
+    it('If driver login doesn\'t have String data type in "User_Email" key',    () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: 345432345, User_password: "123456"}}}));  
+    it('If driver login doesn\'t have String data type in "User_password" key', () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: 123456}}}));  
+  });
+
+   // Data format checks
+   describe("Bad request in data format checks: ", async function() {
+    it('If login doesn\'t have "client" or "driver" values in "type_of_user" key',  () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "asdas"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
+    it('If client login have empty "User_Email" key',                               () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
+    it('If client login have empty "User_password" key',                            () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: " "}}}));
+    it('If client login doesn\'t have correct e-mail format in "User_Email" key',   () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "234ewrw3", User_password: "123456"}}}));
+    it('If driver login have empty "User_Email" key',                               () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: " ", User_password: "123456"}}}));
+    it('If driver login have empty "User_password" key',                            () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: " "}}}));
+    it('If driver login doesn\'t have correct e-mail format in "User_Email" key',   () => checkStatusRequest(400, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "234ewrw3", User_password: "123456"}}}));
+  });
+
+  // Good work
+  describe("OK in good work checks: ", async function() {
+    it('If client login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "client"}, body: {request: {User_Email: "testclientname@hotmail.com", User_password: "123456"}}}));
+    it('If driver login works', () => checkStatusRequest(200, api.login, {method: 'POST', params: {type_of_user: "driver"}, body: {request: {User_Email: "testdrivername@hotmail.com", User_password: "123456"}}}));
+  });
+
+});
+
 // Haulage create and modify test
 describe("Haulage create and modify test:", async function() {
 
@@ -342,7 +361,7 @@ describe("Haulage create and modify test:", async function() {
   describe("Bad request in structure checks: ", async function() {
     it('If haulage create doesn\'t have "request" key',           () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {}}));
     it('If haulage create doesn\'t have "Date" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
-    it('If haulage create doesn\'t have "Year" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
+     it('If haulage create doesn\'t have "Year" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
     it('If haulage create doesn\'t have "Month" key',             () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
     it('If haulage create doesn\'t have "Day" key',               () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
     it('If haulage create doesn\'t have "Hour" key',              () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "Description", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
@@ -409,6 +428,7 @@ describe("Haulage create and modify test:", async function() {
     });
     
     it('Should return Created if haulage create works',  () => checkStatusRequest(201, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "DescriptionTest", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
+    it('Should return Created if another haulage create works in the same time',  () => checkStatusRequest(201, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "DescriptionTest", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: -1}}}));
 
   });
 
@@ -422,47 +442,142 @@ describe("Haulage create and modify test:", async function() {
     });
     
     it('Should return Created if haulage modify works',  () => checkStatusRequest(201, api.haulageCreate, {method: 'POST', body: {request: { Date:{Year: 2020, Month: 7, Day: 24, Hour: 4, Minute: 30}, Origin_coord: "Origin_coord" , Destination_coord: "Destination_coord", Description: "DescriptionTest", Comments: "Comments", Weight: 30, Duration: 1000*60*30, Id_user: db_user_id, Id_haulage: Id_haulage}}}));
-
-    it('Should return Ok if haulage dont\'t have vehicles available for Weight in modify',  () => checkStatusRequest(200, api.haulageCreate, {method: 'POST', body: {"request" : {
-      "Origin_coord": "13,413",
-      "Destination_coord": "534,534",
-      "Weight": 100000000000000000,
-      "Description": "new descr",
-      "Comments": "new comments",
-      "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3},
-      "Id_user": db_user_id,
-      "Duration": 2,
-      "Id_haulage":Id_haulage
-      
-    }}}));
-
-    it('Should return Bad Request if haulage doesnt\'t exist in modify',  () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {"request" : {
-      "Origin_coord": "13,413",
-      "Destination_coord": "534,534",
-      "Weight": 10,
-      "Description": "new descr",
-      "Comments": "new comments",
-      "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3},
-      "Id_user": db_user_id,
-      "Duration": 2,
-      "Id_haulage":1
-      
-    }}}));
-
-    it('Should return Bad Request if user doesnt\'t exist in modify',  () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {"request" : {
-      "Origin_coord": "13,413",
-      "Destination_coord": "534,534",
-      "Weight": 10,
-      "Description": "new descr",
-      "Comments": "new comments",
-      "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3},
-      "Id_user": 123321,
-      "Duration": 2,
-      "Id_haulage":Id_haulage
-      
-    }}}));
+    it('Should return Ok if haulage dont\'t have vehicles available for Weight in modify',  () => checkStatusRequest(200, api.haulageCreate, {method: 'POST', body: {"request" : { "Origin_coord": "13,413", "Destination_coord": "534,534", "Weight": 100000000000000000, "Description": "new descr", "Comments": "new comments", "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3}, "Id_user": db_user_id, "Duration": 2, "Id_haulage":Id_haulage}}}));
+    it('Should return Bad Request if haulage doesnt\'t exist in modify',  () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {"request" : { "Origin_coord": "13,413", "Destination_coord": "534,534", "Weight": 10, "Description": "new descr", "Comments": "new comments", "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3}, "Id_user": db_user_id, "Duration": 2, "Id_haulage":1}}}));
+    it('Should return Bad Request if user doesnt\'t exist in modify',  () => checkStatusRequest(400, api.haulageCreate, {method: 'POST', body: {"request" : { "Origin_coord": "13,413", "Destination_coord": "534,534", "Weight": 10, "Description": "new descr", "Comments": "new comments", "Date": {"Year":2010,"Month":3,"Day":15,"Hour":2,"Minute":3}, "Id_user": 123321, "Duration": 2, "Id_haulage":Id_haulage}}}));
   
   });
 
 });
 
+// User notification test
+describe("User notification test:", async function() {
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB();  
+  });
+
+  // Bad request structure checks
+  describe("Bad request in structure checks: ", async function() {
+
+    it('If User notification doesn\'t have "type_of_user" key', () => checkStatusRequest(400, api.haulageCreate, {method: 'GET', params: { Id: db_driver_id}}));
+    it('If User notification doesn\'t have "Id" key',           () => checkStatusRequest(400, api.haulageCreate, {method: 'GET', params: { type_of_user: "Driver"}}));
+
+  });
+
+  // Data type checks
+  describe("Bad request in data type checks: ", async function() {
+    
+    it('If User notification doesn\'t have Number data type in "Id" key',           () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: "sdfsdf", type_of_user: "driver"}}));
+    it('If User notification doesn\'t have String data type in "type_of_user" key', () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id, type_of_user: 34544}}));
+    
+  });
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If User notification have numbers <= 0 in "Id" key',                                  () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: -2343, type_of_user: "driver"}}));
+    it('If User notification have decimal number in in "Id" key',                             () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: 234.3423, type_of_user: "driver"}}));
+    it('If User notification doesn\'t have "driver" o "client" values in "type_of_user" key', () => checkStatusRequest(400, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id, type_of_user: "sdfd"}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('Should return Created if Driver notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_driver_id, type_of_user: "driver"}}));
+    it('Should return Created if Client notification works', () => checkStatusRequest(200, api.userNotificationCheck, {method: 'GET', params: { Id: db_user_id, type_of_user: "client"}}));
+
+  });
+
+});
+
+// User notification delete
+describe("User notification delete:", async function() {
+
+  let Id_Notification_Type = undefined;
+
+  // Before actions
+  before(async function() {
+    // DataBase connection
+    await syncDB();  
+    // get haulage of driver
+    let result = (await controllerFactory.getController("Notification").getRegisterBy("Driver", {Id_driver: db_driver_id}))
+    Id_haulage = result.data[0].Id_haulage
+    Id_Notification_Type = result.data[0].Id_Notification_Type
+  });
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If User notification doesn\'t have "driver" o "client" values in "type_of_user" key', () => checkStatusRequest(400, api.userNotificationDelete, {method: 'GET', params: { Id: db_driver_id, type_of_user: "sdfd", Id_haulage: Id_haulage, type_notif: Id_Notification_Type}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('Should return Created if Driver delete notification works', () => checkStatusRequest(200, api.userNotificationDelete, {method: 'GET', params: { Id: db_driver_id, type_of_user: "driver", Id_haulage: Id_haulage, type_notif: Id_Notification_Type}}));
+  
+  });
+
+});
+
+// User haulage list
+describe("User haulage list:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If User haulage list not work', () => checkStatusRequest(500, api.haulageUserList, {method: 'GET', params: { Id_user: "sdss"}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('If User haulage list work', () => checkStatusRequest(200, api.haulageUserList, {method: 'GET', params: { Id_user: db_user_id}}));
+  
+  });
+
+});
+
+// Driver haulage list
+describe("Driver haulage list:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If User haulage list not work', () => checkStatusRequest(500, api.haulageDriverList, {method: 'GET', params: { Id_driver: "sdss"}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('If User haulage list work', () => checkStatusRequest(200, api.haulageDriverList, {method: 'GET', params: { Id_driver: db_driver_id}}));
+  
+  });
+
+});
+
+// Haulage rate test
+describe("Driver haulage list:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If User haulage list not work', () => checkStatusRequest(500, api.haulageDriverList, {method: 'GET', params: { Id_driver: "sdss"}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('If User haulage list work', () => checkStatusRequest(200, api.haulageDriverList, {method: 'GET', params: { Id_driver: db_driver_id}}));
+  
+  });
+
+});

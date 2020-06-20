@@ -78,7 +78,7 @@ async function getRegisterBy(query)
 
     } catch (error) {
         logger.info("DriverController: "+ error)
-        return {status:-1, data:error}
+        return {status:-1, error:error}
 
     }
 }

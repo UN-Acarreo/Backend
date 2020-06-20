@@ -95,6 +95,30 @@ async function getVehicleInfo(vehicle_id){
     }
 }
 
+//Return vehicle information
+async function getVehicleBy(query){
+    try{
+    var VehicleModel = await ModelFactory.getModel("Vehicle")
+    let vehicle_info = await VehicleModel.findAll(
+        { where: query }
+        )
+    //query returns array of vehicles that match where clause, in this case we expect only 1
+    if(vehicle_info.length==0)
+    {
+        logger.info("VehicleController: No vehicle found with that id")
+        return {status:0, data:" No vehicle information found with that id"}
+    }
+    else{
+        logger.info("VehicleController: vehicle info found")
+        return {status: 1, data: vehicle_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("VehicleController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 async function deleteByPlate(Plate){
     try{
 
@@ -122,5 +146,6 @@ module.exports = {
     getAll: getAll,
     getRegisterByPk: getRegisterByPk,
     getVehicleInfo: getVehicleInfo,
+    getVehicleBy: getVehicleBy,
     deleteByPlate: deleteByPlate
 };
