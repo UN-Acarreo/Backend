@@ -24022,3 +24022,58 @@
 [2020-06-20T02:34:47.759Z] : info : UserController:User found
 [2020-06-20T02:34:47.759Z] : info : UserHandler: succesfull call to getUserInfo
 [2020-06-20T02:34:47.759Z] : info : api: haulage list returned
+[2020-06-20T03:11:13.187Z] : info : Server: Server is running
+[2020-06-20T03:11:13.622Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-20T03:11:13.922Z] : info : Server: database tables created if the dont exist
+[2020-06-20T04:29:41.756Z] : info : Server: Server is running
+[2020-06-20T04:29:42.064Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-20T04:29:42.484Z] : info : Server: database tables created if the dont exist
+[2020-06-20T04:30:16.124Z] : info : DriverController:email doesnt match known Driver
+[2020-06-20T04:30:16.125Z] : info : DriverHandler: Driver is not valid
+[2020-06-20T04:30:16.125Z] : info : api.js: could not find Driver
+[2020-06-20T04:30:20.151Z] : info : UserController:Number of users returned
+[2020-06-20T04:30:20.152Z] : info : UserHandler: email match
+[2020-06-20T04:30:20.155Z] : info : UserController:User found
+[2020-06-20T04:30:20.255Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-20T04:30:20.255Z] : info : api.js: returned user id succesfully
+[2020-06-20T04:30:20.315Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-20T04:30:23.842Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-20T04:31:02.638Z] : info : HaulageController: list was found successfully.
+[2020-06-20T04:31:02.639Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-20T04:31:02.803Z] : info : VehicleController: list was returned successfully.
+[2020-06-20T04:31:02.803Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-20T04:31:02.803Z] : info : VehicleHandler:enough cars
+[2020-06-20T04:31:02.957Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-20T04:31:02.957Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-20T04:31:03.408Z] : info : RouteController: Route was created successfully.
+[2020-06-20T04:31:03.469Z] : info : CargoController: Cargo was created successfully.
+[2020-06-20T04:31:03.636Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-20T04:31:03.636Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-20T04:31:03.636Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-20T04:31:03.673Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-20T04:31:03.673Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-20T04:31:03.673Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-20T04:31:03.676Z] : info : DriverController: register was returned successfully.
+[2020-06-20T04:31:03.678Z] : info : VehicleController: list was returned successfully.
+[2020-06-20T04:31:03.679Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-20T04:31:03.679Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-20T04:31:03.866Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-20T04:31:03.866Z] : info : Subject: in register observer: success
+[2020-06-20T04:33:03.611Z] : info : DriverController:Driver found
+[2020-06-20T04:33:03.690Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-20T04:33:03.699Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-20T04:33:03.699Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-20T04:33:03.699Z] : info : api.js: returned Driver id succesfully
+[2020-06-20T04:33:03.744Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-20T04:36:34.709Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-20T04:38:21.977Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-20T04:47:43.455Z] : info : Server: Server is running
+[2020-06-20T04:47:43.828Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-20T04:47:44.152Z] : info : Server: database tables created if the dont exist
+[2020-06-20T04:47:55.079Z] : info : DriverController:Driver found
+[2020-06-20T04:47:55.177Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-20T04:47:55.564Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-20T04:47:55.564Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-20T04:47:55.565Z] : info : api.js: returned Driver id succesfully
+[2020-06-20T04:47:56.208Z] : info : type_NotificationController:notifications found
+[2020-06-20T04:47:56.208Z] : info : api:driver/user notifications found succesfully

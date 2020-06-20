@@ -159,7 +159,8 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 router.get('/:type_of_user/notification/check/:Id', exports.userNotificationCheck = async function (req, res) {
 
     params = await req.params;
-    if ("type_of_user" in params && "Id" in params && typeof params.type_of_user == "string" && typeof params.Id == "number" && params.Id >= 0 && Number.isInteger(params.Id)) {
+    console.log(params)
+    if ("type_of_user" in params && "Id" in params && typeof params.type_of_user == "string" && typeof params.Id == "string" && !isNaN(params.Id) && Number(params.Id)  >= 0) {
         
         let type_of_user = req.params.type_of_user
         if(type_of_user == "driver")
