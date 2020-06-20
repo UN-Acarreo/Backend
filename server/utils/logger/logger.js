@@ -3,7 +3,7 @@
 const {createLogger, format, transports} = require('winston');
 
 // create and export logger
-logger = createLogger({     
+var logger = createLogger({     
 
     // Set simple format
     format: format.combine(                        
@@ -29,7 +29,7 @@ logger = createLogger({
 
 })
 
-module.exports = logger;
+module.exports = global.logger = logger;
 
 /*
     Logger call types
