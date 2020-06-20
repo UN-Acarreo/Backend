@@ -36,7 +36,7 @@ class BusinessLogicFactory {
             default:
                 return null;
         }
-    };
+    }
 }
 
 module.exports = BusinessLogicFactory;

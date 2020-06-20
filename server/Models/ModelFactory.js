@@ -36,7 +36,7 @@ class ModelFactory {
             default:
                 return null;
         }
-    };
+    }
 }
 
 module.exports = ModelFactory;
