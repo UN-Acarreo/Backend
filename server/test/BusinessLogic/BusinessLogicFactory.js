@@ -26,4 +26,4 @@ describe("Log client test:", async function(){
     it('If getBusinessLogic in is good return import', () => assert.equal(businessLogicFactory.getBusinessLogic("Rating"), require("../../BusinessLogic/BusinessLogicProducts/RatingHandler")))
     it('If getBusinessLogic in is good return import', () => assert.equal(businessLogicFactory.getBusinessLogic("Notification"), require("../../BusinessLogic/BusinessLogicProducts/NotificationHandler")))
 
-  });
+});
