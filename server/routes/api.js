@@ -668,8 +668,8 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
 });
 
 //Redirect unhandled requests
-router.all('*', function (req, res) {
-    return res.redirect("/");
+router.all('*', exports.redirect = async function (req, res) {
+    return res.status(200).redirect("/");
 });
 
 exports.router = router;

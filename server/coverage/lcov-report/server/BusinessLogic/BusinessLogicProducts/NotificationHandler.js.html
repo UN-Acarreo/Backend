@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.89% </span>
+                <span class="strong">80.56% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>46/72</span>
+                <span class='fraction'>58/72</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">61.11% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/18</span>
+                <span class='fraction'>11/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.78% </span>
+                <span class="strong">88.89% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/9</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.89% </span>
+                <span class="strong">80.56% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>46/72</span>
+                <span class='fraction'>58/72</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -276,17 +276,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -358,12 +358,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -377,14 +377,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -473,22 +473,22 @@ const getController = require('../../Controllers/ControllerFactory').getControll
 &nbsp;
 &nbsp;
 //create notification for service cancelation
-async function <span class="fstat-no" title="function not covered" >DriversCancelNotification(</span>drivers,notifications,Id_haulage)
+async function DriversCancelNotification(drivers,notifications,Id_haulage)
 {
 &nbsp;
   //console.log(Id_haulage)
   //console.log(drivers)
-<span class="cstat-no" title="statement not covered" >  for(const driver of drivers){</span>
+  for(const driver of drivers){
       //console.log("###"+driver)
-      const subject = <span class="cstat-no" title="statement not covered" >new Subject()</span>
-<span class="cstat-no" title="statement not covered" >      for (const notification of notifications) {</span>
-<span class="cstat-no" title="statement not covered" >          subject.notifications.add(notification)</span>
+      const subject = new Subject()
+      for (const notification of notifications) {
+          subject.notifications.add(notification)
       }
 &nbsp;
-      let observer = <span class="cstat-no" title="statement not covered" >new Observer(driver,"Driver")</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >          await subject.registerObserver(observer, Id_haulage)</span>
-<span class="cstat-no" title="statement not covered" >          return {status:1}</span>
+      let observer = new Observer(driver,"Driver")
+      try {
+          await subject.registerObserver(observer, Id_haulage)
+          return {status:1}
       } catch (error) {
           //console.log("###"+error)
 <span class="cstat-no" title="statement not covered" >          return {status:-1, error: error}</span>
@@ -562,10 +562,10 @@ async function getNotifications(Id,type)
 &nbsp;
     const subject = new Subject()
     let notifications = await subject.notifyObserver(new Observer(Id,type))
-    <span class="missing-if-branch" title="if path not taken" >I</span>if(notifications.status==-1)
+    if(notifications.status==-1)
     {
-<span class="cstat-no" title="statement not covered" >        logger.error("NotificationHandler: "+ notifications.error)</span>
-<span class="cstat-no" title="statement not covered" >        return {status: -1, error:"Hubo un error recuperando sus notificaciones"}</span>
+        logger.error("NotificationHandler: "+ notifications.error)
+        return {status: -1, error:"Hubo un error recuperando sus notificaciones"}
     } else if(notifications.status==0)
     {
         return {status:0,data:"No tiene nuevas notificaciones"}
@@ -581,12 +581,12 @@ async function removeNotification(type_notif, type_of_user,Id,Id_haulage)
 &nbsp;
         const subject = new Subject()
         let result = await subject.removeObserver(new Observer(Id,type_of_user),Id_haulage,type_notif)
-        <span class="missing-if-branch" title="else path not taken" >E</span>if(result.status!=-1)
+        if(result.status!=-1)
             return {status:result.status,data:""}
         else
         {
-<span class="cstat-no" title="statement not covered" >            logger.error("NotificationHandler: "+ result.error)</span>
-<span class="cstat-no" title="statement not covered" >            return {status:-1,error: result.error}</span>
+            logger.error("NotificationHandler: "+ result.error)
+            return {status:-1,error: result.error}
         }
 &nbsp;
 }
@@ -670,7 +670,7 @@ module.exports =
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 16:05:17 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 18:28:56 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

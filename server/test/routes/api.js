@@ -140,7 +140,7 @@ describe("Driver signup test:", async function() {
     
     it('Should return Created if driver signup works', () => checkStatusRequest(201, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverName", Driver_last_name: "TestDriverLastName", Identity_card: 123456, Driver_phone: 567890, Driver_Email: "testdrivername@hotmail.com", Driver_address: "TestDriverDirection", Driver_password: "123456", Driver_photo: "123456", foto_data: userPhoto}}}));
     it('Should return Created if driver signup works with blanks in name and last name', () => checkStatusRequest(201, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "Test Driver Name", Driver_last_name: "Test Driver Last Name", Identity_card: 123456, Driver_phone: 567890, Driver_Email: "testdrivername@hotmail.com", Driver_address: "TestDriverDirection", Driver_password: "123456", Driver_photo: "123456", foto_data: userPhoto}}}));
-
+    
   });
 
   // Good work
@@ -158,6 +158,21 @@ describe("Driver signup test:", async function() {
     
   });
 
+  // Good work
+  describe("Bad in duplications: ", async function() {
+    
+    // Before actions
+    before(async function() {
+      // Get regiter test driver
+      db_driver_id2 = (await lastResult)._getJSONData().db_driver_id;
+    });
+
+    it('Should return Bad in duplication', () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverNameTwo", Driver_last_name: "TestDriverLastNameTwo", Identity_card: 1234562, Driver_phone: 5678902, Driver_Email: "testdrivername2@hotmail.com", Driver_address: "TestDriverDirection2", Driver_password: "1234562", Driver_photo: "1234562", foto_data: userPhoto}}}));
+    it('Should return Bad in duplication', () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverNameTwo", Driver_last_name: "TestDriverLastNameTwo", Identity_card: 12345622, Driver_phone: 5678902, Driver_Email: "testdrivername2@hotmail.com", Driver_address: "TestDriverDirection2", Driver_password: "1234562", Driver_photo: "1234562", foto_data: userPhoto}}}));
+    it('Should return Bad in duplication', () => checkStatusRequest(400, api.driverSignup, {method: 'POST', body: {request: {Driver_name: "TestDriverNameTwo", Driver_last_name: "TestDriverLastNameTwo", Identity_card: 12345622, Driver_phone: 56789022, Driver_Email: "testdrivername2@hotmail.com", Driver_address: "TestDriverDirection2", Driver_password: "1234562", Driver_photo: "1234562", foto_data: userPhoto}}}));
+    
+  });
+
 });
 
 // Vehicle signup test
@@ -165,8 +180,6 @@ describe("Vehicle signup test:", async function() {
 
   // Before actions
   before(async function() {
-    // Get regiter test driver
-    db_driver_id2 = (await lastResult)._getJSONData().db_driver_id;
     // Delete test vehicle if exist
     await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
     await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate2");
@@ -221,12 +234,24 @@ describe("Vehicle signup test:", async function() {
       // Delete test vehicle if exist
       await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate");
       await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate2");
+      await controllerFactory.getController("Vehicle").deleteByPlate("TestPlate3");
     });
     
     it('Should return Created if vehicle signup works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 123456, db_driver_id: db_driver_id, Plate: "TestPlate", Brand: "TestBrand", Model: "TestModel", Payload_capacity: 100, Photo: "123456", foto_data: carPhoto, Is_owner: true}}}));
     it('Should return Created if vehicle signup works',  () => checkStatusRequest(201, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 1234562, db_driver_id: db_driver_id2, Plate: "TestPlate2", Brand: "TestBrand2", Model: "TestModel2", Payload_capacity: 100, Photo: "1234562", foto_data: carPhoto, Is_owner: true}}}));
 
+    it('Should return Error if fail',  () => checkStatusRequest(500, api.vehicleSignup, {method: 'POST', body: {request: {Identity_card: 1234562, db_driver_id: 456456456, Plate: "TestPlate3", Brand: "TestBrand2", Model: "TestModel2", Payload_capacity: 100, Photo: "1234562", foto_data: carPhoto, Is_owner: true}}}));
+
+
   });
+
+   // Hualage Good work
+   describe("OK in good work checks: ", async function() {
+    
+    it('If driver empty haulage list work', () => checkStatusRequest(200, api.haulageDriverList, {method: 'GET', params: { Id_driver: db_driver_id}}));
+
+  });
+  
 
 });
 
@@ -288,6 +313,13 @@ describe("Client signup test:", async function() {
     
     it('Should return Created if client signup works',                                    () => checkStatusRequest(201, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
     it('Should return Created if client signup works with blanks in name and last name',  () => checkStatusRequest(201, api.clientSignup, {method: 'POST', body: {request: { User_name: "Test Client Name", User_last_name:  "Test Client Last Name", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+  });
+
+  // Good work
+  describe("OK in good work in PK unique: ", async function() {
+    
+    it('Should return Bad if client exist',                                    () => checkStatusRequest(400, api.clientSignup, {method: 'POST', body: {request: { User_name: "TestClientName", User_last_name:  "TestClientLastName", User_password: "123456", User_address: "TestClientDirection", User_Email: "testclientname@hotmail.com" }}}));
+  
   });
 
 });
@@ -357,6 +389,13 @@ describe("Haulage create and modify test:", async function() {
     await controllerFactory.getController("Haulage").deleteByIdUser(db_user_id);
     // Delete test caego if exist
     //await controllerFactory.getController("Cargo").deleteByDescription("DescriptionTest");
+  });
+
+   // Haulage client Good work 
+   describe("OK in Haulage client Good work: ", async function() {
+    
+    it('Haulage client Good work ', () => checkStatusRequest(200, api.haulageUserList, {method: 'GET', params: { Id_user: db_user_id}}));
+  
   });
 
   // Bad request structure checks
@@ -486,6 +525,12 @@ describe("User notification test:", async function() {
     
   });
 
+  // Bad work 
+  describe("OK in bad work: ", async function() {
+      
+    it('Should return Error if Driver notification not work', () => checkStatusRequest(500, api.userNotificationCheck, {method: 'GET', params: { Id: "345345345345345345345345", type_of_user: "driver"}}));
+  });
+
   // Good work create
   describe("OK in good create checks: ", async function() {
     
@@ -518,10 +563,17 @@ describe("User notification delete:", async function() {
     
   });
 
+  // Good work delete
+  describe("Bad in delete: ", async function() {
+      
+    it('Should return Created if Driver delete notification not work', () => checkStatusRequest(500, api.userNotificationDelete, {method: 'GET', params: { Id: db_driver_id, type_of_user: "driver", Id_haulage: Id_haulage, type_notif: "sdfsdf"}}));
+  });
+
   // Good work create
   describe("OK in good create checks: ", async function() {
     
     it('Should return Created if Driver delete notification works', () => checkStatusRequest(200, api.userNotificationDelete, {method: 'GET', params: { Id: db_driver_id, type_of_user: "driver", Id_haulage: Id_haulage, type_notif: Id_Notification_Type}}));
+    it('Should return Created if Driver delete notification works', () => checkStatusRequest(200, api.userNotificationDelete, {method: 'GET', params: { Id: db_driver_id, type_of_user: "client", Id_haulage: Id_haulage, type_notif: Id_Notification_Type}}));
   
   });
 
@@ -572,7 +624,9 @@ describe("Haulage rate test:", async function() {
   describe("Bad request in data format checks: ", async function() {
     
     it('If Haulage rate not work', () => checkStatusRequest(500, api.haulageRate, {method: 'POST', body: {Id_haulage: Id_haulage, Puntuality: "asdas", Cargo_state: 3, Customer_support: 4, Comments: "Coments"}}));
+    it('If Haulage rate not work', () => checkStatusRequest(500, api.haulageRate, {method: 'POST', body: {Id_haulage: "scdsdf", Puntuality: 5, Cargo_state: 3, Customer_support: 4, Comments: "Coments"}}));
     
+
   });
 
   // Good work create
@@ -614,9 +668,49 @@ describe("Haulage finish test:", async function() {
   });
 
   // Good work create
-  describe("OK in good create checks: ", async function() {
+  describe("OK in good checks: ", async function() {
     
     it('If Haulage finish work', () => checkStatusRequest(200, api.haulageFinish, {method: 'POST', body: {request: {Id_haulage: Id_haulage}}}));
+  
+  });
+
+});
+
+// Haulage cancel test
+describe("Haulage cancel test:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If Haulage cancel not work', () => checkStatusRequest(500, api.haulageCancel, {method: 'POST', body: {request: {Id_haulage: "sdfsd", vehicles: [{driver: {Id_driver: db_driver_id}}]}}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good checks: ", async function() {
+    
+    it('If Haulage cancel work', () => checkStatusRequest(200, api.haulageCancel, {method: 'POST', body: {request: {Id_haulage: Id_haulage, vehicles: [{driver: {Id_driver: db_driver_id}}]}}}));
+  
+  });
+
+});
+
+// Redirect test
+describe("Redirect test:", async function() {
+
+  // Good work 
+  describe("OK in good checks: ", async function() {
+    
+    it('If Haulage Redirect work', async () => {
+      
+      // Simulate Request and Response
+      var req = httpMocks.createRequest({method: '*'});
+      var res = httpMocks.createResponse();
+
+      // Make equal test
+      assert.equal(undefined, await api.redirect(req, res));
+    
+    });
   
   });
 
