@@ -36,7 +36,7 @@ router.post('/log-client-errors', exports.logClientErrors = async function (req,
 //status -2 = filed checks failed, error message returned
 //status -3 = wrong path
 router.post('/:type_of_user/login', exports.login = async function (req, res) {
-    
+
     if ("request" in req.body && "User_Email" in  req.body.request && "User_password" in req.body.request ) {
 
         //TODO login user using Oauth
@@ -153,7 +153,7 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
         logger.error("api.js: /driver/signup: Bad Requests: " + req.body);
         return res.status(400).send("Bad Request");
     }
-    
+
 });
 
 router.get('/:type_of_user/notification/check/:Id', exports.userNotificationCheck = async function (req, res) {
@@ -281,9 +281,9 @@ router.post('/vehicle/signup', exports.vehicleSignup = async function (req, res)
 
 //Route will be used to handle client sign up POST requests
 router.post('/client/signup', exports.clientSignup = async function (req, res) {
-    
+
     if ("request" in req.body && "User_name" in req.body.request && "User_last_name" in req.body.request && "User_password" in req.body.request && "User_address" in req.body.request && "User_Email" in req.body.request) {
-    
+
         const valid_fields = await getHandler("Fields").check_fields(req);
         if (valid_fields !== true) {
             return res.status(400).json({ error: valid_fields })
@@ -447,7 +447,7 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
 router.post('/haulage/create', exports.haulageCreate = async function (req, res) {
 
     if ("request" in req.body && "Date" in req.body.request  && "Year" in req.body.request.Date  && "Month" in req.body.request.Date  && "Day" in req.body.request.Date  && "Hour" in req.body.request.Date  && "Minute" in req.body.request.Date && "Origin_coord" in req.body.request && "Destination_coord" in req.body.request && "Description" in req.body.request && "Comments" in req.body.request && "Weight" in req.body.request && "Duration" in req.body.request && "Id_user" in req.body.request && "Id_haulage" in req.body.request) {
-    
+
         // Check fields
         const valid_fields = await getHandler("Fields").check_fields(req);
         if (valid_fields !== true) {
@@ -463,10 +463,10 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         let haulage_reg = undefined;
         let route_reg = undefined;
         let cargo_reg = undefined;
-    
+
         // If request is for modify
         if (modify) {
-            
+
             // Get haulage
             haulage_reg = await getHandler("Haulage").getHaulageInfo(newValues.Id_haulage)
 
@@ -485,7 +485,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
             await getHandler("Notification").deleteByHaulage("User", newValues.Id_haulage)
             // Delete haulage
             await getHandler("Haulage").deleteByUserByPk(newValues.Id_haulage)
-        
+
         }
 
         // Create with specified values
@@ -572,7 +572,7 @@ router.post('/haulage/create', exports.haulageCreate = async function (req, res)
         if (modify && result.status != 201) {
             let oldValues = { Date:{Year: haulage_reg.data.Date.getFullYear(), Month: haulage_reg.data.Date.getMonth(), Day: haulage_reg.data.Date.getDate(), Hour: haulage_reg.data.Date.getHours(), Minute: haulage_reg.data.Date.getMinutes()}, Origin_coord: route_reg.data.Origin_coord , Destination_coord: route_reg.data.Destination_coord, Description: cargo_reg.data.Description, Comments: cargo_reg.data.Comments, Weight: cargo_reg.data.Weight, Duration: route_reg.data.Duration, Id_user: haulage_reg.data.Id_user}
             await create (oldValues);
-        } 
+        }
         return res.status(result.status).json(result.json);
 
     } else {
@@ -617,7 +617,7 @@ router.post('/haulage/finish', exports.haulageFinish = async function (req, res)
     notifications.push(constants.HAULAGE_DONE)
     await getHandler("Notification").createUserNoficiations(Id_haulage,notifications)
     res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
-    
+
 
 });
 
@@ -631,7 +631,7 @@ router.post('/haulage/begin', exports.haulageBegin = async function (req, res) {
 
     if (result.status != 1) {
         logger.error("api: " + result.error)
-        res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
+        res.status(500).json({ status: -1, error: "Hubo un problema al comenzar el acarreo" });
     }
     let notifications = []
     notifications.push(constants.HAULAGE_BEGUN)
@@ -641,8 +641,28 @@ router.post('/haulage/begin', exports.haulageBegin = async function (req, res) {
 
 //Route will be used to handle cancel POST service requests
 router.post('/haulage/cancel', exports.haulageCancel = async function (req, res) {
-    //TODO cancel service
-    res.status(200).json({ Api: 'Online' })
+    let Id_haulage = req.body.request.Id_haulage;
+    let vehicles = req.body.request.vehicles;
+    //console.log(req.body)
+    let result = await getHandler("Haulage").cancelHaulage(Id_haulage)
+    if (result.status != 1) {
+        logger.error("api: " + result.error)
+        res.status(500).json({ status: -1, error: "Hubo un problema al cancelar el acarreo" });
+    }
+
+
+    let drivers = []
+
+    vehicles.forEach((vehicle, i) => {
+        drivers.push(vehicle.driver.Id_driver)
+    });
+    //drivers.push(vehicles[0].driver.Id_driver)
+    //console.log(drivers)
+
+    let notifications = []
+    notifications.push(constants.HAULAGE_CANCELED)
+    await getHandler("Notification").DriversCancelNotification(drivers,notifications,Id_haulage)
+    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha sido cancelado con exito" });
 });
 
 //Route will be used to handle the drivers schedules GET request

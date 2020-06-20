@@ -165,25 +165,38 @@ async function beginHaulage(Id_haulage)
   return{status:1, data:"success"};
 }
 
+async function cancelHaulage(Id_haulage)
+{
+  // Cancel the haulage and set finish time
+  let haulage = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.CANCELLED, new Date().getTime())
+  if(haulage.status!=1)
+  {
+    logger.error("HaulageHandler: cancelHaulage error: "+ haulage.error)
+    return{status:-1, error:haulage.error};
+  }
+  logger.info("HaulageHandler: cancelHaulage success")
+  return{status:1, data:"success"};
+}
+
 async function deleteByUserEmail(Email) {
-    
+
   // Select drivers by Identity_Card
   let result = await ControllerFactory.getController("User").getUserBy({User_Email: Email})
-  
+
   // Delete notifcations with driver id
   if (result.status != 0) {
 
       await ControllerFactory.getController("Haulage").deleteByIdUser(result.data.Id_user)
 
   }
-  
+
 }
 
 async function deleteByUserByPk(Id_haulage) {
-    
+
   console.log(Id_haulage)
   let result = await ControllerFactory.getController("Haulage").deleteByPk(Id_haulage)
-  
+
   if(result.status!=1)
   {
     logger.error("HaulageHandler: deleteByUserByPk error: "+ result.error)
@@ -191,7 +204,7 @@ async function deleteByUserByPk(Id_haulage) {
   }
   logger.info("HaulageHandler: deleteByUserByPk success")
   return{status:1};
-  
+
 }
 
 module.exports = {
@@ -202,5 +215,6 @@ module.exports = {
     setHaulageRating: setHaulageRating,
     deleteByUserEmail: deleteByUserEmail,
     beginHaulage: beginHaulage,
-    deleteByUserByPk: deleteByUserByPk
+    deleteByUserByPk: deleteByUserByPk,
+    cancelHaulage: cancelHaulage
 };
