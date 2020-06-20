@@ -564,20 +564,20 @@ describe("Driver haulage list:", async function() {
 });
 
 // Haulage rate test
-describe("Driver haulage list:", async function() {
+/*describe("Haulage rate test:", async function() {
 
   // Data format checks
   describe("Bad request in data format checks: ", async function() {
     
-    it('If User haulage list not work', () => checkStatusRequest(500, api.haulageDriverList, {method: 'GET', params: { Id_driver: "sdss"}}));
+    it('Haulage rate not work', () => checkStatusRequest(500, api.haulageRate, {method: 'GET', params: { Id_driver: "sdss"}}));
     
   });
 
   // Good work create
   describe("OK in good create checks: ", async function() {
     
-    it('If User haulage list work', () => checkStatusRequest(200, api.haulageDriverList, {method: 'GET', params: { Id_driver: db_driver_id}}));
+    it('If Haulage rate work', () => checkStatusRequest(200, api.haulageRate, {method: 'GET', params: { Id_driver: db_driver_id}}));
   
   });
 
-});
+});*/
