@@ -8,6 +8,7 @@ const getHandler = require('../BusinessLogic/BusinessLogicFactory').getBusinessL
 
 // Import logger
 const logger = require('./../utils/logger/logger');
+const { check_fields } = require('../BusinessLogic/BusinessLogicProducts/FieldsHandler');
 
 //Import constants
 const constants = require("../constants").notif_description
@@ -111,6 +112,7 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 
         const valid_fields = await getHandler("Fields").check_fields(req);
         if (valid_fields !== true) {
+            logger.info('Signup driver: checks fields failed')
             return res.status(400).json({ error: valid_fields })
         }
         //Save drivers image
@@ -154,33 +156,45 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
 
 });
 
-router.get('/:type_of_user/notification/check/:Id', exports.driverNotificationCheck = async function (req, res) {
+router.get('/:type_of_user/notification/check/:Id', exports.userNotificationCheck = async function (req, res) {
 
-    let type_of_user = req.params.type_of_user
-    if(type_of_user == "driver")
-        type_of_user = "Driver"
-    else if(type_of_user == "client")
-        type_of_user = "User"
-    else
-    {
-        logger.info("api: user/driver notifications: Validation fail")
+    params = await req.params;
+    console.log(params)
+    if ("type_of_user" in params && "Id" in params && typeof params.type_of_user == "string" && typeof params.Id == "string" && !isNaN(params.Id) && Number.isInteger(Number(params.Id)) && Number(params.Id)  >= 0) {
+        
+        let type_of_user = req.params.type_of_user
+        if(type_of_user == "driver")
+            type_of_user = "Driver"
+        else if(type_of_user == "client")
+            type_of_user = "User"
+        else
+        {
+            logger.info("api: user/driver notifications: Validation fail")
+            return res.status(400).json({ status:-1, error: "URL incorrecto"})
+        }
+        var Id = req.params.Id;
+        let notifications = await getHandler("Notification").getNotifications(Id,type_of_user)
+        if(notifications.status==-1)
+        {
+            logger.info("api: driver/user notifications: "+notifications.error)
+            return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
+        }
+        else if(notifications.status==1 || notifications.status==0)
+        {
+            logger.info("api:driver/user notifications found succesfully")
+            return res.status(200).json({status:notifications.status ,data:notifications.data})
+        }
+
+    } else {
+        
+        logger.info("api: user/driver notifications: Validation structure fail")
         return res.status(400).json({ status:-1, error: "URL incorrecto"})
+
     }
-    var Id = req.params.Id;
-    let notifications = await getHandler("Notification").getNotifications(Id,type_of_user)
-    if(notifications.status==-1)
-    {
-        logger.info("api: driver/user notifications: "+notifications.error)
-        return res.status(500).json({ status:-1, error: "Hubo un problema recuperando sus notificaciones"})
-    }
-    else if(notifications.status==1 || notifications.status==0)
-    {
-        logger.info("api:driver/user notifications found succesfully")
-        return res.status(200).json({status:notifications.status ,data:notifications.data})
-    }
+    
 })
 
-router.delete('/:type_of_user/notification/delete/:type_notif/:Id/:Id_haulage',exports.driverNotificationDelete = async function (req, res){
+router.delete('/:type_of_user/notification/delete/:type_notif/:Id/:Id_haulage',exports.userNotificationDelete = async function (req, res){
 
     let type_of_user = req.params.type_of_user
     if(type_of_user == "driver")
@@ -344,14 +358,16 @@ router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async functi
             haulage_list.push(haulage_object);
 
         }
-        //console.log(haulage_list)
+        logger.error("api.js: /haulage/user/list: correct");
         return res.status(200).json({ haulages: haulage_list })
     }
-    if (haulages.status == 0) {
-        res.status(200).json({ status: 0, error: "No existen acarreos creados" });
+    else if (haulages.status == 0) {
+        logger.error("api.js: /haulage/user/list: no haulages found");
+        return res.status(200).json({ status: 0, error: "No existen acarreos creados" });
     }
     else {
-        res.status(500).json({ status: -1, error: "Hubo un problema al traer los acarreos" });
+        logger.error("api.js: /haulage/user/list: error");
+        return res.status(500).json({ status: -1, error: "Hubo un problema al traer los acarreos" });
     }
 
 })
@@ -363,11 +379,11 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
     let vehicles_haulages = await getHandler("Haulage_Driver_Vehicle").get_Haulage_Driver_Vehicles_of_Driver(Id_driver)
     if (vehicles_haulages.status != 1) {
         logger.error("api: " + vehicles_haulages.error)
-        res.status(500).json({ status: -1, error: "Hubo un problema al traer los acarreos" });
+        return res.status(500).json({ status: -1, error: "Hubo un problema al traer los acarreos" });
     }
     if (vehicles_haulages.data.length == 0) {
         logger.error("api: No haulages for driver")
-        res.status(200).json({ status: 0, error: "No existen acarreos creados" });
+        return res.status(200).json({ status: 0, error: "No existen acarreos creados" });
     }
     let haulage_list = []
     for (const vehicle_haulage of vehicles_haulages.data) {
@@ -405,7 +421,7 @@ router.get('/haulage/driver/list/:Id_driver', exports.haulageDriverList = async 
         if (errorDescription != "") {
 
             logger.error("api:"+ errorDescription)
-            res.status(500).json({ status: -1, error: errorDescription });
+            return res.status(500).json({ status: -1, error: errorDescription });
         }
         haulage_list.push({
             vehicle: vehicle.data,
