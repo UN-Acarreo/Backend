@@ -1,5 +1,6 @@
 'use strict';
-
+// Import logger
+const logger = require('./../../utils/logger/logger');
 module.exports = {
 
   // Add End_date column
