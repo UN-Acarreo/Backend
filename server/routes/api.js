@@ -334,7 +334,8 @@ router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async functi
             //console.log(status_info)
             const rating_info = await getHandler("Rating").getRatingInfo(haulage.Id_rating);
             //console.log(rating_info)
-
+            let bill_info = await getHandler("Bill").getBillInfo(haulage.Id_haulage);
+        
             const driver_vehicles_assigned = await getHandler("Haulage_Driver_Vehicle").getVehiclesAssigned(haulage.Id_haulage);
             //Get the actual information from vehicle and driver
             for (const driver_vehicle of driver_vehicles_assigned.data) {
@@ -355,6 +356,7 @@ router.get('/haulage/user/list/:Id_user', exports.haulageUserList = async functi
             haulage_object.route = route_info.data;
             haulage_object.status = status_info.data;
             haulage_object.rating = rating_info.data;
+            haulage_object.bill = bill_info.data;
             haulage_list.push(haulage_object);
 
         }
