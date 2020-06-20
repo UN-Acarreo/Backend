@@ -14,10 +14,14 @@ async function getBillInfo(Id_haulage)
     }else if(bill.status==0)
     {
         logger.info("BillHandler/getBillInfo: No bill information")
-        return {status:0, data:"not found"}
+        return {status:0, data:"El acarreo no tiene factura"}
     }else
     {
         logger.error("BillHandler/getBillInfo: "+bill.error)
-        return {status:1, error:bill.error}
+        return {status:-1, error:bill.error}
     }
+}
+
+module.exports ={
+    getBillInfo:getBillInfo
 }
