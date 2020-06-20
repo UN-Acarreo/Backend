@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">47.37% </span>
+                <span class="strong">78.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/19</span>
+                <span class='fraction'>15/19</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">47.37% </span>
+                <span class="strong">78.95% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/19</span>
+                <span class='fraction'>15/19</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -148,11 +148,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -160,12 +160,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,13 +203,13 @@ async function getRatingInfo(rating_id){
 }
 &nbsp;
 // Create Rating
-async function <span class="fstat-no" title="function not covered" >create(</span>info) {
+async function create(info) {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
+    try {
         // Get atributes
         //const { Puntuality, Cargo_state, Customer_support, Comments } = req.body.request;
         // Create Rating
-        var new_rating = <span class="cstat-no" title="statement not covered" >await ModelFactory.getModel("Rating").create(</span>
+        var new_rating = await ModelFactory.getModel("Rating").create(
             {
                 Puntuality: info.Puntuality,
                 Cargo_state: info.Cargo_state,
@@ -217,12 +217,12 @@ async function <span class="fstat-no" title="function not covered" >create(</spa
                 Comments: info.Comments
             }
         );
-<span class="cstat-no" title="statement not covered" >        logger.info("RatingController: Rating was created successfully.");</span>
-<span class="cstat-no" title="statement not covered" >        return {status: 1, data: new_rating.Id_rating}; </span>//return the id of the rating to be stored later on the haulage
+        logger.info("RatingController: Rating was created successfully.");
+        return {status: 1, data: new_rating.Id_rating}; //return the id of the rating to be stored later on the haulage
 &nbsp;
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >        logger.error("RatingController: " + error);</span>
-<span class="cstat-no" title="statement not covered" >        return {status: -1, error: error};</span>
+        logger.error("RatingController: " + error);
+        return {status: -1, error: error};
     }
 &nbsp;
 }
@@ -235,7 +235,7 @@ module.exports = { create: create, getRatingInfo: getRatingInfo };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 10:46:08 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 16:05:17 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

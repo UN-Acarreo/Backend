@@ -142,6 +142,20 @@ async function deleteByDriverIdentityCard(Identity_Card) {
 
 }
 
+async function deleteByUserEmail(User_Email) {
+
+    // Select drivers by Identity_Card 
+    let result = await getController("User").getUserBy({User_Email: User_Email})
+
+    // Delete notifcations with driver id
+    if (result.status != 0) {
+
+        await getController("Notification").remove("User", {Id_user: result.data.Id_user})
+
+    }
+
+}
+
 async function deleteByHaulage(type_of_user, Id_haulage) {
 
     let result = await getController("Notification").remove(type_of_user, {Id_haulage: Id_haulage})
@@ -182,6 +196,7 @@ module.exports =
     removeNotification: removeNotification,
     createUserNoficiations: createUserNoficiations,
     deleteByDriverIdentityCard: deleteByDriverIdentityCard,
+    deleteByUserEmail: deleteByUserEmail,
     deleteByHaulage: deleteByHaulage,
     DriversCancelNotification: DriversCancelNotification
 }

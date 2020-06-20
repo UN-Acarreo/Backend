@@ -613,12 +613,12 @@ router.post('/haulage/finish', exports.haulageFinish = async function (req, res)
 
     if (result.status != 1) {
         logger.error("api: " + result.error)
-        res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
+        return res.status(500).json({ status: -1, error: "Hubo un problema al finalizar el acarreo" });
     }
     let notifications = []
     notifications.push(constants.HAULAGE_DONE)
     await getHandler("Notification").createUserNoficiations(Id_haulage,notifications)
-    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
+    return res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha finalizado con exito" });
 
 
 });
@@ -633,12 +633,12 @@ router.post('/haulage/begin', exports.haulageBegin = async function (req, res) {
 
     if (result.status != 1) {
         logger.error("api: " + result.error)
-        res.status(500).json({ status: -1, error: "Hubo un problema al comenzar el acarreo" });
+        return res.status(500).json({ status: -1, error: "Hubo un problema al comenzar el acarreo" });
     }
     let notifications = []
     notifications.push(constants.HAULAGE_BEGUN)
     await getHandler("Notification").createUserNoficiations(Id_haulage,notifications)
-    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha comenzado con exito" });
+    return res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha comenzado con exito" });
 });
 
 //Route will be used to handle cancel POST service requests
@@ -649,7 +649,7 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
     let result = await getHandler("Haulage").cancelHaulage(Id_haulage)
     if (result.status != 1) {
         logger.error("api: " + result.error)
-        res.status(500).json({ status: -1, error: "Hubo un problema al cancelar el acarreo" });
+        return res.status(500).json({ status: -1, error: "Hubo un problema al cancelar el acarreo" });
     }
 
 
@@ -664,23 +664,12 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
     let notifications = []
     notifications.push(constants.HAULAGE_CANCELED)
     await getHandler("Notification").DriversCancelNotification(drivers,notifications,Id_haulage)
-    res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha sido cancelado con exito" });
-});
-
-//Route will be used to handle the drivers schedules GET request
-router.get('/driver/schedule', exports.driverSchedule = async function (req, res) {
-    res.status(200).json({ Api: 'Send driver schedule' })
-});
-
-//Route will be used to send the drivers location GET request
-router.get('/driver/location', exports.driverLocation = async function (req, res) {
-    res.status(200).json({ Api: 'Send driver coordinates' })
+    return res.status(200).json({ status: 1, data: result.data, message: "El acarreo ha sido cancelado con exito" });
 });
 
 //Redirect unhandled requests
 router.all('*', function (req, res) {
-    res.redirect("/");
-
+    return res.redirect("/");
 });
 
 exports.router = router;

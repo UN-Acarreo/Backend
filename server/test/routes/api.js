@@ -237,6 +237,8 @@ describe("Client signup test:", async function() {
   before(async function() {
     // DataBase connection
     await syncDB();  
+     // Delete client notification if exist
+     await businessLogicFactory.getBusinessLogic("Notification").deleteByUserEmail("testclientname@hotmail.com");
     // Delete haulage if exist
     await businessLogicFactory.getBusinessLogic("Haulage").deleteByUserEmail("testclientname@hotmail.com");
     // Delete test client if exist
@@ -564,20 +566,58 @@ describe("Driver haulage list:", async function() {
 });
 
 // Haulage rate test
-/*describe("Haulage rate test:", async function() {
+describe("Haulage rate test:", async function() {
 
   // Data format checks
   describe("Bad request in data format checks: ", async function() {
     
-    it('Haulage rate not work', () => checkStatusRequest(500, api.haulageRate, {method: 'GET', params: { Id_driver: "sdss"}}));
+    it('If Haulage rate not work', () => checkStatusRequest(500, api.haulageRate, {method: 'POST', body: {Id_haulage: Id_haulage, Puntuality: "asdas", Cargo_state: 3, Customer_support: 4, Comments: "Coments"}}));
     
   });
 
   // Good work create
   describe("OK in good create checks: ", async function() {
     
-    it('If Haulage rate work', () => checkStatusRequest(200, api.haulageRate, {method: 'GET', params: { Id_driver: db_driver_id}}));
+    it('If Haulage rate work', () => checkStatusRequest(200, api.haulageRate, {method: 'POST', body: {Id_haulage: Id_haulage, Puntuality: 5, Cargo_state: 3, Customer_support: 4, Comments: "Coments"}}));
   
   });
 
-});*/
+});
+
+// Haulage begin test
+describe("Haulage begin test:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If Haulage begin not work', () => checkStatusRequest(500, api.haulageBegin, {method: 'POST', body: {request: {Id_haulage: "sdfsd"}}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('If Haulage begin work', () => checkStatusRequest(200, api.haulageBegin, {method: 'POST', body: {request: {Id_haulage: Id_haulage}}}));
+  
+  });
+
+});
+
+// Haulage begin test
+describe("Haulage finish test:", async function() {
+
+  // Data format checks
+  describe("Bad request in data format checks: ", async function() {
+    
+    it('If Haulage finish not work', () => checkStatusRequest(500, api.haulageFinish, {method: 'POST', body: {request: {Id_haulage: "sdfsd"}}}));
+    
+  });
+
+  // Good work create
+  describe("OK in good create checks: ", async function() {
+    
+    it('If Haulage finish work', () => checkStatusRequest(200, api.haulageFinish, {method: 'POST', body: {request: {Id_haulage: Id_haulage}}}));
+  
+  });
+
+});
