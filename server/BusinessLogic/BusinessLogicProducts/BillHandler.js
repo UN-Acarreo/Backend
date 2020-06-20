@@ -6,6 +6,7 @@ const logger = require('../../utils/logger/logger');
 
 async function getBillInfo(Id_haulage)
 {
+    //gets info of bill from db, if there is no bill returns status 0
     let bill = await ControllerFactory.getController("Bill").getRegisterBy({Id_haulage:Id_haulage})
     if(bill.status==1)
     {
