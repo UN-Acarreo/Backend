@@ -303,6 +303,9 @@ router.post('/client/signup', exports.clientSignup = async function (req, res) {
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»") {
                 return res.status(400).json({ error: "El E-Mail ya existe" });
             }
+            if (message == "SequelizeUniqueConstraintError: Validation error") {
+                return res.status(400).json({ error: "Error de validación" });
+            }
             return res.status(500).json({ error: message });
         }
 
