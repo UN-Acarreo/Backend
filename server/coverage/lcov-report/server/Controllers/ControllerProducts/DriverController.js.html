@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.33% </span>
+                <span class="strong">76.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>44/60</span>
+                <span class='fraction'>46/60</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.33% </span>
+                <span class="strong">76.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>44/60</span>
+                <span class='fraction'>46/60</span>
             </div>
         
             
@@ -268,12 +268,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -376,12 +376,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -423,7 +423,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 &nbsp;
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -466,7 +466,7 @@ async function create(Driver_name, Driver_last_name, Driver_password_hashed, Dri
 async function <span class="fstat-no" title="function not covered" >countWhere(</span>query) {
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >        count = await ModelFactory.getModel("Driver").count({ where: query })</span>
+        let count = <span class="cstat-no" title="statement not covered" >await ModelFactory.getModel("Driver").count({ where: query })</span>
 <span class="cstat-no" title="statement not covered" >        logger.info("DriverController:Number of Drivers returned")</span>
 <span class="cstat-no" title="statement not covered" >        return{status:1, data:count}</span>
     } catch (error) {
@@ -556,10 +556,10 @@ async function getDriverInfoByIdentityCard(Identity_card){
         { where: { Identity_card: Identity_card }}
         )
     //query returns array of drivers that match where clause, in this case we expect only 1
-    <span class="missing-if-branch" title="if path not taken" >I</span>if(driver_info.length==0)
+    if(driver_info.length==0)
     {
-<span class="cstat-no" title="statement not covered" >        logger.info("DriverController: No driver found with that id")</span>
-<span class="cstat-no" title="statement not covered" >        return {status:0, data:" No driver information found with that id"}</span>
+        logger.info("DriverController: No driver found with that id")
+        return {status:0, data:" No driver information found with that id"}
     }
     else{
         logger.info("DriverController: driver info found")
@@ -610,7 +610,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 20 2020 18:28:56 GMT-0500 (hora estándar de Colombia)
+                at Sat Jun 20 2020 19:05:04 GMT-0500 (hora estándar de Colombia)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
