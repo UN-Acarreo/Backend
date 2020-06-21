@@ -9866,3 +9866,478 @@
 [2020-06-21T00:04:53.763Z] : info : HaulageHandler: cancelHaulage success
 [2020-06-21T00:04:53.766Z] : info : Driver_NotificationController: notification was created successfully.
 [2020-06-21T00:04:53.767Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:20.697Z] : info : DataBase: Connection to data base has been established successfully.
+[2020-06-21T00:18:20.700Z] : info : CargoController: No cargo found with that id
+[2020-06-21T00:18:20.700Z] : error : cargo Handler:  No cargo information found with that id
+[2020-06-21T00:18:20.705Z] : info : CargoController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «asdas»
+[2020-06-21T00:18:20.706Z] : error : Cargo Handler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «asdas»
+[2020-06-21T00:18:20.836Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:20.836Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:20.840Z] : info : DriverController:Driver found
+[2020-06-21T00:18:20.843Z] : info : DriverController: SequelizeDatabaseError: el operador no existe: character varying = integer
+[2020-06-21T00:18:20.843Z] : error : DriverHandler: error from getDriverByEmailSequelizeDatabaseError: el operador no existe: character varying = integer
+[2020-06-21T00:18:20.845Z] : info : DriverController:Driver found
+[2020-06-21T00:18:20.941Z] : info : DriverController:email doesnt match known Driver
+[2020-06-21T00:18:20.941Z] : info : DriverHandler: Driver is not valid
+[2020-06-21T00:18:20.944Z] : info : DriverController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdaasd»
+[2020-06-21T00:18:20.944Z] : error : Driver Handler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdaasd»
+[2020-06-21T00:18:20.946Z] : info : DriverController: No driver found with that id
+[2020-06-21T00:18:20.946Z] : error : driver Handler:  No driver information found with that id
+[2020-06-21T00:18:20.950Z] : info : DriverController: driver info found
+[2020-06-21T00:18:21.047Z] : info : DriverController: Driver was created successfully.
+[2020-06-21T00:18:21.048Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-21T00:18:21.050Z] : info : DriverController:Driver found
+[2020-06-21T00:18:21.059Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-21T00:18:21.059Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-21T00:18:21.062Z] : info : VehicleController: vehicle info found
+[2020-06-21T00:18:21.075Z] : error : Driver_VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdf»
+[2020-06-21T00:18:21.075Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:21.075Z] : error : Driver_VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdf»
+[2020-06-21T00:18:21.083Z] : error : Driver_VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfd»
+[2020-06-21T00:18:21.084Z] : error : Driver_VehicleHandler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfd»
+[2020-06-21T00:18:21.088Z] : info : Driver_VehicleController: id doesnt match known Driver with Vehicle
+[2020-06-21T00:18:21.089Z] : info : Driver_VehicleHandler: id doesnt match known Driver with Vehicle
+[2020-06-21T00:18:21.091Z] : error : Driver_VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ssdfs»
+[2020-06-21T00:18:21.092Z] : error : Driver_VehicleHandler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «ssdfs»
+[2020-06-21T00:18:21.093Z] : info : Driver_VehicleController: id doesnt match known Driver with Vehicle
+[2020-06-21T00:18:21.094Z] : info : Driver_VehicleHandler: id doesnt match known Driver with Vehicle
+[2020-06-21T00:18:21.098Z] : error : Driver_VehicleController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sfssd»
+[2020-06-21T00:18:21.098Z] : error : Driver_VehicleHandler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sfssd»
+[2020-06-21T00:18:21.099Z] : error : DriverHandler: Cant get list of drivers
+[2020-06-21T00:18:21.102Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.103Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.106Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.109Z] : error : api.js: /log-client-errors: Bad Requests: [object Object]
+[2020-06-21T00:18:21.111Z] : error : api.js: /log-client-errors: Bad Requests: [object Object]
+[2020-06-21T00:18:21.112Z] : error : api.js: /log-client-errors: Bad Requests: [object Object]
+[2020-06-21T00:18:21.113Z] : error : Api: Server recieved error from client:: "Test message" "Stack message"
+[2020-06-21T00:18:21.213Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:21.215Z] : info : DriverController: driver info found
+[2020-06-21T00:18:21.220Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:21.222Z] : info : DriverController: driver info found
+[2020-06-21T00:18:21.223Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:21.225Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.228Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.229Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.230Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.230Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.231Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.232Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.233Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.250Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.251Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.251Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.252Z] : error : api.js: /driver/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.254Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.256Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.258Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.260Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.261Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.264Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.268Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.269Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.270Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.271Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.272Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.273Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.274Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.275Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.277Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.294Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.295Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.296Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.296Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.297Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.298Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.299Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.300Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.301Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.302Z] : info : Signup driver: checks fields failed
+[2020-06-21T00:18:21.304Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.307Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.405Z] : info : DriverController: Driver was created successfully.
+[2020-06-21T00:18:21.406Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-21T00:18:21.406Z] : info : Signup driver: added succesfully
+[2020-06-21T00:18:21.409Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.411Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.519Z] : info : DriverController: Driver was created successfully.
+[2020-06-21T00:18:21.519Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-21T00:18:21.519Z] : info : Signup driver: added succesfully
+[2020-06-21T00:18:21.522Z] : info : DriverController: ReferenceError: driver_info is not defined
+[2020-06-21T00:18:21.524Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.615Z] : info : DriverController: Driver was created successfully.
+[2020-06-21T00:18:21.616Z] : info : DriverHandler: Driver was created successfully.
+[2020-06-21T00:18:21.616Z] : info : Signup driver: added succesfully
+[2020-06-21T00:18:21.618Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.709Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.710Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.710Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.713Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.812Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.812Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.812Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.814Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.907Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.908Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.908Z] : error : Signup driver: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:21.911Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.912Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.914Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.915Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.931Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.932Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.933Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.934Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.935Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.936Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.937Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.938Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.940Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.942Z] : error : api.js: /vehicle/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:21.958Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.958Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.959Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.960Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.962Z] : info : VehicleController: vehicle was deleted
+[2020-06-21T00:18:21.962Z] : info : VehicleController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:21.966Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:21.969Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-21T00:18:21.985Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-21T00:18:21.990Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:21.990Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:21.991Z] : info : Signup vehicle: added succesfully
+[2020-06-21T00:18:21.995Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:22.000Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-21T00:18:22.001Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-21T00:18:22.003Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:22.004Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:22.004Z] : info : Signup vehicle: added succesfully
+[2020-06-21T00:18:22.008Z] : info : ImageHandler:Save image: Image saved succesfully
+[2020-06-21T00:18:22.011Z] : info : VehicleController: Vehicle was created successfully.
+[2020-06-21T00:18:22.012Z] : info : VehicleHandler: Vehicle was created successfully.
+[2020-06-21T00:18:22.015Z] : error : Driver_VehicleController: SequelizeForeignKeyConstraintError: inserción o actualización en la tabla «Driver_Vehicle» viola la llave foránea «Driver_Vehicle_Id_driver_fkey»
+[2020-06-21T00:18:22.015Z] : info : Driver_VehicleController: Driver_Vehicle was created successfully.
+[2020-06-21T00:18:22.016Z] : error : Driver_VehicleController: SequelizeForeignKeyConstraintError: inserción o actualización en la tabla «Driver_Vehicle» viola la llave foránea «Driver_Vehicle_Id_driver_fkey»
+[2020-06-21T00:18:22.016Z] : error : Signup vehicle: Error registrando el vehículo
+[2020-06-21T00:18:22.026Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-21T00:18:22.026Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-21T00:18:22.027Z] : error : api: No haulages for driver
+[2020-06-21T00:18:22.077Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:22.083Z] : info : UserController:User found
+[2020-06-21T00:18:22.086Z] : info : User_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:22.088Z] : info : UserController:User found
+[2020-06-21T00:18:22.097Z] : info : HaulageController: Haulages was deleted
+[2020-06-21T00:18:22.100Z] : info : UserController: clients was deleted
+[2020-06-21T00:18:22.101Z] : info : UserController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:22.102Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.103Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.120Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.122Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.123Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.124Z] : error : api.js: /client/signup: Bad Requests: [object Object]
+[2020-06-21T00:18:22.139Z] : info : UserController: clients was deleted
+[2020-06-21T00:18:22.139Z] : info : UserController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:22.237Z] : info : UserController: User was created successfully.
+[2020-06-21T00:18:22.238Z] : info : UserHandler: User was created successfully.
+[2020-06-21T00:18:22.238Z] : info : Signup client: added succesfully
+[2020-06-21T00:18:22.241Z] : info : UserController: clients was deleted
+[2020-06-21T00:18:22.241Z] : info : UserController: TypeError: Cannot read property 'dataValues' of undefined
+[2020-06-21T00:18:22.340Z] : info : UserController: User was created successfully.
+[2020-06-21T00:18:22.341Z] : info : UserHandler: User was created successfully.
+[2020-06-21T00:18:22.341Z] : info : Signup client: added succesfully
+[2020-06-21T00:18:22.433Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-21T00:18:22.433Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-21T00:18:22.433Z] : error : Signup user: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-21T00:18:22.473Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:22.576Z] : error : UserController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-21T00:18:22.576Z] : error : UserHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»
+[2020-06-21T00:18:22.668Z] : error : DriverController: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:22.668Z] : error : DriverHandler: SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Driver_Email_key»
+[2020-06-21T00:18:22.669Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.670Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.671Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.672Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.673Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.673Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.674Z] : error : api.js: /:type_of_user/login: Bad Requests: [object Object]
+[2020-06-21T00:18:22.675Z] : info : api.js: request parameters doesnt mactch driver nor user
+[2020-06-21T00:18:22.685Z] : info : UserController:Number of users returned
+[2020-06-21T00:18:22.685Z] : info : UserHandler: email match
+[2020-06-21T00:18:22.688Z] : info : UserController:User found
+[2020-06-21T00:18:22.789Z] : info : UserHandler: succesfull call to getUserByEmail
+[2020-06-21T00:18:22.790Z] : info : api.js: returned user id succesfully
+[2020-06-21T00:18:22.792Z] : info : DriverController:Driver found
+[2020-06-21T00:18:22.883Z] : info : DriverHandler: succesfull call to getDriverByEmail
+[2020-06-21T00:18:22.888Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-21T00:18:22.888Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-21T00:18:22.888Z] : info : api.js: returned Driver id succesfully
+[2020-06-21T00:18:22.931Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:22.935Z] : info : UserController:User found
+[2020-06-21T00:18:22.936Z] : info : HaulageController: Haulages was deleted
+[2020-06-21T00:18:22.939Z] : info : HaulageController: User has zero haulages
+[2020-06-21T00:18:22.939Z] : error : Haulage Handler: no hulages found
+[2020-06-21T00:18:22.939Z] : error : api.js: /haulage/user/list: no haulages found
+[2020-06-21T00:18:22.941Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.942Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.943Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.944Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.945Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.946Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.947Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.948Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.949Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.950Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.950Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.951Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.952Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.953Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.953Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:22.954Z] : info : api.js: /haulage/create: El año de la Fecha no es válido
+[2020-06-21T00:18:22.955Z] : info : api.js: /haulage/create: El mes la Fecha no es válido
+[2020-06-21T00:18:22.956Z] : info : api.js: /haulage/create: El dia de la Fecha no es válido
+[2020-06-21T00:18:22.957Z] : info : api.js: /haulage/create: La hora de la Fecha no es válido
+[2020-06-21T00:18:22.958Z] : info : api.js: /haulage/create: El minuto de la Fecha no es válido
+[2020-06-21T00:18:22.959Z] : info : api.js: /haulage/create: La coordenada de origen no es válida
+[2020-06-21T00:18:22.959Z] : info : api.js: /haulage/create: La coordenada de destino no es válida
+[2020-06-21T00:18:22.960Z] : info : api.js: /haulage/create: La descripción no es válida
+[2020-06-21T00:18:22.961Z] : info : api.js: /haulage/create: Los comentarios no son válidos
+[2020-06-21T00:18:22.962Z] : info : api.js: /haulage/create: El peso no es válido
+[2020-06-21T00:18:22.963Z] : info : api.js: /haulage/create: La duración no es válida
+[2020-06-21T00:18:22.964Z] : info : api.js: /haulage/create: El id de usuario no es válido
+[2020-06-21T00:18:22.965Z] : info : api.js: /haulage/create: El id del accarreo no es válido
+[2020-06-21T00:18:22.967Z] : info : api.js: /haulage/create: El año de la Fecha no es válido
+[2020-06-21T00:18:22.986Z] : info : api.js: /haulage/create: El año de la Fecha no es válido
+[2020-06-21T00:18:22.987Z] : info : api.js: /haulage/create: El mes la Fecha no es válido
+[2020-06-21T00:18:22.988Z] : info : api.js: /haulage/create: El mes la Fecha no es válido
+[2020-06-21T00:18:22.989Z] : info : api.js: /haulage/create: El dia de la Fecha no es válido
+[2020-06-21T00:18:22.991Z] : info : api.js: /haulage/create: El dia de la Fecha no es válido
+[2020-06-21T00:18:22.991Z] : info : api.js: /haulage/create: La hora de la Fecha no es válido
+[2020-06-21T00:18:22.993Z] : info : api.js: /haulage/create: La hora de la Fecha no es válido
+[2020-06-21T00:18:22.997Z] : info : api.js: /haulage/create: El minuto de la Fecha no es válido
+[2020-06-21T00:18:22.999Z] : info : api.js: /haulage/create: El minuto de la Fecha no es válido
+[2020-06-21T00:18:23.000Z] : info : api.js: /haulage/create: La coordenada de origen no es válida
+[2020-06-21T00:18:23.003Z] : info : api.js: /haulage/create: La coordenada de destino no es válida
+[2020-06-21T00:18:23.005Z] : info : api.js: /haulage/create: La descripción no es válida
+[2020-06-21T00:18:23.006Z] : info : api.js: /haulage/create: El peso no es válido
+[2020-06-21T00:18:23.007Z] : info : api.js: /haulage/create: La duración no es válida
+[2020-06-21T00:18:23.008Z] : info : api.js: /haulage/create: La duración no es válida
+[2020-06-21T00:18:23.009Z] : info : api.js: /haulage/create: El id de usuario no es válido
+[2020-06-21T00:18:23.010Z] : info : api.js: /haulage/create: El id de usuario no es válido
+[2020-06-21T00:18:23.012Z] : info : api.js: /haulage/create: El id del accarreo no es válido
+[2020-06-21T00:18:23.032Z] : info : HaulageController: Haulages was deleted
+[2020-06-21T00:18:23.037Z] : info : HaulageController: list was found successfully.
+[2020-06-21T00:18:23.037Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-21T00:18:23.039Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.040Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-21T00:18:23.040Z] : info : VehicleHandler:enough cars
+[2020-06-21T00:18:23.042Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-21T00:18:23.043Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-21T00:18:23.050Z] : info : RouteController: Route was created successfully.
+[2020-06-21T00:18:23.053Z] : info : CargoController: Cargo was created successfully.
+[2020-06-21T00:18:23.059Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-21T00:18:23.059Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-21T00:18:23.059Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-21T00:18:23.063Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-21T00:18:23.063Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-21T00:18:23.063Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-21T00:18:23.068Z] : info : DriverController: register was returned successfully.
+[2020-06-21T00:18:23.069Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.070Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-21T00:18:23.070Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-21T00:18:23.074Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.075Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:23.077Z] : info : HaulageController: SequelizeForeignKeyConstraintError: update o delete en «Haulage» viola la llave foránea «Driver_Notification_Id_haulage_fkey» en la tabla «Driver_Notification»
+[2020-06-21T00:18:23.079Z] : info : HaulageController: list was found successfully.
+[2020-06-21T00:18:23.081Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-21T00:18:23.081Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-21T00:18:23.082Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.082Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-21T00:18:23.082Z] : info : VehicleHandler:enough cars
+[2020-06-21T00:18:23.084Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-21T00:18:23.085Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-21T00:18:23.087Z] : info : RouteController: Route was created successfully.
+[2020-06-21T00:18:23.089Z] : info : CargoController: Cargo was created successfully.
+[2020-06-21T00:18:23.092Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-21T00:18:23.093Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-21T00:18:23.093Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-21T00:18:23.096Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-21T00:18:23.096Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-21T00:18:23.096Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-21T00:18:23.098Z] : info : DriverController: register was returned successfully.
+[2020-06-21T00:18:23.100Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.100Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-21T00:18:23.101Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-21T00:18:23.103Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.104Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:23.108Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.108Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-21T00:18:23.111Z] : info : RouteController: route info found
+[2020-06-21T00:18:23.113Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.116Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:23.117Z] : info : NotificationHandler: Notification was deleted successfully
+[2020-06-21T00:18:23.118Z] : info : User_NotificationController:User had no notifications.
+[2020-06-21T00:18:23.119Z] : error : NotificationHandler: undefined
+[2020-06-21T00:18:23.122Z] : info : HaulageController: Haulage was deleted
+[2020-06-21T00:18:23.123Z] : info : HaulageHandler: deleteByUserByPk success
+[2020-06-21T00:18:23.126Z] : info : HaulageController: list was found successfully.
+[2020-06-21T00:18:23.146Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-21T00:18:23.146Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-21T00:18:23.149Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.149Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-21T00:18:23.150Z] : info : VehicleHandler:enough cars
+[2020-06-21T00:18:23.155Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-21T00:18:23.155Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-21T00:18:23.158Z] : info : RouteController: Route was created successfully.
+[2020-06-21T00:18:23.160Z] : info : CargoController: Cargo was created successfully.
+[2020-06-21T00:18:23.165Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-21T00:18:23.165Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-21T00:18:23.165Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-21T00:18:23.172Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-21T00:18:23.173Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-21T00:18:23.173Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-21T00:18:23.200Z] : info : DriverController: register was returned successfully.
+[2020-06-21T00:18:23.202Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.202Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-21T00:18:23.203Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-21T00:18:23.206Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.207Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:23.210Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.211Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-21T00:18:23.213Z] : info : RouteController: route info found
+[2020-06-21T00:18:23.216Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.218Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:23.218Z] : info : NotificationHandler: Notification was deleted successfully
+[2020-06-21T00:18:23.220Z] : info : User_NotificationController:User had no notifications.
+[2020-06-21T00:18:23.221Z] : error : NotificationHandler: undefined
+[2020-06-21T00:18:23.224Z] : info : HaulageController: Haulage was deleted
+[2020-06-21T00:18:23.224Z] : info : HaulageHandler: deleteByUserByPk success
+[2020-06-21T00:18:23.226Z] : info : HaulageController: list was found successfully.
+[2020-06-21T00:18:23.226Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-21T00:18:23.228Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.228Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-21T00:18:23.228Z] : info : VehicleHandler: not enough cars
+[2020-06-21T00:18:23.229Z] : info : api.js: Cant create haulage, no vehicles available
+[2020-06-21T00:18:23.231Z] : info : HaulageController: list was found successfully.
+[2020-06-21T00:18:23.232Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-21T00:18:23.232Z] : info : Haulage_Driver_VehicleHandler: list of bussy drivers and vehicles list returned successfully.
+[2020-06-21T00:18:23.234Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.235Z] : info : VehicleHandler:list of free vehciles ready:
+[2020-06-21T00:18:23.235Z] : info : VehicleHandler:enough cars
+[2020-06-21T00:18:23.237Z] : info : Driver_VehicleController: Driver vehicle found
+[2020-06-21T00:18:23.238Z] : info : Driver_VehicleHandler: Driver vehicle found
+[2020-06-21T00:18:23.241Z] : info : RouteController: Route was created successfully.
+[2020-06-21T00:18:23.243Z] : info : CargoController: Cargo was created successfully.
+[2020-06-21T00:18:23.247Z] : info : HaulageController: Haulage was created successfully.
+[2020-06-21T00:18:23.247Z] : info : HaulageHandler: cargo and route of haulage created successfully
+[2020-06-21T00:18:23.247Z] : info : api.js: haulage, cargo and route created: 
+[2020-06-21T00:18:23.250Z] : info : Haulage_Driver_VehicleController: Haulage_Driver_Vehicle was created successfully.
+[2020-06-21T00:18:23.250Z] : info : Haulage_Driver_VehicleHandler: all registers were created successfully.
+[2020-06-21T00:18:23.251Z] : info : api.js: all haulage_driver_vehicles created 
+[2020-06-21T00:18:23.252Z] : info : DriverController: register was returned successfully.
+[2020-06-21T00:18:23.254Z] : info : VehicleController: list was returned successfully.
+[2020-06-21T00:18:23.254Z] : info : Haulage_Driver_VehicleHandler: driver_vehicle info ok 
+[2020-06-21T00:18:23.255Z] : info : Haulage_Driver_VehicleHandler: all driver_vehicle info ok 
+[2020-06-21T00:18:23.258Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.258Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:23.261Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.261Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-21T00:18:23.262Z] : info : api.js: /haulage/create: haulage id incorrect
+[2020-06-21T00:18:23.264Z] : info : api.js: /haulage/create: El id del accarreo no es válido
+[2020-06-21T00:18:23.346Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:23.348Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:23.350Z] : error : api.js: /haulage/create: Bad Requests: [object Object]
+[2020-06-21T00:18:23.353Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-21T00:18:23.355Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-21T00:18:23.358Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-21T00:18:23.360Z] : info : api: user/driver notifications: Validation structure fail
+[2020-06-21T00:18:23.362Z] : info : api: user/driver notifications: Validation fail
+[2020-06-21T00:18:23.368Z] : error : type_NotificationController: SequelizeDatabaseError: el valor «345345345345345345345345» está fuera de rango para el tipo integer
+[2020-06-21T00:18:23.369Z] : error : NotificationHandler: SequelizeDatabaseError: el valor «345345345345345345345345» está fuera de rango para el tipo integer
+[2020-06-21T00:18:23.370Z] : info : api: driver/user notifications: Hubo un error recuperando sus notificaciones
+[2020-06-21T00:18:23.373Z] : info : type_NotificationController:notifications found
+[2020-06-21T00:18:23.374Z] : info : api:driver/user notifications found succesfully
+[2020-06-21T00:18:23.376Z] : info : User_NotificationController:User has 0 notifications
+[2020-06-21T00:18:23.376Z] : info : api:driver/user notifications found succesfully
+[2020-06-21T00:18:23.433Z] : info : Server: database tables created if the dont exist
+[2020-06-21T00:18:23.436Z] : info : type_NotificationController:notifications found
+[2020-06-21T00:18:23.438Z] : info : api: user/driver remove notifications: Validation fail
+[2020-06-21T00:18:23.441Z] : error : Driver_NotificationController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsdf»
+[2020-06-21T00:18:23.442Z] : error : Subject:removeObserver SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsdf»
+[2020-06-21T00:18:23.442Z] : error : NotificationHandler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsdf»
+[2020-06-21T00:18:23.445Z] : info : Driver_NotificationController: notification was deleted successfully.
+[2020-06-21T00:18:23.446Z] : info : Subject:removeObserver 
+[2020-06-21T00:18:23.448Z] : info : User_NotificationController:User had no notifications.
+[2020-06-21T00:18:23.448Z] : info : Subject:removeObserver 
+[2020-06-21T00:18:23.453Z] : info : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdss»
+[2020-06-21T00:18:23.454Z] : error : Haulage Handler: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdss»
+[2020-06-21T00:18:23.455Z] : error : api.js: /haulage/user/list: error
+[2020-06-21T00:18:23.459Z] : info : HaulageController: User haulages found
+[2020-06-21T00:18:23.462Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.464Z] : info : RouteController: route info found
+[2020-06-21T00:18:23.470Z] : info : StatusController: status info found
+[2020-06-21T00:18:23.475Z] : info : RatingController: No rating information found with that id
+[2020-06-21T00:18:23.476Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-21T00:18:23.485Z] : info : BillController/getRegisterBy: no bills found
+[2020-06-21T00:18:23.485Z] : info : BillHandler/getBillInfo: No bill information
+[2020-06-21T00:18:23.488Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-21T00:18:23.490Z] : info : VehicleController: vehicle info found
+[2020-06-21T00:18:23.493Z] : info : DriverController: driver info found
+[2020-06-21T00:18:23.495Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.497Z] : info : RouteController: route info found
+[2020-06-21T00:18:23.500Z] : info : StatusController: status info found
+[2020-06-21T00:18:23.502Z] : info : RatingController: No rating information found with that id
+[2020-06-21T00:18:23.502Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-21T00:18:23.504Z] : info : BillController/getRegisterBy: no bills found
+[2020-06-21T00:18:23.504Z] : info : BillHandler/getBillInfo: No bill information
+[2020-06-21T00:18:23.506Z] : info : Haulage_Driver_VehicleController: driver_vehicle_info info found
+[2020-06-21T00:18:23.508Z] : info : VehicleController: vehicle info found
+[2020-06-21T00:18:23.510Z] : info : DriverController: driver info found
+[2020-06-21T00:18:23.511Z] : error : api.js: /haulage/user/list: correct
+[2020-06-21T00:18:23.536Z] : error : Haulage_Driver_VehicleController: Error getting list:SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdss»
+[2020-06-21T00:18:23.536Z] : error : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdss»
+[2020-06-21T00:18:23.537Z] : error : api: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdss»
+[2020-06-21T00:18:23.540Z] : info : Haulage_Driver_VehicleController: registers found.
+[2020-06-21T00:18:23.541Z] : info : Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_of_Driver success
+[2020-06-21T00:18:23.543Z] : info : VehicleController: vehicle info found
+[2020-06-21T00:18:23.545Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.546Z] : info : HaulageHandler: getHaulageInfo success
+[2020-06-21T00:18:23.548Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.551Z] : info : RouteController: route info found
+[2020-06-21T00:18:23.554Z] : info : StatusController: status info found
+[2020-06-21T00:18:23.556Z] : info : RatingController: No rating information found with that id
+[2020-06-21T00:18:23.556Z] : info : Rating Handler: El servicio no ha sido calificado
+[2020-06-21T00:18:23.559Z] : info : UserController:User found
+[2020-06-21T00:18:23.559Z] : info : UserHandler: succesfull call to getUserInfo
+[2020-06-21T00:18:23.560Z] : info : api: haulage list returned
+[2020-06-21T00:18:23.589Z] : error : RatingController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «asdas»
+[2020-06-21T00:18:23.593Z] : info : RatingController: Rating was created successfully.
+[2020-06-21T00:18:23.594Z] : info : Rating Handler: rating succesfully created, returning id: 91
+[2020-06-21T00:18:23.601Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «scdsdf»
+[2020-06-21T00:18:23.602Z] : error : HaulageHandler: Haulage rating assignment error: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «scdsdf»
+[2020-06-21T00:18:23.606Z] : info : RatingController: Rating was created successfully.
+[2020-06-21T00:18:23.607Z] : info : Rating Handler: rating succesfully created, returning id: 92
+[2020-06-21T00:18:23.611Z] : info : HaulageHandler: Haulage rating assignment success
+[2020-06-21T00:18:23.617Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.617Z] : error : HaulageHandler: beginHaulage error: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.617Z] : error : api: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.622Z] : info : HaulageHandler: beginHaulage success
+[2020-06-21T00:18:23.625Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.630Z] : error : User_NotificationController: SequelizeForeignKeyConstraintError: inserción o actualización en la tabla «User_Notification» viola la llave foránea «User_Notification_Id_Notification_Type_fkey»
+[2020-06-21T00:18:23.630Z] : error : Subject: in register observer: SequelizeForeignKeyConstraintError: inserción o actualización en la tabla «User_Notification» viola la llave foránea «User_Notification_Id_Notification_Type_fkey»
+[2020-06-21T00:18:23.637Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.637Z] : error : HaulageHandler: finishHaulage error: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.638Z] : error : api: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.643Z] : info : HaulageHandler: finishHaulage success
+[2020-06-21T00:18:23.645Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.647Z] : info : CargoController: Cargo info found
+[2020-06-21T00:18:23.652Z] : info : BillController: Bill was created successfully.
+[2020-06-21T00:18:23.653Z] : info : HaulageHandler: finishHaulage success
+[2020-06-21T00:18:23.655Z] : info : HaulageController: register was returned successfully.
+[2020-06-21T00:18:23.659Z] : info : User_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.659Z] : info : Subject: in register observer: success
+[2020-06-21T00:18:23.665Z] : error : HaulageController: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.666Z] : error : HaulageHandler: cancelHaulage error: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.666Z] : error : api: SequelizeDatabaseError: la sintaxis de entrada no es válida para integer: «sdfsd»
+[2020-06-21T00:18:23.673Z] : info : HaulageHandler: cancelHaulage success
+[2020-06-21T00:18:23.677Z] : info : Driver_NotificationController: notification was created successfully.
+[2020-06-21T00:18:23.677Z] : info : Subject: in register observer: success

@@ -147,6 +147,9 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»") {
                 return res.status(400).json({ error: "La Cédula ya existe" });
             }
+            if (message == "SequelizeUniqueConstraintError: Validation error") {
+                return res.status(400).json({ error: "Error de validación" });
+            }
             return res.status(500).json({ error: message });
         }
     } else {
