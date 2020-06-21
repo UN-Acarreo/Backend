@@ -3,16 +3,16 @@
 var assert = require("assert");
 
 // Import sync database
-var syncDB = require("../../../DataBase/syncDB.js");
+var syncDB = require("../../DataBase/syncDB.js");
 
 // Import Business Logic Factory
-const businessLogicFactory = require('../../../BusinessLogic/BusinessLogicFactory');
+const businessLogicFactory = require('../../BusinessLogic/BusinessLogicFactory');
 
 // Import Controller Factory
-const controllerFactory = require('../../../Controllers/ControllerFactory');
+const controllerFactory = require('../../Controllers/ControllerFactory');
 
 // Import api.js for test
-const UserHandler = require('../../../BusinessLogic/BusinessLogicProducts/UserHandler');
+const UserHandler = require('../../BusinessLogic/BusinessLogicProducts/UserHandler');
 
 // BusinessLogic test
 describe("User handler test:", async function(){

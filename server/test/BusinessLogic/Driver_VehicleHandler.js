@@ -3,13 +3,13 @@
 var assert = require("assert");
 
 // Import Driver Handler
-const Driver_VehicleHandler = require('../../../BusinessLogic/BusinessLogicProducts/Driver_VehicleHandler');
+const Driver_VehicleHandler = require('../../BusinessLogic/BusinessLogicProducts/Driver_VehicleHandler');
 
 // Import Business Logic Factory
-const businessLogicFactory = require('../../../BusinessLogic/BusinessLogicFactory');
+const businessLogicFactory = require('../../BusinessLogic/BusinessLogicFactory');
 
 // Import Controller Factory
-const controllerFactory = require('../../../Controllers/ControllerFactory');
+const controllerFactory = require('../../Controllers/ControllerFactory');
 
 // Driver handler test
 describe("Driver vehicle handler test:", async function(){
