@@ -147,6 +147,9 @@ router.post('/driver/signup', exports.driverSignup = async function (req, res) {
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «Driver_Identity_card_key»") {
                 return res.status(400).json({ error: "La Cédula ya existe" });
             }
+            if (message == "SequelizeUniqueConstraintError: Validation error") {
+                return res.status(400).json({ error: "Error de validación" });
+            }
             return res.status(500).json({ error: message });
         }
     } else {
@@ -299,6 +302,9 @@ router.post('/client/signup', exports.clientSignup = async function (req, res) {
             logger.error("Signup user: " + message);
             if (message == "SequelizeUniqueConstraintError: llave duplicada viola restricción de unicidad «User_User_Email_key»") {
                 return res.status(400).json({ error: "El E-Mail ya existe" });
+            }
+            if (message == "SequelizeUniqueConstraintError: Validation error") {
+                return res.status(400).json({ error: "Error de validación" });
             }
             return res.status(500).json({ error: message });
         }
@@ -668,8 +674,8 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
 });
 
 //Redirect unhandled requests
-router.all('*', function (req, res) {
-    return res.redirect("/");
+router.all('*', exports.redirect = async function (req, res) {
+    return res.status(200).redirect("/");
 });
 
 exports.router = router;
