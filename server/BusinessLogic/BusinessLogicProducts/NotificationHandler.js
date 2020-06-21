@@ -15,8 +15,13 @@ async function DriversCancelNotification(drivers,notifications,Id_haulage)
 
   //console.log(Id_haulage)
   //console.log(drivers)
+  console.log("lista en handler")
+  console.log(drivers)
+  let status
+  let errorx
   for(const driver of drivers){
       //console.log("###"+driver)
+      //console.log("entra al for "+ driver)
       const subject = new Subject()
       for (const notification of notifications) {
           subject.notifications.add(notification)
@@ -25,11 +30,24 @@ async function DriversCancelNotification(drivers,notifications,Id_haulage)
       let observer = new Observer(driver,"Driver")
       try {
           await subject.registerObserver(observer, Id_haulage)
-          return {status:1}
+          //console.log("**************crea notificacion")
+          status=1
+          
       } catch (error) {
+            //console.log("**************error")
           //console.log("###"+error)
-          return {status:-1, error: error}
+          status =-1
+          errorx = error
+          
       }
+ }
+ if(status==1)
+ {
+    return {status:1}
+ }
+ else
+ {
+    return {status:-1, error: errorx}
  }
 /*
     try {

@@ -665,6 +665,7 @@ router.post('/haulage/cancel', exports.haulageCancel = async function (req, res)
         drivers.push(vehicle.driver.Id_driver)
     });
     //drivers.push(vehicles[0].driver.Id_driver)
+    //console.log("lista en api:")
     //console.log(drivers)
 
     let notifications = []
