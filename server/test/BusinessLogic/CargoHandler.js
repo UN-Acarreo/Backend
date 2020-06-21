@@ -3,7 +3,7 @@
 var assert = require("assert");
 
 // Import api.js for test
-const CargoHandler = require('../../../BusinessLogic/BusinessLogicProducts/CargoHandler');
+const CargoHandler = require('../../BusinessLogic/BusinessLogicProducts/CargoHandler');
 
 // BusinessLogic test
 describe("BusinessLogic test:", async function(){
