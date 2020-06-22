@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -120,10 +120,76 @@ async function updateHaulageById(id, state, date)
     }
 }
 
+async function setHaulageRating(haulage_id, rating_id)
+{
+    try {
+        let result = await ModelFactory.getModel("Haulage").update(
+            {Id_rating: rating_id}, //values
+            {where: {Id_haulage: haulage_id}} //conditions
+          )
+        if (result) {
+            return {status: 1}
+        } else {
+            logger.error("HaulageController: Query error");
+            return {status: -1, error: "HaulageController: Query error"}
+        }
+    } catch (error) {
+        logger.error("HaulageController: " + error);
+        return {status: -1, error: error};
+    }
+}
+
+async function deleteByIdUser(Id_user){
+    try{
+
+        let info = await ModelFactory.getModel("Haulage").destroy({ where: { Id_user: Id_user }})
+
+        //query returns array of clients that match where clause, in this case we expect only 1
+        if(info.length==0)
+        {
+            logger.info("HaulageController: No Haulage found with that Id_User")
+            return {status:0, data:" No Haulage information found with that Id_User"}
+        }
+        else{
+            logger.info("HaulageController: Haulages was deleted")
+            return {status: 1}
+        }
+
+    } catch (error) {
+        logger.info("HaulageController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
+async function deleteByPk(Id_haulage){
+    try{
+
+        let info = await ModelFactory.getModel("Haulage").destroy({ where: { Id_haulage: Id_haulage }})
+
+        //query returns array of clients that match where clause, in this case we expect only 1
+        if(info.length==0)
+        {
+            logger.info("HaulageController: No Haulage found with that Id_haulage")
+            return {status:0, data:" No Haulage information found with that Id_haulage"}
+        }
+        else{
+            logger.info("HaulageController: Haulage was deleted")
+            return {status: 1}
+        }
+
+    } catch (error) {
+        logger.info("HaulageController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     getRegisterBy:getRegisterBy,
     getHaulages: getHaulages,
     getRegisterByPk:getRegisterByPk,
-    updateHaulageById: updateHaulageById
+    updateHaulageById: updateHaulageById,
+    setHaulageRating: setHaulageRating,
+    deleteByIdUser: deleteByIdUser,
+    deleteByPk: deleteByPk
 };

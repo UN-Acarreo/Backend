@@ -27,10 +27,12 @@ class ControllerFactory {
                 return require("./ControllerProducts/UserController");
             case "Vehicle":
                 return require("./ControllerProducts/VehicleController");
+            case "Notification":
+                return require("./ControllerProducts/NotificationController");
             default:
                 return null;
         }
-    };
+    }
 }
 
 module.exports = ControllerFactory;

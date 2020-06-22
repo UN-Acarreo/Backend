@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -43,7 +43,7 @@ async function create(Driver_name, Driver_last_name, Driver_password_hashed, Dri
 async function countWhere(query) {
 
     try {
-        count = await ModelFactory.getModel("Driver").count({ where: query })
+        let count = await ModelFactory.getModel("Driver").count({ where: query })
         logger.info("DriverController:Number of Drivers returned")
         return{status:1, data:count}
     } catch (error) {
@@ -78,7 +78,7 @@ async function getRegisterBy(query)
 
     } catch (error) {
         logger.info("DriverController: "+ error)
-        return {status:-1, data:error}
+        return {status:-1, error:error}
 
     }
 }
@@ -125,11 +125,58 @@ async function getDriverInfo(driver_id){
     }
 }
 
+//Return driver information
+async function getDriverInfoByIdentityCard(Identity_card){
+    try{
+    var DriverModel = await ModelFactory.getModel("Driver")
+    let driver_info = await DriverModel.findAll(
+        { where: { Identity_card: Identity_card }}
+        )
+    //query returns array of drivers that match where clause, in this case we expect only 1
+    if(driver_info.length==0)
+    {
+        logger.info("DriverController: No driver found with that id")
+        return {status:0, data:" No driver information found with that id"}
+    }
+    else{
+        logger.info("DriverController: driver info found")
+        return {status: 1, data: driver_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("DriverController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
+async function deleteByIdentityCard(Identity_card){
+    try{
+    var DriverModel = await ModelFactory.getModel("Driver")
+    await DriverModel.destroy({ where: { Identity_card: Identity_card }})
+
+    //query returns array of drivers that match where clause, in this case we expect only 1
+    if(driver_info.length==0)
+    {
+        logger.info("DriverController: No driver found with that Identity_card")
+        return {status:0, data:" No driver information found with that Identity_card"}
+    }
+    else{
+        logger.info("DriverController: drivers was deleted")
+        return {status: 1}
+    }
+
+  } catch (error) {
+    logger.info("DriverController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     countWhere: countWhere,
     getRegisterBy: getRegisterBy,
     getRegisterByPk: getRegisterByPk,
-    getDriverInfo: getDriverInfo
-
+    getDriverInfo: getDriverInfo,
+    deleteByIdentityCard: deleteByIdentityCard,
+    getDriverInfoByIdentityCard: getDriverInfoByIdentityCard
  };

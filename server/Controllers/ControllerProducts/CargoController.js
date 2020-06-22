@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+let ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -55,4 +55,30 @@ async function create(req) {
 
 }
 
-module.exports = { create: create, getCargoInfo: getCargoInfo };
+async function deleteByDescription(Description){
+    try{
+
+        let info = await ModelFactory.getModel("Cargo").destroy({ where: { Description: Description }})
+
+        //query returns array of clients that match where clause, in this case we expect only 1
+        if(info.length==0)
+        {
+            logger.info("CargoController: No cargo found with that Description")
+            return {status:0, data:" No cargo information found with that Description"}
+        }
+        else{
+            logger.info("CargoController: cargos was deleted")
+            return {status: 1, data: info[0].dataValues}
+        }
+
+    } catch (error) {
+        logger.info("CargoController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
+module.exports = { 
+    create: create, 
+    getCargoInfo: getCargoInfo,
+    deleteByDescription: deleteByDescription
+};

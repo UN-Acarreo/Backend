@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -16,7 +16,7 @@ async function getRatingInfo(rating_id){
     if(rating_info.length==0)
     {
         logger.info("RatingController: No rating information found with that id")
-        return {status:0, data:" El servicio no ha sido calificado"}
+        return {status:0, data: "El servicio no ha sido calificado"}
     }
     else{
         logger.info("RatingController: rating info found")
@@ -30,28 +30,26 @@ async function getRatingInfo(rating_id){
 }
 
 // Create Rating
-async function create(req) {
+async function create(info) {
 
     try {
-
         // Get atributes
-        const { Puntuality, Cargo_state, Customer_support, Comments } = req.body.request;
-
+        //const { Puntuality, Cargo_state, Customer_support, Comments } = req.body.request;
         // Create Rating
-        await ModelFactory.getModel("Rating").create(
+        var new_rating = await ModelFactory.getModel("Rating").create(
             {
-                Puntuality: Puntuality,
-                Cargo_state: Cargo_state,
-                Customer_support: Customer_support,
-                Comments: Comments
+                Puntuality: info.Puntuality,
+                Cargo_state: info.Cargo_state,
+                Customer_support: info.Customer_support,
+                Comments: info.Comments
             }
         );
         logger.info("RatingController: Rating was created successfully.");
-        return 1;
+        return {status: 1, data: new_rating.Id_rating}; //return the id of the rating to be stored later on the haulage
 
     } catch (error) {
         logger.error("RatingController: " + error);
-        return error;
+        return {status: -1, error: error};
     }
 
 }

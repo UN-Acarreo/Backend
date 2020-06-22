@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -95,9 +95,57 @@ async function getVehicleInfo(vehicle_id){
     }
 }
 
+//Return vehicle information
+async function getVehicleBy(query){
+    try{
+    var VehicleModel = await ModelFactory.getModel("Vehicle")
+    let vehicle_info = await VehicleModel.findAll(
+        { where: query }
+        )
+    //query returns array of vehicles that match where clause, in this case we expect only 1
+    if(vehicle_info.length==0)
+    {
+        logger.info("VehicleController: No vehicle found with that id")
+        return {status:0, data:" No vehicle information found with that id"}
+    }
+    else{
+        logger.info("VehicleController: vehicle info found")
+        return {status: 1, data: vehicle_info[0].dataValues}
+    }
+
+  } catch (error) {
+    logger.info("VehicleController: "+ error)
+    return {status:-1, data:error}
+    }
+}
+
+async function deleteByPlate(Plate){
+    try{
+
+        let driver_info = await ModelFactory.getModel("Vehicle").destroy({ where: { Plate: Plate }})
+
+        //query returns array of drivers that match where clause, in this case we expect only 1
+        if(driver_info.length==0)
+        {
+            logger.info("VehicleController: No vehicle found with that Plate")
+            return {status:0, data:" No vehicle information found with that Plate"}
+        }
+        else{
+            logger.info("VehicleController: vehicle was deleted")
+            return {status: 1, data: driver_info[0].dataValues}
+        }
+
+    } catch (error) {
+        logger.info("VehicleController: "+ error)
+        return {status:-1, data:error}
+    }
+}
+
 module.exports = {
     create: create,
     getAll: getAll,
     getRegisterByPk: getRegisterByPk,
-    getVehicleInfo: getVehicleInfo
+    getVehicleInfo: getVehicleInfo,
+    getVehicleBy: getVehicleBy,
+    deleteByPlate: deleteByPlate
 };

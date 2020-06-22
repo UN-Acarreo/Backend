@@ -1,7 +1,7 @@
 
 // Import ControllerFactory
-ControllerFactory = require('../../Controllers/ControllerFactory');
-description = require("../../constants").status_description
+const ControllerFactory = require('../../Controllers/ControllerFactory');
+let description = require("../../constants").status_description
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -27,7 +27,7 @@ async function createAllHaulage_Driver_VehicleFromList(list_driver_vehicles,Id_h
 
 // get list of bussy DriverVehicle
 async function getListOfBussyDriverVehicle(start_date, duration) {
-    
+
     //Calculating end date based on start date and duration
     let end_date = new Date(
         start_date.getFullYear(),
@@ -37,8 +37,7 @@ async function getListOfBussyDriverVehicle(start_date, duration) {
         start_date.getMinutes()+duration.minutes
         )
     //getting all haulages that are active at time of haulage
-    let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy
-        ({
+    let activeHaulages = await ControllerFactory.getController("Haulage").getRegisterBy({
             [Op.or]:
                 [{
                     Id_status: [description.IN_PROGRESS,
@@ -98,7 +97,7 @@ async function getListOfBussyDriverVehicle(start_date, duration) {
 async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
 {
     let driverInfo= await ControllerFactory.getController("Driver").getRegisterByPk(
-        driver_Pk,["Driver_name","Driver_last_name","Driver_phone"]
+        driver_Pk,["Driver_name","Driver_last_name","Driver_phone", "Driver_photo", "Identity_card"]
     )
     if(driverInfo.status!=1)
     {
@@ -106,7 +105,7 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
         return {status: -1, error: driverInfo.error};
     }
     let vehicleInfo= await ControllerFactory.getController("Vehicle").getRegisterByPk(
-        vehicle_Pk,["Plate","Brand","Model"]
+        vehicle_Pk,["Plate","Brand","Model","Photo"]
     )
     if(vehicleInfo.status!=1)
     {
@@ -123,15 +122,18 @@ async function getDriver_VehicleInfo(driver_Pk,vehicle_Pk)
             Plate:vehicle.Plate,
             Brand:vehicle.Brand,
             Model:vehicle.Model,
+            vehicle_photo: vehicle.Photo,
             Driver_name:driver.Driver_name,
             Driver_last_name:driver.Driver_last_name,
-            Driver_phone:driver.Driver_phone
+            Driver_phone:driver.Driver_phone,
+            Driver_photo: driver.Driver_photo,
+            Identity_card: driver.Identity_card
         }
     }
 }
 async function getAll_Driver_VehicleInfo(needed_driver_vehicles)
 {
-    list = []
+    let list = []
     for(element of needed_driver_vehicles)
     {
         let driver_vehicle = await getDriver_VehicleInfo(element.Id_driver,element.Id_vehicle)
@@ -162,6 +164,7 @@ async function getVehiclesAssigned(haualge_id){
 
     return {status: 1, data: vehicles.data}
 }
+
 async function get_Haulage_Driver_Vehicles_of_Driver(dirver_id)
 {
     let vehicles_haulages = await
@@ -178,6 +181,21 @@ async function get_Haulage_Driver_Vehicles_of_Driver(dirver_id)
     return {status: 1, data: vehicles_haulages.data};
 }
 
+async function get_Haulage_Driver_Vehicles_by_Haulgage(Id_haulage)
+{
+    let Haulage_Driver_Vehicles = await
+        ControllerFactory.getController("Haulage_Driver_Vehicle").getRegisterBy(
+            {Id_haulage : Id_haulage}, []
+            );
+    if(Haulage_Driver_Vehicles.status!=1)
+    {
+        logger.error("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_by_Haulgage: " +Haulage_Driver_Vehicles.error);
+        return {status: -1, error: Haulage_Driver_Vehicles.error};
+    }
+    logger.info("Haulage_Driver_VehicleHandler : get_Haulage_Driver_Vehicles_by_Haulgage success")
+    return {status: 1, data: Haulage_Driver_Vehicles.data};
+}
+
 
 module.exports ={
     createAllHaulage_Driver_VehicleFromList : createAllHaulage_Driver_VehicleFromList,
@@ -185,6 +203,6 @@ module.exports ={
     getDriver_VehicleInfo: getDriver_VehicleInfo,
     getAll_Driver_VehicleInfo:getAll_Driver_VehicleInfo,
     getVehiclesAssigned: getVehiclesAssigned,
-    get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver
+    get_Haulage_Driver_Vehicles_of_Driver: get_Haulage_Driver_Vehicles_of_Driver,
+    get_Haulage_Driver_Vehicles_by_Haulgage: get_Haulage_Driver_Vehicles_by_Haulgage
 }
-

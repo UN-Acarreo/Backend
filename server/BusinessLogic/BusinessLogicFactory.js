@@ -29,10 +29,14 @@ class BusinessLogicFactory {
                 return require("./BusinessLogicProducts/StatusHandler");
             case "Rating":
                 return require("./BusinessLogicProducts/RatingHandler");
+            case "Notification":
+                return require("./BusinessLogicProducts/NotificationHandler")
+            case "Bill":
+                return require("./BusinessLogicProducts/BillHandler")
             default:
                 return null;
         }
-    };
+    }
 }
 
 module.exports = BusinessLogicFactory;

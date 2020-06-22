@@ -11,8 +11,9 @@ const api = require('./routes/api.js');
 const index = require('./routes/index.js');
 // Import logger
 const logger = require('./utils/logger/logger');
-//importr db
-const db = require("./DataBase/database");
+//importr db sync
+const syncDB = require("./DataBase/syncDB");
+
 app.use(function(req,res,next){
   res.header('Access-Control-Allow-Origin: *');
   next();
@@ -32,7 +33,7 @@ app.use(express.static(__dirname + '/public'));
 
 //Require route files
 app.use('/',index);
-app.use('/api',api);
+app.use('/api', api.router);
 
 // Start server in specific port
 app.listen(3001, function(){
@@ -40,41 +41,8 @@ app.listen(3001, function(){
   logger.info('Server: Server is running');
 });
 
- //creating all models
-User = require("./Models/ModelProducts/User");
-Driver = require("./Models/ModelProducts/Driver");
-Vehicle = require("./Models/ModelProducts/Vehicle");
-Rating = require("./Models/ModelProducts/Rating");
-Route = require("./Models/ModelProducts/Route");
-Status = require("./Models/ModelProducts/Status");
-Cargo = require("./Models/ModelProducts/Cargo");
-Haulage = require("./Models/ModelProducts/Haulage");
-Bill = require("./Models/ModelProducts/Bill");
-Driver_Vehicle = require("./Models/ModelProducts/Driver_Vehicle");
-Haulage_Driver_Vehicle=require("./Models/ModelProducts/Haulage_Driver_Vehicle");
-
-async function init_dataBase () {
-  try {
-  //creating all tables if they dont exist allready
-   await User.sync()
-   await Driver.sync()
-   await Vehicle.sync()
-   await Rating.sync()
-   await Route.sync()
-   await Status.sync()
-   await Cargo.sync()
-   await Haulage.sync()
-   await Bill.sync()
-   await Driver_Vehicle.sync()
-   await Haulage_Driver_Vehicle.sync()
-   //await db.sync()
-   logger.info("Server: database tables created if the dont exist");
-  } catch (err) {
-    logger.error("Server: unable to create database tables: "+err)
-  }
- }
-
-init_dataBase ()
+// Sync Data Base
+syncDB()
 
 /*
 	- You are able to access to local server by http://localhost:3000/

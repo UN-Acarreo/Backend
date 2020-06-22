@@ -1,6 +1,6 @@
 
 // Import ModelFactory
-ModelFactory = require('../../Models/ModelFactory');
+const ModelFactory = require('../../Models/ModelFactory');
 
 // Import logger
 const logger = require('../../utils/logger/logger');
@@ -33,7 +33,7 @@ async function create( Id_driver, Id_vehicle, Is_owner ) {
 //status 0 = Driver not found
 //status 1 = Driver found, Driver returned
 //status -1 = error, error message returned
-async function getRegisterBy(query,registerToGet)
+async function getRegisterBy(query, registerToGet)
 {
     //query to find Driver by given email (which is unique)
     try {
@@ -43,7 +43,7 @@ async function getRegisterBy(query,registerToGet)
             registers = await  ModelFactory.getModel("Driver").findAll(
                 { where:  query , 
                   attributes: [],
-                  include: [{model: ModelFactory.getModel("Vehicle")}]
+                  include: [{model: ModelFactory.getModel("Vehicle"), required: true}]
                 }
             )
         }else if(registerToGet=="Driver")
