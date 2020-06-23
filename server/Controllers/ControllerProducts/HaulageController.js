@@ -101,13 +101,28 @@ async function getRegisterByPk(Pk)
     }
 }
 
-async function updateHaulageById(id, state, date)
+async function updateHaulageById(id, state, date,type_of_date)
 {
     try {
-        let result = await ModelFactory.getModel("Haulage").update(
-            {Id_status: state, End_date: date},
-            {returning: true, where: {Id_haulage: id}}
-          )
+        let result
+        if(type_of_date == "End")
+        {
+            result = await ModelFactory.getModel("Haulage").update(
+                {Id_status: state, End_date: date},
+                {returning: true, where: {Id_haulage: id}}
+              )
+        }
+        else if(type_of_date == "Begin")
+        {
+            result = await ModelFactory.getModel("Haulage").update(
+                {Id_status: state, Date: date},
+                {returning: true, where: {Id_haulage: id}}
+              )
+        }
+        else
+        {
+            return {status: -1, error: "HaulageController: bad input"}
+        }
         if (result) {
             return {status: 1}
         } else {
