@@ -105,7 +105,7 @@ async function finishHaulage(Id_haulage)
 {
 
   // Finish haulage and set finish time
-  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.DONE, new Date().getTime())
+  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.DONE, new Date().getTime(),"End")
   if(haualge.status!=1)
   {
     logger.error("HaulageHandler: finishHaulage error: "+ haualge.error)
@@ -155,7 +155,7 @@ async function finishHaulage(Id_haulage)
 async function beginHaulage(Id_haulage)
 {
   // Finish haulage and set finish time
-  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.IN_PROGRESS, new Date().getTime())
+  let haualge = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.IN_PROGRESS, new Date().getTime(),"Begin")
   if(haualge.status!=1)
   {
     logger.error("HaulageHandler: beginHaulage error: "+ haualge.error)
@@ -168,7 +168,7 @@ async function beginHaulage(Id_haulage)
 async function cancelHaulage(Id_haulage)
 {
   // Cancel the haulage and set finish time
-  let haulage = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.CANCELLED, new Date().getTime())
+  let haulage = await ControllerFactory.getController("Haulage").updateHaulageById(Id_haulage, description.CANCELLED, new Date().getTime(),"End")
   if(haulage.status!=1)
   {
     logger.error("HaulageHandler: cancelHaulage error: "+ haulage.error)
